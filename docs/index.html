@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#246bfe" />
+    <meta name="description" content="학생과 직장인이 사용할 수 있는 영어사전, 한영사전, 발음, 예문, 업무 영어 학습 앱" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <title>학생·직장인 영어사전 V4</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="top-bar" aria-label="앱 소개">
+        <div>
+          <p class="eyebrow">Student & Work Dictionary V4</p>
+          <h1>영어사전</h1>
+        </div>
+        <button class="icon-button" id="clearAllButton" type="button" title="기록 지우기" aria-label="기록 지우기">
+          <span aria-hidden="true">↺</span>
+        </button>
+      </section>
+
+      <section class="search-panel" aria-label="단어 검색">
+        <label for="searchInput">단어 검색</label>
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="apple 또는 사과" autocomplete="off" />
+          <button id="searchButton" type="button">검색</button>
+        </div>
+        <div class="suggestions" id="suggestions" aria-label="추천 단어"></div>
+      </section>
+
+      <section class="result-panel" id="resultPanel" aria-live="polite"></section>
+
+      <section class="quiz-panel" aria-label="단어 퀴즈">
+        <div class="quiz-heading">
+          <div>
+            <p class="eyebrow">Review</p>
+            <h2>뜻 맞히기</h2>
+          </div>
+          <button class="small-action" id="nextQuizButton" type="button">다음</button>
+        </div>
+        <p class="quiz-question" id="quizQuestion"></p>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p class="quizFeedback" id="quizFeedback" aria-live="polite"></p>
+      </section>
+
+      <nav class="tabs" aria-label="단어 목록 보기">
+        <button class="tab is-active" type="button" data-tab="recent">최근</button>
+        <button class="tab" type="button" data-tab="favorites">즐겨찾기</button>
+        <button class="tab" type="button" data-tab="all">전체 단어</button>
+      </nav>
+
+      <section class="word-list" id="wordList" aria-label="단어 목록"></section>
+    </main>
+
+    <script src="vocab-bank.js"></script>
+    <script src="top1000-supplement.js"></script>
+    <script src="top2000-supplement.js"></script>
+    <script src="top2200-supplement.js"></script>
+    <script src="ministry3000-supplement.js"></script>
+    <script src="verified-bank-supplement.js"></script>
+    <script src="verified-meaning-overrides.js"></script>
+    <script src="app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          let refreshing = false;
+
+          navigator.serviceWorker.addEventListener("controllerchange", () => {
+            if (refreshing) {
+              return;
+            }
+            refreshing = true;
+            window.location.reload();
+          });
+
+          navigator.serviceWorker.register("./service-worker.js").then((registration) => {
+            registration.update();
+
+            if (registration.waiting) {
+              registration.waiting.postMessage({ type: "SKIP_WAITING" });
+            }
+
+            registration.addEventListener("updatefound", () => {
+              const newWorker = registration.installing;
+              if (!newWorker) {
+                return;
+              }
+
+              newWorker.addEventListener("statechange", () => {
+                if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                  newWorker.postMessage({ type: "SKIP_WAITING" });
+                }
+              });
+            });
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

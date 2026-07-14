@@ -1,0 +1,12 @@
+.agents/
+.codex/
+tmp-*.js
+tmp-*.html
+tmp-*.json
+outputs/kids-dictionary-versions/
+outputs/*
+!outputs/kids-dictionary/
+!outputs/kids-dictionary/**
+!outputs/kids-dictionary-release/
+!outputs/kids-dictionary-release/**
+!outputs/kids-dictionary-version-history.txt
