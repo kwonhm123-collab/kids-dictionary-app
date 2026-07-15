@@ -36,6 +36,15 @@ const supplement2200Code = fs.existsSync("./outputs/kids-dictionary/top2200-supp
 const ministry3000SupplementCode = fs.existsSync("./outputs/kids-dictionary/ministry3000-supplement.js")
   ? fs.readFileSync("./outputs/kids-dictionary/ministry3000-supplement.js", "utf8")
   : "";
+const verifiedBankSupplementCode = fs.existsSync("./outputs/kids-dictionary/verified-bank-supplement.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/verified-bank-supplement.js", "utf8")
+  : "window.verifiedBankSupplement = {};";
+const verifiedMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/verified-meaning-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/verified-meaning-overrides.js", "utf8")
+  : "window.verifiedMeaningOverrides = {};";
+const manualMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-meaning-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-meaning-overrides.js", "utf8")
+  : "";
 
 const context = {
   console,
@@ -72,6 +81,9 @@ vm.runInContext(supplementCode, context);
 vm.runInContext(supplement2000Code, context);
 vm.runInContext(supplement2200Code, context);
 vm.runInContext(ministry3000SupplementCode, context);
+vm.runInContext(verifiedBankSupplementCode, context);
+vm.runInContext(verifiedMeaningOverridesCode, context);
+vm.runInContext(manualMeaningOverridesCode, context);
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
 const cases = [
@@ -132,6 +144,13 @@ const cases = [
   ["neighborhood", "neighborhood", "영한 기본어"],
   ["\uc774\uc6c3", "neighbor", "한영 기본어"],
   ["\ub3d9\ub124", "neighborhood", "한영 기본어"],
+  ["\uc0b0\ucd9c\ubb3c", "deliverable", "한영 수동 보정어"],
+  ["\ucca8\ubd80", "attachment", "한영 수동 보정어"],
+  ["\uc218\uc2e0\uc790", "recipient", "한영 수동 보정어"],
+  ["\ubc1c\uc2e0\uc790", "sender", "한영 수동 보정어"],
+  ["\ub85c\ub4dc\ub9f5", "roadmap", "한영 수동 보정어"],
+  ["\uc628\ubcf4\ub529", "onboarding", "한영 수동 보정어"],
+  ["\ud1f4\uc0ac \uc808\ucc28", "offboarding", "한영 수동 보정어"],
   [" SCHOOL ", "school", "영한 공백/대소문자"],
   ["Apple", "apple", "영한 공백/대소문자"],
   ["책상", "desk", "한영 기본어"],
@@ -244,6 +263,28 @@ const qualityResults = qualityWords.map((word) => {
   };
 });
 const qualityFailed = qualityResults.filter((result) => !result.pass);
+const meaningChecks = [
+  ["deliverable", "산출물"],
+  ["attachment", "첨부 파일"],
+  ["timeline", "일정표"],
+  ["roadmap", "로드맵"],
+  ["onboarding", "온보딩"],
+  ["offboarding", "오프보딩"],
+  ["reimbursement", "비용 환급"],
+  ["viewer", "시청자"],
+  ["appearance", "외모"],
+  ["dental", "치과의"],
+];
+const meaningResults = meaningChecks.map(([word, expected]) => {
+  const entry = context.findWord(word);
+  return {
+    word,
+    expected,
+    actual: entry?.korean ?? null,
+    pass: typeof entry?.korean === "string" && entry.korean.includes(expected),
+  };
+});
+const meaningFailed = meaningResults.filter((result) => !result.pass);
 context.renderResult(context.findWord("world"));
 const worldHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("gold"));
@@ -290,6 +331,7 @@ console.log(
       autocomplete: { total: autocompleteResults.length, failed: autocompleteFailed.length, results: autocompleteResults },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
+      meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
       render: { total: renderChecks.length, failed: renderFailed.length, results: renderChecks },
       related: { total: relatedResults.length, failed: relatedFailed.length, results: relatedResults },
     },
@@ -297,6 +339,14 @@ console.log(
     2
   )
 );
-if (failed.length > 0 || autocompleteFailed.length > 0 || senseFailed.length > 0 || qualityFailed.length > 0 || renderFailed.length > 0 || relatedFailed.length > 0) {
+if (
+  failed.length > 0 ||
+  autocompleteFailed.length > 0 ||
+  senseFailed.length > 0 ||
+  qualityFailed.length > 0 ||
+  meaningFailed.length > 0 ||
+  renderFailed.length > 0 ||
+  relatedFailed.length > 0
+) {
   process.exitCode = 1;
 }

@@ -18,6 +18,7 @@ const FILES = [
   "ministry3000-supplement.js",
   "verified-bank-supplement.js",
   "verified-meaning-overrides.js",
+  "manual-meaning-overrides.js",
   "manifest.json",
   "service-worker.js",
   "icon.svg",

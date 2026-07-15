@@ -58,6 +58,15 @@ const context = {
 };
 
 vm.createContext(context);
+if (fs.existsSync("./outputs/kids-dictionary/verified-bank-supplement.js")) {
+  vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/verified-bank-supplement.js", "utf8"), context);
+}
+if (fs.existsSync("./outputs/kids-dictionary/verified-meaning-overrides.js")) {
+  vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/verified-meaning-overrides.js", "utf8"), context);
+}
+if (fs.existsSync("./outputs/kids-dictionary/manual-meaning-overrides.js")) {
+  vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/manual-meaning-overrides.js", "utf8"), context);
+}
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
 (async () => {
