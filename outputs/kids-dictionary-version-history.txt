@@ -861,3 +861,28 @@ Level 4까지 외부 기준 검증:
 메모:
 - 이제 자동 생성 검수 파일이 다시 만들어져도 manual-meaning-overrides.js 가 마지막에 적용되어 핵심 단어 품질이 유지됩니다.
 - GitHub 에는 검증 리포트가 아니라 실제 앱 수정 내용만 반영하면 됩니다.
+버전: v49
+작성일: 2026-07-15
+코드/파일 위치:
+- outputs/kids-dictionary-versions/v49/
+- outputs/kids-dictionary/
+- outputs/kids-dictionary-release/
+- docs/
+- work/test-search.cjs
+- work/test-word-info.cjs
+
+주요 변경 내용:
+- 보류 38개 단어를 manual-excluded-words.js 로 분리해 앱에서 완전 제외했습니다.
+- 제외 단어는 검색 결과, 자동완성, 전체 단어 목록에서 모두 나오지 않도록 처리했습니다.
+- 최근 본 단어와 즐겨찾기에도 제외 단어가 남아 있으면 자동으로 정리되도록 보강했습니다.
+- 제외 단어를 영어로 정확히 입력했을 때 비슷한 다른 단어로 잘못 연결되지 않도록 검색 예외 처리를 추가했습니다.
+- service-worker 캐시 버전을 v49로 올리고 제외 단어 파일도 릴리스/배포본에 포함되도록 수정했습니다.
+- 테스트 스크립트에 제외 단어 검증을 추가해 cialis, href, findlaw, disclaimers 가 검색/자동완성에서 빠지는지 확인하도록 보강했습니다.
+
+검증 결과:
+- node work/test-search.cjs 통과
+- node work/test-word-info.cjs 통과
+- node work/build-kids-dictionary-github-pages.cjs 실행 완료
+
+메모:
+- 이번 보류 38개는 일반 영어 학습 단어보다 상품명, 약어, 사이트명, 기술 토큰 성격이 강해서 앱 품질을 위해 완전 제외 처리했습니다.

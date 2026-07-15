@@ -19,6 +19,7 @@ const FILES = [
   "verified-bank-supplement.js",
   "verified-meaning-overrides.js",
   "manual-meaning-overrides.js",
+  "manual-excluded-words.js",
   "manifest.json",
   "service-worker.js",
   "icon.svg",

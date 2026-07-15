@@ -45,6 +45,9 @@ const verifiedMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/ve
 const manualMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-meaning-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-meaning-overrides.js", "utf8")
   : "";
+const manualExcludedWordsCode = fs.existsSync("./outputs/kids-dictionary/manual-excluded-words.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-excluded-words.js", "utf8")
+  : "window.excludedDictionaryWords = [];";
 
 const context = {
   console,
@@ -84,6 +87,7 @@ vm.runInContext(ministry3000SupplementCode, context);
 vm.runInContext(verifiedBankSupplementCode, context);
 vm.runInContext(verifiedMeaningOverridesCode, context);
 vm.runInContext(manualMeaningOverridesCode, context);
+vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
 const cases = [
@@ -221,6 +225,18 @@ const autocompleteResults = autocompleteCases.map(([query, expected]) => {
   return { query, expected, words: words.slice(0, 5), pass: words.includes(expected) };
 });
 const autocompleteFailed = autocompleteResults.filter((result) => !result.pass);
+const excludedWords = ["cialis", "href", "findlaw", "disclaimers"];
+const excludedResults = excludedWords.map((word) => {
+  const actual = context.findWord(word)?.word ?? null;
+  return { word, actual, pass: actual === null };
+});
+const excludedAutocompleteWords = context.getAutocompleteWords("ci").map((entry) => entry.word);
+const excludedAutocompleteResult = {
+  word: "cialis-autocomplete",
+  actual: excludedAutocompleteWords.includes("cialis") ? "cialis" : null,
+  pass: !excludedAutocompleteWords.includes("cialis"),
+};
+const excludedFailed = [...excludedResults.filter((result) => !result.pass), ...(excludedAutocompleteResult.pass ? [] : [excludedAutocompleteResult])];
 const runEntry = context.findWord("run");
 const senseChecks = [
   {
@@ -329,6 +345,7 @@ console.log(
     {
       search: { total: results.length, failed: failed.length, results },
       autocomplete: { total: autocompleteResults.length, failed: autocompleteFailed.length, results: autocompleteResults },
+      excluded: { total: excludedResults.length + 1, failed: excludedFailed.length, results: [...excludedResults, excludedAutocompleteResult] },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
@@ -342,6 +359,7 @@ console.log(
 if (
   failed.length > 0 ||
   autocompleteFailed.length > 0 ||
+  excludedFailed.length > 0 ||
   senseFailed.length > 0 ||
   qualityFailed.length > 0 ||
   meaningFailed.length > 0 ||

@@ -1717,6 +1717,18 @@ dictionary.forEach((entry) => {
   }
 });
 
+const excludedDictionaryWords = new Set(
+  (window.excludedDictionaryWords ?? [])
+    .map((word) => String(word).trim().toLowerCase())
+    .filter(Boolean)
+);
+
+if (excludedDictionaryWords.size) {
+  const filteredDictionary = dictionary.filter((entry) => !excludedDictionaryWords.has(entry.word.toLowerCase()));
+  dictionary.length = 0;
+  dictionary.push(...filteredDictionary);
+}
+
 const searchInput = document.querySelector("#searchInput");
 const searchButton = document.querySelector("#searchButton");
 const resultPanel = document.querySelector("#resultPanel");
@@ -1732,8 +1744,10 @@ const quizFeedback = document.querySelector("#quizFeedback");
 let activeTab = "recent";
 let selectedWord = getTodayWord();
 let quizWord = null;
-let recentWords = loadList("kidsDictionaryRecent");
-let favoriteWords = loadList("kidsDictionaryFavorites");
+let recentWords = sanitizeStoredWords(loadList("kidsDictionaryRecent"));
+let favoriteWords = sanitizeStoredWords(loadList("kidsDictionaryFavorites"));
+saveList("kidsDictionaryRecent", recentWords);
+saveList("kidsDictionaryFavorites", favoriteWords);
 const pronunciationAudioCache = new Map();
 const externalWordInfoCache = new Map();
 const preferredKoreanSearchMap = {
@@ -1856,6 +1870,10 @@ function normalize(text) {
   return text.trim().toLowerCase();
 }
 
+function sanitizeStoredWords(words) {
+  return words.filter((word) => !excludedDictionaryWords.has(normalize(String(word))));
+}
+
 function getTodayWord() {
   const now = new Date();
   const month = String(now.getMonth() + 1).padStart(2, "0");
@@ -1964,6 +1982,9 @@ function findWord(query) {
   const cleanQuery = normalize(query);
   const rawQuery = query.trim();
   if (!cleanQuery) {
+    return null;
+  }
+  if (excludedDictionaryWords.has(cleanQuery)) {
     return null;
   }
 
