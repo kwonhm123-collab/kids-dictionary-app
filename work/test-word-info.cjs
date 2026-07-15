@@ -67,6 +67,12 @@ if (fs.existsSync("./outputs/kids-dictionary/verified-meaning-overrides.js")) {
 if (fs.existsSync("./outputs/kids-dictionary/manual-meaning-overrides.js")) {
   vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/manual-meaning-overrides.js", "utf8"), context);
 }
+if (fs.existsSync("./outputs/kids-dictionary/manual-extra-overrides.js")) {
+  vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/manual-extra-overrides.js", "utf8"), context);
+}
+if (fs.existsSync("./outputs/kids-dictionary/manual-middle-school-additions.js")) {
+  vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-additions.js", "utf8"), context);
+}
 if (fs.existsSync("./outputs/kids-dictionary/manual-excluded-words.js")) {
   vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/manual-excluded-words.js", "utf8"), context);
 }

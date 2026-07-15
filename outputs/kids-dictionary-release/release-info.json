@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T11:59:34.967Z",
+  "generatedAt": "2026-07-15T14:55:20.928Z",
   "sourceDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary",
   "releaseDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary-release",
   "files": [
@@ -14,6 +14,8 @@
     "verified-bank-supplement.js",
     "verified-meaning-overrides.js",
     "manual-meaning-overrides.js",
+    "manual-extra-overrides.js",
+    "manual-middle-school-additions.js",
     "manual-excluded-words.js",
     "manifest.json",
     "service-worker.js",

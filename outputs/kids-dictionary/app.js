@@ -1529,6 +1529,7 @@ const top1000SupplementMeanings = window.top1000SupplementMeanings ?? {};
 const ministry3000Supplement = window.ministry3000Supplement ?? {};
 const verifiedBankSupplement = window.verifiedBankSupplement ?? {};
 const verifiedMeaningOverrides = window.verifiedMeaningOverrides ?? {};
+const manualDictionaryAdditions = Array.isArray(window.manualDictionaryAdditions) ? window.manualDictionaryAdditions : [];
 const knownTop1000SupplementWords = new Set(dictionary.map((entry) => entry.word.toLowerCase()));
 
 const remainingBankPriorityMeanings = {
@@ -1561,6 +1562,25 @@ function buildKeywordsFromKorean(korean) {
     .map((item) => item.trim())
     .filter((item) => /[가-힣]/.test(item))
     .slice(0, 8);
+}
+
+function normalizeManualPart(part) {
+  switch (String(part || "").trim().toLowerCase()) {
+    case "n":
+      return "\uBA85\uC0AC";
+    case "v":
+      return "\uB3D9\uC0AC";
+    case "adj":
+      return "\uD615\uC6A9\uC0AC";
+    case "adv":
+      return "\uBD80\uC0AC";
+    case "prep":
+      return "\uC804\uCE58\uC0AC";
+    case "propn":
+      return "\uACE0\uC720\uBA85\uC0AC";
+    default:
+      return String(part || "\uC5B4\uD718");
+  }
 }
 
 function getBaseMeaning(word) {
@@ -1701,6 +1721,46 @@ dictionary.push(
     })
 );
 
+if (manualDictionaryAdditions.length) {
+  const existingManualWords = new Set(dictionary.map((entry) => entry.word.toLowerCase()));
+  const normalizedManualEntries = manualDictionaryAdditions
+    .filter((item) => Array.isArray(item) && item.length >= 3)
+    .map(([word, korean, part]) => {
+      const normalizedWord = String(word || "").trim();
+      const normalizedKorean = String(korean || "").trim();
+      if (!normalizedWord || !normalizedKorean) {
+        return null;
+      }
+
+      return {
+        word: normalizedWord,
+        pronunciation: normalizedWord,
+        korean: normalizedKorean,
+        part: normalizeManualPart(part),
+        category: "\uC911\uB4F1 1500 \uBCF4\uAC15",
+        level: 2,
+        definition: `\uC911\uB4F1 \uD544\uC218 \uB2E8\uC5B4 \uBCF4\uAC15 \uD56D\uBAA9\uC774\uC5D0\uC694. \uB73B\uC740 '${normalizedKorean}'\uC785\uB2C8\uB2E4.`,
+        keywords: buildKeywordsFromKorean(normalizedKorean),
+        examples: [
+          [`I studied the word "${normalizedWord}".`, `\uB098\uB294 '${normalizedWord}' \uB2E8\uC5B4\uB97C \uACF5\uBD80\uD588\uC5B4\uC694.`],
+          [`"${normalizedWord}" is in the middle school list.`, `'${normalizedWord}'\uB294 \uC911\uB4F1 \uB2E8\uC5B4 \uBAA9\uB85D\uC5D0 \uB4E4\uC5B4 \uC788\uC5B4\uC694.`],
+        ],
+        structure: wordStructureNotes[normalizedWord] ?? null,
+      };
+    })
+    .filter(Boolean)
+    .filter((entry) => {
+      const lowerWord = entry.word.toLowerCase();
+      if (existingManualWords.has(lowerWord)) {
+        return false;
+      }
+      existingManualWords.add(lowerWord);
+      return true;
+    });
+
+  dictionary.push(...normalizedManualEntries);
+}
+
 const VERIFIED_MEANING_PREFIX = "\uAC80\uC99D \uBC18\uC601 \uB73B\uC740 '";
 const VERIFIED_MEANING_SUFFIX = "'\uC785\uB2C8\uB2E4.";
 
@@ -1803,6 +1863,10 @@ const preferredKoreanSearchMap = {
   "확인하다": "confirm",
   "해결하다": "resolve",
   "인증": "authentication",
+  "\ub054\ucc0d\ud55c": "terrible",
+  "\ud615\ud3b8\uc5c6\ub294": "terrible",
+  "\uc54c\ud30c\ubcb3": "alphabet",
+  "\uc601\ub9ac\ud55c": "clever",
 };
 const localSynonyms = {
   appear: ["emerge", "show up", "seem"],
@@ -1823,6 +1887,7 @@ const localSynonyms = {
   strategy: ["plan", "approach"],
   confirm: ["verify", "check"],
   resolve: ["solve", "settle"],
+  terrible: ["awful", "horrible", "bad"],
   comforting: ["soothing", "reassuring", "encouraging"],
   locally: ["nearby", "in the area", "regionally"],
 };
@@ -2029,16 +2094,6 @@ function findWord(query) {
     return exactEnglishMatch;
   }
 
-  const startsWithEnglishMatch = dictionary.find((entry) => entry.word.toLowerCase().startsWith(cleanQuery));
-  if (startsWithEnglishMatch) {
-    return startsWithEnglishMatch;
-  }
-
-  const englishContainsMatch = dictionary.find((entry) => entry.word.toLowerCase().includes(cleanQuery));
-  if (englishContainsMatch) {
-    return englishContainsMatch;
-  }
-
   return null;
 }
 
@@ -2226,7 +2281,7 @@ function renderRelatedEntries(query, entry) {
         ${relatedEntries
           .map(
             (related) => `
-              <button class="related-word" type="button" data-related-word="${related.word}">
+              <button class="related-word" type="button" data-related-word="${escapeHtml(related.word)}">
                 <span>${escapeHtml(related.word)}</span>
                 <small>${escapeHtml(related.korean)}</small>
               </button>
@@ -2344,6 +2399,7 @@ function renderResult(entry, query = "") {
 
   const favoriteClass = isFavorite(entry.word) ? "favorite-on" : "";
   const favoriteLabel = isFavorite(entry.word) ? "★ 저장됨" : "☆ 저장";
+  const escapedWord = escapeHtml(entry.word);
   const structureHtml = entry.structure
     ? `
       <section class="structure-card" aria-label="단어 구조 설명">
@@ -2362,27 +2418,27 @@ function renderResult(entry, query = "") {
   resultPanel.innerHTML = `
     <div class="word-heading">
       <div>
-        <h2 class="word-title">${entry.word}</h2>
+        <h2 class="word-title">${escapedWord}</h2>
         ${renderFallbackPronunciation(entry)}
       </div>
-      <button class="icon-button" type="button" data-speak="${entry.word}" title="실제 발음 듣기" aria-label="${entry.word} 실제 발음 듣기">
+      <button class="icon-button" type="button" data-speak="${escapedWord}" title="실제 발음 듣기" aria-label="${escapedWord} 실제 발음 듣기">
         <span aria-hidden="true">▶</span>
       </button>
     </div>
     <div class="badge-row">
-      <span class="badge">${entry.part}</span>
-      <span class="badge category">${entry.category}</span>
+      <span class="badge">${escapeHtml(entry.part)}</span>
+      <span class="badge category">${escapeHtml(entry.category)}</span>
       <span class="badge level">Level ${entry.level}</span>
     </div>
-    <p class="meaning">${entry.korean}</p>
+    <p class="meaning">${escapeHtml(entry.korean)}</p>
     ${renderSenseList(entry)}
     ${renderInflectionDetails(entry)}
     ${renderSynonymSection(entry)}
     ${relatedHtml}
     ${structureHtml}
     <div class="actions">
-      <button class="primary-action" type="button" data-speak="${entry.word}">실제 발음 듣기</button>
-      <button class="primary-action ${favoriteClass}" type="button" data-favorite="${entry.word}">${favoriteLabel}</button>
+      <button class="primary-action" type="button" data-speak="${escapedWord}">실제 발음 듣기</button>
+      <button class="primary-action ${favoriteClass}" type="button" data-favorite="${escapedWord}">${favoriteLabel}</button>
     </div>
     <h3 class="examples-title">쉬운 예문</h3>
     <ul class="examples">
@@ -2390,10 +2446,10 @@ function renderResult(entry, query = "") {
         .map(
           ([english, korean]) => `
             <li class="example-card">
-              <strong>${english}</strong>
-              <span>${korean}</span>
+              <strong>${escapeHtml(english)}</strong>
+              <span>${escapeHtml(korean)}</span>
               <div class="example-actions">
-                <button class="example-speak" type="button" data-speak="${english}">예문 듣기</button>
+                <button class="example-speak" type="button" data-speak="${escapeHtml(english)}">예문 듣기</button>
               </div>
             </li>
           `

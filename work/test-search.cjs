@@ -45,6 +45,12 @@ const verifiedMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/ve
 const manualMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-meaning-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-meaning-overrides.js", "utf8")
   : "";
+const manualExtraOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-extra-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-extra-overrides.js", "utf8")
+  : "";
+const manualMiddleSchoolAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-middle-school-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-additions.js", "utf8")
+  : "window.manualDictionaryAdditions = [];";
 const manualExcludedWordsCode = fs.existsSync("./outputs/kids-dictionary/manual-excluded-words.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-excluded-words.js", "utf8")
   : "window.excludedDictionaryWords = [];";
@@ -87,6 +93,8 @@ vm.runInContext(ministry3000SupplementCode, context);
 vm.runInContext(verifiedBankSupplementCode, context);
 vm.runInContext(verifiedMeaningOverridesCode, context);
 vm.runInContext(manualMeaningOverridesCode, context);
+vm.runInContext(manualExtraOverridesCode, context);
+vm.runInContext(manualMiddleSchoolAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
@@ -136,6 +144,25 @@ const cases = [
   ["government", "government", "영한 기본어"],
   ["gold", "gold", "영한 기본어"],
   ["golden", "golden", "영한 기본어"],
+  ["terrible", "terrible", "영한 고등어"],
+  ["acquaintance", "acquaintance", "영한 중등 1500 보강"],
+  ["alphabet", "alphabet", "영한 중등 1500 보강"],
+  ["ambulance", "ambulance", "영한 중등 1500 보강"],
+  ["amnesia", "amnesia", "영한 중등 1500 보강"],
+  ["ankle", "ankle", "영한 중등 1500 보강"],
+  ["applause", "applause", "영한 중등 1500 보강"],
+  ["appoint", "appoint", "영한 중등 1500 보강"],
+  ["apprentice", "apprentice", "영한 중등 1500 보강"],
+  ["astronaut", "astronaut", "영한 중등 1500 보강"],
+  ["awful", "awful", "영한 중등 1500 보강"],
+  ["bacon", "bacon", "영한 중등 1500 보강"],
+  ["clever", "clever", "영한 중등 1500 보강"],
+  ["daisy", "daisy", "영한 중등 1500 보강"],
+  ["dolphin", "dolphin", "영한 중등 1500 보강"],
+  ["refrigerator", "refrigerator", "영한 중등 1500 보강"],
+  ["watermelon", "watermelon", "영한 중등 1500 보강"],
+  ["yogurt", "yogurt", "영한 중등 1500 보강"],
+  ["zebra", "zebra", "영한 중등 1500 보강"],
   ["appear", "appear", "영한 고등어"],
   ["disappear", "disappear", "영한 구조어"],
   ["deadline", "deadline", "영한 업무어"],
@@ -155,6 +182,21 @@ const cases = [
   ["\ub85c\ub4dc\ub9f5", "roadmap", "한영 수동 보정어"],
   ["\uc628\ubcf4\ub529", "onboarding", "한영 수동 보정어"],
   ["\ud1f4\uc0ac \uc808\ucc28", "offboarding", "한영 수동 보정어"],
+  ["\ub054\ucc0d\ud55c", "terrible", "한영 수동 보정어"],
+  ["\uc544\ub294 \uc0ac\ub78c", "acquaintance", "한영 중등 1500 보강"],
+  ["\uc54c\ud30c\ubcb3", "alphabet", "한영 중등 1500 보강"],
+  ["\uad6c\uae09\ucc28", "ambulance", "한영 중등 1500 보강"],
+  ["\ubc1c\ubaa9", "ankle", "한영 중등 1500 보강"],
+  ["\ubc15\uc218", "applause", "한영 중등 1500 보강"],
+  ["\uc6b0\uc8fc\ube44\ud589\uc0ac", "astronaut", "한영 중등 1500 보강"],
+  ["\ubca0\uc774\ucee8", "bacon", "한영 중등 1500 보강"],
+  ["\uc601\ub9ac\ud55c", "clever", "한영 중등 1500 보강"],
+  ["\ub9c8\ub298", "garlic", "한영 중등 1500 보강"],
+  ["\ucf54\ub07c\ub9ac", "elephant", "한영 중등 1500 보강"],
+  ["\ub0c9\uc7a5\uace0", "refrigerator", "한영 중등 1500 보강"],
+  ["\uc218\ubc15", "watermelon", "한영 중등 1500 보강"],
+  ["\uc694\uad6c\ub974\ud2b8", "yogurt", "한영 중등 1500 보강"],
+  ["\uc5bc\ub8e9\ub9d0", "zebra", "한영 중등 1500 보강"],
   [" SCHOOL ", "school", "영한 공백/대소문자"],
   ["Apple", "apple", "영한 공백/대소문자"],
   ["책상", "desk", "한영 기본어"],
@@ -237,6 +279,12 @@ const excludedAutocompleteResult = {
   pass: !excludedAutocompleteWords.includes("cialis"),
 };
 const excludedFailed = [...excludedResults.filter((result) => !result.pass), ...(excludedAutocompleteResult.pass ? [] : [excludedAutocompleteResult])];
+const falsePositiveWords = ["zzqxword", "notarealword", "imaginaryentry", "donutshopx", "watermelonzz", "zebraword"];
+const falsePositiveResults = falsePositiveWords.map((word) => {
+  const actual = context.findWord(word)?.word ?? null;
+  return { word, actual, pass: actual === null };
+});
+const falsePositiveFailed = falsePositiveResults.filter((result) => !result.pass);
 const runEntry = context.findWord("run");
 const senseChecks = [
   {
@@ -290,6 +338,17 @@ const meaningChecks = [
   ["viewer", "시청자"],
   ["appearance", "외모"],
   ["dental", "치과의"],
+  ["terrible", "\ub054\ucc0d\ud55c"],
+  ["acquaintance", "\uc544\ub294 \uc0ac\ub78c"],
+  ["ambulance", "\uad6c\uae09\ucc28"],
+  ["ankle", "\ubc1c\ubaa9"],
+  ["appoint", "\uc9c0\uba85\ud558\ub2e4"],
+  ["apprentice", "\uacac\uc2b5\uc0dd"],
+  ["astronaut", "\uc6b0\uc8fc\ube44\ud589\uc0ac"],
+  ["awful", "\ub054\ucc0d\ud55c"],
+  ["garlic", "\ub9c8\ub298"],
+  ["refrigerator", "\ub0c9\uc7a5\uace0"],
+  ["watermelon", "\uc218\ubc15"],
 ];
 const meaningResults = meaningChecks.map(([word, expected]) => {
   const entry = context.findWord(word);
@@ -307,6 +366,8 @@ context.renderResult(context.findWord("gold"));
 const goldHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("golden"));
 const goldenHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("begin"));
+const beginHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const renderChecks = [
   {
     name: "world 화면 뜻 표시",
@@ -319,6 +380,12 @@ const renderChecks = [
   {
     name: "golden 화면 뜻 표시",
     pass: goldenHtml.includes("금빛의, 황금색의, 귀중한") && goldenHtml.includes("golden opportunity") && goldenHtml.includes("금빛"),
+  },
+  {
+    name: "begin 예문 따옴표 escape",
+    pass:
+      beginHtml.includes('I searched for &quot;begin&quot; in the dictionary.') &&
+      beginHtml.includes('data-speak="I searched for &quot;begin&quot; in the dictionary."'),
   },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);
@@ -346,6 +413,7 @@ console.log(
       search: { total: results.length, failed: failed.length, results },
       autocomplete: { total: autocompleteResults.length, failed: autocompleteFailed.length, results: autocompleteResults },
       excluded: { total: excludedResults.length + 1, failed: excludedFailed.length, results: [...excludedResults, excludedAutocompleteResult] },
+      falsePositives: { total: falsePositiveResults.length, failed: falsePositiveFailed.length, results: falsePositiveResults },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
