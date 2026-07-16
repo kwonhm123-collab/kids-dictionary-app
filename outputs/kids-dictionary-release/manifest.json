@@ -1,7 +1,7 @@
 {
-  "name": "학생 직장인 영어사전",
-  "short_name": "영어사전",
-  "description": "학생과 직장인이 사용할 수 있는 영어사전, 한영사전, 발음, 예문, 업무 영어 학습 앱",
+  "name": "유니유니 영어사전",
+  "short_name": "유니유니",
+  "description": "유니유니 영어사전, 한영사전, 발음, 예문, 업무 영어 학습이 가능한 앱",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

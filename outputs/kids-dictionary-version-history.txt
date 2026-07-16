@@ -1203,3 +1203,12 @@ ode work/test-search.cjs 전체 통과
 대표 반영 예시:
 - mask: 얼굴을 가리거나 보호하기 위한 마스크, 복면, 다른 얼굴 모습이 그려진 가면, 탈
 - category: 검증 완료 단어
+버전: v62
+작성일: 2026-07-16
+코드 저장 위치: outputs/kids-dictionary-versions/v62/
+
+주요 변경 내용:
+- 앱 대표 이름을 영어사전에서 유니유니 영어사전으로 변경했습니다.
+- 상단 타이틀 문구를 UNIUNI ENGLISH DICTIONARY V4로 변경했습니다.
+- 브라우저 제목과 설치용 manifest 이름도 유니유니 영어사전으로 맞췄습니다.
+- 서비스 워커 캐시 버전을 kids-dictionary-v62로 올려 휴대폰 설치 앱에 새 이름이 반영되도록 준비했습니다.
