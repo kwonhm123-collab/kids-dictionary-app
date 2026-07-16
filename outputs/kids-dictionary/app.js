@@ -1935,12 +1935,17 @@ const searchButton = document.querySelector("#searchButton");
 const resultPanel = document.querySelector("#resultPanel");
 const wordList = document.querySelector("#wordList");
 const tabs = document.querySelectorAll(".tab");
+const propertiesButton = document.querySelector("#propertiesButton");
 const clearAllButton = document.querySelector("#clearAllButton");
 const suggestions = document.querySelector("#suggestions");
 const nextQuizButton = document.querySelector("#nextQuizButton");
 const quizQuestion = document.querySelector("#quizQuestion");
 const quizOptions = document.querySelector("#quizOptions");
 const quizFeedback = document.querySelector("#quizFeedback");
+const propertiesModal = document.querySelector("#propertiesModal");
+const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
+const propertiesBody = document.querySelector("#propertiesBody");
+const APP_RELEASE_VERSION = "v63";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2242,6 +2247,7 @@ function findWord(query) {
 function rememberWord(word) {
   recentWords = [word, ...recentWords.filter((item) => item !== word)].slice(0, 12);
   saveList("kidsDictionaryRecent", recentWords);
+  refreshPropertiesModalIfOpen();
 }
 
 function isFavorite(word) {
@@ -2258,6 +2264,7 @@ function toggleFavorite(word) {
   saveList("kidsDictionaryFavorites", favoriteWords);
   renderResult(selectedWord);
   renderWordList();
+  refreshPropertiesModalIfOpen();
 }
 
 function isSingleEnglishWord(text) {
@@ -2634,6 +2641,266 @@ function renderWordList() {
     .join("");
 }
 
+function formatCount(value) {
+  return new Intl.NumberFormat("ko-KR").format(Number(value) || 0);
+}
+
+function getEditionLabel() {
+  const eyebrowText = document.querySelector(".top-bar .eyebrow")?.textContent ?? "";
+  return eyebrowText.match(/V\d+/i)?.[0] ?? "V4";
+}
+
+function buildAppStats() {
+  const byLevel = new Map([
+    [1, 0],
+    [2, 0],
+    [3, 0],
+    [4, 0],
+    [5, 0],
+  ]);
+  const byCategory = new Map();
+  let exampleCount = 0;
+  let pronunciationGuideCount = 0;
+  let structureCount = 0;
+
+  dictionary.forEach((entry) => {
+    const level = Number(entry.level || 0);
+    byLevel.set(level, (byLevel.get(level) ?? 0) + 1);
+    byCategory.set(entry.category, (byCategory.get(entry.category) ?? 0) + 1);
+    if (Array.isArray(entry.examples) && entry.examples.length) {
+      exampleCount += 1;
+    }
+    if (entry.pronunciation) {
+      pronunciationGuideCount += 1;
+    }
+    if (entry.structure) {
+      structureCount += 1;
+    }
+  });
+
+  const elementaryCount = (byLevel.get(1) ?? 0) + (byLevel.get(2) ?? 0);
+  const middleCount = byLevel.get(3) ?? 0;
+  const highCount = byLevel.get(4) ?? 0;
+  const workCount = byLevel.get(5) ?? 0;
+  const verifiedOverrideCount = Object.keys(verifiedMeaningOverrides).length;
+  const verifiedCategoryCount = byCategory.get("검증 완료 단어") ?? 0;
+
+  return {
+    totalWords: dictionary.length,
+    verifiedOverrideCount,
+    verifiedCategoryCount,
+    excludedCount: excludedDictionaryWords.size,
+    exampleCount,
+    pronunciationGuideCount,
+    structureCount,
+    recentCount: recentWords.length,
+    favoriteCount: favoriteWords.length,
+    selectedWord: selectedWord?.word ?? "-",
+    levelRows: [
+      ["초등 단계", elementaryCount, "Level 1-2"],
+      ["중등 단계", middleCount, "Level 3"],
+      ["고등 단계", highCount, "Level 4"],
+      ["실무 확장", workCount, "Level 5"],
+    ],
+    categoryRows: [
+      ["검증 완료 단어", verifiedCategoryCount],
+      ["어휘 뱅크 자동 보강", byCategory.get("어휘 뱅크 자동 보강") ?? 0],
+      ["상위 2200 보강", byCategory.get("상위 2200 보강") ?? 0],
+      ["중등 1500 보강", byCategory.get("중등 1500 보강") ?? 0],
+      ["고등 3000 보강", byCategory.get("고등 3000 보강") ?? 0],
+      ["고등 필수", byCategory.get("고등 필수") ?? 0],
+    ],
+    appRows: [
+      ["앱 이름", "유니유니 영어사전"],
+      ["에디션", getEditionLabel()],
+      ["배포 버전", APP_RELEASE_VERSION],
+      ["제외 단어", `${formatCount(excludedDictionaryWords.size)}개`],
+      ["오프라인 사용", typeof navigator !== "undefined" && "serviceWorker" in navigator ? "지원" : "미지원"],
+    ],
+  };
+}
+
+function renderSummaryRows(rows) {
+  return rows
+    .map(
+      ([name, count, helper = ""]) => `
+        <div class="summary-row">
+          <div class="summary-name">
+            ${escapeHtml(name)}
+            ${helper ? `<div class="stat-helper">${escapeHtml(helper)}</div>` : ""}
+          </div>
+          <div class="summary-count">${formatCount(count)}</div>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderMetaRows(rows) {
+  return rows
+    .map(
+      ([label, value]) => `
+        <div class="meta-row">
+          <div class="meta-label">${escapeHtml(label)}</div>
+          <div class="meta-value">${escapeHtml(value)}</div>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderPropertiesModal() {
+  if (!propertiesBody) {
+    return;
+  }
+
+  const stats = buildAppStats();
+  propertiesBody.innerHTML = `
+    <section class="properties-section" aria-label="요약 통계">
+      <h3>요약 통계</h3>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <p class="stat-label">전체 등록 단어</p>
+          <p class="stat-value">${formatCount(stats.totalWords)}</p>
+          <p class="stat-helper">현재 앱에 바로 검색 가능한 단어 수</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">네이버 검수 반영</p>
+          <p class="stat-value">${formatCount(stats.verifiedOverrideCount)}</p>
+          <p class="stat-helper">검수 뜻 보정이 연결된 단어 수</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">최근 찾아본 단어</p>
+          <p class="stat-value">${formatCount(stats.recentCount)}</p>
+          <p class="stat-helper">최근 검색 기록 저장 개수</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">즐겨찾기 단어</p>
+          <p class="stat-value">${formatCount(stats.favoriteCount)}</p>
+          <p class="stat-helper">다시 보고 싶은 단어 저장 개수</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="properties-section" aria-label="레벨별 단어 수">
+      <h3>레벨별 단어 수</h3>
+      <div class="stats-grid">
+        ${stats.levelRows
+          .map(
+            ([name, count, helper]) => `
+              <article class="stat-card level-card">
+                <p class="stat-label">${escapeHtml(name)}</p>
+                <p class="stat-value">${formatCount(count)}</p>
+                <p class="stat-helper">${escapeHtml(helper)}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <section class="properties-section" aria-label="단어 출처와 상태">
+      <h3>단어 출처와 상태</h3>
+      <div class="summary-list">
+        ${renderSummaryRows(stats.categoryRows)}
+      </div>
+    </section>
+
+    <section class="properties-section" aria-label="학습 기능 지원">
+      <h3>학습 기능 지원</h3>
+      <div class="summary-list">
+        ${renderSummaryRows([
+          ["예문 제공 단어", stats.exampleCount],
+          ["발음 안내 단어", stats.pronunciationGuideCount],
+          ["어근 설명 단어", stats.structureCount],
+        ])}
+      </div>
+    </section>
+
+    <section class="properties-section" aria-label="현재 사용 상태">
+      <h3>현재 사용 상태</h3>
+      <div class="meta-list">
+        ${renderMetaRows([
+          ["현재 선택 단어", stats.selectedWord],
+          ["최근 기록 저장", `${formatCount(stats.recentCount)}개`],
+          ["즐겨찾기 저장", `${formatCount(stats.favoriteCount)}개`],
+        ])}
+      </div>
+    </section>
+
+    <section class="properties-section" aria-label="앱 정보">
+      <h3>앱 정보</h3>
+      <div class="meta-list">
+        ${renderMetaRows(stats.appRows)}
+      </div>
+    </section>
+
+    <section class="properties-section" aria-label="기록 관리">
+      <h3>기록 관리</h3>
+      <div class="properties-actions">
+        <button class="secondary-action" type="button" data-properties-action="clear-recent">최근 기록 지우기</button>
+        <button class="secondary-action" type="button" data-properties-action="clear-favorites">즐겨찾기 지우기</button>
+      </div>
+    </section>
+  `;
+}
+
+function openPropertiesModal() {
+  if (!propertiesModal) {
+    return;
+  }
+
+  renderPropertiesModal();
+  propertiesModal.hidden = false;
+  document.body.classList.add("modal-open");
+  propertiesCloseButton?.focus();
+}
+
+function closePropertiesModal() {
+  if (!propertiesModal) {
+    return;
+  }
+
+  propertiesModal.hidden = true;
+  document.body.classList.remove("modal-open");
+  propertiesButton?.focus();
+}
+
+function refreshPropertiesModalIfOpen() {
+  if (propertiesModal && propertiesModal.hidden === false) {
+    renderPropertiesModal();
+  }
+}
+
+function clearRecentHistory() {
+  recentWords = [];
+  saveList("kidsDictionaryRecent", recentWords);
+  renderWordList();
+  renderSuggestions();
+  refreshPropertiesModalIfOpen();
+}
+
+function clearFavoriteWords() {
+  favoriteWords = [];
+  saveList("kidsDictionaryFavorites", favoriteWords);
+  renderResult(selectedWord, searchInput.value || selectedWord?.word || "");
+  renderWordList();
+  enrichWordDetails(selectedWord);
+  refreshPropertiesModalIfOpen();
+}
+
+function clearAllUsageData() {
+  recentWords = [];
+  favoriteWords = [];
+  saveList("kidsDictionaryRecent", recentWords);
+  saveList("kidsDictionaryFavorites", favoriteWords);
+  renderResult(selectedWord, searchInput.value || selectedWord?.word || "");
+  renderWordList();
+  renderSuggestions();
+  enrichWordDetails(selectedWord);
+  refreshPropertiesModalIfOpen();
+}
+
 function selectWord(entry, shouldRemember = true, sourceQuery = null) {
   if (!entry) {
     return;
@@ -2649,6 +2916,7 @@ function selectWord(entry, shouldRemember = true, sourceQuery = null) {
   renderWordList();
   renderSuggestions();
   enrichWordDetails(entry);
+  refreshPropertiesModalIfOpen();
 }
 
 function handleSearch() {
@@ -2769,15 +3037,38 @@ tabs.forEach((tab) => {
   });
 });
 
-clearAllButton.addEventListener("click", () => {
-  recentWords = [];
-  favoriteWords = [];
-  saveList("kidsDictionaryRecent", recentWords);
-  saveList("kidsDictionaryFavorites", favoriteWords);
-  renderResult(selectedWord);
-  renderWordList();
-  renderSuggestions();
+propertiesButton?.addEventListener("click", openPropertiesModal);
+propertiesCloseButton?.addEventListener("click", closePropertiesModal);
+
+propertiesModal?.addEventListener("click", (event) => {
+  if (event.target === propertiesModal) {
+    closePropertiesModal();
+    return;
+  }
+
+  const actionButton = event.target.closest("[data-properties-action]");
+  if (!actionButton) {
+    return;
+  }
+
+  if (actionButton.dataset.propertiesAction === "clear-recent") {
+    clearRecentHistory();
+  }
+
+  if (actionButton.dataset.propertiesAction === "clear-favorites") {
+    clearFavoriteWords();
+  }
 });
+
+if (typeof document.addEventListener === "function") {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && propertiesModal && !propertiesModal.hidden) {
+      closePropertiesModal();
+    }
+  });
+}
+
+clearAllButton.addEventListener("click", clearAllUsageData);
 
 selectWord(selectedWord, false);
 renderSuggestions();
