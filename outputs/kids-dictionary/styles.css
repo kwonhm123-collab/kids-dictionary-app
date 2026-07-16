@@ -647,6 +647,10 @@ input[type="search"]:focus {
   padding: 12px;
 }
 
+.modal-backdrop[hidden] {
+  display: none;
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
