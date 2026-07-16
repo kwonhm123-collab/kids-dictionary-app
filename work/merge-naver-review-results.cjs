@@ -89,13 +89,25 @@ function loadUpdates(file) {
   throw new Error("Update JSON must be an array or an object with rows.");
 }
 
-if (!fs.existsSync(MASTER_CSV)) {
-  throw new Error(`Missing ${MASTER_CSV}`);
+const extraArgs = process.argv.slice(2);
+const updateFile = extraArgs.find((arg) => !arg.startsWith("--"));
+if (!updateFile) {
+  throw new Error("Usage: node work/merge-naver-review-results.cjs <updates.json> [--master=...] [--batch-dir=...] [--batch-size=...]");
 }
 
-const updateFile = process.argv[2];
-if (!updateFile) {
-  throw new Error("Usage: node work/merge-naver-review-results.cjs <updates.json>");
+const masterArg = extraArgs.find((arg) => arg.startsWith("--master="));
+const batchDirArg = extraArgs.find((arg) => arg.startsWith("--batch-dir="));
+const batchSizeArg = extraArgs.find((arg) => arg.startsWith("--batch-size="));
+
+const masterCsv = masterArg ? path.resolve(ROOT, masterArg.slice("--master=".length)) : MASTER_CSV;
+const batchDir = batchDirArg ? path.resolve(ROOT, batchDirArg.slice("--batch-dir=".length)) : BATCH_DIR;
+const batchSize = batchSizeArg ? Number(batchSizeArg.slice("--batch-size=".length)) : BATCH_SIZE;
+
+if (!fs.existsSync(masterCsv)) {
+  throw new Error(`Missing ${masterCsv}`);
+}
+if (!Number.isFinite(batchSize) || batchSize < 1) {
+  throw new Error(`Invalid batch size: ${batchSizeArg}`);
 }
 
 const updatesPath = path.resolve(ROOT, updateFile);
@@ -103,7 +115,7 @@ if (!fs.existsSync(updatesPath)) {
   throw new Error(`Missing ${updatesPath}`);
 }
 
-const parsed = parseCsv(fs.readFileSync(MASTER_CSV, "utf8"));
+const parsed = parseCsv(fs.readFileSync(masterCsv, "utf8"));
 const updates = loadUpdates(updatesPath);
 const updateBySequence = new Map(
   updates
@@ -123,13 +135,15 @@ for (const row of parsed.rows) {
   changed += 1;
 }
 
-writeCsv(MASTER_CSV, parsed.header, parsed.rows);
+writeCsv(masterCsv, parsed.header, parsed.rows);
 
-for (let start = 0; start < parsed.rows.length; start += BATCH_SIZE) {
-  const batchRows = parsed.rows.slice(start, start + BATCH_SIZE);
-  const batchNo = Math.floor(start / BATCH_SIZE) + 1;
+fs.mkdirSync(batchDir, { recursive: true });
+
+for (let start = 0; start < parsed.rows.length; start += batchSize) {
+  const batchRows = parsed.rows.slice(start, start + batchSize);
+  const batchNo = Math.floor(start / batchSize) + 1;
   const batchFile = path.join(
-    BATCH_DIR,
+    batchDir,
     `naver-manual-review-all-batch-${String(batchNo).padStart(2, "0")}.csv`
   );
   writeCsv(batchFile, parsed.header, batchRows);
@@ -139,8 +153,8 @@ console.log(
   JSON.stringify(
     {
       updatedRows: changed,
-      masterCsv: MASTER_CSV,
-      batchDir: BATCH_DIR,
+      masterCsv,
+      batchDir,
       updateFile: updatesPath,
     },
     null,

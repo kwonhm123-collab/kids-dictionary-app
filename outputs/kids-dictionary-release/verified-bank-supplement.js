@@ -45,6 +45,10 @@ window.verifiedBankSupplement = Object.assign(
     "업적, 성취한 것",
     "단어"
   ],
+  "acquaintance": [
+    "아는 사람, 지인",
+    "명사"
+  ],
   "acres": [
     "방대한 물품",
     "단어"
@@ -99,6 +103,14 @@ window.verifiedBankSupplement = Object.assign(
   ],
   "affected": [
     "가장된, 꾸민",
+    "동사"
+  ],
+  "affection": [
+    "애정, 정음",
+    "명사"
+  ],
+  "affirm": [
+    "단언하다, 확인하다",
     "동사"
   ],
   "affordable": [
@@ -181,6 +193,18 @@ window.verifiedBankSupplement = Object.assign(
     "알고리즘",
     "단어"
   ],
+  "alibi": [
+    "알리바이, 부재 증명",
+    "명사"
+  ],
+  "align": [
+    "나란히[가지런히] 만들다, 일직선으로 하다, 나란[가지런]하다, (~에 맞춰) ~을 조정[조절]하다",
+    "동사"
+  ],
+  "alike": [
+    "비슷한, 닮은",
+    "형용사"
+  ],
   "alive": [
     "살아 있는",
     "단어"
@@ -189,45 +213,669 @@ window.verifiedBankSupplement = Object.assign(
     "남자 이름",
     "단어"
   ],
+  "alley": [
+    "골목",
+    "명사"
+  ],
   "alliance": [
     "동맹, 연합",
     "단어"
+  ],
+  "allocate": [
+    "할당하다",
+    "동사"
   ],
   "allocated": [
     "할당하다",
     "단어"
   ],
+  "allot": [
+    "배분하다, 할당하다",
+    "동사"
+  ],
+  "allowance": [
+    "용돈, 수당, 허용량",
+    "명사"
+  ],
+  "alloy": [
+    "합금",
+    "명사"
+  ],
+  "allude": [
+    "암시",
+    "동사"
+  ],
+  "allure": [
+    "매혹하다, 매력",
+    "동사"
+  ],
+  "ally": [
+    "동맹, 동맹국",
+    "명사"
+  ],
+  "almanac": [
+    "연감, 책력",
+    "명사"
+  ],
+  "almighty": [
+    "전능하신, 엄청난, 맙소사(놀람·분노를 나타낼 때)",
+    "형용사"
+  ],
+  "almond": [
+    "아몬드",
+    "명사"
+  ],
+  "alms": [
+    "구호금[품]",
+    "명사"
+  ],
+  "aloe": [
+    "알로에",
+    "명사"
+  ],
+  "aloft": [
+    "높이, 위에",
+    "부사"
+  ],
+  "aloof": [
+    "냉담한, 거리를 두는",
+    "형용사"
+  ],
+  "aloud": [
+    "소리 내어",
+    "부사"
+  ],
+  "alphabet": [
+    "알파벳",
+    "명사"
+  ],
+  "altar": [
+    "제단",
+    "명사"
+  ],
+  "alteration": [
+    "변경, 개정",
+    "명사"
+  ],
   "alternate": [
     "번갈아 생기는 나오는",
     "단어"
+  ],
+  "altitude": [
+    "고도",
+    "명사"
+  ],
+  "altogether": [
+    "완전히, 모두 합쳐",
+    "부사"
+  ],
+  "altruism": [
+    "이타주의",
+    "명사"
+  ],
+  "altruistic": [
+    "이타적인",
+    "형용사"
+  ],
+  "alum": [
+    "명반, 백반(염색이나 피혁 공업용 물질)",
+    "명사"
+  ],
+  "aluminium": [
+    "알루미늄",
+    "명사"
   ],
   "aluminum": [
     "U 미 화학 알루미늄 )",
     "단어"
   ],
+  "alumna": [
+    "여자 졸업생",
+    "명사"
+  ],
   "alumni": [
     "졸업생들",
     "단어"
+  ],
+  "alumnus": [
+    "남자 졸업생",
+    "명사"
+  ],
+  "amalgam": [
+    "혼합[결합]물, 아말감(흔히 치과에서 쓰는 수은과 다른 금속의 합금)",
+    "명사"
+  ],
+  "amalgamate": [
+    "합치다, 융합하다",
+    "동사"
+  ],
+  "amass": [
+    "모으다, 축적하다",
+    "동사"
+  ],
+  "amaze": [
+    "깜짝 놀라게 하다",
+    "동사"
+  ],
+  "amazed": [
+    "놀란",
+    "형용사"
+  ],
+  "amazement": [
+    "(대단한) 놀라움",
+    "명사"
   ],
   "amazing": [
     "놀라운",
     "단어"
   ],
+  "ambassador": [
+    "대사, 홍보대사",
+    "명사"
+  ],
+  "ambiance": [
+    "분위기",
+    "명사"
+  ],
+  "ambidextrous": [
+    "양손잡이의",
+    "형용사"
+  ],
+  "ambience": [
+    "분위기",
+    "명사"
+  ],
+  "ambient": [
+    "주위의, 둘러싼",
+    "형용사"
+  ],
+  "ambiguity": [
+    "모호함",
+    "명사"
+  ],
+  "ambitious": [
+    "야심 있는",
+    "형용사"
+  ],
+  "ambivalence": [
+    "양가적 감정, 양면성",
+    "명사"
+  ],
+  "ambivalent": [
+    "반대 감정이 병존하는, 애증이 엇갈리는",
+    "형용사"
+  ],
+  "amble": [
+    "천천히 걷다",
+    "동사"
+  ],
+  "amblyopia": [
+    "약시",
+    "명사"
+  ],
+  "ambo": [
+    "설교단, 강연대",
+    "명사"
+  ],
+  "ambrosia": [
+    "신들의 음식, 매우 맛있는 것",
+    "명사"
+  ],
+  "ambulance": [
+    "구급차",
+    "명사"
+  ],
+  "ambulate": [
+    "걷다, 보행하다",
+    "동사"
+  ],
+  "ambush": [
+    "매복, 기습",
+    "명사"
+  ],
   "amd": [
     "의학 의료 의",
     "단어"
+  ],
+  "ameba": [
+    "아메바",
+    "명사"
+  ],
+  "ameliorate": [
+    "개선하다, 향상시키다",
+    "동사"
+  ],
+  "amelioration": [
+    "개선, 향상",
+    "명사"
+  ],
+  "amen": [
+    "아멘",
+    "명사"
+  ],
+  "amenable": [
+    "말을 잘 듣는, …을 잘 받아들이는, (특정한 방식으로) 처리할 수 있는",
+    "형용사"
   ],
   "amended": [
     "개정 수정 하다",
     "단어"
   ],
+  "amends": [
+    "보상, 배상",
+    "명사"
+  ],
+  "amenity": [
+    "편의 시설, 쿠적함",
+    "명사"
+  ],
+  "americanism": [
+    "미국식 표현, 미국주의",
+    "명사"
+  ],
+  "americanize": [
+    "미국화하다",
+    "동사"
+  ],
+  "americium": [
+    "아메리슘",
+    "명사"
+  ],
+  "amethyst": [
+    "자수정",
+    "명사"
+  ],
+  "amiability": [
+    "상냥함, 붙임성",
+    "명사"
+  ],
+  "amiable": [
+    "상냥한, 붙임성 있는",
+    "형용사"
+  ],
+  "amicability": [
+    "우호, 화친, 친선, 친선 행위",
+    "명사"
+  ],
+  "amicable": [
+    "우호적인, 원만한",
+    "형용사"
+  ],
+  "amice": [
+    "개두포(蓋頭布) ), (옛날 승려의) 털모자, (프랑스 canon의) 왼팔 완장",
+    "명사"
+  ],
+  "amid": [
+    "(특히 흥분·공포심이 느껴지는) 가운데[중]에, …으로 에워싸인",
+    "전치사"
+  ],
+  "amidships": [
+    "배의 중앙부에",
+    "부사"
+  ],
+  "amidst": [
+    "(특히 흥분·공포심이 느껴지는) 가운데[중]에, …으로 에워싸인",
+    "전치사"
+  ],
+  "amine": [
+    "아민",
+    "명사"
+  ],
+  "amir": [
+    "(이슬람 국가의) 왕[통치자]",
+    "명사"
+  ],
+  "amiss": [
+    "잘못된",
+    "부사"
+  ],
+  "amity": [
+    "우호, 친선",
+    "명사"
+  ],
+  "ammeter": [
+    "전류계",
+    "명사"
+  ],
+  "ammonia": [
+    "암모니아",
+    "명사"
+  ],
+  "ammoniac": [
+    "암모니아의",
+    "형용사"
+  ],
+  "ammonic": [
+    "암모늄의",
+    "형용사"
+  ],
+  "ammonite": [
+    "암모나이트",
+    "명사"
+  ],
+  "ammunition": [
+    "탄약",
+    "명사"
+  ],
+  "amnesia": [
+    "기억 상실증",
+    "명사"
+  ],
+  "amnesty": [
+    "사면",
+    "명사"
+  ],
+  "amoeba": [
+    "아메바",
+    "명사"
+  ],
+  "amoebaean": [
+    "(문답체 시 따위) 상호 응답적인(alternately responsive)",
+    "형용사"
+  ],
+  "amok": [
+    "미친 듯이, 난폭하게",
+    "부사"
+  ],
+  "amontillado": [
+    "아몬틸라도 셰리주",
+    "명사"
+  ],
+  "amoral": [
+    "도덕 관념이 없는",
+    "형용사"
+  ],
+  "amorality": [
+    "비도덕성, 도덕 관념 없음",
+    "명사"
+  ],
+  "amorist": [
+    "호색꾼, 연애 문학 작가",
+    "명사"
+  ],
+  "amorous": [
+    "성관계를 원하는, 육욕적인 애정을 보이는",
+    "형용사"
+  ],
+  "amorphism": [
+    "무정형 상태",
+    "명사"
+  ],
+  "amorphous": [
+    "무정형의, 형태가 없는",
+    "형용사"
+  ],
+  "amortization": [
+    "상각, 분할 상환",
+    "명사"
+  ],
+  "amortize": [
+    "상각하다, 분할 상환하다",
+    "동사"
+  ],
+  "amour": [
+    "(비밀) 정사(情事), 통정(通情)",
+    "명사"
+  ],
+  "amoxicillin": [
+    "아목시실린 ((경구(經口) 페니실린))",
+    "명사"
+  ],
   "amp": [
     "암페어",
     "단어"
   ],
+  "amperage": [
+    "(암페어로 측정된) 전류의 세기, 암페어 수",
+    "명사"
+  ],
+  "ampere": [
+    "암페어",
+    "명사"
+  ],
+  "ampersand": [
+    "앰퍼샌드, & 기호",
+    "명사"
+  ],
+  "amphetamine": [
+    "암페타민",
+    "명사"
+  ],
+  "amphibia": [
+    "양서류",
+    "명사"
+  ],
+  "amphibian": [
+    "양서류의, 양서류 동물",
+    "형용사"
+  ],
+  "amphibious": [
+    "양서류의, 양면성의",
+    "형용사"
+  ],
+  "amphibiously": [
+    "수륙 양쪽에 속하여, 수륙 양용으로",
+    "부사"
+  ],
+  "amphitheater": [
+    "원형 극장, 원형 경기장",
+    "명사"
+  ],
+  "amphitheatre": [
+    "원형 극장, 원형 경기장",
+    "명사"
+  ],
+  "amphora": [
+    "암포라 항아리",
+    "명사"
+  ],
+  "ample": [
+    "충분한, 넓은",
+    "형용사"
+  ],
+  "ampleness": [
+    "풍부함, 넓음",
+    "명사"
+  ],
+  "amplification": [
+    "확대, 증폭",
+    "명사"
+  ],
+  "amplifier": [
+    "증폭기",
+    "명사"
+  ],
+  "amplify": [
+    "확대하다, 증폭하다",
+    "동사"
+  ],
+  "amplitude": [
+    "진폭",
+    "명사"
+  ],
+  "ampoule": [
+    "앰플(주사액이 든 작은 병)",
+    "명사"
+  ],
+  "ampule": [
+    "(주사약 따위의) 앰풀. (또는 ampoule, ampul)",
+    "명사"
+  ],
+  "ampulla": [
+    "(고대 로마의) 양손잡이가 달린 병, 단지, 성유(聖油)[성수] 그릇, 팽대부",
+    "명사"
+  ],
+  "amputate": [
+    "절단하다",
+    "동사"
+  ],
+  "amputation": [
+    "절단, 절제",
+    "명사"
+  ],
+  "amputee": [
+    "절단 환자",
+    "명사"
+  ],
   "amsterdam": [
     "암스테르담 )",
     "단어"
+  ],
+  "amuck": [
+    "난폭하게, 미친 듯이",
+    "부사"
+  ],
+  "amulet": [
+    "부적, 호신부",
+    "명사"
+  ],
+  "amuse": [
+    "재미있게 하다",
+    "동사"
+  ],
+  "amusement": [
+    "즐거움, 오락",
+    "명사"
+  ],
+  "amusing": [
+    "재미있는",
+    "형용사"
+  ],
+  "amusingly": [
+    "재미나게, [문장을 수식하여] 재미있는 것은",
+    "부사"
+  ],
+  "amygdala": [
+    "편도체",
+    "명사"
+  ],
+  "amyl": [
+    "아밀 기",
+    "명사"
+  ],
+  "amylose": [
+    "아밀로오스 ((녹말의 주성분인 다당류))",
+    "명사"
+  ],
+  "ana": [
+    "어록, 일화집, [pl.] 소화(小話), 일화(anecdote)",
+    "명사"
+  ],
+  "anabasis": [
+    "원정, 진군",
+    "명사"
+  ],
+  "anabatic": [
+    "상승 기류의[로 생기는](opp. katabatic)",
+    "형용사"
+  ],
+  "anabena": [
+    "(채소) daikon, white radish, (비유적)",
+    "명사"
+  ],
+  "anabolic": [
+    "동화 작용의",
+    "형용사"
+  ],
+  "anabolism": [
+    "동화 작용",
+    "명사"
+  ],
+  "anachronism": [
+    "시대착오",
+    "명사"
+  ],
+  "anachronistic": [
+    "시대착오의",
+    "형용사"
+  ],
+  "anachronistically": [
+    "시대 착오적으로, 시대에 맞지 않게",
+    "부사"
+  ],
+  "anachrony": [
+    "시간교란",
+    "명사"
+  ],
+  "anaconda": [
+    "아나콘다",
+    "명사"
+  ],
+  "anacreon": [
+    "아나크레온",
+    "명사"
+  ],
+  "anacreontic": [
+    "아나크레온의, 주정 시의",
+    "형용사"
+  ],
+  "anacrusis": [
+    "여음, 업박",
+    "명사"
+  ],
+  "anadem": [
+    "꽃관, 화관",
+    "명사"
+  ],
+  "anadiplosis": [
+    "전사반복(前辭反復) ((앞글의 중요어, 특히 끝말을 다음 글 앞에서 반복하기))",
+    "명사"
+  ],
+  "anaglyph": [
+    "얕은 돋을새김 장식(품), [광학] 입체 사진",
+    "명사"
+  ],
+  "anaglypta": [
+    "부조 무늬 벽지",
+    "명사"
+  ],
+  "anagogic": [
+    "신비적 해석의",
+    "형용사"
+  ],
+  "anagogical": [
+    "영적",
+    "형용사"
+  ],
+  "anagogically": [
+    "신비적으로",
+    "부사"
+  ],
+  "anagogy": [
+    "신비적 해석, 영적 해석",
+    "명사"
+  ],
+  "anagram": [
+    "철자 순서를 바꾼 말",
+    "명사"
+  ],
+  "anagrammatic": [
+    "어구의 철자 바꾸기(놀이)의, 철자를 바꾼 어구의",
+    "형용사"
+  ],
+  "anagrammatical": [
+    "어구의 철자 바꾸기(놀이)의, 철자를 바꾼 어구의",
+    "형용사"
+  ],
+  "anagrammatically": [
+    "철자 순서를 바꾸어, 철자 순서를 바꾼 어구로",
+    "부사"
+  ],
+  "anagrammatism": [
+    "어구의 철자 바꾸기",
+    "명사"
+  ],
+  "anagrammatist": [
+    "글자 수수께끼 고안[제작]자",
+    "명사"
+  ],
+  "anagrammatize": [
+    "바꾸어 다른 말로 만들다",
+    "동사"
+  ],
+  "anagrams": [
+    "문자 수수께끼",
+    "명사"
   ],
   "analog": [
     "유사의, 상사형 의",
@@ -249,6 +897,18 @@ window.verifiedBankSupplement = Object.assign(
     "남자 이름 )",
     "단어"
   ],
+  "anecdote": [
+    "일화, 짧은 이야기",
+    "명사"
+  ],
+  "anemia": [
+    "빈혈",
+    "명사"
+  ],
+  "anesthetic": [
+    "마취제, 마취의",
+    "명사"
+  ],
   "angel": [
     "천사",
     "단어"
@@ -261,9 +921,21 @@ window.verifiedBankSupplement = Object.assign(
     "각도, 각",
     "단어"
   ],
+  "angst": [
+    "불안, 고민",
+    "명사"
+  ],
+  "anguish": [
+    "극심한 고통, 괴로움",
+    "명사"
+  ],
   "animation": [
     "생기, 활기",
     "단어"
+  ],
+  "ankle": [
+    "발목",
+    "명사"
   ],
   "anna": [
     "형",
@@ -285,9 +957,61 @@ window.verifiedBankSupplement = Object.assign(
     "발표 , 소식",
     "단어"
   ],
+  "annoyance": [
+    "짜증, 귀찮음",
+    "명사"
+  ],
+  "annuity": [
+    "연금, 연금 보험",
+    "명사"
+  ],
+  "anode": [
+    "양극",
+    "명사"
+  ],
+  "anomaly": [
+    "변칙, 이례",
+    "명사"
+  ],
+  "ant": [
+    "개미",
+    "명사"
+  ],
+  "antagonism": [
+    "적대, 대립",
+    "명사"
+  ],
+  "antagonist": [
+    "적대자 (= opponent )",
+    "명사"
+  ],
+  "antarctica": [
+    "남극",
+    "명사"
+  ],
+  "antelope": [
+    "영양, 영노루",
+    "명사"
+  ],
+  "anthem": [
+    "(국가·단체 등에 중요한 의미가 있는) 노래[–가], (흔히 오르간 반주에 맞춰 부르는) 성가[찬송가]",
+    "명사"
+  ],
+  "anthology": [
+    "선집, 선시집",
+    "명사"
+  ],
   "anthony": [
     "남자 이름 )",
     "단어"
+  ],
+  "anticipation": [
+    "기대, 예상",
+    "명사"
+  ],
+  "antidote": [
+    "해독제",
+    "명사"
   ],
   "antique": [
     "골동품인",
@@ -297,9 +1021,17 @@ window.verifiedBankSupplement = Object.assign(
     "가치가 큰 골동품",
     "단어"
   ],
+  "antiquity": [
+    "고대, 고대 문물",
+    "명사"
+  ],
   "antonio": [
     "남자 이름",
     "단어"
+  ],
+  "anvil": [
+    "모루",
+    "명사"
   ],
   "anytime": [
     "언제든지 )",
@@ -325,9 +1057,45 @@ window.verifiedBankSupplement = Object.assign(
     "떨어져",
     "단어"
   ],
+  "apathy": [
+    "무관심, 무기력",
+    "명사"
+  ],
+  "apex": [
+    "정점, 절정",
+    "명사"
+  ],
+  "apostle": [
+    "사도",
+    "명사"
+  ],
+  "appall": [
+    "오싹하게[질겁하게] 하다, 질리게 하다(terrify)",
+    "동사"
+  ],
+  "apparatus": [
+    "장치, 기관",
+    "명사"
+  ],
   "apparently": [
     "듣자 보아 하니",
     "단어"
+  ],
+  "appease": [
+    "달래다, 진정시키다",
+    "동사"
+  ],
+  "appellant": [
+    "항소인",
+    "명사"
+  ],
+  "append": [
+    "덧붙이다, 첨부하다",
+    "동사"
+  ],
+  "applause": [
+    "박수, 찬채",
+    "명사"
   ],
   "appliances": [
     "가전 제품",
@@ -337,21 +1105,157 @@ window.verifiedBankSupplement = Object.assign(
     "지원자",
     "단어"
   ],
+  "appoint": [
+    "지명하다, 임명하다",
+    "동사"
+  ],
   "appointed": [
     "정해진, 지정된",
     "단어"
+  ],
+  "appraise": [
+    "감정하다, 평가하다",
+    "동사"
+  ],
+  "apprehend": [
+    "체포하다, 이해하다",
+    "동사"
+  ],
+  "apprehension": [
+    "염려, 불안",
+    "명사"
+  ],
+  "apprentice": [
+    "도제, 견습생",
+    "명사"
+  ],
+  "apprenticeship": [
+    "견습 기간, 수습",
+    "명사"
+  ],
+  "apprise": [
+    "알리다, 통지하다",
+    "동사"
   ],
   "approaches": [
     "다가가다 오다",
     "단어"
   ],
+  "approbation": [
+    "칭찬, 승인",
+    "명사"
+  ],
+  "appropriation": [
+    "전용, 충당",
+    "명사"
+  ],
+  "approximation": [
+    "근사치, 근접",
+    "명사"
+  ],
+  "apricot": [
+    "살구",
+    "명사"
+  ],
+  "apron": [
+    "앞치마",
+    "명사"
+  ],
+  "apt": [
+    "적절한, 재능 있는",
+    "형용사"
+  ],
+  "aptitude": [
+    "적성, 소질",
+    "명사"
+  ],
+  "aquarium": [
+    "수족관",
+    "명사"
+  ],
+  "aquatic": [
+    "물속[물가]에서 자라는[사는], 수생의, 물과 관련된",
+    "형용사"
+  ],
+  "aqueduct": [
+    "수로, 송수로",
+    "명사"
+  ],
   "arab": [
     "아랍인",
     "단어"
   ],
+  "arabian": [
+    "아라비아의",
+    "형용사"
+  ],
+  "arbitrary": [
+    "임의의, 제멋대로인",
+    "형용사"
+  ],
+  "arbitration": [
+    "중재, 조정",
+    "명사"
+  ],
+  "arbor": [
+    "정자, 나무 그늘",
+    "명사"
+  ],
+  "arboretum": [
+    "수목원",
+    "명사"
+  ],
   "arcade": [
     "회랑",
     "단어"
+  ],
+  "arcane": [
+    "신비로운, 불가사의한",
+    "형용사"
+  ],
+  "archae": [
+    "[고대의][원시적인]의 뜻",
+    "명사"
+  ],
+  "archaeologist": [
+    "고고학자",
+    "명사"
+  ],
+  "archaeology": [
+    "고고학",
+    "명사"
+  ],
+  "archaic": [
+    "고대의, 낡은",
+    "형용사"
+  ],
+  "archangel": [
+    "대천사",
+    "명사"
+  ],
+  "archbishop": [
+    "대주교",
+    "명사"
+  ],
+  "archer": [
+    "궁수",
+    "명사"
+  ],
+  "archery": [
+    "궁도, 활쏘기",
+    "명사"
+  ],
+  "ardent": [
+    "열렬한",
+    "형용사"
+  ],
+  "ardor": [
+    "열정",
+    "명사"
+  ],
+  "arduous": [
+    "힘든, 고된",
+    "형용사"
   ],
   "arena": [
     "경기장 공연장",
@@ -361,6 +1265,42 @@ window.verifiedBankSupplement = Object.assign(
     "아르헨티나",
     "단어"
   ],
+  "argumentative": [
+    "따지기 좋아하는, 시비를 거는",
+    "형용사"
+  ],
+  "aria": [
+    "아리아, 독창곡",
+    "명사"
+  ],
+  "arid": [
+    "건조한",
+    "형용사"
+  ],
+  "aridity": [
+    "[U] 건조 (상태), 빈약, 무미건조",
+    "명사"
+  ],
+  "aristocracy": [
+    "귀족 계급, 귀족 정치",
+    "명사"
+  ],
+  "aristocrat": [
+    "귀족",
+    "명사"
+  ],
+  "aristocratic": [
+    "귀족적인",
+    "형용사"
+  ],
+  "arithmetic": [
+    "산수, 산술",
+    "명사"
+  ],
+  "ark": [
+    "방주",
+    "명사"
+  ],
   "arkansas": [
     "아칸소 주 ((미국 중부의 주",
     "단어"
@@ -369,9 +1309,49 @@ window.verifiedBankSupplement = Object.assign(
     "팔",
     "단어"
   ],
+  "armada": [
+    "함대",
+    "명사"
+  ],
+  "armament": [
+    "무장, 무기",
+    "명사"
+  ],
+  "armchair": [
+    "안락의자",
+    "명사"
+  ],
   "armed": [
     "무기가 사용되는",
     "단어"
+  ],
+  "armor": [
+    "갑옷",
+    "명사"
+  ],
+  "armory": [
+    "문장학(heraldry), 문장부(付) 인명록",
+    "명사"
+  ],
+  "armpit": [
+    "겨드랑이",
+    "명사"
+  ],
+  "aroma": [
+    "향기",
+    "명사"
+  ],
+  "aromatic": [
+    "향이 좋은 (= fragrant )",
+    "형용사"
+  ],
+  "arouse": [
+    "깨우다, 불러일으키다",
+    "동사"
+  ],
+  "arpeggio": [
+    "아르페지오",
+    "명사"
   ],
   "arrangements": [
     "채비, 준비",
@@ -381,6 +1361,10 @@ window.verifiedBankSupplement = Object.assign(
     "집합체 모음/무리",
     "단어"
   ],
+  "arrear": [
+    "[보통 pl.] (일·지불금의) 지체, 밀림 ((of)), 지불 잔금, 연체금",
+    "명사"
+  ],
   "arrival": [
     "도착",
     "단어"
@@ -389,13 +1373,241 @@ window.verifiedBankSupplement = Object.assign(
     "도착하다",
     "단어"
   ],
+  "arrogance": [
+    "오만",
+    "명사"
+  ],
+  "arrogant": [
+    "오만한",
+    "형용사"
+  ],
+  "arsenal": [
+    "무기고",
+    "명사"
+  ],
+  "artery": [
+    "동맥",
+    "명사"
+  ],
+  "artful": [
+    "교묘한, 솜씨 있는",
+    "형용사"
+  ],
   "arthur": [
     "남자 이름 )",
     "단어"
   ],
+  "articulate": [
+    "분명히 표현하다, 또렷한",
+    "동사"
+  ],
+  "artifice": [
+    "책략, 계략 (= cunning )",
+    "명사"
+  ],
+  "artillery": [
+    "포병, 대포",
+    "명사"
+  ],
+  "artisan": [
+    "장인",
+    "명사"
+  ],
+  "artistry": [
+    "예술성, 기교",
+    "명사"
+  ],
+  "artless": [
+    "꾸밈없는, 순진한",
+    "형용사"
+  ],
+  "artsy": [
+    "예술 취향의, 예술가 같은",
+    "형용사"
+  ],
+  "arty": [
+    "예술적인 척하는, 예술풍의",
+    "형용사"
+  ],
+  "arugula": [
+    "로켓, 로켓탄, 로켓 추진 미사일, 치솟다, 급증[급등]하다 (= shoot up )",
+    "명사"
+  ],
+  "ascend": [
+    "올라가다",
+    "동사"
+  ],
+  "ascendancy": [
+    "우세, 지배력",
+    "명사"
+  ],
+  "ascendant": [
+    "우세한, 상승하는",
+    "형용사"
+  ],
+  "ascension": [
+    "상승, 승천",
+    "명사"
+  ],
+  "ascent": [
+    "상승, 오르막",
+    "명사"
+  ],
+  "ascertain": [
+    "확인하다, 알아내다",
+    "동사"
+  ],
+  "ascetic": [
+    "금욕적인, 금욕주의자",
+    "형용사"
+  ],
+  "ascribe": [
+    "~의 탓으로 돌리다, ~에 귀속시키다",
+    "동사"
+  ],
+  "aseptic": [
+    "무균의",
+    "형용사"
+  ],
+  "ashamed": [
+    "부끄러운",
+    "형용사"
+  ],
+  "ashen": [
+    "잿빛의, 창백한",
+    "형용사"
+  ],
+  "ashore": [
+    "해안[강안]으로[에], 물가로[에]",
+    "부사"
+  ],
+  "ashtray": [
+    "재떨이",
+    "명사"
+  ],
+  "ashy": [
+    "회색[회백색]의, 창백한(pale), 재의, 재투성이의",
+    "형용사"
+  ],
+  "asinine": [
+    "터무니없는 (= ridiculous )",
+    "형용사"
+  ],
+  "askance": [
+    "의심[불신]의 눈으로, 옆으로, 비스듬히, 곁눈으로, 빗대어, 어물어물, 비스듬한, 옆으로 한, 기울어진(sideways)",
+    "부사"
+  ],
+  "askew": [
+    "삐딱하게, 삐뚜름히 (= crooked )",
+    "형용사"
+  ],
+  "asleep": [
+    "잠이 든, 자고 있는 (↔ awake )",
+    "형용사"
+  ],
+  "asocial": [
+    "비사교적인, [구어] 자기중심적인, 반사회적인",
+    "형용사"
+  ],
   "asp": [
     "작은 독사",
     "단어"
+  ],
+  "aspen": [
+    "사시나무",
+    "명사"
+  ],
+  "aspersion": [
+    "비난, 중상",
+    "명사"
+  ],
+  "asphalt": [
+    "아스팔트",
+    "명사"
+  ],
+  "asphyxia": [
+    "질식",
+    "명사"
+  ],
+  "aspic": [
+    "아스픽(육즙으로 만든 투명한 젤리. 차게 식혀 상에 냄)",
+    "명사"
+  ],
+  "aspidistra": [
+    "엽란(흔히 관상용으로 실내에서 기르는 식물)",
+    "명사"
+  ],
+  "aspirant": [
+    "출세[승리]를 염원[열망]하는 사람, 포부가 큰 사람",
+    "명사"
+  ],
+  "aspirate": [
+    "흡인하다, 기음으로 발음하다",
+    "동사"
+  ],
+  "aspiration": [
+    "열망, 포부",
+    "명사"
+  ],
+  "aspire": [
+    "열망하다",
+    "동사"
+  ],
+  "aspirin": [
+    "아스피린",
+    "명사"
+  ],
+  "ass": [
+    "당나귀",
+    "명사"
+  ],
+  "assail": [
+    "맹렬히 공격하다",
+    "동사"
+  ],
+  "assailant": [
+    "(특히 신체적) 공격을 가한 사람, 폭행범 (= attacker )",
+    "명사"
+  ],
+  "assassin": [
+    "암살범",
+    "명사"
+  ],
+  "assassinate": [
+    "암살하다",
+    "동사"
+  ],
+  "assassination": [
+    "암살",
+    "명사"
+  ],
+  "assay": [
+    "분석, 시금",
+    "명사"
+  ],
+  "assemblage": [
+    "집합, 모임",
+    "명사"
+  ],
+  "assent": [
+    "찬성, 승인, 찬성하다",
+    "동사"
+  ],
+  "assert": [
+    "주장하다",
+    "동사"
+  ],
+  "assertion": [
+    "주장",
+    "명사"
+  ],
+  "assiduous": [
+    "근면 성실한 (= diligent )",
+    "형용사"
+  ],
+  "assignation": [
+    "약속, 밀회",
+    "명사"
   ],
   "assigned": [
     "할당된",
@@ -405,13 +1617,233 @@ window.verifiedBankSupplement = Object.assign(
     "과제, 임무",
     "단어"
   ],
+  "assimilate": [
+    "동화하다, 흡수하다",
+    "동사"
+  ],
+  "assimilation": [
+    "동화, 흡수",
+    "명사"
+  ],
+  "assonance": [
+    "음의 유사(인접한 두 단어의 두 음절이 모음은 같고 자음이 다르거나, 자음은 같고 모음이 다를 때 발생하는 효과. 예: sonnet and porridge, cold and killed)",
+    "명사"
+  ],
+  "assort": [
+    "분류하다, 어울리게 하다",
+    "동사"
+  ],
+  "assortment": [
+    "모음, 갖가지",
+    "명사"
+  ],
+  "assuage": [
+    "달래다, 누그러뜨리다",
+    "동사"
+  ],
+  "aster": [
+    "과꽃",
+    "명사"
+  ],
+  "astern": [
+    "선미 쪽으로, 뒤에",
+    "부사"
+  ],
+  "astigmatism": [
+    "난시",
+    "명사"
+  ],
+  "astonishment": [
+    "놀람, 경악",
+    "명사"
+  ],
+  "astound": [
+    "경악시키다, 큰 충격을 주다 (= astonish )",
+    "동사"
+  ],
+  "astounding": [
+    "경악스러운, 믿기 어려운 (= astonishing )",
+    "형용사"
+  ],
+  "astral": [
+    "별의, 별과 관련된",
+    "형용사"
+  ],
+  "astray": [
+    "길을 잃어, 잘못된 길로",
+    "부사"
+  ],
+  "astride": [
+    "다리를 벌리고 걸터앉아",
+    "부사"
+  ],
+  "astringent": [
+    "수렴성의, 수축[지혈]시키는, 신랄한, 재기가 번득이는, 수렴제 (화장품), (지혈용) 수축제",
+    "형용사"
+  ],
+  "astrolabe": [
+    "아스트롤라베(과거 천문 관측에 쓰이던 장치)",
+    "명사"
+  ],
+  "astrologer": [
+    "점성가",
+    "명사"
+  ],
+  "astrology": [
+    "점성술",
+    "명사"
+  ],
+  "astronaut": [
+    "우주비행사",
+    "명사"
+  ],
+  "astronomer": [
+    "천문학자",
+    "명사"
+  ],
+  "astronomical": [
+    "천문학의, 엄청난",
+    "형용사"
+  ],
+  "astrophysics": [
+    "천체물리학",
+    "명사"
+  ],
+  "astute": [
+    "영리한, 눈치 빠른",
+    "형용사"
+  ],
+  "asunder": [
+    "산산이, 갈라져",
+    "부사"
+  ],
+  "asylum": [
+    "망명, 보호소",
+    "명사"
+  ],
+  "asymmetry": [
+    "비대칭",
+    "명사"
+  ],
+  "asymptote": [
+    "점근선",
+    "명사"
+  ],
+  "atavism": [
+    "격세 유전, 조상 회귀",
+    "명사"
+  ],
+  "atavistic": [
+    "인간 본래의",
+    "형용사"
+  ],
+  "ate": [
+    "eat 의 과거",
+    "동사"
+  ],
+  "atelier": [
+    "화실, 작업실",
+    "명사"
+  ],
+  "atheism": [
+    "무신론",
+    "명사"
+  ],
+  "atheist": [
+    "무신론자",
+    "명사"
+  ],
+  "atheistic": [
+    "무신론의",
+    "형용사"
+  ],
+  "atheling": [
+    "왕자, 귀공자",
+    "명사"
+  ],
+  "atherosclerosis": [
+    "아테롬성 동맥 경화증",
+    "명사"
+  ],
+  "athlete": [
+    "운동선수",
+    "명사"
+  ],
   "athletic": [
     "탄탄한",
     "단어"
   ],
+  "athwart": [
+    "가로질러, 반대하여",
+    "부사"
+  ],
   "atlantic": [
     "the ~ 대서양",
     "단어"
+  ],
+  "atman": [
+    "아트만, 자아",
+    "명사"
+  ],
+  "atmospheric": [
+    "대기의, 분위기 있는",
+    "형용사"
+  ],
+  "atomicity": [
+    "원자 수, 원자가",
+    "명사"
+  ],
+  "atomize": [
+    "원자화하다, 세분화하다",
+    "동사"
+  ],
+  "atone": [
+    "속죄하다",
+    "동사"
+  ],
+  "atonement": [
+    "속죄, 보상",
+    "명사"
+  ],
+  "atonic": [
+    "강세를 안 받는",
+    "형용사"
+  ],
+  "atony": [
+    "무긴장, 쇠약",
+    "명사"
+  ],
+  "atop": [
+    "꼭대기에",
+    "부사"
+  ],
+  "atopy": [
+    "아토피",
+    "명사"
+  ],
+  "atrocious": [
+    "잔혹한, 형편없는",
+    "형용사"
+  ],
+  "atrocity": [
+    "잔학 행위",
+    "명사"
+  ],
+  "atrophy": [
+    "위축, 쇠퇴",
+    "명사"
+  ],
+  "atrophying": [
+    "(혈액 부족으로 인한 신체 부위의) 위축(증), (신체의 일부가) 위축되다",
+    "형용사"
+  ],
+  "atropine": [
+    "아트로핀",
+    "명사"
+  ],
+  "attache": [
+    "외교관 보좌관, 서류가방",
+    "명사"
   ],
   "attached": [
     "애착을 가진",
@@ -420,6 +1852,22 @@ window.verifiedBankSupplement = Object.assign(
   "attacks": [
     "폭행, 공격",
     "단어"
+  ],
+  "attain": [
+    "이루다, 도달하다",
+    "동사"
+  ],
+  "attainment": [
+    "성취",
+    "명사"
+  ],
+  "attaint": [
+    "…에게서 사권(私權)을 박탈하다, 더럽히다(taint)",
+    "동사"
+  ],
+  "attar": [
+    "향유, 꽃기름",
+    "명사"
   ],
   "attend": [
     "참석하다",
@@ -457,6 +1905,10 @@ window.verifiedBankSupplement = Object.assign(
     "항공",
     "단어"
   ],
+  "avocado": [
+    "아보카도",
+    "명사"
+  ],
   "awareness": [
     "의식 관심",
     "단어"
@@ -464,6 +1916,10 @@ window.verifiedBankSupplement = Object.assign(
   "awesome": [
     "경탄할 만한, 어마어마한, 엄청난",
     "단어"
+  ],
+  "awful": [
+    "끔찍한, 형편없는",
+    "형용사"
   ],
   "ba": [
     "문학 학사 문학사 학위",
@@ -476,6 +1932,18 @@ window.verifiedBankSupplement = Object.assign(
   "babes": [
     "남에게 잘 속는 순진한 사람",
     "단어"
+  ],
+  "bacon": [
+    "베이컨",
+    "명사"
+  ],
+  "badly": [
+    "잘, 좋게, 제대로, 철저히, 완전히, 잘, 건강한, 건강[몸]이 좋은",
+    "부사"
+  ],
+  "bagel": [
+    "베이글",
+    "명사"
   ],
   "baker": [
     "제빵사, 빵집 주인",
@@ -509,6 +1977,10 @@ window.verifiedBankSupplement = Object.assign(
     "싸게 사는 물건",
     "단어"
   ],
+  "bark": [
+    "나무껍질, 짖다",
+    "명사"
+  ],
   "bass": [
     "베이스 , 최저음",
     "단어"
@@ -541,6 +2013,10 @@ window.verifiedBankSupplement = Object.assign(
     "맥주",
     "단어"
   ],
+  "beetle": [
+    "딱정벌레",
+    "명사"
+  ],
   "behalf": [
     "U 이익",
     "단어"
@@ -568,6 +2044,10 @@ window.verifiedBankSupplement = Object.assign(
   "berlin": [
     "베를린 )",
     "단어"
+  ],
+  "beside": [
+    "옆에, …에 비해[견줘]",
+    "전치사"
   ],
   "bet": [
     "돈을 걸다",
@@ -609,9 +2089,17 @@ window.verifiedBankSupplement = Object.assign(
     "버밍엄 )",
     "단어"
   ],
+  "bitter": [
+    "격렬한, 억울해 하는, 비터(쓴맛이 강한 맥주. 영국에서 아주 인기 있음)",
+    "형용사"
+  ],
   "biz": [
     "산업 사업",
     "단어"
+  ],
+  "blackberry": [
+    "블랙베리",
+    "명사"
   ],
   "blackjack": [
     "블랙잭",
@@ -620,6 +2108,10 @@ window.verifiedBankSupplement = Object.assign(
   "blank": [
     "빈, 녹음 되지 않은",
     "단어"
+  ],
+  "blanket": [
+    "담요",
+    "명사"
   ],
   "blind": [
     "눈이 먼, 맹인인",
@@ -632,6 +2124,14 @@ window.verifiedBankSupplement = Object.assign(
   "blonde": [
     "금발인",
     "단어"
+  ],
+  "blouse": [
+    "블라우스",
+    "명사"
+  ],
+  "blueberry": [
+    "블루베리",
+    "명사"
   ],
   "bluetooth": [
     "블루 투스",
@@ -713,6 +2213,10 @@ window.verifiedBankSupplement = Object.assign(
     "영국의",
     "단어"
   ],
+  "brandy": [
+    "브랜디",
+    "명사"
+  ],
   "brass": [
     "놋쇠 황동",
     "단어"
@@ -757,6 +2261,10 @@ window.verifiedBankSupplement = Object.assign(
     "의학사",
     "단어"
   ],
+  "bud": [
+    "봉오리, 싹",
+    "명사"
+  ],
   "buddy": [
     "친구",
     "단어"
@@ -781,6 +2289,10 @@ window.verifiedBankSupplement = Object.assign(
     "뉴스 단신",
     "단어"
   ],
+  "bun": [
+    "둥근 빵",
+    "명사"
+  ],
   "bureau": [
     "책상",
     "단어"
@@ -796,6 +2308,10 @@ window.verifiedBankSupplement = Object.assign(
   "busy": [
     "바쁜",
     "단어"
+  ],
+  "cabbage": [
+    "양배추",
+    "명사"
   ],
   "cabinet": [
     "내각",
@@ -873,6 +2389,10 @@ window.verifiedBankSupplement = Object.assign(
     "꼼꼼히",
     "단어"
   ],
+  "careless": [
+    "부주의한",
+    "형용사"
+  ],
   "caribbean": [
     "카리브 사람의 , 카리브 해의",
     "단어"
@@ -884,6 +2404,10 @@ window.verifiedBankSupplement = Object.assign(
   "carrier": [
     "항공사, 수송 운송 회사",
     "단어"
+  ],
+  "carrot": [
+    "당근",
+    "명사"
   ],
   "carrying": [
     "적재, 운송, 운수",
@@ -932,6 +2456,10 @@ window.verifiedBankSupplement = Object.assign(
   "celebrity": [
     "유명 인사",
     "단어"
+  ],
+  "celery": [
+    "셀러리",
+    "명사"
   ],
   "cellular": [
     "세포의",
@@ -1005,6 +2533,10 @@ window.verifiedBankSupplement = Object.assign(
     "체크 바둑판 무늬의",
     "단어"
   ],
+  "cheek": [
+    "볼, 뺨",
+    "명사"
+  ],
   "cheese": [
     "치즈",
     "단어"
@@ -1020,6 +2552,10 @@ window.verifiedBankSupplement = Object.assign(
   "chest": [
     "가슴, 흉부",
     "단어"
+  ],
+  "chestnut": [
+    "밤, 밤색",
+    "명사"
   ],
   "chevrolet": [
     "시보레 )",
@@ -1040,6 +2576,10 @@ window.verifiedBankSupplement = Object.assign(
   "chile": [
     "칠레",
     "단어"
+  ],
+  "chin": [
+    "턱",
+    "명사"
   ],
   "chip": [
     "이가 빠진 흔적",
@@ -1069,6 +2609,10 @@ window.verifiedBankSupplement = Object.assign(
     "교회",
     "단어"
   ],
+  "cigarette": [
+    "담배",
+    "명사"
+  ],
   "cincinnati": [
     "신시내티 )",
     "단어"
@@ -1088,6 +2632,10 @@ window.verifiedBankSupplement = Object.assign(
   "citizen": [
     "시민",
     "단어"
+  ],
+  "clam": [
+    "조개",
+    "명사"
   ],
   "clark": [
     "남자 이름",
@@ -1113,6 +2661,10 @@ window.verifiedBankSupplement = Object.assign(
     "없애기 정리",
     "단어"
   ],
+  "clever": [
+    "영리한",
+    "형용사"
+  ],
   "climate": [
     "기후",
     "단어"
@@ -1137,6 +2689,10 @@ window.verifiedBankSupplement = Object.assign(
     "닫는 것 사람 , 폐색기",
     "단어"
   ],
+  "closet": [
+    "벽장, 옷장",
+    "명사"
+  ],
   "clothes": [
     "옷, 의복",
     "단어"
@@ -1157,9 +2713,17 @@ window.verifiedBankSupplement = Object.assign(
     "해안 연안 의",
     "단어"
   ],
+  "coconut": [
+    "코코넛",
+    "명사"
+  ],
   "coins": [
     "전산기 정보시스템",
     "단어"
+  ],
+  "cola": [
+    "콜라",
+    "명사"
   ],
   "collaboration": [
     "공동 작업 연구",
@@ -1188,6 +2752,10 @@ window.verifiedBankSupplement = Object.assign(
   "combat": [
     "전투, 싸움",
     "단어"
+  ],
+  "comforting": [
+    "위로가 되는",
+    "형용사"
   ],
   "comic": [
     "웃기는, 재미있는",
@@ -1433,6 +3001,10 @@ window.verifiedBankSupplement = Object.assign(
     "신용 거래",
     "단어"
   ],
+  "crab": [
+    "게",
+    "명사"
+  ],
   "crack": [
     "갈라지다, 금이 가다",
     "단어"
@@ -1469,6 +3041,10 @@ window.verifiedBankSupplement = Object.assign(
     "왕관",
     "단어"
   ],
+  "cruel": [
+    "잔인한",
+    "형용사"
+  ],
   "cruises": [
     "유람선 여행",
     "단어"
@@ -1480,6 +3056,10 @@ window.verifiedBankSupplement = Object.assign(
   "cuba": [
     "쿠바 의 공화국, 수도 Havana))",
     "단어"
+  ],
+  "cupboard": [
+    "찬장",
+    "명사"
   ],
   "curriculum": [
     "교육과정",
@@ -1505,9 +3085,17 @@ window.verifiedBankSupplement = Object.assign(
     "아빠",
     "단어"
   ],
+  "daisy": [
+    "데이지",
+    "명사"
+  ],
   "damages": [
     "손해 액",
     "단어"
+  ],
+  "dancer": [
+    "무용수, 춤추는 사람",
+    "명사"
   ],
   "danger": [
     "위험",
@@ -1556,6 +3144,10 @@ window.verifiedBankSupplement = Object.assign(
   "def": [
     "끝내 주는",
     "단어"
+  ],
+  "defeat": [
+    "패배, 패배시키다",
+    "동사"
   ],
   "defence": [
     "방어, 옹호, 수비",
@@ -1761,6 +3353,10 @@ window.verifiedBankSupplement = Object.assign(
     "인형",
     "단어"
   ],
+  "dolphin": [
+    "돌고래",
+    "명사"
+  ],
   "don": [
     "교수",
     "단어"
@@ -1781,6 +3377,10 @@ window.verifiedBankSupplement = Object.assign(
     "수축, 축소",
     "단어"
   ],
+  "donut": [
+    "도넛",
+    "명사"
+  ],
   "dose": [
     "복용량 투여량",
     "단어"
@@ -1797,6 +3397,10 @@ window.verifiedBankSupplement = Object.assign(
     "남자 이름 )",
     "단어"
   ],
+  "downstairs": [
+    "아래층, 아래층에",
+    "부사"
+  ],
   "downtown": [
     "시내에 로",
     "단어"
@@ -1808,6 +3412,10 @@ window.verifiedBankSupplement = Object.assign(
   "drama": [
     "드라마 극",
     "단어"
+  ],
+  "drawer": [
+    "서랍",
+    "명사"
   ],
   "drawn": [
     "핼쑥한",
@@ -1840,6 +3448,10 @@ window.verifiedBankSupplement = Object.assign(
   "dublin": [
     "더블린 )",
     "단어"
+  ],
+  "dull": [
+    "따분한, 재미없는 (= dreary ), 흐릿한, 칙칙한, 윤기 없는, 둔해지다, 약해지다, 누그러지다",
+    "형용사"
   ],
   "duration": [
     "지속, 기간",
@@ -1909,6 +3521,22 @@ window.verifiedBankSupplement = Object.assign(
     "이집트 )",
     "단어"
   ],
+  "eighteen": [
+    "18, 열여덟",
+    "수사"
+  ],
+  "eighth": [
+    "여덟 번째, 8분의 1의",
+    "수사"
+  ],
+  "eighty": [
+    "80, 여든",
+    "수사"
+  ],
+  "elbow": [
+    "팔꿈치",
+    "명사"
+  ],
   "elected": [
     "선출된",
     "단어"
@@ -1920,6 +3548,18 @@ window.verifiedBankSupplement = Object.assign(
   "elementary": [
     "초보의, 초급의",
     "단어"
+  ],
+  "elephant": [
+    "코끼리",
+    "명사"
+  ],
+  "eleven": [
+    "11, 열하나",
+    "수사"
+  ],
+  "eleventh": [
+    "열한 번째",
+    "수사"
   ],
   "eligibility": [
     "적임, 적격",
@@ -2261,9 +3901,21 @@ window.verifiedBankSupplement = Object.assign(
     "UC 섬유",
     "단어"
   ],
+  "fifteen": [
+    "15, 열다섯",
+    "수사"
+  ],
+  "fifteenth": [
+    "열다섯 번째",
+    "수사"
+  ],
   "fifth": [
     "다섯 번째의, 제5의",
     "단어"
+  ],
+  "fiftieth": [
+    "쉰 번째",
+    "수사"
   ],
   "fig": [
     "무화과",
@@ -2301,6 +3953,10 @@ window.verifiedBankSupplement = Object.assign(
     "판석 널돌",
     "단어"
   ],
+  "flashlight": [
+    "손전등",
+    "명사"
+  ],
   "flexibility": [
     "탄력",
     "단어"
@@ -2333,6 +3989,10 @@ window.verifiedBankSupplement = Object.assign(
     "사람들",
     "단어"
   ],
+  "foolish": [
+    "어리석은",
+    "형용사"
+  ],
   "forever": [
     "영원히",
     "단어"
@@ -2361,6 +4021,10 @@ window.verifiedBankSupplement = Object.assign(
     "…에서 멀리, 밖으로",
     "단어"
   ],
+  "fortieth": [
+    "마흔 번째",
+    "수사"
+  ],
   "foster": [
     "조성하다, 발전시키다",
     "단어"
@@ -2372,6 +4036,14 @@ window.verifiedBankSupplement = Object.assign(
   "founded": [
     "기초 근거 가 …한",
     "단어"
+  ],
+  "fourteen": [
+    "14, 열넷",
+    "수사"
+  ],
+  "fourteenth": [
+    "열네 번째",
+    "수사"
   ],
   "fourth": [
     "네 번째의, 제4의",
@@ -2429,6 +4101,10 @@ window.verifiedBankSupplement = Object.assign(
     "차고, 주차장",
     "단어"
   ],
+  "garlic": [
+    "마늘",
+    "명사"
+  ],
   "gary": [
     "Elbert Henry, 미국의 실업가·법률가",
     "단어"
@@ -2481,6 +4157,14 @@ window.verifiedBankSupplement = Object.assign(
     "거인",
     "단어"
   ],
+  "gin": [
+    "진",
+    "명사"
+  ],
+  "giraffe": [
+    "기린",
+    "명사"
+  ],
   "glad": [
     "기쁜 반가운",
     "단어"
@@ -2505,6 +4189,10 @@ window.verifiedBankSupplement = Object.assign(
     "용어 사전 해설 목록",
     "단어"
   ],
+  "glove": [
+    "장갑",
+    "명사"
+  ],
   "gm": [
     "그램 )",
     "단어"
@@ -2513,6 +4201,10 @@ window.verifiedBankSupplement = Object.assign(
     "영양",
     "단어"
   ],
+  "goat": [
+    "염소",
+    "명사"
+  ],
   "goes": [
     "GO 의 3인칭 단수 현재형",
     "단어"
@@ -2520,6 +4212,10 @@ window.verifiedBankSupplement = Object.assign(
   "gonna": [
     "난 해내고 말거야",
     "단어"
+  ],
+  "goose": [
+    "거위",
+    "명사"
   ],
   "gordon": [
     "Charles George ~ )",
@@ -2553,6 +4249,14 @@ window.verifiedBankSupplement = Object.assign(
     "통밀의",
     "단어"
   ],
+  "grape": [
+    "포도",
+    "명사"
+  ],
+  "grapefruit": [
+    "그레이프프루트(약간 신맛이 나고 큰 오렌지같이 생긴 노란 과일)",
+    "명사"
+  ],
   "graph": [
     "그래프, 도표",
     "단어"
@@ -2560,6 +4264,10 @@ window.verifiedBankSupplement = Object.assign(
   "grass": [
     "풀 꼴 , 잔디",
     "단어"
+  ],
+  "grateful": [
+    "감사하는",
+    "형용사"
   ],
   "gray": [
     "회색, 쥐색",
@@ -2629,6 +4337,10 @@ window.verifiedBankSupplement = Object.assign(
     "털이 많은",
     "단어"
   ],
+  "ham": [
+    "햄",
+    "명사"
+  ],
   "hamilton": [
     "남자 이름",
     "단어"
@@ -2640,6 +4352,10 @@ window.verifiedBankSupplement = Object.assign(
   "handbook": [
     "편람, 안내서",
     "단어"
+  ],
+  "handsome": [
+    "잘생긴",
+    "형용사"
   ],
   "happened": [
     "있다 발생하다/벌어지다",
@@ -2681,6 +4397,10 @@ window.verifiedBankSupplement = Object.assign(
     "천국, 천당, 하늘나라",
     "단어"
   ],
+  "heel": [
+    "발뒤꿈치, 굽",
+    "명사"
+  ],
   "heights": [
     "높이, 키 신장",
     "단어"
@@ -2700,6 +4420,10 @@ window.verifiedBankSupplement = Object.assign(
   "herself": [
     "자신 스스로",
     "단어"
+  ],
+  "hibiscus": [
+    "하비스쿠스(무궁화속에 속하며, 화려한 색의 큰 꽃이 피는 열대성 식물)",
+    "명사"
   ],
   "hidden": [
     "HIDE 의 과거분사",
@@ -2792,6 +4516,10 @@ window.verifiedBankSupplement = Object.assign(
   "hundreds": [
     "백, 100",
     "단어"
+  ],
+  "hundredth": [
+    "백 번째",
+    "수사"
   ],
   "hungary": [
     "헝가리 )",
@@ -3121,6 +4849,10 @@ window.verifiedBankSupplement = Object.assign(
     "남자 이름",
     "단어"
   ],
+  "journalist": [
+    "기자",
+    "명사"
+  ],
   "joy": [
     "기쁨 즐거움 , 환희",
     "단어"
@@ -3132,6 +4864,10 @@ window.verifiedBankSupplement = Object.assign(
   "judgment": [
     "판단, 심판, 심사, 감정, 평가",
     "단어"
+  ],
+  "kangaroo": [
+    "캥거루",
+    "명사"
   ],
   "karen": [
     "카렌 족 )",
@@ -3173,6 +4909,10 @@ window.verifiedBankSupplement = Object.assign(
     "케리 ))",
     "단어"
   ],
+  "ketchup": [
+    "케첩",
+    "명사"
+  ],
   "kevin": [
     "남자 이름",
     "단어"
@@ -3209,6 +4949,14 @@ window.verifiedBankSupplement = Object.assign(
     "키스하다 입을 맞추다",
     "단어"
   ],
+  "kiwi": [
+    "키위",
+    "명사"
+  ],
+  "koala": [
+    "코알라",
+    "명사"
+  ],
   "korean": [
     "한국의",
     "단어"
@@ -3224,6 +4972,10 @@ window.verifiedBankSupplement = Object.assign(
   "labs": [
     "low-altitude bombing system 폭격 시스템)",
     "단어"
+  ],
+  "ladder": [
+    "사다리",
+    "명사"
   ],
   "laid": [
     "lay 의 과거, 과거분사",
@@ -3265,6 +5017,10 @@ window.verifiedBankSupplement = Object.assign(
     "라우라, 독거 수도원",
     "단어"
   ],
+  "lavender": [
+    "라벤더",
+    "명사"
+  ],
   "lawrence": [
     "남자 이름",
     "단어"
@@ -3284,6 +5040,10 @@ window.verifiedBankSupplement = Object.assign(
   "layout": [
     "레이아웃 배치",
     "단어"
+  ],
+  "lazy": [
+    "게으른",
+    "형용사"
   ],
   "lbs": [
     "Location Based Service 위치 기반 서비스",
@@ -3329,6 +5089,10 @@ window.verifiedBankSupplement = Object.assign(
     "여가",
     "단어"
   ],
+  "lemonade": [
+    "레모네이드",
+    "명사"
+  ],
   "lens": [
     "렌즈",
     "단어"
@@ -3340,6 +5104,10 @@ window.verifiedBankSupplement = Object.assign(
   "lessons": [
     "수업 교습/교육",
     "단어"
+  ],
+  "lettuce": [
+    "상추",
+    "명사"
   ],
   "lewis": [
     "돌덩이 등을 끌어 올리고 내리는 쇠집게",
@@ -3384,6 +5152,18 @@ window.verifiedBankSupplement = Object.assign(
   "lift": [
     "들어 올리다 올리다",
     "단어"
+  ],
+  "lighter": [
+    "라이터",
+    "명사"
+  ],
+  "lily": [
+    "백합",
+    "명사"
+  ],
+  "lime": [
+    "라임",
+    "명사"
   ],
   "limitations": [
     "제한사항",
@@ -3433,6 +5213,10 @@ window.verifiedBankSupplement = Object.assign(
     "life 의 복수",
     "단어"
   ],
+  "lizard": [
+    "도마뱀",
+    "명사"
+  ],
   "lo": [
     "야, 하",
     "단어"
@@ -3440,6 +5224,10 @@ window.verifiedBankSupplement = Object.assign(
   "loaded": [
     "실은, 가득찬 무거운",
     "단어"
+  ],
+  "lobster": [
+    "바닷가재",
+    "명사"
   ],
   "locate": [
     "…의 정확한 위치를 찾아내다",
@@ -3473,6 +5261,10 @@ window.verifiedBankSupplement = Object.assign(
     "손실, 손해",
     "단어"
   ],
+  "loudly": [
+    "드르렁, 드르릉, 드르렁드르렁",
+    "부사"
+  ],
   "louisiana": [
     "루이지애나 ((미국 남부의 주",
     "단어"
@@ -3484,6 +5276,10 @@ window.verifiedBankSupplement = Object.assign(
   "lovely": [
     "사랑스러운, 아름다운, 어여쁜, 매력적인",
     "단어"
+  ],
+  "loyal": [
+    "충성스러운, 성실한",
+    "형용사"
   ],
   "lp": [
     "엘피판",
@@ -3553,6 +5349,10 @@ window.verifiedBankSupplement = Object.assign(
     "만화",
     "단어"
   ],
+  "mango": [
+    "망고",
+    "명사"
+  ],
   "mapping": [
     "분포측정",
     "단어"
@@ -3581,6 +5381,10 @@ window.verifiedBankSupplement = Object.assign(
     "시장",
     "단어"
   ],
+  "marmalade": [
+    "마멀레이드",
+    "명사"
+  ],
   "marshall": [
     "원수",
     "단어"
@@ -3604,6 +5408,14 @@ window.verifiedBankSupplement = Object.assign(
   "matthew": [
     "마태 마태오 복음 )",
     "단어"
+  ],
+  "mattress": [
+    "매트리스",
+    "명사"
+  ],
+  "mayonnaise": [
+    "마요네즈",
+    "명사"
   ],
   "mayor": [
     "시장 구청장",
@@ -3660,6 +5472,10 @@ window.verifiedBankSupplement = Object.assign(
   "melbourne": [
     "멜버른 )",
     "단어"
+  ],
+  "melon": [
+    "멜론",
+    "명사"
   ],
   "memorabilia": [
     "수집품 기념품",
@@ -3805,6 +5621,10 @@ window.verifiedBankSupplement = Object.assign(
     "남자 이름",
     "단어"
   ],
+  "mosquito": [
+    "모기",
+    "명사"
+  ],
   "mostly": [
     "주로, 일반적으로",
     "단어"
@@ -3844,6 +5664,18 @@ window.verifiedBankSupplement = Object.assign(
   "muscle": [
     "근육",
     "단어"
+  ],
+  "musician": [
+    "음악가",
+    "명사"
+  ],
+  "mussel": [
+    "홍합",
+    "명사"
+  ],
+  "mustard": [
+    "머스터드, 겨자",
+    "명사"
   ],
   "mutual": [
     "상호간의, 서로의",
@@ -3941,9 +5773,21 @@ window.verifiedBankSupplement = Object.assign(
     "9, 아홉",
     "단어"
   ],
+  "nineteen": [
+    "19, 열아홉",
+    "수사"
+  ],
+  "ninety": [
+    "90, 아흔",
+    "수사"
+  ],
   "nintendo": [
     "닌텐도 비디오 게임 사 제품)",
     "단어"
+  ],
+  "ninth": [
+    "아홉 번째",
+    "수사"
   ],
   "nm": [
     "나노미터 )",
@@ -3960,6 +5804,14 @@ window.verifiedBankSupplement = Object.assign(
   "noise": [
     "소리, 소음",
     "단어"
+  ],
+  "noisy": [
+    "시끄러운",
+    "형용사"
+  ],
+  "noodle": [
+    "국수, 면",
+    "명사"
   ],
   "normally": [
     "보통 , 보통 때는",
@@ -4021,6 +5873,10 @@ window.verifiedBankSupplement = Object.assign(
     "간호사",
     "단어"
   ],
+  "nut": [
+    "견과, 너트",
+    "명사"
+  ],
   "nv": [
     "우편 Nevada, New Version",
     "단어"
@@ -4073,9 +5929,17 @@ window.verifiedBankSupplement = Object.assign(
     "오냐",
     "단어"
   ],
+  "omelet": [
+    "오믈렛",
+    "명사"
+  ],
   "ongoing": [
     "계속 진행 중인",
     "단어"
+  ],
+  "onion": [
+    "양파",
+    "명사"
   ],
   "onto": [
     "… 로 에",
@@ -4120,6 +5984,10 @@ window.verifiedBankSupplement = Object.assign(
   "oracle": [
     "신탁을 받는 곳 신탁을 전하는 사제",
     "단어"
+  ],
+  "orchid": [
+    "난초",
+    "명사"
   ],
   "ordered": [
     "정돈된, 정연한",
@@ -4177,9 +6045,17 @@ window.verifiedBankSupplement = Object.assign(
     "해외 외국/국외 의",
     "단어"
   ],
+  "owl": [
+    "올빼미",
+    "명사"
+  ],
   "oxford": [
     "옥스퍼드화",
     "단어"
+  ],
+  "oyster": [
+    "굴",
+    "명사"
   ],
   "packard": [
     "패커드",
@@ -4193,6 +6069,10 @@ window.verifiedBankSupplement = Object.assign(
     "페인트, 페인트",
     "단어"
   ],
+  "painter": [
+    "화가",
+    "명사"
+  ],
   "painting": [
     "그림",
     "단어"
@@ -4200,6 +6080,10 @@ window.verifiedBankSupplement = Object.assign(
   "pair": [
     "짝을 짓다",
     "단어"
+  ],
+  "pajamas": [
+    "잠옷",
+    "명사"
   ],
   "pakistan": [
     "파키스탄 )",
@@ -4209,9 +6093,21 @@ window.verifiedBankSupplement = Object.assign(
     "궁전",
     "단어"
   ],
+  "pale": [
+    "창백한, 연한",
+    "형용사"
+  ],
   "pan": [
     "냄비 팬",
     "단어"
+  ],
+  "pancake": [
+    "팬케이크",
+    "명사"
+  ],
+  "panda": [
+    "판다",
+    "명사"
   ],
   "pants": [
     "팬티",
@@ -4245,6 +6141,10 @@ window.verifiedBankSupplement = Object.assign(
     "의회, 국회",
     "단어"
   ],
+  "parrot": [
+    "앵무새",
+    "명사"
+  ],
   "partial": [
     "부분적인, 불완전한",
     "단어"
@@ -4260,6 +6160,10 @@ window.verifiedBankSupplement = Object.assign(
   "passion": [
     "격정",
     "단어"
+  ],
+  "pasta": [
+    "파스타",
+    "명사"
   ],
   "pat": [
     "쓰다듬다 토닥거리다",
@@ -4289,9 +6193,29 @@ window.verifiedBankSupplement = Object.assign(
     "태평양 여름 시간",
     "단어"
   ],
+  "pea": [
+    "완두콩",
+    "명사"
+  ],
+  "peaceful": [
+    "평화로운, 조용한",
+    "형용사"
+  ],
+  "peach": [
+    "복숭아",
+    "명사"
+  ],
   "peak": [
     "절정, 정점, 최고조",
     "단어"
+  ],
+  "peanut": [
+    "땅콩",
+    "명사"
+  ],
+  "pear": [
+    "배",
+    "명사"
   ],
   "pearl": [
     "진주",
@@ -4312,6 +6236,10 @@ window.verifiedBankSupplement = Object.assign(
   "penalty": [
     "처벌, 형벌",
     "단어"
+  ],
+  "penguin": [
+    "펭귄",
+    "명사"
   ],
   "pension": [
     "연금",
@@ -4377,6 +6305,10 @@ window.verifiedBankSupplement = Object.assign(
     "알약, 정제",
     "단어"
   ],
+  "pillow": [
+    "베개",
+    "명사"
+  ],
   "pills": [
     "정제",
     "단어"
@@ -4392,6 +6324,10 @@ window.verifiedBankSupplement = Object.assign(
   "pine": [
     "소나무, 솔",
     "단어"
+  ],
+  "pineapple": [
+    "파인애플",
+    "명사"
   ],
   "pioneer": [
     "개척자 선구자",
@@ -4477,6 +6413,10 @@ window.verifiedBankSupplement = Object.assign(
     "명사",
     "단어"
   ],
+  "poet": [
+    "시인",
+    "명사"
+  ],
   "poetry": [
     "시, 시가",
     "단어"
@@ -4488,6 +6428,10 @@ window.verifiedBankSupplement = Object.assign(
   "polish": [
     "광택제",
     "단어"
+  ],
+  "polite": [
+    "공손한",
+    "형용사"
   ],
   "poll": [
     "여론 조사",
@@ -4504,6 +6448,10 @@ window.verifiedBankSupplement = Object.assign(
   "popularity": [
     "인기",
     "단어"
+  ],
+  "pork": [
+    "돼지고기",
+    "명사"
   ],
   "portion": [
     "부분 일부",
@@ -4536,6 +6484,10 @@ window.verifiedBankSupplement = Object.assign(
   "pot": [
     "냄비, 솥",
     "단어"
+  ],
+  "potato": [
+    "감자",
+    "명사"
   ],
   "potter": [
     "빈둥거리다",
@@ -4817,6 +6769,10 @@ window.verifiedBankSupplement = Object.assign(
     "빠른",
     "단어"
   ],
+  "raspberry": [
+    "산딸기, 혀를 입술 사이로 진동시키며 내는 야유 소리",
+    "명사"
+  ],
   "rated": [
     "rate 의 과거·과거분사",
     "단어"
@@ -4888,6 +6844,10 @@ window.verifiedBankSupplement = Object.assign(
   "reform": [
     "개혁 개선 하다",
     "단어"
+  ],
+  "refrigerator": [
+    "냉장고",
+    "명사"
   ],
   "refund": [
     "환불",
@@ -5129,9 +7089,17 @@ window.verifiedBankSupplement = Object.assign(
     "고무",
     "단어"
   ],
+  "rude": [
+    "무례한",
+    "형용사"
+  ],
   "rugby": [
     "럭비",
     "단어"
+  ],
+  "rum": [
+    "럼주",
+    "명사"
   ],
   "rush": [
     "급 히 움직이다 하다 , 서두르다",
@@ -5160,6 +7128,10 @@ window.verifiedBankSupplement = Object.assign(
   "salt": [
     "소금",
     "단어"
+  ],
+  "salty": [
+    "짠",
+    "형용사"
   ],
   "sam": [
     "남자 이름 ), 여자 이름 )",
@@ -5193,6 +7165,10 @@ window.verifiedBankSupplement = Object.assign(
     "사우디 아라비아 의, 사우디 아라비아의 주민",
     "단어"
   ],
+  "sausage": [
+    "소시지",
+    "명사"
+  ],
   "says": [
     "say 의 3인칭 단수 직설법 현재형",
     "단어"
@@ -5204,6 +7180,10 @@ window.verifiedBankSupplement = Object.assign(
   "scan": [
     "살피다",
     "단어"
+  ],
+  "scarf": [
+    "스카프",
+    "명사"
   ],
   "scenes": [
     "현장",
@@ -5236,6 +7216,10 @@ window.verifiedBankSupplement = Object.assign(
   "scripts": [
     "각본",
     "단어"
+  ],
+  "sculptor": [
+    "조각가",
+    "명사"
   ],
   "seal": [
     "봉 봉인 하다",
@@ -5309,6 +7293,14 @@ window.verifiedBankSupplement = Object.assign(
     "기구 , 구조, 조직",
     "단어"
   ],
+  "seventeen": [
+    "17, 열일곱",
+    "수사"
+  ],
+  "seventy": [
+    "70, 일흔",
+    "수사"
+  ],
   "severe": [
     "극심한, 심각한",
     "단어"
@@ -5321,9 +7313,17 @@ window.verifiedBankSupplement = Object.assign(
     "그림자",
     "단어"
   ],
+  "shallow": [
+    "얕은",
+    "형용사"
+  ],
   "shape": [
     "모양, 형태, 형",
     "단어"
+  ],
+  "shark": [
+    "상어",
+    "명사"
   ],
   "sharp": [
     "날카로운, 뾰족한, 예리한",
@@ -5372,6 +7372,10 @@ window.verifiedBankSupplement = Object.assign(
   "showtimes": [
     "명사",
     "단어"
+  ],
+  "shrimp": [
+    "새우",
+    "명사"
   ],
   "si": [
     "국제 체제",
@@ -5437,6 +7441,18 @@ window.verifiedBankSupplement = Object.assign(
     "개정 개회 기간",
     "단어"
   ],
+  "sixteen": [
+    "16, 열여섯",
+    "수사"
+  ],
+  "sixty": [
+    "60, 예순",
+    "수사"
+  ],
+  "skating": [
+    "스케이트 타기",
+    "명사"
+  ],
   "skill": [
     "기량",
     "단어"
@@ -5477,9 +7493,29 @@ window.verifiedBankSupplement = Object.assign(
     "문자 메시지 전송 서비스",
     "단어"
   ],
+  "snail": [
+    "달팽이",
+    "명사"
+  ],
+  "sock": [
+    "양말",
+    "명사"
+  ],
   "socket": [
     "콘센트",
     "단어"
+  ],
+  "soda": [
+    "탄산음료",
+    "명사"
+  ],
+  "sofa": [
+    "소파",
+    "명사"
+  ],
+  "softly": [
+    "부드럽게, 조용히",
+    "부사"
   ],
   "soil": [
     "토양, 흙",
@@ -5517,9 +7553,17 @@ window.verifiedBankSupplement = Object.assign(
     "어딘가에 에서/에로",
     "단어"
   ],
+  "sour": [
+    "(맛이) 신, 시큼한, (↔ sweet ), 상한, 안 좋아지다, 틀어지다, 안 좋아지게[틀어지게] 만들다",
+    "형용사"
+  ],
   "southwest": [
     "the ~ 남서 )",
     "단어"
+  ],
+  "soy": [
+    "콩, 대두",
+    "명사"
   ],
   "spanking": [
     "엉덩이 때리기",
@@ -5565,6 +7609,10 @@ window.verifiedBankSupplement = Object.assign(
     "쓰다 들이다",
     "단어"
   ],
+  "spinach": [
+    "시금치",
+    "명사"
+  ],
   "spiritual": [
     "정신의, 정신적인",
     "단어"
@@ -5576,6 +7624,10 @@ window.verifiedBankSupplement = Object.assign(
   "sponsors": [
     "스폰서 광고주/후원 업체",
     "단어"
+  ],
+  "spoon": [
+    "숟가락",
+    "명사"
   ],
   "spot": [
     "점, 반점",
@@ -5600,6 +7652,10 @@ window.verifiedBankSupplement = Object.assign(
   "sql": [
     "structured query language",
     "단어"
+  ],
+  "squid": [
+    "오징어",
+    "명사"
   ],
   "sr": [
     "고위 고급/상급/상위 의",
@@ -5661,6 +7717,10 @@ window.verifiedBankSupplement = Object.assign(
     "찌르다 박다",
     "단어"
   ],
+  "stool": [
+    "등받이 없는 의자, 스툴",
+    "명사"
+  ],
   "stopped": [
     "멈춘, 정지된",
     "단어"
@@ -5673,9 +7733,17 @@ window.verifiedBankSupplement = Object.assign(
     "폭풍, 폭풍우",
     "단어"
   ],
+  "stove": [
+    "난로, 가스레인지",
+    "명사"
+  ],
   "strange": [
     "이상한",
     "단어"
+  ],
+  "strawberry": [
+    "딸기",
+    "명사"
   ],
   "stress": [
     "스트레스",
@@ -5765,6 +7833,10 @@ window.verifiedBankSupplement = Object.assign(
     "정상, 산꼭대기",
     "단어"
   ],
+  "sunflower": [
+    "해바라기",
+    "명사"
+  ],
   "superior": [
     "우수한 우세한/우월한",
     "단어"
@@ -5800,6 +7872,10 @@ window.verifiedBankSupplement = Object.assign(
   "sw": [
     "단파",
     "단어"
+  ],
+  "sweater": [
+    "스웨터",
+    "명사"
   ],
   "sweden": [
     "스웨덴 )",
@@ -5913,6 +7989,10 @@ window.verifiedBankSupplement = Object.assign(
     "테니스",
     "단어"
   ],
+  "tenth": [
+    "열 번째",
+    "수사"
+  ],
   "terminal": [
     "공항 터미널",
     "단어"
@@ -5932,6 +8012,10 @@ window.verifiedBankSupplement = Object.assign(
   "testimonials": [
     "고객의 증명",
     "단어"
+  ],
+  "textbook": [
+    "교과서",
+    "명사"
   ],
   "thai": [
     "타이 사람, the ~ 타이 국민",
@@ -5956,6 +8040,18 @@ window.verifiedBankSupplement = Object.assign(
   "thin": [
     "얇은, 가는",
     "단어"
+  ],
+  "thirteen": [
+    "13, 열셋",
+    "수사"
+  ],
+  "thirteenth": [
+    "열세 번째",
+    "수사"
+  ],
+  "thirtieth": [
+    "서른 번째",
+    "수사"
   ],
   "thongs": [
     "끈 달린 슬리퍼",
@@ -6057,6 +8153,10 @@ window.verifiedBankSupplement = Object.assign(
     "멋진",
     "단어"
   ],
+  "tooth": [
+    "이, 치아",
+    "명사"
+  ],
   "toshiba": [
     "도시바",
     "단어"
@@ -6157,6 +8257,14 @@ window.verifiedBankSupplement = Object.assign(
     "관",
     "단어"
   ],
+  "tulip": [
+    "튤립",
+    "명사"
+  ],
+  "turtle": [
+    "바다 거북, (모든 종류의) 거북",
+    "명사"
+  ],
   "tutorial": [
     "개별 그룹별 지도 시간",
     "단어"
@@ -6169,6 +8277,14 @@ window.verifiedBankSupplement = Object.assign(
     "터널 비전 시스템",
     "단어"
   ],
+  "twelfth": [
+    "열두 번째",
+    "수사"
+  ],
+  "twentieth": [
+    "스무 번째",
+    "수사"
+  ],
   "twenty": [
     "20, 스물",
     "단어"
@@ -6176,6 +8292,10 @@ window.verifiedBankSupplement = Object.assign(
   "twice": [
     "두 번",
     "단어"
+  ],
+  "twig": [
+    "잔가지",
+    "명사"
   ],
   "twiki": [
     "트위키 )",
@@ -6237,6 +8357,10 @@ window.verifiedBankSupplement = Object.assign(
     "무제한의, 무한정의",
     "단어"
   ],
+  "unlucky": [
+    "운이 나쁜",
+    "형용사"
+  ],
   "unsubscribe": [
     "주소를 삭제하다",
     "단어"
@@ -6249,6 +8373,10 @@ window.verifiedBankSupplement = Object.assign(
     "업로드하다",
     "단어"
   ],
+  "upstairs": [
+    "위층, 위층에",
+    "부사"
+  ],
   "urw": [
     "참 잘 오셨습니다",
     "단어"
@@ -6260,6 +8388,10 @@ window.verifiedBankSupplement = Object.assign(
   "usc": [
     "미국 연방 법전",
     "단어"
+  ],
+  "useless": [
+    "소용없는, 쓸모 없는, (…을) 잘 못하는",
+    "형용사"
   ],
   "usual": [
     "흔히 하는 있는 , 평상시의, 보통의",
@@ -6349,6 +8481,10 @@ window.verifiedBankSupplement = Object.assign(
     "휴가용 주택, 별장",
     "단어"
   ],
+  "vinegar": [
+    "식초",
+    "명사"
+  ],
   "vinyl": [
     "비닐",
     "단어"
@@ -6381,6 +8517,14 @@ window.verifiedBankSupplement = Object.assign(
     "비타민",
     "단어"
   ],
+  "vivid": [
+    "선명한, 생생한",
+    "형용사"
+  ],
+  "vodka": [
+    "보드카",
+    "명사"
+  ],
   "voltage": [
     "전압",
     "단어"
@@ -6388,6 +8532,10 @@ window.verifiedBankSupplement = Object.assign(
   "von": [
     "독일·오스트리아 귀족의 가명 앞에서 … 의",
     "단어"
+  ],
+  "waffle": [
+    "와플",
+    "명사"
   ],
   "wake": [
     "깨다 일어나다 , 깨우다",
@@ -6401,6 +8549,10 @@ window.verifiedBankSupplement = Object.assign(
     "벽지",
     "단어"
   ],
+  "walnut": [
+    "호두",
+    "명사"
+  ],
   "ward": [
     "-실 병동",
     "단어"
@@ -6413,6 +8565,10 @@ window.verifiedBankSupplement = Object.assign(
     "토끼의 사육장",
     "단어"
   ],
+  "watermelon": [
+    "수박",
+    "명사"
+  ],
   "wave": [
     "파도, 물결",
     "단어"
@@ -6424,6 +8580,10 @@ window.verifiedBankSupplement = Object.assign(
   "weak": [
     "약한, 힘이 없는",
     "단어"
+  ],
+  "weakness": [
+    "약점, 약함",
+    "명사"
   ],
   "wealth": [
     "부 , 재산",
@@ -6449,6 +8609,14 @@ window.verifiedBankSupplement = Object.assign(
     "젖은",
     "단어"
   ],
+  "whale": [
+    "고래",
+    "명사"
+  ],
+  "whatelse": [
+    "그 밖에 무엇, 또 무엇",
+    "어구"
+  ],
   "wheel": [
     "바퀴",
     "단어"
@@ -6464,6 +8632,10 @@ window.verifiedBankSupplement = Object.assign(
   "whereas": [
     "…한 사실이 있으므로",
     "단어"
+  ],
+  "whiskey": [
+    "위스키",
+    "명사"
   ],
   "widely": [
     "널리, 폭넓게",
@@ -6537,6 +8709,10 @@ window.verifiedBankSupplement = Object.assign(
     "직장, 업무 현장",
     "단어"
   ],
+  "worm": [
+    "벌레, 지렁이",
+    "명사"
+  ],
   "worry": [
     "걱정하다",
     "단어"
@@ -6560,6 +8736,10 @@ window.verifiedBankSupplement = Object.assign(
   "wright": [
     "장인, 기능인 )",
     "단어"
+  ],
+  "wrist": [
+    "손목",
+    "명사"
   ],
   "writers": [
     "작가, 문인, 저술가",
@@ -6592,6 +8772,14 @@ window.verifiedBankSupplement = Object.assign(
   "yoga": [
     "요가",
     "단어"
+  ],
+  "yogurt": [
+    "요구르트",
+    "명사"
+  ],
+  "zebra": [
+    "얼룩말",
+    "명사"
   ],
   "zum": [
     "예를 들면",

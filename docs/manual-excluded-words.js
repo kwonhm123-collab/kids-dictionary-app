@@ -1,4 +1,8 @@
 window.excludedDictionaryWords = [
+  "anabasises",
+  "anaglyption",
+  "anagoges",
+  "ashray",
   "cialis",
   "levitra",
   "adipex",

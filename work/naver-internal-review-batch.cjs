@@ -8,12 +8,14 @@ const OUTPUT_DIR = path.join(ROOT, "outputs", "naver-manual-review-all-batches")
 
 function parseArgs(argv) {
   const options = {
+    input: "",
     limit: 100,
     maxLevel: 4,
     startSequence: 0,
     concurrency: 5,
     output: "",
     decision: "",
+    continueOnError: true,
   };
 
   for (const arg of argv) {
@@ -21,11 +23,13 @@ function parseArgs(argv) {
     const value = rawValue ?? "";
 
     if (key === "--limit") options.limit = Number(value || 100);
+    else if (key === "--input") options.input = value;
     else if (key === "--max-level") options.maxLevel = Number(value || 4);
     else if (key === "--start-sequence") options.startSequence = Number(value || 0);
     else if (key === "--concurrency") options.concurrency = Number(value || 5);
     else if (key === "--output") options.output = value;
     else if (key === "--decision") options.decision = value;
+    else if (key === "--continue-on-error") options.continueOnError = value !== "false";
   }
 
   if (!Number.isFinite(options.limit) || options.limit < 1) {
@@ -538,6 +542,30 @@ async function reviewRow(row, options) {
   };
 }
 
+async function reviewRowSafe(row, options) {
+  try {
+    return await reviewRow(row, options);
+  } catch (error) {
+    if (!options.continueOnError) {
+      throw error;
+    }
+
+    return {
+      sequence: Number(row.sequence),
+      word: String(row.word || "").trim(),
+      appKorean: row.appKorean,
+      naverManualStatus: "\uAC80\uC218\uC644\uB8CC",
+      naverManualMeaning: "",
+      naverDecision: "\uBCF4\uB958",
+      reviewerMemo: `\uB124\uC774\uBC84 \uB0B4\uBD80 API \uC790\uB3D9 \uAC80\uC218 \uC624\uB958 | ${String(error?.message || error)}`,
+      entryId: "",
+      dictCid: "",
+      entryName: "",
+      proneticSymbols: "",
+    };
+  }
+}
+
 async function mapWithConcurrency(items, limit, mapper) {
   const results = new Array(items.length);
   let nextIndex = 0;
@@ -576,12 +604,13 @@ function buildDefaultOutputPath(rows, maxLevel) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
+  const inputCsv = options.input ? path.resolve(ROOT, options.input) : MASTER_CSV;
 
-  if (!fs.existsSync(MASTER_CSV)) {
-    throw new Error(`Missing ${MASTER_CSV}`);
+  if (!fs.existsSync(inputCsv)) {
+    throw new Error(`Missing ${inputCsv}`);
   }
 
-  const rows = parseCsv(fs.readFileSync(MASTER_CSV, "utf8").replace(/^\uFEFF/, ""));
+  const rows = parseCsv(fs.readFileSync(inputCsv, "utf8").replace(/^\uFEFF/, ""));
   const targets = rows
     .filter((row) => Number(row.appLevel || 0) <= options.maxLevel)
     .filter((row) => Number(row.sequence || 0) >= options.startSequence)
@@ -598,7 +627,7 @@ async function main() {
 
   const startedAt = Date.now();
   const reviewedRows = await mapWithConcurrency(targets, options.concurrency, (row) =>
-    reviewRow(row, options)
+    reviewRowSafe(row, options)
   );
   const elapsedMs = Date.now() - startedAt;
 

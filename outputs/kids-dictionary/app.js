@@ -1557,11 +1557,23 @@ function getEntryByWord(word) {
 }
 
 function buildKeywordsFromKorean(korean) {
-  return String(korean || "")
+  const normalizedKorean = String(korean || "").trim();
+  const baseTokens = String(korean || "")
     .split(/, |,|;|\/| /)
     .map((item) => item.trim())
-    .filter((item) => /[가-힣]/.test(item))
-    .slice(0, 8);
+    .filter((item) => /[가-힣]/.test(item));
+
+  const compactWhole = normalizedKorean.replace(/[,\s;/]+/g, "");
+  const expandedTokens = baseTokens.flatMap((item) => {
+    const compact = item.replace(/\s+/g, "");
+    return compact && compact !== item ? [item, compact] : [item];
+  });
+
+  const mergedTokens = compactWhole && /[가-힣]/.test(compactWhole)
+    ? [compactWhole, ...expandedTokens]
+    : expandedTokens;
+
+  return [...new Set(mergedTokens)].slice(0, 8);
 }
 
 function normalizeManualPart(part) {
@@ -1945,7 +1957,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v64";
+const APP_RELEASE_VERSION = "v66";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2703,12 +2715,13 @@ function buildAppStats() {
       ["실무 확장", workCount, "Level 5"],
     ],
     categoryRows: [
-      ["검증 완료 단어", verifiedCategoryCount],
+      ["네이버 검수 반영", verifiedOverrideCount],
+      ["어휘 뱅크 검증 완료", verifiedCategoryCount],
       ["어휘 뱅크 자동 보강", byCategory.get("어휘 뱅크 자동 보강") ?? 0],
       ["상위 2200 보강", byCategory.get("상위 2200 보강") ?? 0],
       ["중등 1500 보강", byCategory.get("중등 1500 보강") ?? 0],
       ["고등 3000 보강", byCategory.get("고등 3000 보강") ?? 0],
-      ["고등 필수", byCategory.get("고등 필수") ?? 0],
+      ["고등 필수", byCategory.get("고등 필수") ?? 0]
     ],
     appRows: [
       ["앱 이름", "유니유니 영어사전"],
@@ -2767,7 +2780,7 @@ function renderPropertiesModal() {
         <article class="stat-card">
           <p class="stat-label">네이버 검수 반영</p>
           <p class="stat-value">${formatCount(stats.verifiedOverrideCount)}</p>
-          <p class="stat-helper">검수 뜻 보정이 연결된 단어 수</p>
+          <p class="stat-helper">전체 등록 단어 중 검수 뜻 보정이 연결된 수</p>
         </article>
         <article class="stat-card">
           <p class="stat-label">최근 찾아본 단어</p>

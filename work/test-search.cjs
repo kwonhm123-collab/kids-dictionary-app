@@ -268,7 +268,7 @@ const autocompleteResults = autocompleteCases.map(([query, expected]) => {
   return { query, expected, words: words.slice(0, 5), pass: words.includes(expected) };
 });
 const autocompleteFailed = autocompleteResults.filter((result) => !result.pass);
-const excludedWords = ["cialis", "href", "findlaw", "disclaimers"];
+const excludedWords = ["anabasises", "anaglyption", "anagoges", "ashray", "cialis", "href", "findlaw", "disclaimers"];
 const excludedResults = excludedWords.map((word) => {
   const actual = context.findWord(word)?.word ?? null;
   return { word, actual, pass: actual === null };
