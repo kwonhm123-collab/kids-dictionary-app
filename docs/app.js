@@ -1591,6 +1591,145 @@ function getBaseMeaning(word) {
   return null;
 }
 
+function splitMeaningTokens(korean) {
+  return Array.from(
+    new Set(
+      String(korean || "")
+        .split(/, |,|;|\/|·/)
+        .map((item) => item.trim())
+        .filter(Boolean)
+    )
+  );
+}
+
+function dedupeMeaningTokens(tokens) {
+  return Array.from(
+    new Set(
+      tokens
+        .map((item) => String(item || "").trim())
+        .filter(Boolean)
+    )
+  );
+}
+
+function isVerbMeaningToken(token) {
+  return /다$/.test(String(token || "").trim());
+}
+
+function isNounLikeMeaningToken(token) {
+  return !/(의|한|적인|스럽다|스러운|같은)$/.test(String(token || "").trim());
+}
+
+function normalizePluralMeaningToken(token) {
+  const normalized = String(token || "").trim();
+  if (normalized.endsWith("의") && normalized.length > 1) {
+    return normalized.slice(0, -1);
+  }
+  return normalized;
+}
+
+function toGerundMeaningToken(token) {
+  const normalized = String(token || "").trim();
+  if (!normalized) return "";
+  if (normalized.endsWith("하다")) {
+    return `${normalized.slice(0, -2)}하기`;
+  }
+  if (normalized.endsWith("다")) {
+    return `${normalized.slice(0, -1)}기`;
+  }
+  return normalized;
+}
+
+function toActorMeaningToken(token) {
+  const normalized = String(token || "").trim();
+  if (!normalized) return "";
+  if (normalized.endsWith("하다")) {
+    return `${normalized.slice(0, -2)}하는 사람`;
+  }
+  if (normalized.endsWith("다")) {
+    return `${normalized.slice(0, -1)}는 사람`;
+  }
+  return `${normalized} 관련 사람`;
+}
+
+function buildDerivedSupplement(word, baseEntry, suffix) {
+  const baseWord = String(baseEntry.word || word || "").trim();
+  const basePart = String(baseEntry.part || "단어").trim();
+  const rawTokens = splitMeaningTokens(baseEntry.korean);
+  const verbTokens = rawTokens.filter(isVerbMeaningToken);
+  const normalizedPluralTokens = rawTokens.map(normalizePluralMeaningToken).filter(Boolean);
+  const nounLikeTokens = normalizedPluralTokens.filter(isNounLikeMeaningToken);
+  const hasNounPart = basePart.includes("명사");
+  const hasVerbPart = basePart.includes("동사");
+  const hasMixedPart = /명사|동사|형용사|부사/.test(basePart) && basePart.includes(",");
+
+  if (suffix === "plural") {
+    let meanings;
+    if (hasVerbPart && !hasNounPart) {
+      meanings = verbTokens.length ? verbTokens : rawTokens;
+    } else if (hasNounPart) {
+      const preferred = nounLikeTokens.length ? nounLikeTokens : normalizedPluralTokens;
+      meanings = hasMixedPart ? preferred.slice(0, 2) : preferred;
+    } else {
+      meanings = nounLikeTokens.length ? nounLikeTokens : normalizedPluralTokens;
+    }
+
+    const finalMeanings = dedupeMeaningTokens(meanings).slice(0, 3);
+    const pluralKeywords = finalMeanings
+      .filter((item) => !isVerbMeaningToken(item))
+      .map((item) => `${item}들`);
+    const note = hasVerbPart && !hasNounPart
+      ? `${baseWord}의 3인칭 단수 현재형 표현이에요.`
+      : hasNounPart && hasVerbPart
+        ? `${baseWord}의 복수형 또는 3인칭 단수 현재형으로 쓰일 수 있는 표현이에요.`
+        : `${baseWord}의 복수형 표현이에요.`;
+
+    return {
+      korean: finalMeanings.join(", "),
+      part: hasNounPart ? "명사" : basePart,
+      note,
+      keywords: dedupeMeaningTokens([...finalMeanings, ...pluralKeywords]),
+    };
+  }
+
+  if (suffix === "past") {
+    const source = verbTokens.length ? verbTokens : rawTokens;
+    const finalMeanings = dedupeMeaningTokens(source).slice(0, 3);
+    return {
+      korean: finalMeanings.join(", "),
+      part: basePart,
+      note: `${baseWord}의 과거형 또는 과거분사형 표현이에요.`,
+      keywords: dedupeMeaningTokens([...finalMeanings, ...rawTokens]),
+    };
+  }
+
+  if (suffix === "ing") {
+    const source = verbTokens.length ? verbTokens : rawTokens;
+    const converted = verbTokens.length ? source.map(toGerundMeaningToken) : source;
+    const finalMeanings = dedupeMeaningTokens(converted).slice(0, 3);
+    return {
+      korean: finalMeanings.join(", "),
+      part: basePart,
+      note: `${baseWord}의 동명사 또는 현재분사형 표현이에요.`,
+      keywords: dedupeMeaningTokens([...finalMeanings, ...rawTokens]),
+    };
+  }
+
+  if (suffix === "person") {
+    const source = verbTokens.length ? verbTokens : rawTokens.slice(0, 2);
+    const converted = verbTokens.length ? source.map(toActorMeaningToken) : source.map((item) => `${item} 관련 사람`);
+    const finalMeanings = dedupeMeaningTokens(converted).slice(0, 3);
+    return {
+      korean: finalMeanings.join(", "),
+      part: "명사",
+      note: `${baseWord}와 관련된 사람을 가리키는 표현이에요.`,
+      keywords: dedupeMeaningTokens([...finalMeanings, ...rawTokens]),
+    };
+  }
+
+  return null;
+}
+
 function deriveSupplementFromKnownWord(word) {
   const lower = word.toLowerCase();
   const candidates = [];
@@ -1616,17 +1755,9 @@ function deriveSupplementFromKnownWord(word) {
   for (const candidate of candidates) {
     const baseEntry = getBaseMeaning(candidate.base);
     if (!baseEntry) continue;
-    if (candidate.suffix === "plural") {
-      return [`${baseEntry.korean}들`, baseEntry.part];
-    }
-    if (candidate.suffix === "past") {
-      return [`${baseEntry.korean}의 과거형 또는 과거분사`, baseEntry.part];
-    }
-    if (candidate.suffix === "ing") {
-      return [`${baseEntry.korean}하는 중, ${baseEntry.korean}하기`, baseEntry.part];
-    }
-    if (candidate.suffix === "person") {
-      return [`${baseEntry.korean}하는 사람`, "명사"];
+    const derived = buildDerivedSupplement(lower, baseEntry, candidate.suffix);
+    if (derived) {
+      return derived;
     }
   }
 
@@ -1690,14 +1821,25 @@ dictionary.push(
     .filter((word) => !existingWords.has(word.toLowerCase()))
     .map((word) => {
       const supplement = getBankSupplement(word);
+      const supplementInfo =
+        supplement && !Array.isArray(supplement)
+          ? supplement
+          : { korean: supplement[0], part: supplement[1], note: "", keywords: [] };
       const isPrioritySupplement = Array.isArray(ministry3000Supplement[word.toLowerCase()]);
       const isFallbackSupplement = !isPrioritySupplement;
-      const korean = supplement[0];
-      const part = supplement[1];
-      const keywords = korean
-        .split(/, |,|;| /)
+      const korean = supplementInfo.korean;
+      const part = supplementInfo.part;
+      const keywords = [...splitMeaningTokens(korean), ...(supplementInfo.keywords ?? [])]
         .map((item) => item.trim())
         .filter((item) => /[가-힣]/.test(item));
+      const defaultDefinition = isPrioritySupplement
+        ? `고등학생까지 사용할 3000개 우선 보강 단어예요. 뜻은 '${korean}'입니다.`
+        : isFallbackSupplement
+          ? `어휘 뱅크의 추가 단어를 자동 보강한 항목이에요. 뜻은 '${korean}'입니다.`
+          : `어휘 뱅크의 추가 단어예요. 뜻은 '${korean}'입니다.`;
+      const definition = supplementInfo.note
+        ? `${supplementInfo.note} 뜻은 '${korean}'입니다.`
+        : defaultDefinition;
 
       return {
         word,
@@ -1706,11 +1848,7 @@ dictionary.push(
         part,
         category: isPrioritySupplement ? "고등 3000 보강" : "어휘 뱅크 자동 보강",
         level: 4,
-        definition: isPrioritySupplement
-          ? `고등학생까지 사용할 3000개 우선 보강 단어예요. 뜻은 '${korean}'입니다.`
-          : isFallbackSupplement
-            ? `어휘 뱅크의 추가 단어를 자동 보강한 항목이에요. 뜻은 '${korean}'입니다.`
-            : `어휘 뱅크의 추가 단어예요. 뜻은 '${korean}'입니다.`,
+        definition,
         keywords: keywords.length ? keywords : [korean],
         examples: [
           [`I looked up "${word}" in the dictionary.`, `나는 사전에서 '${word}'를 찾아봤어요.`],
@@ -1771,6 +1909,9 @@ dictionary.forEach((entry) => {
   const overrideKeywords = buildKeywordsFromKorean(override);
   if (overrideKeywords.length) {
     entry.keywords = overrideKeywords;
+  }
+  if (entry.category === "어휘 뱅크 자동 보강") {
+    entry.category = "검증 완료 단어";
   }
   if (Number(entry.level || 0) >= 3) {
     entry.definition = `${VERIFIED_MEANING_PREFIX}${override}${VERIFIED_MEANING_SUFFIX}`;
@@ -1867,6 +2008,7 @@ const preferredKoreanSearchMap = {
   "\ud615\ud3b8\uc5c6\ub294": "terrible",
   "\uc54c\ud30c\ubcb3": "alphabet",
   "\uc601\ub9ac\ud55c": "clever",
+  "\ucf54\ub07c\ub9ac": "elephant",
 };
 const localSynonyms = {
   appear: ["emerge", "show up", "seem"],

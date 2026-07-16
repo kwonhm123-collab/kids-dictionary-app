@@ -1,5 +1,6 @@
 window.manualDictionaryAdditions = [
   ["acquaintance", "\uC544\uB294 \uC0AC\uB78C, \uC9C0\uC778", "n"],
+  ["textbook", "\uAD50\uACFC\uC11C", "n"],
   ["affection", "\uC560\uC815, \uC815\uC74C", "n"],
   ["affirm", "\uB2E8\uC5B8\uD558\uB2E4, \uD655\uC778\uD558\uB2E4", "v"],
   ["alibi", "\uC54C\uB9AC\uBC14\uC774, \uBD80\uC7AC \uC99D\uBA85", "n"],

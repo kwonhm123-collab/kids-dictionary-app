@@ -168,6 +168,7 @@ const cases = [
   ["deadline", "deadline", "영한 업무어"],
   ["invoice", "invoice", "영한 업무어"],
   ["analytics", "analytics", "영한 업무어"],
+  ["textbook", "textbook", "영한 보강어"],
   ["computer", "computer", "영한 기본어"],
   ["neighbor", "neighbor", "영한 기본어"],
   ["neighbors", "neighbors", "영한 기본어"],
@@ -327,6 +328,31 @@ const qualityResults = qualityWords.map((word) => {
   };
 });
 const qualityFailed = qualityResults.filter((result) => !result.pass);
+const derivedQualityChecks = [
+  ["trees", "나무"],
+  ["positions", "위치"],
+  ["outdoors", "야외"],
+  ["runs", "달리다"],
+  ["adding", "더하기"],
+  ["seeing", "보기"],
+  ["booking", "예약"],
+  ["remaining", "남아 있기"],
+];
+const derivedQualityResults = derivedQualityChecks.map(([word, expected]) => {
+  const entry = context.findWord(word);
+  const korean = entry?.korean ?? null;
+  return {
+    word,
+    expected,
+    actual: korean,
+    pass:
+      typeof korean === "string" &&
+      korean.includes(expected) &&
+      !korean.includes("하는 중") &&
+      !korean.endsWith("들"),
+  };
+});
+const derivedQualityFailed = derivedQualityResults.filter((result) => !result.pass);
 const meaningChecks = [
   ["deliverable", "산출물"],
   ["attachment", "첨부 파일"],
@@ -338,6 +364,7 @@ const meaningChecks = [
   ["viewer", "시청자"],
   ["appearance", "외모"],
   ["dental", "치과의"],
+  ["textbook", "교과서"],
   ["terrible", "\ub054\ucc0d\ud55c"],
   ["acquaintance", "\uc544\ub294 \uc0ac\ub78c"],
   ["ambulance", "\uad6c\uae09\ucc28"],
@@ -416,6 +443,7 @@ console.log(
       falsePositives: { total: falsePositiveResults.length, failed: falsePositiveFailed.length, results: falsePositiveResults },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
+      derivedQuality: { total: derivedQualityResults.length, failed: derivedQualityFailed.length, results: derivedQualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
       render: { total: renderChecks.length, failed: renderFailed.length, results: renderChecks },
       related: { total: relatedResults.length, failed: relatedFailed.length, results: relatedResults },
@@ -430,6 +458,7 @@ if (
   excludedFailed.length > 0 ||
   senseFailed.length > 0 ||
   qualityFailed.length > 0 ||
+  derivedQualityFailed.length > 0 ||
   meaningFailed.length > 0 ||
   renderFailed.length > 0 ||
   relatedFailed.length > 0

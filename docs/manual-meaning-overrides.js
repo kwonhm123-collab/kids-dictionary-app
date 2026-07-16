@@ -3,6 +3,7 @@ window.verifiedMeaningOverrides = Object.assign(
   {
     appearance: "외모, 모습, 등장",
     dental: "치아의, 치과의",
+    booking: "예약",
     viewer: "시청자, 관람자",
     viewers: "시청자들, 관람자들",
 
