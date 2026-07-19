@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T12:18:24.828Z",
+  "generatedAt": "2026-07-19T13:28:22.135Z",
   "sourceDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary",
   "releaseDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary-release",
   "files": [
@@ -16,6 +16,8 @@
     "manual-meaning-overrides.js",
     "manual-extra-overrides.js",
     "manual-middle-school-additions.js",
+    "manual-middle-school-core-additions.js",
+    "manual-middle-school-depth-additions.js",
     "manual-excluded-words.js",
     "manual-proper-noun-overrides.js",
     "naver-pronunciation-overrides.js",

@@ -1932,9 +1932,11 @@ if (manualDictionaryAdditions.length) {
   const existingManualWords = new Set(dictionary.map((entry) => entry.word.toLowerCase()));
   const normalizedManualEntries = manualDictionaryAdditions
     .filter((item) => Array.isArray(item) && item.length >= 3)
-    .map(([word, korean, part]) => {
+    .map(([word, korean, part, category = "\uC911\uB4F1 1500 \uBCF4\uAC15", level = 2]) => {
       const normalizedWord = String(word || "").trim();
       const normalizedKorean = String(korean || "").trim();
+      const normalizedCategory = String(category || "\uC911\uB4F1 1500 \uBCF4\uAC15").trim();
+      const normalizedLevel = Number(level || 2);
       if (!normalizedWord || !normalizedKorean) {
         return null;
       }
@@ -1944,9 +1946,9 @@ if (manualDictionaryAdditions.length) {
         pronunciation: normalizedWord,
         korean: normalizedKorean,
         part: normalizeManualPart(part),
-        category: "\uC911\uB4F1 1500 \uBCF4\uAC15",
-        level: 2,
-        definition: `\uC911\uB4F1 \uD544\uC218 \uB2E8\uC5B4 \uBCF4\uAC15 \uD56D\uBAA9\uC774\uC5D0\uC694. \uB73B\uC740 '${normalizedKorean}'\uC785\uB2C8\uB2E4.`,
+        category: normalizedCategory,
+        level: normalizedLevel,
+        definition: `${normalizedCategory} \uD56D\uBAA9\uC774\uC5D0\uC694. \uB73B\uC740 '${normalizedKorean}'\uC785\uB2C8\uB2E4.`,
         keywords: buildKeywordsFromKorean(normalizedKorean),
         examples: [
           [`I studied the word "${normalizedWord}".`, `\uB098\uB294 '${normalizedWord}' \uB2E8\uC5B4\uB97C \uACF5\uBD80\uD588\uC5B4\uC694.`],
@@ -2048,7 +2050,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v71";
+const APP_RELEASE_VERSION = "v73";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2917,6 +2919,8 @@ function buildAppStats() {
   const autoSupplementCount = byCategory.get("\uC5B4\uD718 \uBC45\uD06C \uC790\uB3D9 \uBCF4\uAC15") ?? 0;
   const top2200Count = byCategory.get("\uC0C1\uC704 2200 \uBCF4\uAC15") ?? 0;
   const middleSchoolSupplementCount = byCategory.get("\uC911\uB4F1 1500 \uBCF4\uAC15") ?? 0;
+  const middleSchoolCoreSupplementCount = byCategory.get("\uC911\uB4F1 \uAE30\uBCF8 \uBCF4\uAC15") ?? 0;
+  const middleSchoolDepthSupplementCount = byCategory.get("\uC911\uB4F1 \uC2EC\uD654 \uBCF4\uAC15") ?? 0;
   const highSchoolSupplementCount = byCategory.get("\uACE0\uB4F1 3000 \uBCF4\uAC15") ?? 0;
   const workEnglishCount = countCategoriesByPrefix("\uC5C5\uBB34 \uC601\uC5B4");
 
@@ -2945,6 +2949,8 @@ function buildAppStats() {
       ["\uC5B4\uD718 \uBC45\uD06C \uC790\uB3D9 \uBCF4\uAC15", autoSupplementCount],
       ["\uC0C1\uC704 2200 \uBCF4\uAC15", top2200Count],
       ["\uC911\uB4F1 1500 \uBCF4\uAC15", middleSchoolSupplementCount],
+      ["\uC911\uB4F1 \uAE30\uBCF8 \uBCF4\uAC15", middleSchoolCoreSupplementCount],
+      ["\uC911\uB4F1 \uC2EC\uD654 \uBCF4\uAC15", middleSchoolDepthSupplementCount],
       ["\uACE0\uB4F1 3000 \uBCF4\uAC15", highSchoolSupplementCount],
       ["\uC5C5\uBB34 \uC601\uC5B4", workEnglishCount],
       ["\uACE0\uC720\uBA85\uC0AC \uBCC4\uB3C4", properNounCount],

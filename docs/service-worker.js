@@ -1,4 +1,4 @@
-const CACHE_NAME = "kids-dictionary-v71";
+const CACHE_NAME = "kids-dictionary-v73";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -14,6 +14,8 @@ const APP_FILES = [
   "./manual-meaning-overrides.js",
   "./manual-extra-overrides.js",
   "./manual-middle-school-additions.js",
+  "./manual-middle-school-core-additions.js",
+  "./manual-middle-school-depth-additions.js",
   "./manual-excluded-words.js",
   "./manual-proper-noun-overrides.js",
   "./naver-pronunciation-overrides.js",

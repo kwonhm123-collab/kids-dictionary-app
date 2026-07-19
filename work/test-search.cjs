@@ -51,6 +51,12 @@ const manualExtraOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual
 const manualMiddleSchoolAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-middle-school-additions.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-additions.js", "utf8")
   : "window.manualDictionaryAdditions = [];";
+const manualMiddleSchoolCoreAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-middle-school-core-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-core-additions.js", "utf8")
+  : "";
+const manualMiddleSchoolDepthAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-middle-school-depth-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-depth-additions.js", "utf8")
+  : "";
 const manualExcludedWordsCode = fs.existsSync("./outputs/kids-dictionary/manual-excluded-words.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-excluded-words.js", "utf8")
   : "window.excludedDictionaryWords = [];";
@@ -104,6 +110,8 @@ vm.runInContext(verifiedMeaningOverridesCode, context);
 vm.runInContext(manualMeaningOverridesCode, context);
 vm.runInContext(manualExtraOverridesCode, context);
 vm.runInContext(manualMiddleSchoolAdditionsCode, context);
+vm.runInContext(manualMiddleSchoolCoreAdditionsCode, context);
+vm.runInContext(manualMiddleSchoolDepthAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(manualProperNounOverridesCode, context);
 vm.runInContext(naverPronunciationOverridesCode, context);
@@ -175,6 +183,17 @@ const cases = [
   ["watermelon", "watermelon", "영한 중등 1500 보강"],
   ["yogurt", "yogurt", "영한 중등 1500 보강"],
   ["zebra", "zebra", "영한 중등 1500 보강"],
+  ["aunt", "aunt", "영한 중등 기본 보강"],
+  ["borrow", "borrow", "영한 중등 기본 보강"],
+  ["climb", "climb", "영한 중등 기본 보강"],
+  ["umbrella", "umbrella", "영한 중등 기본 보강"],
+  ["have to", "have to", "영한 중등 기본 표현"],
+  ["ice cream", "ice cream", "영한 중등 기본 표현"],
+  ["next to", "next to", "영한 중등 기본 표현"],
+  ["accent", "accent", "영한 중등 심화 보강"],
+  ["accountant", "accountant", "영한 중등 심화 보강"],
+  ["anxious", "anxious", "영한 중등 심화 보강"],
+  ["withdraw", "withdraw", "영한 중등 심화 보강"],
   ["appear", "appear", "영한 고등어"],
   ["disappear", "disappear", "영한 구조어"],
   ["deadline", "deadline", "영한 업무어"],
