@@ -1530,6 +1530,7 @@ const ministry3000Supplement = window.ministry3000Supplement ?? {};
 const verifiedBankSupplement = window.verifiedBankSupplement ?? {};
 const verifiedMeaningOverrides = window.verifiedMeaningOverrides ?? {};
 const manualDictionaryAdditions = Array.isArray(window.manualDictionaryAdditions) ? window.manualDictionaryAdditions : [];
+const manualPhraseAdditions = Array.isArray(window.manualPhraseAdditions) ? window.manualPhraseAdditions : [];
 const knownTop1000SupplementWords = new Set(dictionary.map((entry) => entry.word.toLowerCase()));
 
 const remainingBankPriorityMeanings = {
@@ -1970,6 +1971,44 @@ if (manualDictionaryAdditions.length) {
   dictionary.push(...normalizedManualEntries);
 }
 
+if (manualPhraseAdditions.length) {
+  manualPhraseAdditions.forEach(([word, korean, part = "숙어", category = "숙어 보강", level = 3, aliases = []]) => {
+    const normalizedWord = String(word ?? "").trim().toLowerCase().replace(/\s+/g, " ");
+    const normalizedKorean = String(korean ?? "").trim();
+    if (!normalizedWord || !normalizedKorean) {
+      return;
+    }
+
+    const normalizedAliases = uniqueItems(
+      [normalizedWord, ...[].concat(aliases || [])]
+        .map((alias) => String(alias ?? "").trim().toLowerCase().replace(/\s+/g, " "))
+        .filter(Boolean)
+    );
+    const phraseEntry = {
+      word: normalizedWord,
+      pronunciation: normalizedWord,
+      korean: normalizedKorean,
+      part,
+      category,
+      level,
+      definition: `${category} 항목이에요. 뜻은 '${normalizedKorean}'입니다.`,
+      keywords: buildKeywordsFromKorean(normalizedKorean),
+      examples: [
+        [`I learned the phrase "${normalizedWord}".`, `나는 '${normalizedWord}' 표현을 배웠어요.`],
+        [`Please use "${normalizedWord}" in a sentence.`, `'${normalizedWord}'를 문장 안에서 사용해 보세요.`],
+      ],
+      aliases: normalizedAliases,
+      searchKeys: uniqueItems(normalizedAliases.map((alias) => normalizeSearchKey(alias))),
+    };
+    const existingEntry = dictionary.find((entry) => entry.word.toLowerCase() === normalizedWord);
+    if (existingEntry) {
+      Object.assign(existingEntry, phraseEntry);
+      return;
+    }
+    dictionary.push(phraseEntry);
+  });
+}
+
 const VERIFIED_MEANING_PREFIX = "\uAC80\uC99D \uBC18\uC601 \uB73B\uC740 '";
 const VERIFIED_MEANING_SUFFIX = "'\uC785\uB2C8\uB2E4.";
 
@@ -2050,7 +2089,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v73";
+const APP_RELEASE_VERSION = "v75";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2275,7 +2314,50 @@ function saveList(key, list) {
 }
 
 function normalize(text) {
-  return text.trim().toLowerCase();
+  return String(text ?? "").trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function normalizeSearchKey(text) {
+  return normalize(text)
+    .replace(/[’‘]/g, "'")
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9\u3131-\u318e\uac00-\ud7a3]+/g, "");
+}
+
+function getEntrySearchKeys(entry) {
+  return uniqueItems([entry.word, ...(entry.aliases ?? []), ...(entry.searchKeys ?? [])].map(normalizeSearchKey).filter(Boolean));
+}
+
+function entryMatchesEnglishQuery(entry, correctedQuery) {
+  const normalizedWord = normalize(entry.word);
+  const compactQuery = normalizeSearchKey(correctedQuery);
+  if (normalizedWord === correctedQuery || getEntrySearchKeys(entry).includes(compactQuery)) {
+    return true;
+  }
+  return false;
+}
+
+function scoreEnglishCandidate(entry, correctedQuery) {
+  const normalizedWord = normalize(entry.word);
+  const compactQuery = normalizeSearchKey(correctedQuery);
+  const compactWord = normalizeSearchKey(entry.word);
+  const isPhrase = /\s/.test(entry.word);
+  const hasSeparator = /[\s-]/.test(correctedQuery);
+  const aliasExact = (entry.aliases ?? []).some((alias) => normalizeSearchKey(alias) === compactQuery);
+
+  if (normalizedWord === correctedQuery) {
+    return isPhrase ? 120 : 90;
+  }
+  if (isPhrase && aliasExact) {
+    return 100;
+  }
+  if (compactWord === compactQuery) {
+    return isPhrase ? (hasSeparator ? 95 : 70) : 80;
+  }
+  if (getEntrySearchKeys(entry).includes(compactQuery)) {
+    return isPhrase ? (hasSeparator ? 85 : 65) : 60;
+  }
+  return 0;
 }
 
 function sanitizeStoredWords(words) {
@@ -2310,16 +2392,29 @@ function getAutocompleteWords(query) {
   const rawQuery = String(query ?? "").trim();
   const cleanQuery = normalize(query);
   const correctedQuery = commonMisspellingMap[cleanQuery] ?? cleanQuery;
-  if (!correctedQuery || !/^[a-z]+$/.test(correctedQuery)) {
+  const compactQuery = normalizeSearchKey(correctedQuery);
+  if (!correctedQuery || !/^[a-z0-9\s'-]+$/.test(correctedQuery) || !compactQuery) {
     return [];
   }
 
   return dictionary
     .filter((entry) => {
-      const word = entry.word.toLowerCase();
-      return word.startsWith(correctedQuery) || (rawQuery && word === correctedQuery);
+      const word = normalize(entry.word);
+      const compactWord = normalizeSearchKey(word);
+      const aliasMatch = (entry.aliases ?? []).some((alias) => normalize(alias).startsWith(correctedQuery) || normalizeSearchKey(alias).startsWith(compactQuery));
+      return word.startsWith(correctedQuery) || compactWord.startsWith(compactQuery) || aliasMatch || (rawQuery && entryMatchesEnglishQuery(entry, correctedQuery));
     })
     .sort((left, right) => {
+      const leftExact = entryMatchesEnglishQuery(left, correctedQuery) ? 1 : 0;
+      const rightExact = entryMatchesEnglishQuery(right, correctedQuery) ? 1 : 0;
+      if (leftExact !== rightExact) {
+        return rightExact - leftExact;
+      }
+      const leftPhrase = /\s/.test(left.word) ? 1 : 0;
+      const rightPhrase = /\s/.test(right.word) ? 1 : 0;
+      if (leftPhrase !== rightPhrase && compactQuery.length >= 4) {
+        return rightPhrase - leftPhrase;
+      }
       const leftPriority = priorityAutocompleteWords.includes(left.word) ? 1 : 0;
       const rightPriority = priorityAutocompleteWords.includes(right.word) ? 1 : 0;
       if (leftPriority !== rightPriority) {
@@ -2341,6 +2436,9 @@ function getAutocompleteWords(query) {
 
 function highlightAutocomplete(word, query) {
   const cleanQuery = normalize(query);
+  if (!normalize(word).startsWith(cleanQuery)) {
+    return escapeHtml(word);
+  }
   const prefix = escapeHtml(word.slice(0, cleanQuery.length));
   const rest = escapeHtml(word.slice(cleanQuery.length));
   return `<mark>${prefix}</mark>${rest}`;
@@ -2438,7 +2536,16 @@ function findWord(query) {
     return dictionary.find((entry) => entry.category === rawQuery || entry.category.endsWith(`· ${rawQuery}`));
   }
 
-  const exactEnglishMatch = dictionary.find((entry) => entry.word.toLowerCase() === correctedQuery);
+  const exactEnglishMatch = dictionary
+    .map((entry) => ({ entry, score: scoreEnglishCandidate(entry, correctedQuery) }))
+    .filter((candidate) => candidate.score > 0)
+    .sort((left, right) => {
+      const scoreDiff = right.score - left.score;
+      if (scoreDiff !== 0) {
+        return scoreDiff;
+      }
+      return left.entry.level - right.entry.level || left.entry.word.length - right.entry.word.length;
+    })[0]?.entry;
   if (exactEnglishMatch) {
     return exactEnglishMatch;
   }
@@ -2921,7 +3028,11 @@ function buildAppStats() {
   const middleSchoolSupplementCount = byCategory.get("\uC911\uB4F1 1500 \uBCF4\uAC15") ?? 0;
   const middleSchoolCoreSupplementCount = byCategory.get("\uC911\uB4F1 \uAE30\uBCF8 \uBCF4\uAC15") ?? 0;
   const middleSchoolDepthSupplementCount = byCategory.get("\uC911\uB4F1 \uC2EC\uD654 \uBCF4\uAC15") ?? 0;
+  const middleSchoolPhraseSupplementCount = byCategory.get("\uC911\uB4F1 \uC219\uC5B4 \uBCF4\uAC15") ?? 0;
   const highSchoolSupplementCount = byCategory.get("\uACE0\uB4F1 3000 \uBCF4\uAC15") ?? 0;
+  const highSchoolPhraseSupplementCount = byCategory.get("\uACE0\uB4F1 \uC219\uC5B4 \uBCF4\uAC15") ?? 0;
+  const workPhraseSupplementCount = byCategory.get("\uC5C5\uBB34 \uC219\uC5B4 \uBCF4\uAC15") ?? 0;
+  const practicalPhraseSupplementCount = byCategory.get("\uC77C\uBC18 \uC2E4\uC6A9 \uC219\uC5B4 \uBCF4\uAC15") ?? 0;
   const workEnglishCount = countCategoriesByPrefix("\uC5C5\uBB34 \uC601\uC5B4");
 
   return {
@@ -2951,8 +3062,12 @@ function buildAppStats() {
       ["\uC911\uB4F1 1500 \uBCF4\uAC15", middleSchoolSupplementCount],
       ["\uC911\uB4F1 \uAE30\uBCF8 \uBCF4\uAC15", middleSchoolCoreSupplementCount],
       ["\uC911\uB4F1 \uC2EC\uD654 \uBCF4\uAC15", middleSchoolDepthSupplementCount],
+      ["\uC911\uB4F1 \uC219\uC5B4 \uBCF4\uAC15", middleSchoolPhraseSupplementCount],
       ["\uACE0\uB4F1 3000 \uBCF4\uAC15", highSchoolSupplementCount],
+      ["\uACE0\uB4F1 \uC219\uC5B4 \uBCF4\uAC15", highSchoolPhraseSupplementCount],
       ["\uC5C5\uBB34 \uC601\uC5B4", workEnglishCount],
+      ["\uC5C5\uBB34 \uC219\uC5B4 \uBCF4\uAC15", workPhraseSupplementCount],
+      ["\uC77C\uBC18 \uC2E4\uC6A9 \uC219\uC5B4 \uBCF4\uAC15", practicalPhraseSupplementCount],
       ["\uACE0\uC720\uBA85\uC0AC \uBCC4\uB3C4", properNounCount],
     ],
     appRows: [

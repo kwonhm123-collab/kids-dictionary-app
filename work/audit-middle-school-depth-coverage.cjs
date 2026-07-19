@@ -122,6 +122,7 @@ function createAppContext() {
     ["manual-middle-school-additions.js", "window.manualDictionaryAdditions = [];"],
     ["manual-middle-school-core-additions.js", ""],
     ["manual-middle-school-depth-additions.js", ""],
+    ["manual-phrase-additions.js", "window.manualPhraseAdditions = [];"],
     ["manual-excluded-words.js", "window.excludedDictionaryWords = [];"],
     ["manual-proper-noun-overrides.js", "window.properNounOverrides = {};"],
     ["naver-pronunciation-overrides.js", "window.pronunciationDisplayOverrides = {};"],

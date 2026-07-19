@@ -57,6 +57,9 @@ const manualMiddleSchoolCoreAdditionsCode = fs.existsSync("./outputs/kids-dictio
 const manualMiddleSchoolDepthAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-middle-school-depth-additions.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-depth-additions.js", "utf8")
   : "";
+const manualPhraseAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-phrase-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-phrase-additions.js", "utf8")
+  : "window.manualPhraseAdditions = [];";
 const manualExcludedWordsCode = fs.existsSync("./outputs/kids-dictionary/manual-excluded-words.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-excluded-words.js", "utf8")
   : "window.excludedDictionaryWords = [];";
@@ -112,6 +115,7 @@ vm.runInContext(manualExtraOverridesCode, context);
 vm.runInContext(manualMiddleSchoolAdditionsCode, context);
 vm.runInContext(manualMiddleSchoolCoreAdditionsCode, context);
 vm.runInContext(manualMiddleSchoolDepthAdditionsCode, context);
+vm.runInContext(manualPhraseAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(manualProperNounOverridesCode, context);
 vm.runInContext(naverPronunciationOverridesCode, context);
@@ -190,6 +194,18 @@ const cases = [
   ["have to", "have to", "영한 중등 기본 표현"],
   ["ice cream", "ice cream", "영한 중등 기본 표현"],
   ["next to", "next to", "영한 중등 기본 표현"],
+  ["look up", "look up", "영한 숙어"],
+  ["lookup", "look up", "영한 숙어 공백 없는 입력"],
+  ["takecareof", "take care of", "영한 숙어 공백 없는 입력"],
+  ["followup", "follow up", "업무 숙어 공백 없는 입력"],
+  ["log-in", "log in", "업무 숙어 하이픈 입력"],
+  ["account for", "account for", "고등 숙어"],
+  ["takeintoaccount", "take into account", "고등 숙어 공백 없는 입력"],
+  ["in-terms-of", "in terms of", "고등 숙어 하이픈 입력"],
+  ["make a decision", "make a decision", "일반 실용 숙어"],
+  ["getridof", "get rid of", "일반 실용 숙어 공백 없는 입력"],
+  ["do my best", "do one's best", "일반 실용 숙어 별칭 입력"],
+  ["up-to-date", "up to date", "일반 실용 숙어 하이픈 입력"],
   ["accent", "accent", "영한 중등 심화 보강"],
   ["accountant", "accountant", "영한 중등 심화 보강"],
   ["anxious", "anxious", "영한 중등 심화 보강"],
@@ -293,6 +309,12 @@ const autocompleteCases = [
   ["dea", "deadline"],
   ["inv", "invoice"],
   ["sch", "school"],
+  ["looku", "look up"],
+  ["takec", "take care of"],
+  ["followu", "follow up"],
+  ["takei", "take into account"],
+  ["getr", "get rid of"],
+  ["makea", "make a decision"],
 ];
 const autocompleteResults = autocompleteCases.map(([query, expected]) => {
   const words = context.getAutocompleteWords(query).map((entry) => entry.word);

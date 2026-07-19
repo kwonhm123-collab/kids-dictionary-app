@@ -23,6 +23,7 @@ const FILES = [
   "manual-middle-school-additions.js",
   "manual-middle-school-core-additions.js",
   "manual-middle-school-depth-additions.js",
+  "manual-phrase-additions.js",
   "manual-excluded-words.js",
   "manual-proper-noun-overrides.js",
   "naver-pronunciation-overrides.js",
