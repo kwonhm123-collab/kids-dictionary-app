@@ -54,6 +54,15 @@ const manualMiddleSchoolAdditionsCode = fs.existsSync("./outputs/kids-dictionary
 const manualExcludedWordsCode = fs.existsSync("./outputs/kids-dictionary/manual-excluded-words.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-excluded-words.js", "utf8")
   : "window.excludedDictionaryWords = [];";
+const manualProperNounOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-proper-noun-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-proper-noun-overrides.js", "utf8")
+  : "window.properNounOverrides = {};";
+const naverPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/naver-pronunciation-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/naver-pronunciation-overrides.js", "utf8")
+  : "window.pronunciationDisplayOverrides = {};";
+const manualPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-pronunciation-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-pronunciation-overrides.js", "utf8")
+  : "window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};";
 
 const context = {
   console,
@@ -96,6 +105,9 @@ vm.runInContext(manualMeaningOverridesCode, context);
 vm.runInContext(manualExtraOverridesCode, context);
 vm.runInContext(manualMiddleSchoolAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
+vm.runInContext(manualProperNounOverridesCode, context);
+vm.runInContext(naverPronunciationOverridesCode, context);
+vm.runInContext(manualPronunciationOverridesCode, context);
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
 const cases = [
@@ -328,6 +340,11 @@ const qualityResults = qualityWords.map((word) => {
   };
 });
 const qualityFailed = qualityResults.filter((result) => !result.pass);
+const setupPronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.setup.display', context);
+const setupPronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrides.setup.phonetics', context);
+const activitiesDerivedPronunciation = vm.runInContext('getDerivedPronunciationInfo("activities")', context);
+const addingDerivedPronunciation = vm.runInContext('getDerivedPronunciationInfo("adding")', context);
+const accompaniedDerivedPronunciation = vm.runInContext('getDerivedPronunciationInfo("accompanied")', context);
 const derivedQualityChecks = [
   ["trees", "나무"],
   ["positions", "위치"],
@@ -416,6 +433,30 @@ const renderChecks = [
   },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);
+const pronunciationChecks = [
+  {
+    name: "setup 발음기호 표시 보정",
+    pass:
+      setupPronunciationDisplay === "미국∙영국 [sétʌ̀p]" &&
+      Array.isArray(setupPronunciationPhonetics) &&
+      setupPronunciationPhonetics.includes("sétʌ̀p"),
+  },
+];
+pronunciationChecks.push(
+  {
+    name: "activities 파생 발음 연결",
+    pass: Array.isArray(activitiesDerivedPronunciation?.phonetics) && activitiesDerivedPronunciation.phonetics.length > 0,
+  },
+  {
+    name: "adding 파생 발음 연결",
+    pass: Array.isArray(addingDerivedPronunciation?.phonetics) && addingDerivedPronunciation.phonetics.length > 0,
+  },
+  {
+    name: "accompanied 파생 발음 연결",
+    pass: Array.isArray(accompaniedDerivedPronunciation?.phonetics) && accompaniedDerivedPronunciation.phonetics.length > 0,
+  }
+);
+const pronunciationFailed = pronunciationChecks.filter((result) => !result.pass);
 const relatedCases = [
   { query: "\ub208", expectedFirst: "eye", expectedRelated: "snow" },
   { query: "\ubb38\uc81c", expectedFirst: "problem", expectedRelated: "issue" },
@@ -442,6 +483,7 @@ console.log(
       excluded: { total: excludedResults.length + 1, failed: excludedFailed.length, results: [...excludedResults, excludedAutocompleteResult] },
       falsePositives: { total: falsePositiveResults.length, failed: falsePositiveFailed.length, results: falsePositiveResults },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
+      pronunciation: { total: pronunciationChecks.length, failed: pronunciationFailed.length, results: pronunciationChecks },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
       derivedQuality: { total: derivedQualityResults.length, failed: derivedQualityFailed.length, results: derivedQualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
@@ -457,6 +499,7 @@ if (
   autocompleteFailed.length > 0 ||
   excludedFailed.length > 0 ||
   senseFailed.length > 0 ||
+  pronunciationFailed.length > 0 ||
   qualityFailed.length > 0 ||
   derivedQualityFailed.length > 0 ||
   meaningFailed.length > 0 ||

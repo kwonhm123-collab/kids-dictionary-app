@@ -1,4 +1,5 @@
 window.manualDictionaryAdditions = [
+  ["swallow", "\uC0BC\uD0A4\uB2E4, \uC81C\uBE44", "v, n"],
   ["acquaintance", "\uC544\uB294 \uC0AC\uB78C, \uC9C0\uC778", "n"],
   ["textbook", "\uAD50\uACFC\uC11C", "n"],
   ["affection", "\uC560\uC815, \uC815\uC74C", "n"],

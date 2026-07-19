@@ -1727,6 +1727,18 @@ function buildDerivedSupplement(word, baseEntry, suffix) {
     };
   }
 
+  if (suffix === "superlative") {
+    const source = rawTokens.length ? rawTokens : [baseEntry.korean].filter(Boolean);
+    const finalMeanings = dedupeMeaningTokens(source).slice(0, 3);
+    const emphasized = finalMeanings.map((item) => (item.startsWith("가장 ") ? item : `가장 ${item}`));
+    return {
+      korean: emphasized.join(", "),
+      part: basePart,
+      note: `${baseWord}의 최상급 표현이에요.`,
+      keywords: dedupeMeaningTokens([...emphasized, ...finalMeanings, ...rawTokens]),
+    };
+  }
+
   if (suffix === "person") {
     const source = verbTokens.length ? verbTokens : rawTokens.slice(0, 2);
     const converted = verbTokens.length ? source.map(toActorMeaningToken) : source.map((item) => `${item} 관련 사람`);
@@ -1742,27 +1754,72 @@ function buildDerivedSupplement(word, baseEntry, suffix) {
   return null;
 }
 
-function deriveSupplementFromKnownWord(word) {
+function buildDerivedWordCandidates(word) {
   const lower = word.toLowerCase();
   const candidates = [];
+  const seen = new Set();
+
+  function pushCandidate(base, suffix) {
+    const normalizedBase = String(base || "").trim().toLowerCase();
+    if (!normalizedBase) return;
+    const key = `${normalizedBase}|${suffix}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    candidates.push({ base: normalizedBase, suffix });
+  }
 
   if (lower.endsWith("ies") && lower.length > 4) {
-    candidates.push({ base: `${lower.slice(0, -3)}y`, suffix: "plural" });
+    pushCandidate(`${lower.slice(0, -3)}y`, "plural");
+  }
+  if (lower.endsWith("es") && lower.length > 4) {
+    pushCandidate(lower.slice(0, -2), "plural");
   }
   if (lower.endsWith("s") && lower.length > 3) {
-    candidates.push({ base: lower.slice(0, -1), suffix: "plural" });
+    pushCandidate(lower.slice(0, -1), "plural");
+  }
+  if (lower.endsWith("ied") && lower.length > 4) {
+    pushCandidate(`${lower.slice(0, -3)}y`, "past");
   }
   if (lower.endsWith("ed") && lower.length > 4) {
-    candidates.push({ base: lower.slice(0, -2), suffix: "past" });
-    candidates.push({ base: `${lower.slice(0, -1)}`, suffix: "past" });
+    const clipped = lower.slice(0, -2);
+    pushCandidate(`${clipped}e`, "past");
+    pushCandidate(clipped, "past");
+    if (/(bb|dd|ff|gg|ll|mm|nn|pp|rr|tt)$/.test(clipped)) {
+      pushCandidate(clipped.slice(0, -1), "past");
+    }
   }
-  if (lower.endsWith("ing") && lower.length > 5) {
-    candidates.push({ base: lower.slice(0, -3), suffix: "ing" });
-    candidates.push({ base: `${lower.slice(0, -3)}e`, suffix: "ing" });
+  if (lower.endsWith("ying") && lower.length > 6) {
+    pushCandidate(`${lower.slice(0, -4)}ie`, "ing");
+  }
+  if (lower.endsWith("ing") && lower.length > 4) {
+    const clipped = lower.slice(0, -3);
+    pushCandidate(`${clipped}e`, "ing");
+    pushCandidate(clipped, "ing");
+    if (/(bb|dd|ff|gg|ll|mm|nn|pp|rr|tt)$/.test(clipped)) {
+      pushCandidate(clipped.slice(0, -1), "ing");
+    }
+  }
+  if (lower.endsWith("iest") && lower.length > 6) {
+    pushCandidate(`${lower.slice(0, -4)}y`, "superlative");
+  }
+  if (lower.endsWith("est") && lower.length > 5) {
+    const clipped = lower.slice(0, -3);
+    pushCandidate(`${clipped}e`, "superlative");
+    pushCandidate(clipped, "superlative");
+    if (/(bb|dd|ff|gg|ll|mm|nn|pp|rr|tt)$/.test(clipped)) {
+      pushCandidate(clipped.slice(0, -1), "superlative");
+    }
   }
   if (lower.endsWith("er") && lower.length > 4) {
-    candidates.push({ base: lower.slice(0, -2), suffix: "person" });
+    pushCandidate(lower.slice(0, -2), "person");
   }
+
+  return candidates;
+}
+
+function deriveSupplementFromKnownWord(word) {
+  const lower = word.toLowerCase();
+  const candidates = buildDerivedWordCandidates(lower);
 
   for (const candidate of candidates) {
     const baseEntry = getBaseMeaning(candidate.base);
@@ -1942,6 +1999,40 @@ if (excludedDictionaryWords.size) {
   dictionary.push(...filteredDictionary);
 }
 
+const properNounOverrides = Object.fromEntries(
+  Object.entries(window.properNounOverrides ?? {})
+    .map(([word, info]) => [String(word).trim().toLowerCase(), info])
+    .filter(([word]) => Boolean(word))
+);
+
+function getProperNounCategory(type) {
+  if (type === "brand") return "고유명사 · 브랜드";
+  if (type === "place") return "고유명사 · 지명";
+  if (type === "name") return "고유명사 · 이름";
+  if (type === "service") return "고유명사 · 서비스";
+  return "고유명사";
+}
+
+if (Object.keys(properNounOverrides).length) {
+  dictionary.forEach((entry) => {
+    const override = properNounOverrides[entry.word.toLowerCase()];
+    if (!override) return;
+    entry.separateGroup = "proper-noun";
+    entry.properNounType = override.type ?? "general";
+    entry.category = getProperNounCategory(entry.properNounType);
+    if (override.korean) {
+      entry.korean = override.korean;
+    }
+    const properKeywords = buildKeywordsFromKorean(entry.korean);
+    if (properKeywords.length) {
+      entry.keywords = uniqueItems([...(entry.keywords ?? []), ...properKeywords]);
+    }
+    entry.definition =
+      override.note ??
+      `${entry.word}는 일반 학습 단어와 분리해서 관리하는 고유명사예요. 뜻은 '${entry.korean}'입니다.`;
+  });
+}
+
 const searchInput = document.querySelector("#searchInput");
 const searchButton = document.querySelector("#searchButton");
 const resultPanel = document.querySelector("#resultPanel");
@@ -1957,7 +2048,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v66";
+const APP_RELEASE_VERSION = "v71";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2050,11 +2141,18 @@ const localSynonyms = {
   comforting: ["soothing", "reassuring", "encouraging"],
   locally: ["nearby", "in the area", "regionally"],
 };
+const commonMisspellingMap = {
+  sawllow: "swallow",
+};
 const priorityAutocompleteWords = ["deadline", "invoice"];
 const pronunciationDisplayOverrides = {
   run: {
     display: "미국∙영국 [rʌn]",
     phonetics: ["rʌn"],
+  },
+  setup: {
+    display: "미국∙영국 [sétʌ̀p]",
+    phonetics: ["sétʌ̀p"],
   },
   world: {
     display: "미국 [wɝld] · 영국 [wɜːld]",
@@ -2077,6 +2175,90 @@ const pronunciationDisplayOverrides = {
     phonetics: ["lóukəli"],
   },
 };
+Object.assign(pronunciationDisplayOverrides, window.pronunciationDisplayOverrides || {});
+
+function trimIpaEnding(ipa) {
+  return String(ipa || "").replace(/[ˈˌ.\s]+$/g, "");
+}
+
+function endsWithAny(text, suffixes) {
+  return suffixes.some((suffix) => text.endsWith(suffix));
+}
+
+function getIpaEndingClass(ipa) {
+  const normalized = trimIpaEnding(ipa);
+  if (!normalized) return "other";
+  if (endsWithAny(normalized, ["tʃ", "dʒ", "ʧ", "ʤ", "s", "z", "ʃ", "ʒ"])) return "sibilant";
+  if (endsWithAny(normalized, ["t", "d"])) return "alveolar-stop";
+  if (endsWithAny(normalized, ["p", "k", "f", "θ"])) return "voiceless";
+  return "voiced";
+}
+
+function appendIpaSuffix(ipa, suffix) {
+  const base = trimIpaEnding(ipa);
+  if (!base) return "";
+  if (suffix === "plural") {
+    const endingClass = getIpaEndingClass(base);
+    if (endingClass === "sibilant") return `${base}ɪz`;
+    if (endingClass === "voiceless") return `${base}s`;
+    return `${base}z`;
+  }
+  if (suffix === "past") {
+    const endingClass = getIpaEndingClass(base);
+    if (endingClass === "alveolar-stop") return `${base}ɪd`;
+    if (endingClass === "voiceless") return `${base}t`;
+    return `${base}d`;
+  }
+  if (suffix === "ing") {
+    return `${base}ɪŋ`;
+  }
+  if (suffix === "person") {
+    return `${base}ər`;
+  }
+  return base;
+}
+
+function buildDerivedPronunciationDisplay(baseDisplay, phonetics) {
+  if (!phonetics.length) return null;
+  if (!baseDisplay) return null;
+  if (baseDisplay.startsWith("미국∙영국 [")) {
+    return `미국∙영국 [${phonetics[0]}]`;
+  }
+  if (baseDisplay.startsWith("미국 [") && baseDisplay.includes("· 영국 [") && phonetics.length >= 2) {
+    return `미국 [${phonetics[0]}] · 영국 [${phonetics[1]}]`;
+  }
+  if (baseDisplay.startsWith("미국 [")) {
+    return `미국 [${phonetics[0]}]`;
+  }
+  if (baseDisplay.startsWith("영국 [")) {
+    return `영국 [${phonetics[0]}]`;
+  }
+  return null;
+}
+
+function derivePronunciationFromBaseInfo(baseInfo, suffix) {
+  const basePhonetics = uniqueItems((baseInfo?.phonetics ?? []).map(normalizeIpaForDisplay));
+  if (!basePhonetics.length) return null;
+  const phonetics = uniqueItems(basePhonetics.map((ipa) => appendIpaSuffix(ipa, suffix)).filter(Boolean));
+  if (!phonetics.length) return null;
+  return {
+    phonetics,
+    display: buildDerivedPronunciationDisplay(baseInfo?.display ?? null, phonetics),
+  };
+}
+
+function getDerivedPronunciationInfo(word) {
+  const lower = normalize(word);
+  for (const candidate of buildDerivedWordCandidates(lower)) {
+    const baseInfo = pronunciationDisplayOverrides[candidate.base];
+    if (!baseInfo) continue;
+    const derived = derivePronunciationFromBaseInfo(baseInfo, candidate.suffix);
+    if (derived) {
+      return derived;
+    }
+  }
+  return null;
+}
 
 function loadList(key) {
   try {
@@ -2123,13 +2305,18 @@ function escapeHtml(text) {
 }
 
 function getAutocompleteWords(query) {
+  const rawQuery = String(query ?? "").trim();
   const cleanQuery = normalize(query);
-  if (!cleanQuery || !/^[a-z]+$/.test(cleanQuery)) {
+  const correctedQuery = commonMisspellingMap[cleanQuery] ?? cleanQuery;
+  if (!correctedQuery || !/^[a-z]+$/.test(correctedQuery)) {
     return [];
   }
 
   return dictionary
-    .filter((entry) => entry.word.toLowerCase().startsWith(cleanQuery))
+    .filter((entry) => {
+      const word = entry.word.toLowerCase();
+      return word.startsWith(correctedQuery) || (rawQuery && word === correctedQuery);
+    })
     .sort((left, right) => {
       const leftPriority = priorityAutocompleteWords.includes(left.word) ? 1 : 0;
       const rightPriority = priorityAutocompleteWords.includes(right.word) ? 1 : 0;
@@ -2204,11 +2391,12 @@ function getRelatedEntries(query, selectedEntry, limit = 5) {
 
 function findWord(query) {
   const cleanQuery = normalize(query);
+  const correctedQuery = commonMisspellingMap[cleanQuery] ?? cleanQuery;
   const rawQuery = query.trim();
-  if (!cleanQuery) {
+  if (!correctedQuery) {
     return null;
   }
-  if (excludedDictionaryWords.has(cleanQuery)) {
+  if (excludedDictionaryWords.has(correctedQuery)) {
     return null;
   }
 
@@ -2248,7 +2436,7 @@ function findWord(query) {
     return dictionary.find((entry) => entry.category === rawQuery || entry.category.endsWith(`· ${rawQuery}`));
   }
 
-  const exactEnglishMatch = dictionary.find((entry) => entry.word.toLowerCase() === cleanQuery);
+  const exactEnglishMatch = dictionary.find((entry) => entry.word.toLowerCase() === correctedQuery);
   if (exactEnglishMatch) {
     return exactEnglishMatch;
   }
@@ -2297,8 +2485,15 @@ function normalizeIpaForDisplay(text) {
 
 async function getExternalWordInfo(word) {
   const cleanWord = normalize(word);
+  const override = pronunciationDisplayOverrides[cleanWord];
+  const derived = override ? null : getDerivedPronunciationInfo(cleanWord);
   if (!isSingleEnglishWord(cleanWord)) {
-    return { audioUrl: null, phonetics: [], synonyms: [] };
+    return {
+      audioUrl: override?.audioUrl ?? null,
+      phonetics: override?.phonetics ?? derived?.phonetics ?? [],
+      synonyms: localSynonyms[cleanWord] ?? [],
+      pronunciationDisplay: override?.display ?? derived?.display ?? null,
+    };
   }
 
   if (externalWordInfoCache.has(cleanWord)) {
@@ -2308,8 +2503,12 @@ async function getExternalWordInfo(word) {
   try {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord)}`);
     if (!response.ok) {
-      const override = pronunciationDisplayOverrides[cleanWord];
-      const emptyInfo = { audioUrl: null, phonetics: override?.phonetics ?? [], synonyms: localSynonyms[cleanWord] ?? [], pronunciationDisplay: override?.display ?? null };
+      const emptyInfo = {
+        audioUrl: override?.audioUrl ?? null,
+        phonetics: override?.phonetics ?? derived?.phonetics ?? [],
+        synonyms: localSynonyms[cleanWord] ?? [],
+        pronunciationDisplay: override?.display ?? derived?.display ?? null,
+      };
       externalWordInfoCache.set(cleanWord, emptyInfo);
       return emptyInfo;
     }
@@ -2335,14 +2534,22 @@ async function getExternalWordInfo(word) {
       .filter((synonym) => synonym.toLowerCase() !== cleanWord)
       .slice(0, 8);
 
-    const override = pronunciationDisplayOverrides[cleanWord];
-    const info = { audioUrl: audioUrl ?? null, phonetics: override?.phonetics ?? ipaList, synonyms, pronunciationDisplay: override?.display ?? null };
+    const info = {
+      audioUrl: override?.audioUrl ?? audioUrl ?? null,
+      phonetics: override?.phonetics ?? (ipaList.length ? ipaList : derived?.phonetics ?? []),
+      synonyms,
+      pronunciationDisplay: override?.display ?? (ipaList.length ? null : derived?.display ?? null),
+    };
     externalWordInfoCache.set(cleanWord, info);
     pronunciationAudioCache.set(cleanWord, info.audioUrl);
     return info;
   } catch {
-    const override = pronunciationDisplayOverrides[cleanWord];
-    const fallbackInfo = { audioUrl: null, phonetics: override?.phonetics ?? [], synonyms: localSynonyms[cleanWord] ?? [], pronunciationDisplay: override?.display ?? null };
+    const fallbackInfo = {
+      audioUrl: override?.audioUrl ?? null,
+      phonetics: override?.phonetics ?? derived?.phonetics ?? [],
+      synonyms: localSynonyms[cleanWord] ?? [],
+      pronunciationDisplay: override?.display ?? derived?.display ?? null,
+    };
     externalWordInfoCache.set(cleanWord, fallbackInfo);
     pronunciationAudioCache.set(cleanWord, null);
     return fallbackInfo;
@@ -2674,11 +2881,17 @@ function buildAppStats() {
   let exampleCount = 0;
   let pronunciationGuideCount = 0;
   let structureCount = 0;
+  let properNounCount = 0;
 
   dictionary.forEach((entry) => {
-    const level = Number(entry.level || 0);
-    byLevel.set(level, (byLevel.get(level) ?? 0) + 1);
-    byCategory.set(entry.category, (byCategory.get(entry.category) ?? 0) + 1);
+    if (entry.separateGroup === "proper-noun") {
+      properNounCount += 1;
+    } else {
+      const level = Number(entry.level || 0);
+      byLevel.set(level, (byLevel.get(level) ?? 0) + 1);
+      byCategory.set(entry.category, (byCategory.get(entry.category) ?? 0) + 1);
+    }
+
     if (Array.isArray(entry.examples) && entry.examples.length) {
       exampleCount += 1;
     }
@@ -2694,8 +2907,18 @@ function buildAppStats() {
   const middleCount = byLevel.get(3) ?? 0;
   const highCount = byLevel.get(4) ?? 0;
   const workCount = byLevel.get(5) ?? 0;
+  const countCategoriesByPrefix = (prefix) =>
+    [...byCategory.entries()].reduce(
+      (sum, [category, count]) => (category.startsWith(prefix) ? sum + count : sum),
+      0
+    );
   const verifiedOverrideCount = Object.keys(verifiedMeaningOverrides).length;
-  const verifiedCategoryCount = byCategory.get("검증 완료 단어") ?? 0;
+  const verifiedCategoryCount = byCategory.get("\uAC80\uC99D \uC644\uB8CC \uB2E8\uC5B4") ?? 0;
+  const autoSupplementCount = byCategory.get("\uC5B4\uD718 \uBC45\uD06C \uC790\uB3D9 \uBCF4\uAC15") ?? 0;
+  const top2200Count = byCategory.get("\uC0C1\uC704 2200 \uBCF4\uAC15") ?? 0;
+  const middleSchoolSupplementCount = byCategory.get("\uC911\uB4F1 1500 \uBCF4\uAC15") ?? 0;
+  const highSchoolSupplementCount = byCategory.get("\uACE0\uB4F1 3000 \uBCF4\uAC15") ?? 0;
+  const workEnglishCount = countCategoriesByPrefix("\uC5C5\uBB34 \uC601\uC5B4");
 
   return {
     totalWords: dictionary.length,
@@ -2707,32 +2930,37 @@ function buildAppStats() {
     structureCount,
     recentCount: recentWords.length,
     favoriteCount: favoriteWords.length,
+    properNounCount,
     selectedWord: selectedWord?.word ?? "-",
     levelRows: [
-      ["초등 단계", elementaryCount, "Level 1-2"],
-      ["중등 단계", middleCount, "Level 3"],
-      ["고등 단계", highCount, "Level 4"],
-      ["실무 확장", workCount, "Level 5"],
+      ["\uCD08\uB4F1 \uAD8C\uC7A5", elementaryCount, "Level 1-2"],
+      ["\uC911\uB4F1 \uAD8C\uC7A5", middleCount, "Level 3"],
+      ["\uACE0\uB4F1 \uAD8C\uC7A5", highCount, "Level 4"],
+      ["\uC9C1\uC7A5\uC778 \uD655\uC7A5", workCount, "Level 5"],
+      ["\uACE0\uC720\uBA85\uC0AC \uBCC4\uB3C4", properNounCount, "\uBE0C\uB79C\uB4DC\u00B7\uC9C0\uBA85\u00B7\uC774\uB984"],
     ],
     categoryRows: [
-      ["네이버 검수 반영", verifiedOverrideCount],
-      ["어휘 뱅크 검증 완료", verifiedCategoryCount],
-      ["어휘 뱅크 자동 보강", byCategory.get("어휘 뱅크 자동 보강") ?? 0],
-      ["상위 2200 보강", byCategory.get("상위 2200 보강") ?? 0],
-      ["중등 1500 보강", byCategory.get("중등 1500 보강") ?? 0],
-      ["고등 3000 보강", byCategory.get("고등 3000 보강") ?? 0],
-      ["고등 필수", byCategory.get("고등 필수") ?? 0]
+      ["\uB124\uC774\uBC84 \uB73B \uAC80\uC218 \uBC18\uC601", verifiedOverrideCount],
+      ["\uAC80\uC99D \uC644\uB8CC \uB2E8\uC5B4", verifiedCategoryCount],
+      ["\uC5B4\uD718 \uBC45\uD06C \uC790\uB3D9 \uBCF4\uAC15", autoSupplementCount],
+      ["\uC0C1\uC704 2200 \uBCF4\uAC15", top2200Count],
+      ["\uC911\uB4F1 1500 \uBCF4\uAC15", middleSchoolSupplementCount],
+      ["\uACE0\uB4F1 3000 \uBCF4\uAC15", highSchoolSupplementCount],
+      ["\uC5C5\uBB34 \uC601\uC5B4", workEnglishCount],
+      ["\uACE0\uC720\uBA85\uC0AC \uBCC4\uB3C4", properNounCount],
     ],
     appRows: [
-      ["앱 이름", "유니유니 영어사전"],
-      ["에디션", getEditionLabel()],
-      ["배포 버전", APP_RELEASE_VERSION],
-      ["제외 단어", `${formatCount(excludedDictionaryWords.size)}개`],
-      ["오프라인 사용", typeof navigator !== "undefined" && "serviceWorker" in navigator ? "지원" : "미지원"],
+      ["\uC571 \uC774\uB984", "\uC720\uB2C8\uC720\uB2C8 \uC601\uC5B4\uC0AC\uC804"],
+      ["\uC5D0\uB514\uC158", getEditionLabel()],
+      ["\uBC30\uD3EC \uBC84\uC804", APP_RELEASE_VERSION],
+      ["\uC81C\uC678 \uB2E8\uC5B4", `${formatCount(excludedDictionaryWords.size)}\uAC1C`],
+      [
+        "\uC624\uD504\uB77C\uC778 \uC0AC\uC6A9",
+        typeof navigator !== "undefined" && "serviceWorker" in navigator ? "\uC9C0\uC6D0" : "\uBBF8\uC9C0\uC6D0",
+      ],
     ],
   };
 }
-
 function renderSummaryRows(rows) {
   return rows
     .map(
