@@ -1654,6 +1654,11 @@ function isAdverbPart(part) {
   return text.includes("adv") || text.includes("부사") || text.includes("遺");
 }
 
+function isAdjectiveMeaning(korean) {
+  const meaning = getCleanMeaning(korean);
+  return /(한|의|적인|스러운|없는|있는|좋은|나쁜)$/.test(meaning);
+}
+
 function isPhrasePart(part, word) {
   const text = getPartText(part);
   return /\s/.test(String(word || "")) || text.includes("phrase") || text.includes("숙어") || text.includes("구동사") || text.includes("구");
@@ -1661,6 +1666,10 @@ function isPhrasePart(part, word) {
 
 function createRealisticExamples(word, korean, part = "", category = "") {
   const exampleOverrides = {
+    primary: [
+      ["This is the primary reason for the change.", "이것이 그 변화의 주된 이유예요."],
+      ["She goes to a primary school near her home.", "그녀는 집 근처 초등학교에 다녀요."],
+    ],
     stomach: [
       ["My stomach hurts after lunch.", "점심을 먹은 뒤 배가 아파요."],
       ["She put her hand on her stomach.", "그녀는 손을 배 위에 올렸어요."],
@@ -1699,10 +1708,10 @@ function createRealisticExamples(word, korean, part = "", category = "") {
     ];
   }
 
-  if (isAdjectivePart(part)) {
+  if (isAdjectivePart(part) || isAdjectiveMeaning(korean)) {
     return [
-      [`The ${normalizedWord} answer was easy to understand.`, `${meaning} 답은 이해하기 쉬웠어요.`],
-      [`I found a ${normalizedWord} example in the article.`, `나는 글에서 ${meaning} 예를 찾았어요.`],
+      [`This is a ${normalizedWord} point to remember.`, `이것은 기억해야 할 ${meaning} 점이에요.`],
+      [`The article gives a ${normalizedWord} example.`, `그 글에는 ${meaning} 예가 나와요.`],
     ];
   }
 
@@ -2187,7 +2196,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v76";
+const APP_RELEASE_VERSION = "v77";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();

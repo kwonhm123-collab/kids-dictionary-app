@@ -1,0 +1,21 @@
+{
+  "name": "유니유니 영어사전",
+  "short_name": "유니유니",
+  "description": "유니유니 영어사전, 한영사전, 발음, 예문, 업무 영어 학습이 가능한 앱",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#246bfe",
+  "orientation": "portrait",
+  "lang": "ko-KR",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity", "books"]
+}

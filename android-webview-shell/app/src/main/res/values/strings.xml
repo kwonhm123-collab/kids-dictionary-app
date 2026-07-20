@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">유니유니 영어사전</string>
+    <string name="remote_dictionary_url">https://kwonhm123-collab.github.io/kids-dictionary-app/</string>
+    <string name="local_dictionary_url">file:///android_asset/www/index.html</string>
+</resources>

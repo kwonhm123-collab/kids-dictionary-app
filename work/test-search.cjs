@@ -455,7 +455,10 @@ context.renderResult(context.findWord("begin"));
 const beginHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("stomach"));
 const stomachHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("primary"));
+const primaryHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
+const awkwardPrimaryPattern = /I saw a primary|The primary was important|주요한을 봤어요|주요한은 중요했어요/i;
 const renderChecks = [
   {
     name: "world 화면 뜻 표시",
@@ -479,6 +482,15 @@ const renderChecks = [
       stomachHtml.includes("My stomach hurts after lunch.") &&
       stomachHtml.includes("She put her hand on her stomach.") &&
       !repeatedExamplePattern.test(stomachHtml),
+  },
+  {
+    name: "primary 자연 예문 표시",
+    pass:
+      primaryHtml.includes("This is the primary reason for the change.") &&
+      primaryHtml.includes("이것이 그 변화의 주된 이유예요.") &&
+      primaryHtml.includes("She goes to a primary school near her home.") &&
+      primaryHtml.includes("그녀는 집 근처 초등학교에 다녀요.") &&
+      !awkwardPrimaryPattern.test(primaryHtml),
   },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);

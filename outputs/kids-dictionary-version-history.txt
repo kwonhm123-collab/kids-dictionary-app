@@ -1386,3 +1386,51 @@ ode work/test-search.cjs 전체 통과
 - node work/test-search.cjs 전체 통과
 - node work/audit-middle-school-depth-coverage.cjs 전체 통과
 - GitHub Pages용 docs 빌드 완료
+버전: v77
+작성일: 2026-07-20
+코드 보관 위치: outputs/kids-dictionary-versions/v77/
+
+주요 변경 내용:
+- `primary` 검색 시 `I saw a primary...`, `The primary was...`처럼 형용사를 명사처럼 쓰던 부자연스러운 예문을 제거했습니다.
+- `primary` 전용 예문을 `This is the primary reason for the change.`, `She goes to a primary school near her home.`으로 교체했습니다.
+- 한국어 해석을 `이것이 그 변화의 주된 이유예요.`, `그녀는 집 근처 초등학교에 다녀요.`처럼 자연스러운 표현으로 수정했습니다.
+- 형용사형 뜻을 가진 보강 단어가 명사형 예문으로 떨어지지 않도록 공통 예문 생성 규칙을 보강했습니다.
+- 앱 배포 버전은 `v77`, 서비스워커 캐시는 `kids-dictionary-v77`입니다.
+
+검증 기준 및 결과:
+- 영어 품사/용법 기준: Oxford Learner's Dictionaries, Oxford University Press의 `primary` 형용사 항목
+- 한국어 뜻 표현 기준: 기존 앱의 네이버 사전 기준 의미값과 자연스러운 한국어 문장성 검토
+- node work/test-search.cjs 전체 통과, `primary 자연 예문 표시` 검사 추가 통과
+- node work/audit-middle-school-depth-coverage.cjs 전체 통과
+- GitHub Pages용 docs 빌드 완료
+Android APK 셸: v1.0
+작성일: 2026-07-20
+코드 위치: android-webview-shell/
+
+주요 변경 내용:
+- 갤럭시 안드로이드폰 Family Link에서 독립 앱으로 관리할 수 있도록 Android WebView 기반 APK 셸 프로젝트를 추가했습니다.
+- 기본 실행 주소는 GitHub Pages 최신 사전 `https://kwonhm123-collab.github.io/kids-dictionary-app/`입니다.
+- GitHub 접속 실패 또는 인터넷 연결 실패 시 APK 내장 사전 `file:///android_asset/www/index.html`로 자동 전환되도록 구성했습니다.
+- APK 내장 fallback 사전 파일은 현재 `outputs/kids-dictionary-release` 기준으로 동기화했습니다.
+- 나중에 APK fallback 파일을 갱신할 수 있도록 `android-webview-shell/sync-web-assets.ps1` 스크립트를 추가했습니다.
+
+검증 결과:
+- Android Manifest/values/vector XML 파싱 통과
+- APK 내장 assets 필수 파일 확인: index.html, app.js, styles.css, manifest.json, service-worker.js, vocab-bank.js, release-info.json
+- 내장 사전 app.js 버전: v77 확인
+- PC에 Android Studio/JDK/Gradle이 설치되어 있지 않아 APK 실제 빌드는 수행하지 못했습니다.
+Android APK 셸: 빌드 준비 보강
+작성일: 2026-07-20
+코드 위치: android-webview-shell/
+
+주요 변경 내용:
+- Android Studio 설치 후 APK를 만들 수 있도록 `BUILD_APK_ON_WINDOWS.md` 문서를 추가했습니다.
+- `build-debug-apk.ps1` 스크립트를 추가해 사전 assets 동기화 후 debug APK 빌드를 실행할 수 있게 했습니다.
+- `install-debug-apk.ps1` 스크립트를 추가해 adb가 설치된 PC에서는 갤럭시폰에 APK를 바로 재설치할 수 있게 했습니다.
+- `gradlew.bat`가 있으면 Gradle wrapper를 사용하고, 없으면 PC의 `gradle` 명령을 사용하는 방식으로 빌드 스크립트를 구성했습니다.
+
+검증 결과:
+- `sync-web-assets.ps1` 실행 통과
+- PowerShell 스크립트 문법 검사 통과
+- Android Manifest/values/vector XML 파싱 통과
+- 현재 PC에는 Android Studio/JDK/Gradle/adb가 없어 APK 실제 컴파일은 아직 수행하지 못했습니다.
