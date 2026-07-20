@@ -453,6 +453,9 @@ context.renderResult(context.findWord("golden"));
 const goldenHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("begin"));
 const beginHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("stomach"));
+const stomachHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
 const renderChecks = [
   {
     name: "world 화면 뜻 표시",
@@ -467,10 +470,15 @@ const renderChecks = [
     pass: goldenHtml.includes("금빛의, 황금색의, 귀중한") && goldenHtml.includes("golden opportunity") && goldenHtml.includes("금빛"),
   },
   {
-    name: "begin 예문 따옴표 escape",
+    name: "begin 반복형 사전 예문 제거",
+    pass: !repeatedExamplePattern.test(beginHtml),
+  },
+  {
+    name: "stomach 현실 예문 표시",
     pass:
-      beginHtml.includes('I searched for &quot;begin&quot; in the dictionary.') &&
-      beginHtml.includes('data-speak="I searched for &quot;begin&quot; in the dictionary."'),
+      stomachHtml.includes("My stomach hurts after lunch.") &&
+      stomachHtml.includes("She put her hand on her stomach.") &&
+      !repeatedExamplePattern.test(stomachHtml),
   },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);

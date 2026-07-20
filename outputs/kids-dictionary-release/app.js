@@ -1414,10 +1414,7 @@ dictionary.push(
       level: 2,
       definition: `한국어 검색에서 자주 찾는 기본 단어예요. 뜻은 '${korean}'입니다.`,
       keywords,
-      examples: [
-        [`I searched for "${word}".`, `나는 '${word}'를 찾아봤어요.`],
-        [`This is a useful basic word.`, `이것은 유용한 기본 단어예요.`],
-      ],
+      examples: createRealisticExamples(word, korean, part, "기본 한영 보강"),
       structure: wordStructureNotes[word] ?? null,
     }))
 );
@@ -1613,6 +1610,114 @@ function splitMeaningTokens(korean) {
         .filter(Boolean)
     )
   );
+}
+
+const realisticExampleOverrides = {
+  stomach: [
+    ["My stomach hurts after lunch.", "점심을 먹은 뒤 배가 아파요."],
+    ["She put her hand on her stomach.", "그녀는 손을 배 위에 올렸어요."],
+  ],
+  headache: [
+    ["I have a headache this morning.", "오늘 아침에 머리가 아파요."],
+    ["Too much noise can give me a headache.", "소음이 심하면 머리가 아플 수 있어요."],
+  ],
+  dentist: [
+    ["I went to the dentist after school.", "나는 방과 후에 치과에 갔어요."],
+    ["The dentist checked my teeth.", "치과 의사가 내 이를 검사했어요."],
+  ],
+  account: [
+    ["I opened a bank account yesterday.", "나는 어제 은행 계좌를 만들었어요."],
+    ["Please check your account before you pay.", "결제하기 전에 계좌를 확인하세요."],
+  ],
+};
+
+function getCleanMeaning(korean) {
+  return splitMeaningTokens(korean)[0]?.replace(/[()]/g, "").trim() || "뜻";
+}
+
+function getPartText(part) {
+  return String(part || "").toLowerCase();
+}
+
+function isVerbPart(part) {
+  const text = getPartText(part);
+  return text.includes("v") || text.includes("동사") || text.includes("?숈궗");
+}
+
+function isAdjectivePart(part) {
+  const text = getPartText(part);
+  return text.includes("adj") || text.includes("형용사") || text.includes("?뺤슜");
+}
+
+function isAdverbPart(part) {
+  const text = getPartText(part);
+  return text.includes("adv") || text.includes("부사") || text.includes("遺");
+}
+
+function isPhrasePart(part, word) {
+  const text = getPartText(part);
+  return /\s/.test(String(word || "")) || text.includes("phrase") || text.includes("숙어") || text.includes("구동사") || text.includes("구");
+}
+
+function createRealisticExamples(word, korean, part = "", category = "") {
+  const exampleOverrides = {
+    stomach: [
+      ["My stomach hurts after lunch.", "점심을 먹은 뒤 배가 아파요."],
+      ["She put her hand on her stomach.", "그녀는 손을 배 위에 올렸어요."],
+    ],
+    headache: [
+      ["I have a headache this morning.", "오늘 아침에 머리가 아파요."],
+      ["Too much noise can give me a headache.", "소음이 심하면 머리가 아플 수 있어요."],
+    ],
+    dentist: [
+      ["I went to the dentist after school.", "나는 방과 후에 치과에 갔어요."],
+      ["The dentist checked my teeth.", "치과 의사가 내 이를 검사했어요."],
+    ],
+    account: [
+      ["I opened a bank account yesterday.", "나는 어제 은행 계좌를 만들었어요."],
+      ["Please check your account before you pay.", "결제하기 전에 계좌를 확인하세요."],
+    ],
+  };
+  const normalizedWord = String(word || "").trim();
+  const lowerWord = normalizedWord.toLowerCase();
+  if (exampleOverrides[lowerWord]) {
+    return exampleOverrides[lowerWord];
+  }
+
+  const meaning = getCleanMeaning(korean);
+  if (isPhrasePart(part, normalizedWord)) {
+    return [
+      [`We often use "${normalizedWord}" in real conversations.`, `우리는 실제 대화에서 '${normalizedWord}' 표현을 자주 써요.`],
+      [`Try to use "${normalizedWord}" in one short sentence.`, `'${normalizedWord}'를 짧은 문장 하나에 써 보세요.`],
+    ];
+  }
+
+  if (isAdverbPart(part)) {
+    return [
+      [`She spoke ${normalizedWord} during the class.`, `그녀는 수업 중에 ${meaning} 말했어요.`],
+      [`Please answer ${normalizedWord} when you can.`, `가능할 때 ${meaning} 대답해 주세요.`],
+    ];
+  }
+
+  if (isAdjectivePart(part)) {
+    return [
+      [`The ${normalizedWord} answer was easy to understand.`, `${meaning} 답은 이해하기 쉬웠어요.`],
+      [`I found a ${normalizedWord} example in the article.`, `나는 글에서 ${meaning} 예를 찾았어요.`],
+    ];
+  }
+
+  if (isVerbPart(part)) {
+    return [
+      [`We need to ${normalizedWord} the problem today.`, `우리는 오늘 그 문제를 ${meaning} 해야 해요.`],
+      [`She tried to ${normalizedWord} her idea clearly.`, `그녀는 자신의 생각을 분명히 ${meaning} 하려고 했어요.`],
+    ];
+  }
+
+  const article = /^[aeiou]/i.test(normalizedWord) ? "an" : "a";
+  return [
+    [`I saw ${article} ${normalizedWord} near the school.`, `나는 학교 근처에서 ${meaning}을 봤어요.`],
+    [`The ${normalizedWord} was important in the story.`, `그 이야기에서 ${meaning}은 중요했어요.`],
+  ];
 }
 
 function dedupeMeaningTokens(tokens) {
@@ -1875,10 +1980,7 @@ dictionary.push(
           level: 3,
           definition: `상위 빈도 영어 2200개 품질 검사용으로 보강한 단어예요. 뜻은 '${korean}'입니다.`,
         keywords: keywords.length ? keywords : [korean],
-        examples: [
-          [`I searched for "${word}" in the dictionary.`, `나는 사전에서 '${word}'를 검색했어요.`],
-          [`This word appears often in English.`, `이 단어는 영어에서 자주 나와요.`],
-        ],
+        examples: createRealisticExamples(word, korean, verifiedSupplement?.[1] ?? "어휘", "상위 2200 보강"),
         structure: wordStructureNotes[word] ?? null,
       };
     })
@@ -1920,10 +2022,12 @@ dictionary.push(
         level: 4,
         definition,
         keywords: keywords.length ? keywords : [korean],
-        examples: [
-          [`I looked up "${word}" in the dictionary.`, `나는 사전에서 '${word}'를 찾아봤어요.`],
-          [`This word can appear in English reading.`, `이 단어는 영어 독해에 나올 수 있어요.`],
-        ],
+        examples: createRealisticExamples(
+          word,
+          korean,
+          part,
+          isPrioritySupplement ? "고등 3000 보강" : "어휘 뱅크 자동 보강"
+        ),
         structure: wordStructureNotes[word] ?? null,
       };
     })
@@ -1951,10 +2055,7 @@ if (manualDictionaryAdditions.length) {
         level: normalizedLevel,
         definition: `${normalizedCategory} \uD56D\uBAA9\uC774\uC5D0\uC694. \uB73B\uC740 '${normalizedKorean}'\uC785\uB2C8\uB2E4.`,
         keywords: buildKeywordsFromKorean(normalizedKorean),
-        examples: [
-          [`I studied the word "${normalizedWord}".`, `\uB098\uB294 '${normalizedWord}' \uB2E8\uC5B4\uB97C \uACF5\uBD80\uD588\uC5B4\uC694.`],
-          [`"${normalizedWord}" is in the middle school list.`, `'${normalizedWord}'\uB294 \uC911\uB4F1 \uB2E8\uC5B4 \uBAA9\uB85D\uC5D0 \uB4E4\uC5B4 \uC788\uC5B4\uC694.`],
-        ],
+        examples: createRealisticExamples(normalizedWord, normalizedKorean, part, normalizedCategory),
         structure: wordStructureNotes[normalizedWord] ?? null,
       };
     })
@@ -1993,10 +2094,7 @@ if (manualPhraseAdditions.length) {
       level,
       definition: `${category} 항목이에요. 뜻은 '${normalizedKorean}'입니다.`,
       keywords: buildKeywordsFromKorean(normalizedKorean),
-      examples: [
-        [`I learned the phrase "${normalizedWord}".`, `나는 '${normalizedWord}' 표현을 배웠어요.`],
-        [`Please use "${normalizedWord}" in a sentence.`, `'${normalizedWord}'를 문장 안에서 사용해 보세요.`],
-      ],
+      examples: createRealisticExamples(normalizedWord, normalizedKorean, part, category),
       aliases: normalizedAliases,
       searchKeys: uniqueItems(normalizedAliases.map((alias) => normalizeSearchKey(alias))),
     };
@@ -2089,7 +2187,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v75";
+const APP_RELEASE_VERSION = "v76";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
