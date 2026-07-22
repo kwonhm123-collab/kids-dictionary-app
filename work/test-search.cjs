@@ -57,6 +57,9 @@ const manualMiddleSchoolCoreAdditionsCode = fs.existsSync("./outputs/kids-dictio
 const manualMiddleSchoolDepthAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-middle-school-depth-additions.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-middle-school-depth-additions.js", "utf8")
   : "";
+const manualHighSchoolDepthAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-high-school-depth-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-high-school-depth-additions.js", "utf8")
+  : "";
 const manualPhraseAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-phrase-additions.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-phrase-additions.js", "utf8")
   : "window.manualPhraseAdditions = [];";
@@ -72,6 +75,9 @@ const naverPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary
 const manualPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-pronunciation-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-pronunciation-overrides.js", "utf8")
   : "window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};";
+const manualHighSchoolPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-high-school-pronunciation-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-high-school-pronunciation-overrides.js", "utf8")
+  : "";
 
 const context = {
   console,
@@ -115,14 +121,50 @@ vm.runInContext(manualExtraOverridesCode, context);
 vm.runInContext(manualMiddleSchoolAdditionsCode, context);
 vm.runInContext(manualMiddleSchoolCoreAdditionsCode, context);
 vm.runInContext(manualMiddleSchoolDepthAdditionsCode, context);
+vm.runInContext(manualHighSchoolDepthAdditionsCode, context);
 vm.runInContext(manualPhraseAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(manualProperNounOverridesCode, context);
 vm.runInContext(naverPronunciationOverridesCode, context);
+vm.runInContext(manualHighSchoolPronunciationOverridesCode, context);
 vm.runInContext(manualPronunciationOverridesCode, context);
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
 const cases = [
+  ["viable", "viable", "\uC601\uD55C \uACE0\uB4F1\u00B7\uC5C5\uBB34 \uC2E4\uC6A9\uC5B4"],
+  ["\uC2E4\uD589 \uAC00\uB2A5\uD55C", "viable", "\uD55C\uC601 \uACE0\uB4F1\u00B7\uC5C5\uBB34 \uC2E4\uC6A9\uC5B4"],
+  ...[
+    "abolish",
+    "absurd",
+    "accomplishment",
+    "accumulate",
+    "adaptation",
+    "adhere",
+    "administer",
+    "adolescent",
+    "aftermath",
+    "aggression",
+    "allegation",
+    "allege",
+    "analogy",
+    "autonomy",
+    "beneficiary",
+    "betray",
+    "bind",
+    "breach",
+    "breakthrough",
+    "bureaucracy",
+    "casualty",
+    "compassion",
+    "compel",
+    "compelling",
+    "competence",
+    "competent",
+    "compromise",
+    "conceal",
+    "concede",
+    "confront",
+  ].map((word) => [word, word, "Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654"]),
   ["학교", "school", "한영 기본어"],
   ["책", "book", "한영 기본어"],
   ["사람", "person", "한영 기본어"],
@@ -294,6 +336,9 @@ const cases = [
   ["environment", "environment", "영한 고등어"],
   ["responsible", "responsible", "영한 업무어"],
 ];
+const advancedDepthWords = cases
+  .filter(([, , group]) => group === "Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654")
+  .map(([query]) => query);
 
 const results = cases.map(([query, expected, group]) => {
   const actual = context.findWord(query)?.word ?? null;
@@ -315,6 +360,8 @@ const autocompleteCases = [
   ["takei", "take into account"],
   ["getr", "get rid of"],
   ["makea", "make a decision"],
+  ["aboli", "abolish"],
+  ["compell", "compelling"],
 ];
 const autocompleteResults = autocompleteCases.map(([query, expected]) => {
   const words = context.getAutocompleteWords(query).map((entry) => entry.word);
@@ -383,6 +430,14 @@ const qualityResults = qualityWords.map((word) => {
 const qualityFailed = qualityResults.filter((result) => !result.pass);
 const setupPronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.setup.display', context);
 const setupPronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrides.setup.phonetics', context);
+const viablePronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.viable.display', context);
+const viablePronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrides.viable.phonetics', context);
+const advancedDepthPronunciations = Object.fromEntries(
+  advancedDepthWords.map((word) => [
+    word,
+    vm.runInContext(`pronunciationDisplayOverrides[${JSON.stringify(word)}]`, context),
+  ])
+);
 const activitiesDerivedPronunciation = vm.runInContext('getDerivedPronunciationInfo("activities")', context);
 const addingDerivedPronunciation = vm.runInContext('getDerivedPronunciationInfo("adding")', context);
 const accompaniedDerivedPronunciation = vm.runInContext('getDerivedPronunciationInfo("accompanied")', context);
@@ -457,7 +512,31 @@ context.renderResult(context.findWord("stomach"));
 const stomachHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("primary"));
 const primaryHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("viable"));
+const viableHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
+const advancedDepthChecks = advancedDepthWords.map((word) => {
+  const entry = context.findWord(word);
+  const examples = Array.isArray(entry?.examples) ? entry.examples : [];
+  return {
+    word,
+    category: entry?.category ?? null,
+    level: entry?.level ?? null,
+    exampleCount: examples.length,
+    pass:
+      entry?.word === word &&
+      entry?.category === "Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654" &&
+      Number(entry?.level) === 4 &&
+      examples.length === 2 &&
+      examples.every(
+        ([english, translated]) =>
+          String(english || "").trim() &&
+          String(translated || "").trim() &&
+          !repeatedExamplePattern.test(String(english))
+      ),
+  };
+});
+const advancedDepthFailed = advancedDepthChecks.filter((result) => !result.pass);
 const awkwardPrimaryPattern = /I saw a primary|The primary was important|주요한을 봤어요|주요한은 중요했어요/i;
 const renderChecks = [
   {
@@ -492,9 +571,23 @@ const renderChecks = [
       primaryHtml.includes("그녀는 집 근처 초등학교에 다녀요.") &&
       !awkwardPrimaryPattern.test(primaryHtml),
   },
+  {
+    name: "viable 뜻과 자연 예문 표시",
+    pass:
+      viableHtml.includes("\uC2E4\uD589 \uAC00\uB2A5\uD55C") &&
+      viableHtml.includes("We need a viable plan before the meeting.") &&
+      viableHtml.includes("The small business is now commercially viable."),
+  },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);
 const pronunciationChecks = [
+  {
+    name: "viable 발음기호 표시",
+    pass:
+      viablePronunciationDisplay === "\uBBF8\uAD6D\u00B7\uC601\uAD6D [\u02C8va\u026A\u0259bl]" &&
+      Array.isArray(viablePronunciationPhonetics) &&
+      viablePronunciationPhonetics.includes("\u02C8va\u026A\u0259bl"),
+  },
   {
     name: "setup 발음기호 표시 보정",
     pass:
@@ -503,6 +596,19 @@ const pronunciationChecks = [
       setupPronunciationPhonetics.includes("sétʌ̀p"),
   },
 ];
+pronunciationChecks.push(
+  ...advancedDepthWords.map((word) => {
+    const info = advancedDepthPronunciations[word];
+    return {
+      name: `${word} C1 \uBC1C\uC74C\uAE30\uD638 \uD45C\uC2DC`,
+      pass:
+        Boolean(info?.display) &&
+        Array.isArray(info?.phonetics) &&
+        info.phonetics.length > 0 &&
+        info.phonetics.every((phonetic) => String(phonetic).trim().length > 0),
+    };
+  })
+);
 pronunciationChecks.push(
   {
     name: "activities 파생 발음 연결",
@@ -549,6 +655,7 @@ console.log(
       derivedQuality: { total: derivedQualityResults.length, failed: derivedQualityFailed.length, results: derivedQualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
       render: { total: renderChecks.length, failed: renderFailed.length, results: renderChecks },
+      advancedDepth: { total: advancedDepthChecks.length, failed: advancedDepthFailed.length, results: advancedDepthChecks },
       related: { total: relatedResults.length, failed: relatedFailed.length, results: relatedResults },
     },
     null,
@@ -565,6 +672,7 @@ if (
   derivedQualityFailed.length > 0 ||
   meaningFailed.length > 0 ||
   renderFailed.length > 0 ||
+  advancedDepthFailed.length > 0 ||
   relatedFailed.length > 0
 ) {
   process.exitCode = 1;

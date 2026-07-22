@@ -5,6 +5,8 @@ const https = require("https");
 const ROOT = process.cwd();
 const MASTER_CSV = path.join(ROOT, "outputs", "naver-manual-review-all.csv");
 const OUTPUT_DIR = path.join(ROOT, "outputs", "naver-manual-review-all-batches");
+let activeRequestTimeoutMs = 15000;
+let activeRequestRetries = 4;
 
 function parseArgs(argv) {
   const options = {
@@ -16,6 +18,8 @@ function parseArgs(argv) {
     output: "",
     decision: "",
     continueOnError: true,
+    requestTimeoutMs: 15000,
+    requestRetries: 4,
   };
 
   for (const arg of argv) {
@@ -30,6 +34,8 @@ function parseArgs(argv) {
     else if (key === "--output") options.output = value;
     else if (key === "--decision") options.decision = value;
     else if (key === "--continue-on-error") options.continueOnError = value !== "false";
+    else if (key === "--request-timeout-ms") options.requestTimeoutMs = Number(value || 15000);
+    else if (key === "--request-retries") options.requestRetries = Number(value || 4);
   }
 
   if (!Number.isFinite(options.limit) || options.limit < 1) {
@@ -43,6 +49,12 @@ function parseArgs(argv) {
   }
   if (!Number.isFinite(options.concurrency) || options.concurrency < 1) {
     throw new Error("--concurrency must be a positive number");
+  }
+  if (!Number.isFinite(options.requestTimeoutMs) || options.requestTimeoutMs < 1000) {
+    throw new Error("--request-timeout-ms must be at least 1000");
+  }
+  if (!Number.isFinite(options.requestRetries) || options.requestRetries < 0) {
+    throw new Error("--request-retries must be zero or a positive number");
   }
 
   return options;
@@ -201,7 +213,7 @@ function requestJson(url, referer, retries = 2) {
       {
         method: "GET",
         agent: false,
-        timeout: 15000,
+        timeout: activeRequestTimeoutMs,
         headers: {
           Accept: "application/json, text/plain, */*",
           Referer: referer,
@@ -259,7 +271,7 @@ function requestJson(url, referer, retries = 2) {
       }
       reject(error);
     });
-    req.setTimeout(15000, () => {
+    req.setTimeout(activeRequestTimeoutMs, () => {
       req.destroy(new Error(`Request timeout: ${url}`));
     });
     req.end();
@@ -272,7 +284,7 @@ function sleep(ms) {
   });
 }
 
-async function requestJsonWithRetry(url, referer, retries = 4) {
+async function requestJsonWithRetry(url, referer, retries = activeRequestRetries) {
   let lastError = null;
 
   for (let attempt = 0; attempt <= retries; attempt += 1) {
@@ -531,6 +543,8 @@ async function reviewRow(row, options) {
     sequence: Number(row.sequence),
     word,
     appKorean: row.appKorean,
+    appPart: row.appPart,
+    appCategory: row.appCategory,
     naverManualStatus: "\uAC80\uC218\uC644\uB8CC",
     naverManualMeaning: meanings.join(" / "),
     naverDecision: bestWordItem ? decisionInfo.decision : "\uBCF4\uB958",
@@ -538,6 +552,8 @@ async function reviewRow(row, options) {
     entryId: entrySummary?.entryId || "",
     dictCid: entrySummary?.dictCid || "",
     entryName: entrySummary?.entryName || "",
+    matchedEntry: stripTags(bestWordItem?.expEntry),
+    matchType: String(bestWordItem?.matchType || ""),
     proneticSymbols: (entrySummary?.prons || []).join(" / "),
   };
 }
@@ -554,6 +570,8 @@ async function reviewRowSafe(row, options) {
       sequence: Number(row.sequence),
       word: String(row.word || "").trim(),
       appKorean: row.appKorean,
+      appPart: row.appPart,
+      appCategory: row.appCategory,
       naverManualStatus: "\uAC80\uC218\uC644\uB8CC",
       naverManualMeaning: "",
       naverDecision: "\uBCF4\uB958",
@@ -561,6 +579,8 @@ async function reviewRowSafe(row, options) {
       entryId: "",
       dictCid: "",
       entryName: "",
+      matchedEntry: "",
+      matchType: "",
       proneticSymbols: "",
     };
   }
@@ -604,6 +624,8 @@ function buildDefaultOutputPath(rows, maxLevel) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
+  activeRequestTimeoutMs = options.requestTimeoutMs;
+  activeRequestRetries = options.requestRetries;
   const inputCsv = options.input ? path.resolve(ROOT, options.input) : MASTER_CSV;
 
   if (!fs.existsSync(inputCsv)) {

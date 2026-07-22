@@ -2484,5 +2484,6 @@ window.verifiedMeaningOverrides = Object.assign(
     "zimbabwe": "짐바브웨",
     "zoo": "동물원",
     "zope": "웹 페이지의 단순한 내용 제공보다 객체 기술용으로 사용하는 웹 사이트 서버.",
+    "viable": "\uC2E4\uD589 \uAC00\uB2A5\uD55C, \uC131\uACF5\uD560 \uAC00\uB2A5\uC131\uC774 \uC788\uB294, \uC0DD\uC874 \uAC00\uB2A5\uD55C",
   }
 );

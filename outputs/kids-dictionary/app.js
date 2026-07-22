@@ -1666,6 +1666,10 @@ function isPhrasePart(part, word) {
 
 function createRealisticExamples(word, korean, part = "", category = "") {
   const exampleOverrides = {
+    viable: [
+      ["We need a viable plan before the meeting.", "\uC6B0\uB9AC\uB294 \uD68C\uC758 \uC804\uC5D0 \uC2E4\uD589 \uAC00\uB2A5\uD55C \uACC4\uD68D\uC774 \uD544\uC694\uD574\uC694."],
+      ["The small business is now commercially viable.", "\uADF8 \uC18C\uADDC\uBAA8 \uC0AC\uC5C5\uC740 \uC774\uC81C \uC0C1\uC5C5\uC801\uC73C\uB85C \uC131\uACF5\uD560 \uAC00\uB2A5\uC131\uC774 \uC788\uC5B4\uC694."],
+    ],
     primary: [
       ["This is the primary reason for the change.", "이것이 그 변화의 주된 이유예요."],
       ["She goes to a primary school near her home.", "그녀는 집 근처 초등학교에 다녀요."],
@@ -2046,11 +2050,18 @@ if (manualDictionaryAdditions.length) {
   const existingManualWords = new Set(dictionary.map((entry) => entry.word.toLowerCase()));
   const normalizedManualEntries = manualDictionaryAdditions
     .filter((item) => Array.isArray(item) && item.length >= 3)
-    .map(([word, korean, part, category = "\uC911\uB4F1 1500 \uBCF4\uAC15", level = 2]) => {
+    .map(([word, korean, part, category = "\uC911\uB4F1 1500 \uBCF4\uAC15", level = 2, providedExamples = []]) => {
       const normalizedWord = String(word || "").trim();
       const normalizedKorean = String(korean || "").trim();
       const normalizedCategory = String(category || "\uC911\uB4F1 1500 \uBCF4\uAC15").trim();
       const normalizedLevel = Number(level || 2);
+      const normalizedExamples = Array.isArray(providedExamples)
+        ? providedExamples
+            .filter((example) => Array.isArray(example) && example.length >= 2)
+            .map(([english, translated]) => [String(english || "").trim(), String(translated || "").trim()])
+            .filter(([english, translated]) => english && translated)
+            .slice(0, 2)
+        : [];
       if (!normalizedWord || !normalizedKorean) {
         return null;
       }
@@ -2064,7 +2075,10 @@ if (manualDictionaryAdditions.length) {
         level: normalizedLevel,
         definition: `${normalizedCategory} \uD56D\uBAA9\uC774\uC5D0\uC694. \uB73B\uC740 '${normalizedKorean}'\uC785\uB2C8\uB2E4.`,
         keywords: buildKeywordsFromKorean(normalizedKorean),
-        examples: createRealisticExamples(normalizedWord, normalizedKorean, part, normalizedCategory),
+        examples:
+          normalizedExamples.length === 2
+            ? normalizedExamples
+            : createRealisticExamples(normalizedWord, normalizedKorean, part, normalizedCategory),
         structure: wordStructureNotes[normalizedWord] ?? null,
       };
     })
@@ -2196,7 +2210,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v77";
+const APP_RELEASE_VERSION = "v79";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2262,6 +2276,7 @@ const preferredKoreanSearchMap = {
   "인증": "authentication",
   "\ub054\ucc0d\ud55c": "terrible",
   "\ud615\ud3b8\uc5c6\ub294": "terrible",
+  "\uc2e4\ud589 \uac00\ub2a5\ud55c": "viable",
   "\uc54c\ud30c\ubcb3": "alphabet",
   "\uc601\ub9ac\ud55c": "clever",
   "\ucf54\ub07c\ub9ac": "elephant",
@@ -2288,6 +2303,7 @@ const localSynonyms = {
   terrible: ["awful", "horrible", "bad"],
   comforting: ["soothing", "reassuring", "encouraging"],
   locally: ["nearby", "in the area", "regionally"],
+  viable: ["feasible", "workable", "practical"],
 };
 const commonMisspellingMap = {
   sawllow: "swallow",
@@ -2321,6 +2337,10 @@ const pronunciationDisplayOverrides = {
   locally: {
     display: "미국·영국 [lóukəli]",
     phonetics: ["lóukəli"],
+  },
+  viable: {
+    display: "\uBBF8\uAD6D\u00B7\uC601\uAD6D [\u02C8va\u026A\u0259bl]",
+    phonetics: ["\u02C8va\u026A\u0259bl"],
   },
 };
 Object.assign(pronunciationDisplayOverrides, window.pronunciationDisplayOverrides || {});
@@ -3135,6 +3155,7 @@ function buildAppStats() {
   const middleSchoolSupplementCount = byCategory.get("\uC911\uB4F1 1500 \uBCF4\uAC15") ?? 0;
   const middleSchoolCoreSupplementCount = byCategory.get("\uC911\uB4F1 \uAE30\uBCF8 \uBCF4\uAC15") ?? 0;
   const middleSchoolDepthSupplementCount = byCategory.get("\uC911\uB4F1 \uC2EC\uD654 \uBCF4\uAC15") ?? 0;
+  const highSchoolDepthSupplementCount = byCategory.get("Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654") ?? 0;
   const middleSchoolPhraseSupplementCount = byCategory.get("\uC911\uB4F1 \uC219\uC5B4 \uBCF4\uAC15") ?? 0;
   const highSchoolSupplementCount = byCategory.get("\uACE0\uB4F1 3000 \uBCF4\uAC15") ?? 0;
   const highSchoolPhraseSupplementCount = byCategory.get("\uACE0\uB4F1 \uC219\uC5B4 \uBCF4\uAC15") ?? 0;
@@ -3169,6 +3190,7 @@ function buildAppStats() {
       ["\uC911\uB4F1 1500 \uBCF4\uAC15", middleSchoolSupplementCount],
       ["\uC911\uB4F1 \uAE30\uBCF8 \uBCF4\uAC15", middleSchoolCoreSupplementCount],
       ["\uC911\uB4F1 \uC2EC\uD654 \uBCF4\uAC15", middleSchoolDepthSupplementCount],
+      ["Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654", highSchoolDepthSupplementCount],
       ["\uC911\uB4F1 \uC219\uC5B4 \uBCF4\uAC15", middleSchoolPhraseSupplementCount],
       ["\uACE0\uB4F1 3000 \uBCF4\uAC15", highSchoolSupplementCount],
       ["\uACE0\uB4F1 \uC219\uC5B4 \uBCF4\uAC15", highSchoolPhraseSupplementCount],

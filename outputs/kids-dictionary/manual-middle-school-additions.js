@@ -551,5 +551,6 @@ window.manualDictionaryAdditions = [
   ["worm", "벌레, 지렁이", "n"],
   ["wrist", "손목", "n"],
   ["yogurt", "요구르트", "n"],
-  ["zebra", "얼룩말", "n"]
+  ["zebra", "얼룩말", "n"],
+  ["viable", "\uC2E4\uD589 \uAC00\uB2A5\uD55C, \uC131\uACF5\uD560 \uAC00\uB2A5\uC131\uC774 \uC788\uB294, \uC0DD\uC874 \uAC00\uB2A5\uD55C", "adj", "\uACE0\uB4F1\u00B7\uC5C5\uBB34 \uC2E4\uC6A9 \uBCF4\uAC15", 4],
 ];

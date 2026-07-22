@@ -3,6 +3,7 @@
 tmp-*.js
 tmp-*.html
 tmp-*.json
+work/oxford-5000-cefr.pdf
 outputs/kids-dictionary-versions/
 outputs/*
 !outputs/kids-dictionary/
