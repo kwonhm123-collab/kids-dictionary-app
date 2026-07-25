@@ -83,7 +83,10 @@ window.manualPhraseAdditions = [
   ["reach out", "연락하다", "구동사", "업무 숙어 보강", 5],
   ["account for", "설명하다, 차지하다", "숙어", "고등 숙어 보강", 4],
   ["adapt to", "~에 적응하다", "숙어", "고등 숙어 보강", 4],
-  ["adhere to", "~을 지키다, 고수하다", "숙어", "고등 숙어 보강", 4],
+  ["adhere to", "~을 지키다, 고수하다", "숙어", "고등 숙어 보강", 4, [], [
+    ["You must adhere to the school rules.", "너는 학교 규칙을 지켜야 해요."],
+    ["We should adhere to the original plan.", "우리는 원래 계획을 고수해야 해요."],
+  ]],
   ["amount to", "총계가 ~에 이르다, 결국 ~이다", "숙어", "고등 숙어 보강", 4],
   ["appeal to", "~에 호소하다, 마음에 들다", "숙어", "고등 숙어 보강", 4],
   ["apply for", "~에 지원하다, 신청하다", "숙어", "고등 숙어 보강", 4],

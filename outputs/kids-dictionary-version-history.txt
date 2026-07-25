@@ -1442,3 +1442,11 @@ Android APK ��: ���� �غ� ����
 - 재검사 결과 A1/A2/B1/B2/C1 전 레벨 누락 0개를 확인했습니다.
 - 앱 버전을 v80으로 올리고 GitHub Pages docs 및 Android WebView assets 배포본을 동기화했습니다.
 - 검색 테스트 211개, 전체 테스트 묶음 실패 0개를 확인했습니다.
+
+[v81] adhere to 숙어 예문 한글 표현 보정
+- adhere to 숙어 항목에 직접 예문 2개를 추가했습니다.
+- 자동 생성 예문인 We often use ... in real conversations. 유형이 표시되지 않도록 숙어 예문 직접 지정 로직을 추가했습니다.
+- 반영 예문: You must adhere to the school rules. / 너는 학교 규칙을 지켜야 해요.
+- 반영 예문: We should adhere to the original plan. / 우리는 원래 계획을 고수해야 해요.
+- 앱 버전을 v81로 올리고 GitHub Pages docs 및 Android WebView assets 배포본을 동기화했습니다.
+- 검색 테스트 212개 및 adhere to 화면 예문 검증을 통과했습니다.

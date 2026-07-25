@@ -257,6 +257,7 @@ const cases = [
   ["followup", "follow up", "업무 숙어 공백 없는 입력"],
   ["log-in", "log in", "업무 숙어 하이픈 입력"],
   ["account for", "account for", "고등 숙어"],
+  ["adhere to", "adhere to", "고등 숙어"],
   ["takeintoaccount", "take into account", "고등 숙어 공백 없는 입력"],
   ["in-terms-of", "in terms of", "고등 숙어 하이픈 입력"],
   ["make a decision", "make a decision", "일반 실용 숙어"],
@@ -529,7 +530,10 @@ context.renderResult(context.findWord("primary"));
 const primaryHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("viable"));
 const viableHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("adhere to"));
+const adhereToHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
+const genericPhraseExamplePattern = /real conversations|Try to use/i;
 const advancedDepthChecks = advancedDepthWords.map((word) => {
   const entry = context.findWord(word);
   const examples = Array.isArray(entry?.examples) ? entry.examples : [];
@@ -592,6 +596,15 @@ const renderChecks = [
       viableHtml.includes("\uC2E4\uD589 \uAC00\uB2A5\uD55C") &&
       viableHtml.includes("We need a viable plan before the meeting.") &&
       viableHtml.includes("The small business is now commercially viable."),
+  },
+  {
+    name: "adhere to 숙어 자연 예문 표시",
+    pass:
+      adhereToHtml.includes("You must adhere to the school rules.") &&
+      adhereToHtml.includes("너는 학교 규칙을 지켜야 해요.") &&
+      adhereToHtml.includes("We should adhere to the original plan.") &&
+      adhereToHtml.includes("우리는 원래 계획을 고수해야 해요.") &&
+      !genericPhraseExamplePattern.test(adhereToHtml),
   },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);

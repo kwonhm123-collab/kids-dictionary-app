@@ -2096,7 +2096,7 @@ if (manualDictionaryAdditions.length) {
 }
 
 if (manualPhraseAdditions.length) {
-  manualPhraseAdditions.forEach(([word, korean, part = "숙어", category = "숙어 보강", level = 3, aliases = []]) => {
+  manualPhraseAdditions.forEach(([word, korean, part = "숙어", category = "숙어 보강", level = 3, aliases = [], providedExamples = []]) => {
     const normalizedWord = String(word ?? "").trim().toLowerCase().replace(/\s+/g, " ");
     const normalizedKorean = String(korean ?? "").trim();
     if (!normalizedWord || !normalizedKorean) {
@@ -2108,6 +2108,13 @@ if (manualPhraseAdditions.length) {
         .map((alias) => String(alias ?? "").trim().toLowerCase().replace(/\s+/g, " "))
         .filter(Boolean)
     );
+    const normalizedExamples = Array.isArray(providedExamples)
+      ? providedExamples
+          .filter((example) => Array.isArray(example) && example.length >= 2)
+          .map(([english, translated]) => [String(english || "").trim(), String(translated || "").trim()])
+          .filter(([english, translated]) => english && translated)
+          .slice(0, 2)
+      : [];
     const phraseEntry = {
       word: normalizedWord,
       pronunciation: normalizedWord,
@@ -2117,7 +2124,10 @@ if (manualPhraseAdditions.length) {
       level,
       definition: `${category} 항목이에요. 뜻은 '${normalizedKorean}'입니다.`,
       keywords: buildKeywordsFromKorean(normalizedKorean),
-      examples: createRealisticExamples(normalizedWord, normalizedKorean, part, category),
+      examples:
+        normalizedExamples.length === 2
+          ? normalizedExamples
+          : createRealisticExamples(normalizedWord, normalizedKorean, part, category),
       aliases: normalizedAliases,
       searchKeys: uniqueItems(normalizedAliases.map((alias) => normalizeSearchKey(alias))),
     };
@@ -2210,7 +2220,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v80";
+const APP_RELEASE_VERSION = "v81";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
