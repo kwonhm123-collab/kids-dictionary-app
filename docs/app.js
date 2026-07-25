@@ -2210,7 +2210,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v79";
+const APP_RELEASE_VERSION = "v80";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();

@@ -60,6 +60,9 @@ const manualMiddleSchoolDepthAdditionsCode = fs.existsSync("./outputs/kids-dicti
 const manualHighSchoolDepthAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-high-school-depth-additions.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-high-school-depth-additions.js", "utf8")
   : "";
+const manualOxfordPdfAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-oxford-pdf-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-oxford-pdf-additions.js", "utf8")
+  : "";
 const manualPhraseAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-phrase-additions.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-phrase-additions.js", "utf8")
   : "window.manualPhraseAdditions = [];";
@@ -122,6 +125,7 @@ vm.runInContext(manualMiddleSchoolAdditionsCode, context);
 vm.runInContext(manualMiddleSchoolCoreAdditionsCode, context);
 vm.runInContext(manualMiddleSchoolDepthAdditionsCode, context);
 vm.runInContext(manualHighSchoolDepthAdditionsCode, context);
+vm.runInContext(manualOxfordPdfAdditionsCode, context);
 vm.runInContext(manualPhraseAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(manualProperNounOverridesCode, context);
@@ -165,6 +169,17 @@ const cases = [
     "concede",
     "confront",
   ].map((word) => [word, word, "Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654"]),
+  ...[
+    "accumulation",
+    "acre",
+    "aesthetic",
+    "afterward",
+    "aide",
+    "ideology",
+    "legislature",
+    "tolerate",
+    "warfare",
+  ].map((word) => [word, word, "Oxford PDF \uBCF4\uAC15"]),
   ["학교", "school", "한영 기본어"],
   ["책", "book", "한영 기본어"],
   ["사람", "person", "한영 기본어"],

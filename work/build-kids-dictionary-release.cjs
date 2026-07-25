@@ -24,6 +24,7 @@ const FILES = [
   "manual-middle-school-core-additions.js",
   "manual-middle-school-depth-additions.js",
   "manual-high-school-depth-additions.js",
+  "manual-oxford-pdf-additions.js",
   "manual-phrase-additions.js",
   "manual-excluded-words.js",
   "manual-proper-noun-overrides.js",

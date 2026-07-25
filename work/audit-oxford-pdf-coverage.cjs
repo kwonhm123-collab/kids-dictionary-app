@@ -4,8 +4,6 @@ const vm = require("vm");
 const { pathToFileURL } = require("url");
 
 const ROOT = process.cwd();
-const PDF_PATH = path.join(ROOT, "work", "oxford-5000-cefr.pdf");
-const OXFORD_HTML_PATH = path.join(ROOT, "outputs", "external-sources", "oxford-3000-5000.html");
 const DICTIONARY_DIR = path.join(ROOT, "outputs", "kids-dictionary");
 const PDFJS_PATH = path.join(
   process.env.USERPROFILE || "",
@@ -20,6 +18,11 @@ const PDFJS_PATH = path.join(
   "build",
   "pdf.mjs"
 );
+
+const DEFAULT_PDFS = [
+  path.join(process.env.USERPROFILE || "", "Downloads", "American_Oxford_3000_by_CEFR_level.pdf"),
+  path.join(process.env.USERPROFILE || "", "Downloads", "American_Oxford_5000_by_CEFR_level.pdf"),
+];
 
 const DATA_FILES = [
   "vocab-bank.js",
@@ -45,12 +48,18 @@ const DATA_FILES = [
 ];
 
 function parseArgs(argv) {
-  const options = { output: "", targets: "" };
+  const options = {
+    output: path.join("outputs", "oxford-pdf-coverage-audit.json"),
+    targets: path.join("outputs", "oxford-pdf-missing-targets.csv"),
+    pdfs: DEFAULT_PDFS,
+  };
   argv.forEach((arg) => {
     const [key, ...valueParts] = arg.split("=");
     const value = valueParts.join("=");
     if (key === "--output") options.output = value;
     if (key === "--targets") options.targets = value;
+    if (key === "--pdf") options.pdfs.push(path.resolve(value));
+    if (key === "--pdfs") options.pdfs = value.split(";").map((item) => path.resolve(item.trim())).filter(Boolean);
   });
   return options;
 }
@@ -65,59 +74,37 @@ function normalizeHeadword(value) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\d+$/, "")
+    .replace(/[’‘]/g, "'")
     .trim()
     .toLowerCase();
 }
 
-function decodeHtml(value) {
-  return String(value || "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)));
+function normalizePart(value) {
+  const normalized = String(value || "").toLowerCase().replace(/\s+/g, "");
+  const parts = [];
+  if (normalized.includes("n.")) parts.push("명사");
+  if (normalized.includes("v.")) parts.push("동사");
+  if (normalized.includes("adj.")) parts.push("형용사");
+  if (normalized.includes("adv.")) parts.push("부사");
+  if (normalized.includes("prep.")) parts.push("전치사");
+  if (normalized.includes("conj.")) parts.push("접속사");
+  if (normalized.includes("pron.")) parts.push("대명사");
+  if (normalized.includes("det.")) parts.push("한정사");
+  return parts.length ? [...new Set(parts)].join(", ") : value;
 }
 
-function extractOxfordHtmlEntries() {
-  const html = fs.readFileSync(OXFORD_HTML_PATH, "utf8");
-  const entries = [];
-  const itemPattern = /<li\b([^>]*)>([\s\S]*?)<\/li>/g;
-  let match;
-  while ((match = itemPattern.exec(html))) {
-    const attrs = match[1];
-    const body = match[2];
-    const wordMatch = attrs.match(/\bdata-hw="([^"]+)"/);
-    const partMatch = body.match(/<span class="pos">([\s\S]*?)<\/span>/);
-    if (!wordMatch || !partMatch) continue;
-
-    const levels = [
-      ...[...attrs.matchAll(/\bdata-ox(?:3000|5000)="([^"]+)"/g)].map((item) => item[1]),
-      ...[...body.matchAll(/<span class="belong-to">([^<]+)<\/span>/g)].map((item) => item[1]),
-    ].map((level) => level.toUpperCase());
-    const word = normalizeHeadword(decodeHtml(wordMatch[1]).replace(/[\u2018\u2019]/g, "'"));
-    const part = decodeHtml(partMatch[1]).replace(/<[^>]+>/g, "").trim();
-    [...new Set(levels)]
-      .filter((level) => level === "B2" || level === "C1")
-      .forEach((level) => entries.push({ word, part, parts: [part], level, page: null }));
-  }
-
-  const merged = new Map();
-  entries.forEach((entry) => {
-    const key = `${entry.level}:${entry.word}`;
-    const existing = merged.get(key);
-    if (!existing) {
-      merged.set(key, entry);
-      return;
-    }
-    if (!existing.parts.includes(entry.part)) existing.parts.push(entry.part);
-  });
-  return [...merged.values()];
+function cefrToLevel(level) {
+  return { A1: 1, A2: 1, B1: 2, B2: 3, C1: 4 }[level] || 4;
 }
 
-async function extractOxfordPdfEntries() {
-  if (!fs.existsSync(PDF_PATH)) {
-    throw new Error(`Oxford PDF not found: ${PDF_PATH}`);
+function sourceToCategory(source, level) {
+  const listName = /3000/i.test(source) ? "Oxford 3000" : "Oxford 5000";
+  return `${listName} ${level} 보강`;
+}
+
+async function extractPdfEntries(pdfPath) {
+  if (!fs.existsSync(pdfPath)) {
+    throw new Error(`PDF not found: ${pdfPath}`);
   }
   if (!fs.existsSync(PDFJS_PATH)) {
     throw new Error(`pdfjs-dist not found: ${PDFJS_PATH}`);
@@ -128,8 +115,10 @@ async function extractOxfordPdfEntries() {
   global.Path2D = global.Path2D || class Path2D {};
 
   const pdfjs = await import(pathToFileURL(PDFJS_PATH).href);
-  const pdf = await pdfjs.getDocument({ data: new Uint8Array(fs.readFileSync(PDF_PATH)) }).promise;
-  const partPattern = /^(?:n|v|adj|adv|prep|conj|pron)\.(?:(?:,|\/)\s*(?:n|v|adj|adv|prep|conj|pron)\.)*$/;
+  const data = new Uint8Array(fs.readFileSync(pdfPath));
+  const pdf = await pdfjs.getDocument({ data }).promise;
+  const partPattern = /^(?:n|v|adj|adv|prep|conj|pron|det)\.(?:(?:,|\/)\s*(?:n|v|adj|adv|prep|conj|pron|det)\.)*$/i;
+  const levelPattern = /^(?:A1|A2|B1|B2|C1)$/;
   const entries = [];
   let level = "";
 
@@ -140,46 +129,51 @@ async function extractOxfordPdfEntries() {
 
     for (let index = 0; index < tokens.length; index += 1) {
       const token = tokens[index];
-      if (token === "B2" || token === "C1") {
+      if (levelPattern.test(token)) {
         level = token;
         continue;
       }
-      if (!level || !partPattern.test(token)) {
-        continue;
-      }
+      if (!level || !partPattern.test(token)) continue;
 
       let wordIndex = index - 1;
-      while (wordIndex >= 0 && /^(?:\d+|\(.*\))$/.test(tokens[wordIndex])) {
+      while (wordIndex >= 0 && /^(?:\d+|\(.*\)|\/.*\/)$/.test(tokens[wordIndex])) {
         wordIndex -= 1;
       }
       const word = normalizeHeadword(tokens[wordIndex]);
-      if (!/^[a-z][a-z '-]*$/.test(word)) {
-        continue;
-      }
-      entries.push({ word, part: token, level, page: pageNumber });
+      if (!/^[a-z][a-z '-]*$/.test(word)) continue;
+      entries.push({
+        word,
+        part: token,
+        parts: [token],
+        partKorean: normalizePart(token),
+        level,
+        appLevel: cefrToLevel(level),
+        category: sourceToCategory(path.basename(pdfPath), level),
+        source: path.basename(pdfPath),
+        page: pageNumber,
+      });
     }
   }
 
-  const merged = new Map();
-  entries.forEach((entry) => {
-    const key = `${entry.level}:${entry.word}`;
-    const existing = merged.get(key);
-    if (!existing) {
-      merged.set(key, { ...entry, parts: [entry.part] });
-      return;
-    }
-    if (!existing.parts.includes(entry.part)) {
-      existing.parts.push(entry.part);
-    }
-  });
-  return [...merged.values()];
+  return entries;
 }
 
-async function extractOxfordEntries() {
-  if (fs.existsSync(OXFORD_HTML_PATH)) {
-    return extractOxfordHtmlEntries();
-  }
-  return extractOxfordPdfEntries();
+function mergeEntries(entries) {
+  const merged = new Map();
+  entries.forEach((entry) => {
+    const key = `${entry.word}:${entry.level}`;
+    const existing = merged.get(key);
+    if (!existing) {
+      merged.set(key, { ...entry, parts: [...entry.parts] });
+      return;
+    }
+    entry.parts.forEach((part) => {
+      if (!existing.parts.includes(part)) existing.parts.push(part);
+    });
+    existing.part = existing.parts.join(" / ");
+    existing.partKorean = normalizePart(existing.part);
+  });
+  return [...merged.values()].sort((a, b) => a.word.localeCompare(b.word) || a.level.localeCompare(b.level));
 }
 
 function loadDictionary() {
@@ -223,8 +217,9 @@ function loadDictionary() {
       vm.runInContext(fs.readFileSync(filePath, "utf8"), context, { filename: filePath });
     }
   });
-  const appPath = path.join(DICTIONARY_DIR, "app.js");
-  vm.runInContext(fs.readFileSync(appPath, "utf8"), context, { filename: appPath });
+  vm.runInContext(fs.readFileSync(path.join(DICTIONARY_DIR, "app.js"), "utf8"), context, {
+    filename: path.join(DICTIONARY_DIR, "app.js"),
+  });
   return vm.runInContext(
     "dictionary.map(({ word, korean, part, category, level }) => ({ word, korean, part, category, level }))",
     context
@@ -233,31 +228,34 @@ function loadDictionary() {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const oxfordEntries = await extractOxfordEntries();
-  const c1Entries = oxfordEntries.filter((entry) => entry.level === "C1");
+  const extracted = mergeEntries((await Promise.all(options.pdfs.map(extractPdfEntries))).flat());
+  const byWord = new Map();
+  extracted.forEach((entry) => {
+    const existing = byWord.get(entry.word);
+    if (!existing || cefrToLevel(entry.level) > cefrToLevel(existing.level)) byWord.set(entry.word, entry);
+  });
+  const uniqueWords = [...byWord.values()].sort((a, b) => a.word.localeCompare(b.word));
   const dictionary = loadDictionary();
-  const dictionaryByWord = new Map(dictionary.map((entry) => [normalizeHeadword(entry.word), entry]));
-  const missing = c1Entries.filter((entry) => !dictionaryByWord.has(entry.word));
-  const present = c1Entries.filter((entry) => dictionaryByWord.has(entry.word));
-  const weakMeaningPattern = /\uAD00\uB828 \uCD94\uAC00 \uC601\uC5B4 \uC5B4\uD718|additional english vocabulary|\uC790\uB3D9 \uBCF4\uAC15/i;
-  const weakMeanings = present
-    .map((entry) => ({ ...entry, dictionary: dictionaryByWord.get(entry.word) }))
-    .filter((entry) => weakMeaningPattern.test(`${entry.dictionary.korean} ${entry.dictionary.category}`));
+  const dictionaryWords = new Set(dictionary.map((entry) => normalizeHeadword(entry.word)));
+  const missing = uniqueWords.filter((entry) => !dictionaryWords.has(entry.word));
+  const present = uniqueWords.filter((entry) => dictionaryWords.has(entry.word));
+  const byLevel = {};
+  uniqueWords.forEach((entry) => {
+    byLevel[entry.level] = byLevel[entry.level] || { total: 0, present: 0, missing: 0 };
+    byLevel[entry.level].total += 1;
+    byLevel[entry.level][dictionaryWords.has(entry.word) ? "present" : "missing"] += 1;
+  });
 
   const result = {
     generatedAt: new Date().toISOString(),
-    source: "Oxford 5000 by CEFR level (American English)",
-    extracted: {
-      total: oxfordEntries.length,
-      b2: oxfordEntries.filter((entry) => entry.level === "B2").length,
-      c1: c1Entries.length,
-    },
+    sources: options.pdfs,
+    extractedRows: extracted.length,
+    uniqueWords: uniqueWords.length,
     dictionaryTotal: dictionary.length,
-    c1Present: present.length,
-    c1Missing: missing.length,
-    c1WeakMeaning: weakMeanings.length,
-    missing,
-    weakMeanings,
+    present: present.length,
+    missing: missing.length,
+    byLevel,
+    missingWords: missing,
   };
 
   if (options.output) {
@@ -265,46 +263,37 @@ async function main() {
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");
   }
-
   if (options.targets) {
     const targetPath = path.resolve(ROOT, options.targets);
-    const header = [
-      "sequence",
-      "word",
-      "appKorean",
-      "appPart",
-      "appCategory",
-      "appLevel",
-      "naverManualStatus",
-      "naverManualMeaning",
-      "naverDecision",
-    ];
+    const header = ["sequence", "word", "part", "level", "appLevel", "category", "source", "page"];
     const rows = missing.map((entry, index) => [
       index + 1,
       entry.word,
-      "",
-      entry.parts.join(" / "),
-      "Oxford 5000 C1 \uACE0\uB4F1 \uC2EC\uD654",
-      4,
-      "\uB300\uAE30",
-      "",
-      "",
+      entry.partKorean,
+      entry.level,
+      entry.appLevel,
+      entry.category,
+      entry.source,
+      entry.page,
     ]);
-    const csv = [header, ...rows].map((row) => row.map(escapeCsv).join(",")).join("\n");
     fs.mkdirSync(path.dirname(targetPath), { recursive: true });
-    fs.writeFileSync(targetPath, `\uFEFF${csv}\n`, "utf8");
+    fs.writeFileSync(
+      targetPath,
+      `\uFEFF${[header, ...rows].map((row) => row.map(escapeCsv).join(",")).join("\n")}\n`,
+      "utf8"
+    );
   }
 
   process.stdout.write(
     `${JSON.stringify(
       {
-        extracted: result.extracted,
+        uniqueWords: result.uniqueWords,
         dictionaryTotal: result.dictionaryTotal,
-        c1Present: result.c1Present,
-        c1Missing: result.c1Missing,
-        c1WeakMeaning: result.c1WeakMeaning,
-        output: options.output || null,
-        targets: options.targets || null,
+        present: result.present,
+        missing: result.missing,
+        byLevel: result.byLevel,
+        output: options.output,
+        targets: options.targets,
       },
       null,
       2
