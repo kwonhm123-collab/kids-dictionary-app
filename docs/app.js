@@ -670,6 +670,99 @@ const wordStructureNotes = {
   },
 };
 
+const manualInflectionNotes = {
+  appear: {
+    title: "동사형",
+    items: [
+      ["3인칭 단수 현재", "appears"],
+      ["과거형", "appeared"],
+      ["과거 분사", "appeared"],
+      ["현재 분사", "appearing"],
+    ],
+  },
+};
+
+const manualExampleNotes = {
+  appear: [
+    ["When did mammals appear on the earth?", "언제 지구상에 포유류가 생겼을까?"],
+    ["Slowly, an image began to appear on the screen.", "서서히 화면에 어떤 상이 나타나기 시작했다."],
+  ],
+};
+
+const irregularVerbForms = {
+  be: ["is", "was", "been", "being"],
+  become: ["becomes", "became", "become", "becoming"],
+  begin: ["begins", "began", "begun", "beginning"],
+  break: ["breaks", "broke", "broken", "breaking"],
+  bring: ["brings", "brought", "brought", "bringing"],
+  build: ["builds", "built", "built", "building"],
+  buy: ["buys", "bought", "bought", "buying"],
+  catch: ["catches", "caught", "caught", "catching"],
+  choose: ["chooses", "chose", "chosen", "choosing"],
+  come: ["comes", "came", "come", "coming"],
+  cost: ["costs", "cost", "cost", "costing"],
+  cut: ["cuts", "cut", "cut", "cutting"],
+  do: ["does", "did", "done", "doing"],
+  draw: ["draws", "drew", "drawn", "drawing"],
+  drink: ["drinks", "drank", "drunk", "drinking"],
+  drive: ["drives", "drove", "driven", "driving"],
+  eat: ["eats", "ate", "eaten", "eating"],
+  fall: ["falls", "fell", "fallen", "falling"],
+  feel: ["feels", "felt", "felt", "feeling"],
+  find: ["finds", "found", "found", "finding"],
+  fly: ["flies", "flew", "flown", "flying"],
+  forget: ["forgets", "forgot", "forgotten", "forgetting"],
+  get: ["gets", "got", "gotten", "getting"],
+  give: ["gives", "gave", "given", "giving"],
+  go: ["goes", "went", "gone", "going"],
+  grow: ["grows", "grew", "grown", "growing"],
+  have: ["has", "had", "had", "having"],
+  hear: ["hears", "heard", "heard", "hearing"],
+  hide: ["hides", "hid", "hidden", "hiding"],
+  hold: ["holds", "held", "held", "holding"],
+  hurt: ["hurts", "hurt", "hurt", "hurting"],
+  keep: ["keeps", "kept", "kept", "keeping"],
+  know: ["knows", "knew", "known", "knowing"],
+  lead: ["leads", "led", "led", "leading"],
+  leave: ["leaves", "left", "left", "leaving"],
+  lend: ["lends", "lent", "lent", "lending"],
+  let: ["lets", "let", "let", "letting"],
+  lose: ["loses", "lost", "lost", "losing"],
+  make: ["makes", "made", "made", "making"],
+  mean: ["means", "meant", "meant", "meaning"],
+  meet: ["meets", "met", "met", "meeting"],
+  pay: ["pays", "paid", "paid", "paying"],
+  put: ["puts", "put", "put", "putting"],
+  read: ["reads", "read", "read", "reading"],
+  ride: ["rides", "rode", "ridden", "riding"],
+  rise: ["rises", "rose", "risen", "rising"],
+  run: ["runs", "ran", "run", "running"],
+  say: ["says", "said", "said", "saying"],
+  see: ["sees", "saw", "seen", "seeing"],
+  sell: ["sells", "sold", "sold", "selling"],
+  send: ["sends", "sent", "sent", "sending"],
+  set: ["sets", "set", "set", "setting"],
+  shake: ["shakes", "shook", "shaken", "shaking"],
+  show: ["shows", "showed", "shown", "showing"],
+  shut: ["shuts", "shut", "shut", "shutting"],
+  sing: ["sings", "sang", "sung", "singing"],
+  sit: ["sits", "sat", "sat", "sitting"],
+  sleep: ["sleeps", "slept", "slept", "sleeping"],
+  speak: ["speaks", "spoke", "spoken", "speaking"],
+  spend: ["spends", "spent", "spent", "spending"],
+  stand: ["stands", "stood", "stood", "standing"],
+  swim: ["swims", "swam", "swum", "swimming"],
+  take: ["takes", "took", "taken", "taking"],
+  teach: ["teaches", "taught", "taught", "teaching"],
+  tell: ["tells", "told", "told", "telling"],
+  think: ["thinks", "thought", "thought", "thinking"],
+  throw: ["throws", "threw", "thrown", "throwing"],
+  understand: ["understands", "understood", "understood", "understanding"],
+  wear: ["wears", "wore", "worn", "wearing"],
+  win: ["wins", "won", "won", "winning"],
+  write: ["writes", "wrote", "written", "writing"],
+};
+
 dictionary.push(
   ...highSchoolWords.map(([word, korean, part]) => ({
     word,
@@ -680,11 +773,9 @@ dictionary.push(
     level: 4,
     definition: `고등 영어 독해와 내신, 수능 지문에서 자주 쓰이는 단어예요. 뜻은 '${korean}'입니다.`,
     keywords: korean.split(/, |,| /).filter(Boolean),
-    examples: [
-      [`I learned the word "${word}" today.`, `나는 오늘 '${word}'라는 단어를 배웠어요.`],
-      [`This word is useful in English reading.`, `이 단어는 영어 독해에 유용해요.`],
-    ],
+    examples: manualExampleNotes[word] ?? createRealisticExamples(word, korean, part, "고등 필수"),
     structure: wordStructureNotes[word] ?? null,
+    inflections: manualInflectionNotes[word] ?? null,
   }))
 );
 
@@ -1664,8 +1755,113 @@ function isPhrasePart(part, word) {
   return /\s/.test(String(word || "")) || text.includes("phrase") || text.includes("숙어") || text.includes("구동사") || text.includes("구");
 }
 
+function isSingleBaseVerbWord(word) {
+  return /^[a-z]+$/i.test(String(word || "").trim());
+}
+
+function isLikelyDerivedVerbEntry(entry) {
+  const text = `${entry.definition || ""} ${entry.category || ""} ${entry.structure?.formula || ""}`;
+  return /3인칭 단수 현재형|과거형|과거분사형|현재분사형|복수형|파생/.test(text);
+}
+
+function hasFinalConsonantVowelConsonant(word) {
+  const lower = String(word || "").toLowerCase();
+  if (lower.length < 3) return false;
+  const vowels = "aeiou";
+  const a = lower.at(-3);
+  const b = lower.at(-2);
+  const c = lower.at(-1);
+  return !vowels.includes(a) && vowels.includes(b) && !vowels.includes(c) && !/[wxy]/.test(c);
+}
+
+function buildRegularVerbForms(word) {
+  const lower = String(word || "").trim().toLowerCase();
+  let thirdPerson;
+  if (/[^aeiou]y$/.test(lower)) {
+    thirdPerson = `${lower.slice(0, -1)}ies`;
+  } else if (/(s|x|z|ch|sh|o)$/.test(lower)) {
+    thirdPerson = `${lower}es`;
+  } else {
+    thirdPerson = `${lower}s`;
+  }
+
+  let past;
+  if (/[^aeiou]y$/.test(lower)) {
+    past = `${lower.slice(0, -1)}ied`;
+  } else if (lower.endsWith("e")) {
+    past = `${lower}d`;
+  } else if (hasFinalConsonantVowelConsonant(lower)) {
+    past = `${lower}${lower.at(-1)}ed`;
+  } else {
+    past = `${lower}ed`;
+  }
+
+  let presentParticiple;
+  if (/(ie)$/.test(lower)) {
+    presentParticiple = `${lower.slice(0, -2)}ying`;
+  } else if (lower.endsWith("e") && !/(ee|ye|oe)$/.test(lower)) {
+    presentParticiple = `${lower.slice(0, -1)}ing`;
+  } else if (hasFinalConsonantVowelConsonant(lower)) {
+    presentParticiple = `${lower}${lower.at(-1)}ing`;
+  } else {
+    presentParticiple = `${lower}ing`;
+  }
+
+  return [thirdPerson, past, past, presentParticiple];
+}
+
+function buildVerbInflections(word) {
+  const lower = String(word || "").trim().toLowerCase();
+  const forms = irregularVerbForms[lower] ?? buildRegularVerbForms(lower);
+  return {
+    title: "동사형",
+    items: [
+      ["3인칭 단수 현재", forms[0]],
+      ["과거형", forms[1]],
+      ["과거 분사", forms[2]],
+      ["현재 분사", forms[3]],
+    ],
+  };
+}
+
+function shouldAttachVerbInflections(entry) {
+  if (entry.inflections?.items?.length) return false;
+  const hasVerbSignal =
+    isVerbPart(entry.part) || splitMeaningTokens(entry.korean).some((token) => isVerbMeaningToken(token));
+  if (!hasVerbSignal) return false;
+  if (isPhrasePart(entry.part, entry.word)) return false;
+  if (!isSingleBaseVerbWord(entry.word)) return false;
+  if (entry.separateGroup === "proper-noun") return false;
+  if (isLikelyDerivedVerbEntry(entry)) return false;
+  return true;
+}
+
+function addKoreanObjectParticle(meaning) {
+  const text = String(meaning || "").trim();
+  if (!text) return "";
+  const lastChar = text.charCodeAt(text.length - 1);
+  if (lastChar < 0xac00 || lastChar > 0xd7a3) {
+    return `${text}을`;
+  }
+  return `${text}${(lastChar - 0xac00) % 28 === 0 ? "를" : "을"}`;
+}
+
+function addKoreanTopicParticle(meaning) {
+  const text = String(meaning || "").trim();
+  if (!text) return "";
+  const lastChar = text.charCodeAt(text.length - 1);
+  if (lastChar < 0xac00 || lastChar > 0xd7a3) {
+    return `${text}은`;
+  }
+  return `${text}${(lastChar - 0xac00) % 28 === 0 ? "는" : "은"}`;
+}
+
 function createRealisticExamples(word, korean, part = "", category = "") {
   const exampleOverrides = {
+    appear: [
+      ["When did mammals appear on the earth?", "언제 지구상에 포유류가 생겼을까?"],
+      ["Slowly, an image began to appear on the screen.", "서서히 화면에 어떤 상이 나타나기 시작했다."],
+    ],
     viable: [
       ["We need a viable plan before the meeting.", "\uC6B0\uB9AC\uB294 \uD68C\uC758 \uC804\uC5D0 \uC2E4\uD589 \uAC00\uB2A5\uD55C \uACC4\uD68D\uC774 \uD544\uC694\uD574\uC694."],
       ["The small business is now commercially viable.", "\uADF8 \uC18C\uADDC\uBAA8 \uC0AC\uC5C5\uC740 \uC774\uC81C \uC0C1\uC5C5\uC801\uC73C\uB85C \uC131\uACF5\uD560 \uAC00\uB2A5\uC131\uC774 \uC788\uC5B4\uC694."],
@@ -1698,38 +1894,39 @@ function createRealisticExamples(word, korean, part = "", category = "") {
   }
 
   const meaning = getCleanMeaning(korean);
+  const objectMeaning = addKoreanObjectParticle(meaning);
+  const topicMeaning = addKoreanTopicParticle(meaning);
   if (isPhrasePart(part, normalizedWord)) {
     return [
-      [`We often use "${normalizedWord}" in real conversations.`, `우리는 실제 대화에서 '${normalizedWord}' 표현을 자주 써요.`],
-      [`Try to use "${normalizedWord}" in one short sentence.`, `'${normalizedWord}'를 짧은 문장 하나에 써 보세요.`],
+      [`We need to ${normalizedWord} the details before we decide.`, `결정하기 전에 세부 내용을 ${meaning} 필요가 있어요.`],
+      [`Please ${normalizedWord} this point during the meeting.`, `회의 중에 이 점을 ${meaning} 주세요.`],
     ];
   }
 
   if (isAdverbPart(part)) {
     return [
-      [`She spoke ${normalizedWord} during the class.`, `그녀는 수업 중에 ${meaning} 말했어요.`],
-      [`Please answer ${normalizedWord} when you can.`, `가능할 때 ${meaning} 대답해 주세요.`],
+      [`The team worked ${normalizedWord} on the project.`, `그 팀은 프로젝트를 ${meaning} 진행했어요.`],
+      [`She explained the idea ${normalizedWord}.`, `그녀는 그 생각을 ${meaning} 설명했어요.`],
     ];
   }
 
   if (isAdjectivePart(part) || isAdjectiveMeaning(korean)) {
     return [
-      [`This is a ${normalizedWord} point to remember.`, `이것은 기억해야 할 ${meaning} 점이에요.`],
-      [`The article gives a ${normalizedWord} example.`, `그 글에는 ${meaning} 예가 나와요.`],
+      [`This is a ${normalizedWord} part of the plan.`, `이것은 계획에서 ${meaning} 부분이에요.`],
+      [`The article gives a ${normalizedWord} example.`, `그 글은 ${meaning} 예를 보여 줘요.`],
     ];
   }
 
   if (isVerbPart(part)) {
     return [
-      [`We need to ${normalizedWord} the problem today.`, `우리는 오늘 그 문제를 ${meaning} 해야 해요.`],
-      [`She tried to ${normalizedWord} her idea clearly.`, `그녀는 자신의 생각을 분명히 ${meaning} 하려고 했어요.`],
+      [`The team will ${normalizedWord} the plan if needed.`, `필요하면 그 팀은 계획을 ${meaning} 거예요.`],
+      [`The result may ${normalizedWord} in the final report.`, `그 결과는 최종 보고서에서 ${meaning} 수 있어요.`],
     ];
   }
 
-  const article = /^[aeiou]/i.test(normalizedWord) ? "an" : "a";
   return [
-    [`I saw ${article} ${normalizedWord} near the school.`, `나는 학교 근처에서 ${meaning}을 봤어요.`],
-    [`The ${normalizedWord} was important in the story.`, `그 이야기에서 ${meaning}은 중요했어요.`],
+    [`The ${normalizedWord} is part of the main topic.`, `${topicMeaning} 주요 주제의 일부예요.`],
+    [`The report explains the ${normalizedWord} clearly.`, `그 보고서는 ${objectMeaning} 분명하게 설명해요.`],
   ];
 }
 
@@ -2205,6 +2402,12 @@ if (Object.keys(properNounOverrides).length) {
   });
 }
 
+dictionary.forEach((entry) => {
+  if (shouldAttachVerbInflections(entry)) {
+    entry.inflections = buildVerbInflections(entry.word);
+  }
+});
+
 const searchInput = document.querySelector("#searchInput");
 const searchButton = document.querySelector("#searchButton");
 const resultPanel = document.querySelector("#resultPanel");
@@ -2220,7 +2423,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v81";
+const APP_RELEASE_VERSION = "v85";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();

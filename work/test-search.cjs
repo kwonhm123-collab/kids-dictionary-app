@@ -403,6 +403,45 @@ const falsePositiveResults = falsePositiveWords.map((word) => {
 });
 const falsePositiveFailed = falsePositiveResults.filter((result) => !result.pass);
 const runEntry = context.findWord("run");
+const appearEntry = context.findWord("appear");
+function findExactDictionaryEntry(word) {
+  return vm.runInContext(`dictionary.find((entry) => entry.word === ${JSON.stringify(word)})`, context);
+}
+const verbInflectionSampleCases = [
+  ["appear", [["3인칭 단수 현재", "appears"], ["과거형", "appeared"], ["과거 분사", "appeared"], ["현재 분사", "appearing"]]],
+  ["revise", [["3인칭 단수 현재", "revises"], ["과거형", "revised"], ["과거 분사", "revised"], ["현재 분사", "revising"]]],
+  ["finalize", [["3인칭 단수 현재", "finalizes"], ["과거형", "finalized"], ["과거 분사", "finalized"], ["현재 분사", "finalizing"]]],
+  ["begin", [["3인칭 단수 현재", "begins"], ["과거형", "began"], ["과거 분사", "begun"], ["현재 분사", "beginning"]]],
+  ["go", [["3인칭 단수 현재", "goes"], ["과거형", "went"], ["과거 분사", "gone"], ["현재 분사", "going"]]],
+  ["make", [["3인칭 단수 현재", "makes"], ["과거형", "made"], ["과거 분사", "made"], ["현재 분사", "making"]]],
+];
+const verbInflectionSampleResults = verbInflectionSampleCases.map(([word, expected]) => {
+  const entry = findExactDictionaryEntry(word);
+  return {
+    word,
+    expected,
+    actual: entry?.inflections?.items ?? null,
+    pass: JSON.stringify(entry?.inflections?.items) === JSON.stringify(expected),
+  };
+});
+const verbInflectionCoverageResults = vm.runInContext(
+  `dictionary
+    .filter((entry) =>
+      isVerbPart(entry.part) &&
+      !isPhrasePart(entry.part, entry.word) &&
+      isSingleBaseVerbWord(entry.word) &&
+      entry.separateGroup !== "proper-noun" &&
+      !isLikelyDerivedVerbEntry(entry)
+    )
+    .map((entry) => ({
+      word: entry.word,
+      part: entry.part,
+      category: entry.category,
+      pass: Array.isArray(entry.inflections?.items) && entry.inflections.items.length === 4
+    }))`,
+  context
+);
+const verbInflectionCoverageFailed = verbInflectionCoverageResults.filter((result) => !result.pass);
 const senseChecks = [
   {
     name: "run 뜻 목록 5개",
@@ -425,8 +464,22 @@ const senseChecks = [
         ["현재 분사", "running"],
       ]),
   },
+  {
+    name: "appear 동사 변화형",
+    pass:
+      JSON.stringify(appearEntry?.inflections?.items) ===
+      JSON.stringify([
+        ["3인칭 단수 현재", "appears"],
+        ["과거형", "appeared"],
+        ["과거 분사", "appeared"],
+        ["현재 분사", "appearing"],
+      ]),
+  },
 ];
-const senseFailed = senseChecks.filter((result) => !result.pass);
+const senseFailed = [
+  ...senseChecks.filter((result) => !result.pass),
+  ...verbInflectionSampleResults.filter((result) => !result.pass).map((result) => ({ name: `${result.word} 동사 변화형`, pass: false })),
+];
 const qualityWords = ["world", "time", "year", "day", "work", "company", "business", "life", "place", "case", "government", "computer", "gold", "golden"];
 const qualityResults = qualityWords.map((word) => {
   const entry = context.findWord(word);
@@ -532,8 +585,28 @@ context.renderResult(context.findWord("viable"));
 const viableHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("adhere to"));
 const adhereToHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("appear"));
+const appearHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
 const genericPhraseExamplePattern = /real conversations|Try to use/i;
+const lowQualityExamplePattern =
+  /I learned the word|This word is useful|searched for|studied the word|in the dictionary|real conversations|Try to use|단어를 배웠어요|영어 독해에 유용|실제 대화|짧은 문장/i;
+const allExampleEntries = vm.runInContext(
+  "dictionary.map(({ word, examples }) => ({ word, examples }))",
+  context
+);
+const exampleQualityResults = allExampleEntries
+  .map(({ word, examples }) => {
+    const badExamples = (Array.isArray(examples) ? examples : []).filter(([english, translated]) =>
+      lowQualityExamplePattern.test(`${english || ""} ${translated || ""}`)
+    );
+    return {
+      word,
+      badExamples: badExamples.length,
+      pass: badExamples.length === 0,
+    };
+  })
+  .filter((result) => !result.pass);
 const advancedDepthChecks = advancedDepthWords.map((word) => {
   const entry = context.findWord(word);
   const examples = Array.isArray(entry?.examples) ? entry.examples : [];
@@ -605,6 +678,20 @@ const renderChecks = [
       adhereToHtml.includes("We should adhere to the original plan.") &&
       adhereToHtml.includes("우리는 원래 계획을 고수해야 해요.") &&
       !genericPhraseExamplePattern.test(adhereToHtml),
+  },
+  {
+    name: "appear 동사형과 쉬운 예문 표시",
+    pass:
+      appearHtml.includes("동사형") &&
+      appearHtml.includes("appears") &&
+      appearHtml.includes("appeared") &&
+      appearHtml.includes("appearing") &&
+      appearHtml.includes("When did mammals appear on the earth?") &&
+      appearHtml.includes("언제 지구상에 포유류가 생겼을까?") &&
+      appearHtml.includes("Slowly, an image began to appear on the screen.") &&
+      appearHtml.includes("서서히 화면에 어떤 상이 나타나기 시작했다.") &&
+      !appearHtml.includes("I learned the word &quot;appear&quot; today.") &&
+      !appearHtml.includes("This word is useful in English reading."),
   },
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);
@@ -678,11 +765,18 @@ console.log(
       excluded: { total: excludedResults.length + 1, failed: excludedFailed.length, results: [...excludedResults, excludedAutocompleteResult] },
       falsePositives: { total: falsePositiveResults.length, failed: falsePositiveFailed.length, results: falsePositiveResults },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
+      verbInflections: {
+        total: verbInflectionCoverageResults.length,
+        failed: verbInflectionCoverageFailed.length + verbInflectionSampleResults.filter((result) => !result.pass).length,
+        samples: verbInflectionSampleResults,
+        failedCoverage: verbInflectionCoverageFailed.slice(0, 50),
+      },
       pronunciation: { total: pronunciationChecks.length, failed: pronunciationFailed.length, results: pronunciationChecks },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
       derivedQuality: { total: derivedQualityResults.length, failed: derivedQualityFailed.length, results: derivedQualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
       render: { total: renderChecks.length, failed: renderFailed.length, results: renderChecks },
+      exampleQuality: { total: allExampleEntries.length, failed: exampleQualityResults.length, results: exampleQualityResults.slice(0, 50) },
       advancedDepth: { total: advancedDepthChecks.length, failed: advancedDepthFailed.length, results: advancedDepthChecks },
       related: { total: relatedResults.length, failed: relatedFailed.length, results: relatedResults },
     },
@@ -695,11 +789,13 @@ if (
   autocompleteFailed.length > 0 ||
   excludedFailed.length > 0 ||
   senseFailed.length > 0 ||
+  verbInflectionCoverageFailed.length > 0 ||
   pronunciationFailed.length > 0 ||
   qualityFailed.length > 0 ||
   derivedQualityFailed.length > 0 ||
   meaningFailed.length > 0 ||
   renderFailed.length > 0 ||
+  exampleQualityResults.length > 0 ||
   advancedDepthFailed.length > 0 ||
   relatedFailed.length > 0
 ) {
