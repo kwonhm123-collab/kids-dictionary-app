@@ -1619,6 +1619,7 @@ const verifiedBankSupplement = window.verifiedBankSupplement ?? {};
 const verifiedMeaningOverrides = window.verifiedMeaningOverrides ?? {};
 const manualDictionaryAdditions = Array.isArray(window.manualDictionaryAdditions) ? window.manualDictionaryAdditions : [];
 const manualPhraseAdditions = Array.isArray(window.manualPhraseAdditions) ? window.manualPhraseAdditions : [];
+const negativePrefixWordPairs = window.negativePrefixWordPairs ?? {};
 const knownTop1000SupplementWords = new Set(dictionary.map((entry) => entry.word.toLowerCase()));
 
 const remainingBankPriorityMeanings = {
@@ -1663,6 +1664,24 @@ function buildKeywordsFromKorean(korean) {
     : expandedTokens;
 
   return [...new Set(mergedTokens)].slice(0, 8);
+}
+
+function buildNegativePrefixStructure(word) {
+  const pair = negativePrefixWordPairs[String(word || "").toLowerCase()];
+  if (!Array.isArray(pair) || pair.length < 2) {
+    return null;
+  }
+
+  const [baseWord, baseMeaning] = pair;
+  const wordWithParticle = /[aeiou]$/i.test(word) ? `${word}라는` : `${word}이라는`;
+  return {
+    formula: `un + ${baseWord}`,
+    parts: [
+      ["un-", "아님, 반대의 뜻을 나타내는 접두어"],
+      [baseWord, baseMeaning],
+    ],
+    meaning: `${baseWord}에 반대 뜻을 만드는 un-이 붙어서 ${wordWithParticle} 단어가 되었어요.`,
+  };
 }
 
 function normalizeManualPart(part) {
@@ -2403,6 +2422,9 @@ if (Object.keys(properNounOverrides).length) {
 }
 
 dictionary.forEach((entry) => {
+  if (!entry.structure) {
+    entry.structure = buildNegativePrefixStructure(entry.word);
+  }
   if (shouldAttachVerbInflections(entry)) {
     entry.inflections = buildVerbInflections(entry.word);
   }
@@ -2423,7 +2445,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v85";
+const APP_RELEASE_VERSION = "v86";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2939,6 +2961,7 @@ async function getExternalWordInfo(word) {
   if (!isSingleEnglishWord(cleanWord)) {
     return {
       audioUrl: override?.audioUrl ?? null,
+      audioUrls: override?.audioUrls ?? { us: null, uk: null },
       phonetics: override?.phonetics ?? derived?.phonetics ?? [],
       synonyms: localSynonyms[cleanWord] ?? [],
       pronunciationDisplay: override?.display ?? derived?.display ?? null,
@@ -2954,6 +2977,7 @@ async function getExternalWordInfo(word) {
     if (!response.ok) {
       const emptyInfo = {
         audioUrl: override?.audioUrl ?? null,
+        audioUrls: override?.audioUrls ?? { us: null, uk: null },
         phonetics: override?.phonetics ?? derived?.phonetics ?? [],
         synonyms: localSynonyms[cleanWord] ?? [],
         pronunciationDisplay: override?.display ?? derived?.display ?? null,
@@ -2970,9 +2994,8 @@ async function getExternalWordInfo(word) {
         .filter((text) => typeof text === "string" && text.trim())
         .map(normalizeIpaForDisplay)
     );
-    const audioUrl = phonetics
-      .map((phonetic) => phonetic.audio)
-      .find((audio) => typeof audio === "string" && audio.startsWith("https://"));
+    const audioUrls = buildRegionalAudioUrls(phonetics, override?.audioUrls);
+    const audioUrl = override?.audioUrl ?? audioUrls.us ?? audioUrls.uk ?? audioUrls.other ?? null;
     const apiSynonyms = entries.flatMap((entry) =>
       (entry.meanings ?? []).flatMap((meaning) =>
         (meaning.definitions ?? []).flatMap((definition) => definition.synonyms ?? [])
@@ -2985,37 +3008,65 @@ async function getExternalWordInfo(word) {
 
     const info = {
       audioUrl: override?.audioUrl ?? audioUrl ?? null,
+      audioUrls,
       phonetics: override?.phonetics ?? (ipaList.length ? ipaList : derived?.phonetics ?? []),
       synonyms,
       pronunciationDisplay: override?.display ?? (ipaList.length ? null : derived?.display ?? null),
     };
     externalWordInfoCache.set(cleanWord, info);
-    pronunciationAudioCache.set(cleanWord, info.audioUrl);
     return info;
   } catch {
     const fallbackInfo = {
       audioUrl: override?.audioUrl ?? null,
+      audioUrls: override?.audioUrls ?? { us: null, uk: null },
       phonetics: override?.phonetics ?? derived?.phonetics ?? [],
       synonyms: localSynonyms[cleanWord] ?? [],
       pronunciationDisplay: override?.display ?? derived?.display ?? null,
     };
     externalWordInfoCache.set(cleanWord, fallbackInfo);
-    pronunciationAudioCache.set(cleanWord, null);
     return fallbackInfo;
   }
 }
 
-async function getRecordedPronunciation(word) {
+function getAudioRegion(audioUrl) {
+  const normalizedUrl = String(audioUrl || "").toLowerCase();
+  if (/(?:[-_/]|\b)(us|usa)(?:[-_.?/]|\b)/.test(normalizedUrl)) return "us";
+  if (/(?:[-_/]|\b)(uk|gb|british)(?:[-_.?/]|\b)/.test(normalizedUrl)) return "uk";
+  return "other";
+}
+
+function buildRegionalAudioUrls(phonetics, preferredAudioUrls = {}) {
+  const regional = {
+    us: preferredAudioUrls?.us ?? null,
+    uk: preferredAudioUrls?.uk ?? null,
+    other: preferredAudioUrls?.other ?? null,
+  };
+
+  for (const phonetic of phonetics ?? []) {
+    const audioUrl = phonetic?.audio;
+    if (typeof audioUrl !== "string" || !audioUrl.startsWith("https://")) continue;
+    const region = getAudioRegion(audioUrl);
+    if (!regional[region]) {
+      regional[region] = audioUrl;
+    }
+  }
+  return regional;
+}
+
+async function getRecordedPronunciation(word, accent = "us") {
   const cleanWord = normalize(word);
-  if (pronunciationAudioCache.has(cleanWord)) {
-    return pronunciationAudioCache.get(cleanWord);
+  const cacheKey = `${cleanWord}:${accent}`;
+  if (pronunciationAudioCache.has(cacheKey)) {
+    return pronunciationAudioCache.get(cacheKey);
   }
 
   const info = await getExternalWordInfo(word);
-  return info.audioUrl;
+  const audioUrl = info.audioUrls?.[accent] ?? null;
+  pronunciationAudioCache.set(cacheKey, audioUrl);
+  return audioUrl;
 }
 
-function speakWithDeviceVoice(text) {
+function speakWithDeviceVoice(text, accent = "us") {
   if (!("speechSynthesis" in window)) {
     alert("이 브라우저에서는 발음 기능을 사용할 수 없어요.");
     return;
@@ -3024,23 +3075,24 @@ function speakWithDeviceVoice(text) {
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   const voices = window.speechSynthesis.getVoices();
+  const targetLanguage = accent === "uk" ? "en-GB" : "en-US";
   const preferredVoice =
-    voices.find((voice) => voice.lang === "en-US" && /google|samantha|natural|premium/i.test(voice.name)) ??
-    voices.find((voice) => voice.lang === "en-US") ??
+    voices.find((voice) => voice.lang === targetLanguage && /google|samantha|natural|premium/i.test(voice.name)) ??
+    voices.find((voice) => voice.lang === targetLanguage) ??
     voices.find((voice) => voice.lang.startsWith("en"));
 
   if (preferredVoice) {
     utterance.voice = preferredVoice;
   }
 
-  utterance.lang = preferredVoice?.lang ?? "en-US";
+  utterance.lang = preferredVoice?.lang ?? targetLanguage;
   utterance.rate = 0.78;
   utterance.pitch = 1;
   window.speechSynthesis.speak(utterance);
 }
 
-async function speak(text) {
-  const recordedAudioUrl = await getRecordedPronunciation(text);
+async function speak(text, accent = "us") {
+  const recordedAudioUrl = await getRecordedPronunciation(text, accent);
   if (recordedAudioUrl) {
     window.speechSynthesis?.cancel();
     const audio = new Audio(recordedAudioUrl);
@@ -3049,12 +3101,12 @@ async function speak(text) {
       await audio.play();
       return;
     } catch {
-      speakWithDeviceVoice(text);
+      speakWithDeviceVoice(text, accent);
       return;
     }
   }
 
-  speakWithDeviceVoice(text);
+  speakWithDeviceVoice(text, accent);
 }
 
 function formatPronunciationText(word, phonetics, pronunciationDisplay = null) {
@@ -3066,9 +3118,12 @@ function formatPronunciationText(word, phonetics, pronunciationDisplay = null) {
 
 function renderFallbackPronunciation(entry) {
   const helper = entry.pronunciation && entry.pronunciation !== entry.word ? `읽기 도움: ${entry.pronunciation}` : "읽기 도움 표기 없음";
+  const override = pronunciationDisplayOverrides[normalize(entry.word)];
+  const derived = override ? null : getDerivedPronunciationInfo(entry.word);
+  const initialStatus = override?.display ?? derived?.display ?? "발음기호: 불러오는 중...";
   return `
     <p class="pronunciation" data-ipa-for="${entry.word}">
-      <span class="ipa-status">발음기호: 불러오는 중...</span>
+      <span class="ipa-status">${escapeHtml(initialStatus)}</span>
       <span class="pron-help">${helper}</span>
     </p>
   `;
@@ -3238,9 +3293,6 @@ function renderResult(entry, query = "") {
         <h2 class="word-title">${escapedWord}</h2>
         ${renderFallbackPronunciation(entry)}
       </div>
-      <button class="icon-button" type="button" data-speak="${escapedWord}" title="실제 발음 듣기" aria-label="${escapedWord} 실제 발음 듣기">
-        <span aria-hidden="true">▶</span>
-      </button>
     </div>
     <div class="badge-row">
       <span class="badge">${escapeHtml(entry.part)}</span>
@@ -3254,7 +3306,8 @@ function renderResult(entry, query = "") {
     ${relatedHtml}
     ${structureHtml}
     <div class="actions">
-      <button class="primary-action" type="button" data-speak="${escapedWord}">실제 발음 듣기</button>
+      <button class="primary-action pronunciation-action" type="button" data-speak="${escapedWord}" data-accent="us">미국식 듣기</button>
+      <button class="primary-action pronunciation-action british" type="button" data-speak="${escapedWord}" data-accent="uk">영국식 듣기</button>
       <button class="primary-action ${favoriteClass}" type="button" data-favorite="${escapedWord}">${favoriteLabel}</button>
     </div>
     <h3 class="examples-title">쉬운 예문</h3>
@@ -3266,7 +3319,7 @@ function renderResult(entry, query = "") {
               <strong>${escapeHtml(english)}</strong>
               <span>${escapeHtml(korean)}</span>
               <div class="example-actions">
-                <button class="example-speak" type="button" data-speak="${escapeHtml(english)}">예문 듣기</button>
+                <button class="example-speak" type="button" data-speak="${escapeHtml(english)}" data-accent="us">예문 듣기</button>
               </div>
             </li>
           `
@@ -3710,7 +3763,7 @@ resultPanel.addEventListener("click", (event) => {
   const relatedButton = event.target.closest("[data-related-word]");
 
   if (speakButton) {
-    speak(speakButton.dataset.speak);
+    speak(speakButton.dataset.speak, speakButton.dataset.accent ?? "us");
   }
 
   if (favoriteButton) {

@@ -2,6 +2,7 @@ const fs = require("fs");
 const vm = require("vm");
 
 const elements = new Map();
+const spokenUtterances = [];
 
 function makeElement() {
   return {
@@ -81,6 +82,9 @@ const manualPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionar
 const manualHighSchoolPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-high-school-pronunciation-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-high-school-pronunciation-overrides.js", "utf8")
   : "";
+const manualNegativePrefixAdditionsCode = fs.existsSync("./outputs/kids-dictionary/manual-negative-prefix-additions.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/manual-negative-prefix-additions.js", "utf8")
+  : "";
 
 const context = {
   console,
@@ -88,7 +92,9 @@ const context = {
   Audio: function Audio() {
     return { play: async () => {} };
   },
-  SpeechSynthesisUtterance: function SpeechSynthesisUtterance() {},
+  SpeechSynthesisUtterance: function SpeechSynthesisUtterance(text) {
+    this.text = text;
+  },
   fetch: async () => ({ ok: false }),
   localStorage: {
     getItem() {
@@ -98,7 +104,7 @@ const context = {
   },
   window: {
     studentVocabularyBank: [],
-    speechSynthesis: { cancel() {}, speak() {}, getVoices: () => [] },
+    speechSynthesis: { cancel() {}, speak(utterance) { spokenUtterances.push(utterance); }, getVoices: () => [] },
     addEventListener() {},
   },
   document: {
@@ -132,9 +138,12 @@ vm.runInContext(manualProperNounOverridesCode, context);
 vm.runInContext(naverPronunciationOverridesCode, context);
 vm.runInContext(manualHighSchoolPronunciationOverridesCode, context);
 vm.runInContext(manualPronunciationOverridesCode, context);
+vm.runInContext(manualNegativePrefixAdditionsCode, context);
 vm.runInContext(fs.readFileSync("./outputs/kids-dictionary/app.js", "utf8"), context);
 
 const cases = [
+  ["uncertain", "uncertain", "영한 부정 접두어"],
+  ["확신이 없는", "uncertain", "한영 부정 접두어"],
   ["viable", "viable", "\uC601\uD55C \uACE0\uB4F1\u00B7\uC5C5\uBB34 \uC2E4\uC6A9\uC5B4"],
   ["\uC2E4\uD589 \uAC00\uB2A5\uD55C", "viable", "\uD55C\uC601 \uACE0\uB4F1\u00B7\uC5C5\uBB34 \uC2E4\uC6A9\uC5B4"],
   ...[
@@ -501,6 +510,29 @@ const setupPronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides
 const setupPronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrides.setup.phonetics', context);
 const viablePronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.viable.display', context);
 const viablePronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrides.viable.phonetics', context);
+const uncertainPronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.uncertain.display', context);
+const regionalAudioSelection = vm.runInContext(
+  `buildRegionalAudioUrls([
+    { audio: "https://api.dictionaryapi.dev/media/pronunciations/en/certain-ca.mp3" },
+    { audio: "https://api.dictionaryapi.dev/media/pronunciations/en/certain-us.mp3" },
+    { audio: "https://cdn.example.test/certain-uk.mp3" }
+  ])`,
+  context
+);
+context.speakWithDeviceVoice("certain", "us");
+context.speakWithDeviceVoice("certain", "uk");
+const fallbackVoiceLanguages = spokenUtterances.slice(-2).map((utterance) => utterance.lang);
+const negativePrefixWords = vm.runInContext("Object.keys(negativePrefixWordPairs)", context);
+const negativePrefixResults = negativePrefixWords.map((word) => {
+  const entry = context.findWord(word);
+  return {
+    word,
+    actual: entry?.word ?? null,
+    structure: entry?.structure?.formula ?? null,
+    pass: entry?.word === word && entry?.structure?.formula?.startsWith("un + "),
+  };
+});
+const negativePrefixFailed = negativePrefixResults.filter((result) => !result.pass);
 const advancedDepthPronunciations = Object.fromEntries(
   advancedDepthWords.map((word) => [
     word,
@@ -587,6 +619,10 @@ context.renderResult(context.findWord("adhere to"));
 const adhereToHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("appear"));
 const appearHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("certain"));
+const certainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("uncertain"));
+const uncertainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
 const genericPhraseExamplePattern = /real conversations|Try to use/i;
 const lowQualityExamplePattern =
@@ -697,6 +733,32 @@ const renderChecks = [
 const renderFailed = renderChecks.filter((result) => !result.pass);
 const pronunciationChecks = [
   {
+    name: "certain 미국식·영국식 발음 버튼 분리",
+    pass:
+      certainHtml.includes('data-accent="us"') &&
+      certainHtml.includes('data-accent="uk"') &&
+      certainHtml.includes("미국식 듣기") &&
+      certainHtml.includes("영국식 듣기"),
+  },
+  {
+    name: "certain 지역별 녹음 음원 선택",
+    pass:
+      regionalAudioSelection.us?.endsWith("certain-us.mp3") &&
+      regionalAudioSelection.uk?.endsWith("certain-uk.mp3") &&
+      regionalAudioSelection.other?.endsWith("certain-ca.mp3"),
+  },
+  {
+    name: "녹음 음원 없을 때 미국·영국 기기 음성 분리",
+    pass: JSON.stringify(fallbackVoiceLanguages) === JSON.stringify(["en-US", "en-GB"]),
+  },
+  {
+    name: "uncertain 발음기호 표시",
+    pass:
+      uncertainPronunciationDisplay === "미국 [ʌnˈsɝːtən] · 영국 [ʌnˈsɜːtən]" &&
+      uncertainHtml.includes("미국식 듣기") &&
+      uncertainHtml.includes("영국식 듣기"),
+  },
+  {
     name: "viable 발음기호 표시",
     pass:
       viablePronunciationDisplay === "\uBBF8\uAD6D\u00B7\uC601\uAD6D [\u02C8va\u026A\u0259bl]" &&
@@ -772,6 +834,7 @@ console.log(
         failedCoverage: verbInflectionCoverageFailed.slice(0, 50),
       },
       pronunciation: { total: pronunciationChecks.length, failed: pronunciationFailed.length, results: pronunciationChecks },
+      negativePrefixes: { total: negativePrefixResults.length, failed: negativePrefixFailed.length, results: negativePrefixResults },
       quality: { total: qualityResults.length, failed: qualityFailed.length, results: qualityResults },
       derivedQuality: { total: derivedQualityResults.length, failed: derivedQualityFailed.length, results: derivedQualityResults },
       meanings: { total: meaningResults.length, failed: meaningFailed.length, results: meaningResults },
@@ -791,6 +854,7 @@ if (
   senseFailed.length > 0 ||
   verbInflectionCoverageFailed.length > 0 ||
   pronunciationFailed.length > 0 ||
+  negativePrefixFailed.length > 0 ||
   qualityFailed.length > 0 ||
   derivedQualityFailed.length > 0 ||
   meaningFailed.length > 0 ||

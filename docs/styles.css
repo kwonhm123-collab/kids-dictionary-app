@@ -496,7 +496,7 @@ input[type="search"]:focus {
 .actions,
 .example-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   margin: 16px 0;
 }
@@ -514,6 +514,14 @@ input[type="search"]:focus {
 
 .favorite-on {
   background: var(--pink);
+}
+
+.pronunciation-action.british {
+  background: var(--green);
+}
+
+.pronunciation-action.british:active {
+  background: #08715e;
 }
 
 .examples-title {

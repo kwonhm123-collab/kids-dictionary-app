@@ -31,6 +31,7 @@ const FILES = [
   "naver-pronunciation-overrides.js",
   "manual-high-school-pronunciation-overrides.js",
   "manual-pronunciation-overrides.js",
+  "manual-negative-prefix-additions.js",
   "manifest.json",
   "service-worker.js",
   "icon.svg",

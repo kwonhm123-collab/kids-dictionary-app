@@ -1,4 +1,4 @@
-const CACHE_NAME = "kids-dictionary-v85";
+const CACHE_NAME = "kids-dictionary-v86";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -24,6 +24,7 @@ const APP_FILES = [
   "./naver-pronunciation-overrides.js",
   "./manual-high-school-pronunciation-overrides.js",
   "./manual-pronunciation-overrides.js",
+  "./manual-negative-prefix-additions.js",
   "./manifest.json",
   "./icon.svg",
 ];

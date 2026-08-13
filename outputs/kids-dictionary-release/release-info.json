@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T01:36:24.949Z",
+  "generatedAt": "2026-08-13T15:05:54.460Z",
   "sourceDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary",
   "releaseDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary-release",
   "files": [
@@ -26,6 +26,7 @@
     "naver-pronunciation-overrides.js",
     "manual-high-school-pronunciation-overrides.js",
     "manual-pronunciation-overrides.js",
+    "manual-negative-prefix-additions.js",
     "manifest.json",
     "service-worker.js",
     "icon.svg"
