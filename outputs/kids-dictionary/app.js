@@ -2445,7 +2445,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v87";
+const APP_RELEASE_VERSION = "v88";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -3203,6 +3203,13 @@ function renderSynonymSection(entry) {
   `;
 }
 
+function renderAccentNote(entry) {
+  const accentNote = pronunciationDisplayOverrides[normalize(entry.word)]?.accentNote;
+  return accentNote
+    ? `<p class="muted-note accent-note">${escapeHtml(accentNote)}</p>`
+    : "";
+}
+
 function renderRelatedEntries(query, entry) {
   const relatedEntries = getRelatedEntries(query, entry);
   if (!relatedEntries.length) {
@@ -3368,6 +3375,7 @@ function renderResult(entry, query = "") {
     ${renderSynonymSection(entry)}
     ${relatedHtml}
     ${structureHtml}
+    ${renderAccentNote(entry)}
     <div class="actions">
       <button class="primary-action pronunciation-action" type="button" data-speak="${escapedWord}" data-accent="us">미국식 듣기</button>
       <button class="primary-action pronunciation-action british" type="button" data-speak="${escapedWord}" data-accent="uk">영국식 듣기</button>

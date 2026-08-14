@@ -523,6 +523,7 @@ const setupPronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrid
 const viablePronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.viable.display', context);
 const viablePronunciationPhonetics = vm.runInContext('pronunciationDisplayOverrides.viable.phonetics', context);
 const uncertainPronunciationDisplay = vm.runInContext('pronunciationDisplayOverrides.uncertain.display', context);
+const candidatePronunciation = vm.runInContext('pronunciationDisplayOverrides.candidate', context);
 const regionalAudioSelection = vm.runInContext(
   `buildRegionalAudioUrls([
     { audio: "https://api.dictionaryapi.dev/media/pronunciations/en/certain-ca.mp3" },
@@ -635,6 +636,8 @@ context.renderResult(context.findWord("certain"));
 const certainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("uncertain"));
 const uncertainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("candidate"));
+const candidateHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("onboarding"));
 const onboardingHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
@@ -746,6 +749,16 @@ const renderChecks = [
 ];
 const renderFailed = renderChecks.filter((result) => !result.pass);
 const pronunciationChecks = [
+  {
+    name: "candidate 미국식·영국식 동일 발음 안내",
+    pass:
+      candidatePronunciation.display === "미국 [ˈkændɪdət, ˈkændɪdeɪt] · 영국 [ˈkændɪdət, ˈkændɪdeɪt]" &&
+      candidatePronunciation.audioUrls?.us?.endsWith("candidate-us.mp3") &&
+      candidatePronunciation.audioUrls?.uk === null &&
+      candidateHtml.includes("미국식과 영국식 표준 발음이 같은 단어") &&
+      candidateHtml.includes('data-accent="us"') &&
+      candidateHtml.includes('data-accent="uk"'),
+  },
   {
     name: "certain 미국식·영국식 발음 버튼 분리",
     pass:

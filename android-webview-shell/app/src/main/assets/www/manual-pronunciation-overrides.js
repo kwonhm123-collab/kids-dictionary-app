@@ -1,5 +1,18 @@
 (() => {
   const pronunciationAudioOverrides = {
+  "candidate": {
+    "display": "미국 [ˈkændɪdət, ˈkændɪdeɪt] · 영국 [ˈkændɪdət, ˈkændɪdeɪt]",
+    "phonetics": [
+      "ˈkændɪdət",
+      "ˈkændɪdeɪt"
+    ],
+    "audioUrls": {
+      "us": "https://api.dictionaryapi.dev/media/pronunciations/en/candidate-us.mp3",
+      "uk": null,
+      "other": null
+    },
+    "accentNote": "candidate는 미국식과 영국식 표준 발음이 같은 단어예요. 두 버튼의 소리가 매우 비슷하게 들리는 것이 정상입니다."
+  },
   "according": {
     "audioUrl": "https://dict-dn.pstatic.net/v?_lsu_sa_=34f8275f2d4232566690816d3b5496fd2dcc67e56006afe063c2687e8bb665419c5d070a67151d7f49a268352a22601714a7cea38cb3a74213e46564196aec4571de86514588b661c8593ffa40da78560799c53b5bbbe90c3622814362c751c80a9aaf71046cab1b3a532c9728eef853d0b2c4025bde700f391f4eaca17e466f"
   },

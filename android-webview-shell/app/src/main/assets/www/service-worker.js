@@ -1,4 +1,4 @@
-const CACHE_NAME = "kids-dictionary-v87";
+const CACHE_NAME = "kids-dictionary-v88";
 const APP_FILES = [
   "./",
   "./index.html",
