@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T15:05:54.460Z",
+  "generatedAt": "2026-08-14T14:44:25.426Z",
   "sourceDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary",
   "releaseDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary-release",
   "files": [
@@ -24,6 +24,9 @@
     "manual-excluded-words.js",
     "manual-proper-noun-overrides.js",
     "naver-pronunciation-overrides.js",
+    "public-pronunciation-supplement.js",
+    "cmudict-pronunciation-supplement.js",
+    "pronunciation-unavailable-reasons.js",
     "manual-high-school-pronunciation-overrides.js",
     "manual-pronunciation-overrides.js",
     "manual-negative-prefix-additions.js",

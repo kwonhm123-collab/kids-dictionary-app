@@ -76,6 +76,15 @@ const manualProperNounOverridesCode = fs.existsSync("./outputs/kids-dictionary/m
 const naverPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/naver-pronunciation-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/naver-pronunciation-overrides.js", "utf8")
   : "window.pronunciationDisplayOverrides = {};";
+const publicPronunciationSupplementCode = fs.existsSync("./outputs/kids-dictionary/public-pronunciation-supplement.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/public-pronunciation-supplement.js", "utf8")
+  : "window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};";
+const cmudictPronunciationSupplementCode = fs.existsSync("./outputs/kids-dictionary/cmudict-pronunciation-supplement.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/cmudict-pronunciation-supplement.js", "utf8")
+  : "window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};";
+const pronunciationUnavailableReasonsCode = fs.existsSync("./outputs/kids-dictionary/pronunciation-unavailable-reasons.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/pronunciation-unavailable-reasons.js", "utf8")
+  : "window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};";
 const manualPronunciationOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-pronunciation-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-pronunciation-overrides.js", "utf8")
   : "window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};";
@@ -136,6 +145,9 @@ vm.runInContext(manualPhraseAdditionsCode, context);
 vm.runInContext(manualExcludedWordsCode, context);
 vm.runInContext(manualProperNounOverridesCode, context);
 vm.runInContext(naverPronunciationOverridesCode, context);
+vm.runInContext(publicPronunciationSupplementCode, context);
+vm.runInContext(cmudictPronunciationSupplementCode, context);
+vm.runInContext(pronunciationUnavailableReasonsCode, context);
 vm.runInContext(manualHighSchoolPronunciationOverridesCode, context);
 vm.runInContext(manualPronunciationOverridesCode, context);
 vm.runInContext(manualNegativePrefixAdditionsCode, context);
@@ -623,6 +635,8 @@ context.renderResult(context.findWord("certain"));
 const certainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("uncertain"));
 const uncertainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("onboarding"));
+const onboardingHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
 const genericPhraseExamplePattern = /real conversations|Try to use/i;
 const lowQualityExamplePattern =
@@ -761,7 +775,7 @@ const pronunciationChecks = [
   {
     name: "viable 발음기호 표시",
     pass:
-      viablePronunciationDisplay === "\uBBF8\uAD6D\u00B7\uC601\uAD6D [\u02C8va\u026A\u0259bl]" &&
+      viablePronunciationDisplay === "\uBBF8\uAD6D\u2219\uC601\uAD6D [\u02C8va\u026A\u0259bl]" &&
       Array.isArray(viablePronunciationPhonetics) &&
       viablePronunciationPhonetics.includes("\u02C8va\u026A\u0259bl"),
   },
@@ -771,6 +785,19 @@ const pronunciationChecks = [
       setupPronunciationDisplay === "미국∙영국 [sétʌ̀p]" &&
       Array.isArray(setupPronunciationPhonetics) &&
       setupPronunciationPhonetics.includes("sétʌ̀p"),
+  },
+  {
+    name: "숙어 발음기호 미표시 사유 안내",
+    pass:
+      adhereToHtml.includes("발음기호 미표시") &&
+      adhereToHtml.includes("미국식·영국식 전체 표현 듣기"),
+  },
+  {
+    name: "미검증 단일 단어 발음기호 사유 안내",
+    pass:
+      onboardingHtml.includes("발음기호 미표시") &&
+      onboardingHtml.includes("IPA") &&
+      !onboardingHtml.includes("발음기호: 사전 데이터 없음"),
   },
 ];
 pronunciationChecks.push(

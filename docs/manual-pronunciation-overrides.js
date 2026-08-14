@@ -1,6 +1,5 @@
-window.pronunciationDisplayOverrides = Object.assign(
-  window.pronunciationDisplayOverrides || {},
-  {
+(() => {
+  const pronunciationAudioOverrides = {
   "according": {
     "audioUrl": "https://dict-dn.pstatic.net/v?_lsu_sa_=34f8275f2d4232566690816d3b5496fd2dcc67e56006afe063c2687e8bb665419c5d070a67151d7f49a268352a22601714a7cea38cb3a74213e46564196aec4571de86514588b661c8593ffa40da78560799c53b5bbbe90c3622814362c751c80a9aaf71046cab1b3a532c9728eef853d0b2c4025bde700f391f4eaca17e466f"
   },
@@ -88,5 +87,14 @@ window.pronunciationDisplayOverrides = Object.assign(
   "wrote": {
     "audioUrl": "https://dict-dn.pstatic.net/v?_lsu_sa_=3ad8c2589d9830362696a1a039242afdcde56e7505046fd26572007c8b5a6de1325137c86c35c37f09d76525ab2b30f21f52221752ef1e6b89e9099b5af23136101b4d39742cd8b76678055405c3e3eaf087a9794be73c9a652042ede729326b80b2fabae623027e55262534631fd5156304d77c57dc0edf92260d10a9a0cf94"
   }
-}
-);
+  };
+
+  window.pronunciationDisplayOverrides = window.pronunciationDisplayOverrides || {};
+  for (const [word, audioInfo] of Object.entries(pronunciationAudioOverrides)) {
+    window.pronunciationDisplayOverrides[word] = Object.assign(
+      {},
+      window.pronunciationDisplayOverrides[word] || {},
+      audioInfo
+    );
+  }
+})();

@@ -55,6 +55,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈeɪbl"
     ]
   },
+  "abolish": {
+    "display": "미국 [ə │ bɑːlɪʃ] · 영국 [ə │ bɒlɪʃ]",
+    "phonetics": [
+      "ə │ bɑːlɪʃ",
+      "ə │ bɒlɪʃ"
+    ]
+  },
   "aboriginal": {
     "display": "미국∙영국 [ˌæbəˈrɪdʒənl]",
     "phonetics": [
@@ -131,6 +138,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "æbˈstrækt"
     ]
   },
+  "absurd": {
+    "display": "미국 [əbˈsɜːrd] · 영국 [əbˈsɜːd]",
+    "phonetics": [
+      "əbˈsɜːrd",
+      "əbˈsɜːd"
+    ]
+  },
   "abundant": {
     "display": "미국∙영국 [əˈbʌndənt] · 미국 [əˈbʌndənt]",
     "phonetics": [
@@ -167,6 +181,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [əkˈseləreɪt]",
     "phonetics": [
       "əkˈseləreɪt"
+    ]
+  },
+  "accent": {
+    "display": "발음기호 [│ æksent; │ æksənt]",
+    "phonetics": [
+      "│ æksent; │ æksənt"
     ]
   },
   "accept": {
@@ -241,6 +261,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈæksɪdənt"
     ]
   },
+  "accidentally": {
+    "display": "미국∙영국 [│ æksɪ │ dentəli]",
+    "phonetics": [
+      "│ æksɪ │ dentəli"
+    ]
+  },
   "accommodate": {
     "display": "미국 [ə │ kɑːmədeɪt] · 영국 [ə │ kɒmədeɪt]",
     "phonetics": [
@@ -275,6 +301,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ə │ kʌmplɪʃt"
     ]
   },
+  "accomplishment": {
+    "display": "미국 [ə │ kɑːmplɪʃmənt] · 영국 [ə │ kʌmplɪʃmənt]",
+    "phonetics": [
+      "ə │ kɑːmplɪʃmənt",
+      "ə │ kʌmplɪʃmənt"
+    ]
+  },
   "accordance": {
     "display": "미국∙영국 [əkɔ́:rdəns]",
     "phonetics": [
@@ -307,6 +340,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əˈkaʊntəbl"
     ]
   },
+  "accountant": {
+    "display": "미국∙영국 [əˈkaʊntənt] · 미국 [əˈkaʊntənt]",
+    "phonetics": [
+      "əˈkaʊntənt",
+      "əˈkaʊntənt"
+    ]
+  },
   "accounting": {
     "display": "미국 [əˈkaʊntɪŋ]",
     "phonetics": [
@@ -317,6 +357,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [əˈkredɪtɪd]",
     "phonetics": [
       "əˈkredɪtɪd"
+    ]
+  },
+  "accumulate": {
+    "display": "미국∙영국 [əˈkjuːmjəleɪt]",
+    "phonetics": [
+      "əˈkjuːmjəleɪt"
+    ]
+  },
+  "accumulation": {
+    "display": "미국∙영국 [ə │ kju:mjə │ leɪʃn]",
+    "phonetics": [
+      "ə │ kju:mjə │ leɪʃn"
     ]
   },
   "accuracy": {
@@ -330,6 +382,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈækjərət]",
     "phonetics": [
       "ˈækjərət"
+    ]
+  },
+  "accusation": {
+    "display": "미국∙영국 [ˌækjuˈzeɪʃn] · 미국 [ˌækjuˈzeɪʃn]",
+    "phonetics": [
+      "ˌækjuˈzeɪʃn",
+      "ˌækjuˈzeɪʃn"
+    ]
+  },
+  "accuse": {
+    "display": "미국∙영국 [əˈkjuːz] · 미국 [əˈkjuːz]",
+    "phonetics": [
+      "əˈkjuːz",
+      "əˈkjuːz"
     ]
   },
   "accused": {
@@ -419,6 +485,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌækwɪˈzɪʃn"
     ]
   },
+  "acre": {
+    "display": "미국 [ˈeɪkə(r)]",
+    "phonetics": [
+      "ˈeɪkə(r)"
+    ]
+  },
   "acrobat": {
     "display": "미국∙영국 [ˈækrəbæt] · 미국 [ˈækrəbæt]",
     "phonetics": [
@@ -464,6 +536,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈækʃn"
     ]
   },
+  "activate": {
+    "display": "미국∙영국 [ˈæktɪveɪt] · 미국 [ˈæktɪveɪt]",
+    "phonetics": [
+      "ˈæktɪveɪt",
+      "ˈæktɪveɪt"
+    ]
+  },
   "activated": {
     "display": "미국∙영국 [ǽktəvèitid]",
     "phonetics": [
@@ -480,6 +559,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈæktɪv]",
     "phonetics": [
       "ˈæktɪv"
+    ]
+  },
+  "activist": {
+    "display": "미국∙영국 [ˈæktɪvɪst] · 미국 [ˈæktɪvɪst]",
+    "phonetics": [
+      "ˈæktɪvɪst",
+      "ˈæktɪvɪst"
     ]
   },
   "activity": {
@@ -555,6 +641,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [əˈdæpt]",
     "phonetics": [
       "əˈdæpt"
+    ]
+  },
+  "adaptation": {
+    "display": "발음기호 [ˌædæpˈteɪʃn] · 발음기호 [ə | dæpʃn]",
+    "phonetics": [
+      "ˌædæpˈteɪʃn",
+      "ə | dæpʃn"
     ]
   },
   "adapter": {
@@ -635,6 +728,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈædɪkwət"
     ]
   },
+  "adhere": {
+    "display": "미국 [ədˈhɪr] · 영국 [ədˈhɪə(r)]",
+    "phonetics": [
+      "ədˈhɪr",
+      "ədˈhɪə(r)"
+    ]
+  },
   "adidas": {
     "display": "미국∙영국 [ədí:dəz]",
     "phonetics": [
@@ -677,6 +777,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [ˈædmɪn]",
     "phonetics": [
       "ˈædmɪn"
+    ]
+  },
+  "administer": {
+    "display": "미국∙영국 [ədˈmɪnɪstə(r)]",
+    "phonetics": [
+      "ədˈmɪnɪstə(r)"
     ]
   },
   "administration": {
@@ -742,6 +848,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "əˈdoʊbi",
       "əˈdəʊbi"
+    ]
+  },
+  "adolescent": {
+    "display": "미국∙영국 [ˌædəˈlesnt] · 미국 [ˌædəˈlesnt]",
+    "phonetics": [
+      "ˌædəˈlesnt",
+      "ˌædəˈlesnt"
     ]
   },
   "adopt": {
@@ -910,6 +1023,21 @@ window.pronunciationDisplayOverrides = Object.assign(
       "éi"
     ]
   },
+  "aesthetic": {
+    "display": "발음기호 [es | θetɪk] · 발음기호 [iːs | θetɪk; es | θetɪk] · 발음기호 [ə | fɪlieɪt]",
+    "phonetics": [
+      "es | θetɪk",
+      "iːs | θetɪk; es | θetɪk",
+      "ə | fɪlieɪt"
+    ]
+  },
+  "affair": {
+    "display": "미국 [əˈfer] · 영국 [əˈfeə(r)]",
+    "phonetics": [
+      "əˈfer",
+      "əˈfeə(r)"
+    ]
+  },
   "affect": {
     "display": "미국∙영국 [əˈfekt]",
     "phonetics": [
@@ -995,11 +1123,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ɑːftə(r)"
     ]
   },
+  "aftermath": {
+    "display": "미국 [│ æftərmæθ] · 영국 [│ ɑːftəmæθ; │ ɑːftəmɑːθ]",
+    "phonetics": [
+      "│ æftərmæθ",
+      "│ ɑːftəmæθ; │ ɑːftəmɑːθ"
+    ]
+  },
   "afternoon": {
     "display": "미국 [│ æftər │ nuːn] · 영국 [│ ɑːftə │ nuːn]",
     "phonetics": [
       "│ æftər │ nuːn",
       "│ ɑːftə │ nuːn"
+    ]
+  },
+  "afterward": {
+    "display": "미국 [ǽftərwərd] · 영국 [ɑ́:f-]",
+    "phonetics": [
+      "ǽftərwərd",
+      "ɑ́:f-"
+    ]
+  },
+  "afterwards": {
+    "display": "미국 [ˈæftərwərdz] · 영국 [ˈɑːftəwədz]",
+    "phonetics": [
+      "ˈæftərwərdz",
+      "ˈɑːftəwədz"
     ]
   },
   "ag": {
@@ -1062,6 +1211,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "발음기호 [ˈæɡrɪɡət]",
     "phonetics": [
       "ˈæɡrɪɡət"
+    ]
+  },
+  "aggression": {
+    "display": "미국∙영국 [əˈɡreʃn]",
+    "phonetics": [
+      "əˈɡreʃn"
     ]
   },
   "aggressive": {
@@ -1141,6 +1296,13 @@ window.pronunciationDisplayOverrides = Object.assign(
   "aid": {
     "display": "미국∙영국 [eɪd]",
     "phonetics": [
+      "eɪd"
+    ]
+  },
+  "aide": {
+    "display": "미국∙영국 [eɪd] · 미국 [eɪd]",
+    "phonetics": [
+      "eɪd",
       "eɪd"
     ]
   },
@@ -1273,6 +1435,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ælkəhɒl"
     ]
   },
+  "alcoholic": {
+    "display": "미국 [│ ælkə │ hɔːlɪk; │ ælkə │ hɑːlɪk] · 영국 [│ ælkə │ hɒlɪk]",
+    "phonetics": [
+      "│ ælkə │ hɔːlɪk; │ ælkə │ hɑːlɪk",
+      "│ ælkə │ hɒlɪk"
+    ]
+  },
   "alert": {
     "display": "미국 [əˈlɜːrt] · 영국 [əˈlɜːt]",
     "phonetics": [
@@ -1364,6 +1533,26 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɔːl]",
     "phonetics": [
       "ɔːl"
+    ]
+  },
+  "allegation": {
+    "display": "미국∙영국 [ˌæləˈɡeɪʃn] · 미국 [ˌæləˈɡeɪʃn]",
+    "phonetics": [
+      "ˌæləˈɡeɪʃn",
+      "ˌæləˈɡeɪʃn"
+    ]
+  },
+  "allege": {
+    "display": "미국∙영국 [əˈledʒ] · 미국 [əˈledʒ]",
+    "phonetics": [
+      "əˈledʒ",
+      "əˈledʒ"
+    ]
+  },
+  "allegedly": {
+    "display": "미국∙영국 [əˈledʒɪdli]",
+    "phonetics": [
+      "əˈledʒɪdli"
     ]
   },
   "allen": {
@@ -1519,6 +1708,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "əˈlɔːŋ",
       "əˈlɒŋ"
+    ]
+  },
+  "alongside": {
+    "display": "미국 [ə │ lɔːŋ │ saɪd] · 영국 [ə │ lɒŋ │ saɪd]",
+    "phonetics": [
+      "ə │ lɔːŋ │ saɪd",
+      "ə │ lɒŋ │ saɪd"
     ]
   },
   "aloof": {
@@ -2537,6 +2733,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "-lɔ́ɡ"
     ]
   },
+  "analogy": {
+    "display": "미국∙영국 [əˈnælədʒi]",
+    "phonetics": [
+      "əˈnælədʒi"
+    ]
+  },
+  "analyse": {
+    "display": "발음기호 [ˈænəlaɪz]",
+    "phonetics": [
+      "ˈænəlaɪz"
+    ]
+  },
   "analyses": {
     "display": "미국∙영국 [əˈnæləsɪs]",
     "phonetics": [
@@ -2766,10 +2974,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əˈnaʊns"
     ]
   },
+  "annoy": {
+    "display": "미국∙영국 [əˈnɔɪ]",
+    "phonetics": [
+      "əˈnɔɪ"
+    ]
+  },
   "annoyance": {
     "display": "미국∙영국 [əˈnɔɪəns]",
     "phonetics": [
       "əˈnɔɪəns"
+    ]
+  },
+  "annoyed": {
+    "display": "미국∙영국 [əˈnɔɪd] · 미국 [əˈnɔɪd]",
+    "phonetics": [
+      "əˈnɔɪd",
+      "əˈnɔɪd"
+    ]
+  },
+  "annoying": {
+    "display": "미국∙영국 [əˈnɔɪɪŋ] · 미국 [əˈnɔɪɪŋ]",
+    "phonetics": [
+      "əˈnɔɪɪŋ",
+      "əˈnɔɪɪŋ"
     ]
   },
   "annual": {
@@ -2968,6 +3196,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "æŋˈzaɪəti"
     ]
   },
+  "anxious": {
+    "display": "미국∙영국 [ˈæŋkʃəs]",
+    "phonetics": [
+      "ˈæŋkʃəs"
+    ]
+  },
   "any": {
     "display": "미국∙영국 [ˈeni]",
     "phonetics": [
@@ -3060,6 +3294,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈeɪpeks"
     ]
   },
+  "apologize": {
+    "display": "발음기호 [ə | pɑːlədʒaɪz] · 발음기호 [ə | pɒlədʒaɪz]",
+    "phonetics": [
+      "ə | pɑːlədʒaɪz",
+      "ə | pɒlədʒaɪz"
+    ]
+  },
   "apology": {
     "display": "미국 [ə │ pɑːlədʒi] · 영국 [ə │ pɒlədʒi]",
     "phonetics": [
@@ -3117,6 +3358,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [əˈpiːl]",
     "phonetics": [
       "əˈpiːl"
+    ]
+  },
+  "appealing": {
+    "display": "미국∙영국 [əˈpiːlɪŋ]",
+    "phonetics": [
+      "əˈpiːlɪŋ"
     ]
   },
   "appeals": {
@@ -3182,6 +3429,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈæpɪtaɪt]",
     "phonetics": [
       "ˈæpɪtaɪt"
+    ]
+  },
+  "applaud": {
+    "display": "미국∙영국 [əˈplɔːd]",
+    "phonetics": [
+      "əˈplɔːd"
     ]
   },
   "applause": {
@@ -4726,6 +4979,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ə │ stɒnɪʃ"
     ]
   },
+  "astonishing": {
+    "display": "미국 [ə │ stɑːnɪʃɪŋ] · 영국 [ə │ stɒnɪʃɪŋ]",
+    "phonetics": [
+      "ə │ stɑːnɪʃɪŋ",
+      "ə │ stɒnɪʃɪŋ"
+    ]
+  },
   "astonishment": {
     "display": "미국 [ə │ stɑːnɪʃmənt] · 영국 [ə │ stɒnɪʃmənt]",
     "phonetics": [
@@ -5300,6 +5560,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɔːˈɡʌst"
     ]
   },
+  "aunt": {
+    "display": "미국 [ænt] · 영국 [ɑːnt]",
+    "phonetics": [
+      "ænt",
+      "ɑːnt"
+    ]
+  },
   "aurora": {
     "display": "미국∙영국 [ɔ:rɔ́:rə,ə-]",
     "phonetics": [
@@ -5422,6 +5689,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ɔːtə │ məʊtɪv"
     ]
   },
+  "autonomy": {
+    "display": "미국 [ɔː │ tɑːnəmi] · 영국 [ɔː │ tɒnəmi]",
+    "phonetics": [
+      "ɔː │ tɑːnəmi",
+      "ɔː │ tɒnəmi"
+    ]
+  },
   "autumn": {
     "display": "발음기호 [ˈɔːtəm]",
     "phonetics": [
@@ -5493,6 +5767,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əˈvɔɪd"
     ]
   },
+  "await": {
+    "display": "미국∙영국 [əˈweɪt]",
+    "phonetics": [
+      "əˈweɪt"
+    ]
+  },
   "award": {
     "display": "미국 [əˈwɔːrd] · 영국 [əˈwɔːd]",
     "phonetics": [
@@ -5544,6 +5824,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈɔːfl]",
     "phonetics": [
       "ˈɔːfl"
+    ]
+  },
+  "awkward": {
+    "display": "미국 [│ ɔːkwərd] · 영국 [│ ɔːkwəd]",
+    "phonetics": [
+      "│ ɔːkwərd",
+      "│ ɔːkwəd"
     ]
   },
   "axis": {
@@ -5601,6 +5888,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "bæk"
     ]
   },
+  "backdrop": {
+    "display": "미국 [│ bækdrɑːp] · 영국 [│ bækdrɒp]",
+    "phonetics": [
+      "│ bækdrɑːp",
+      "│ bækdrɒp"
+    ]
+  },
   "backed": {
     "display": "미국∙영국 [bǽkt]",
     "phonetics": [
@@ -5619,10 +5913,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈbækɡraʊnd"
     ]
   },
+  "backing": {
+    "display": "미국∙영국 [ˈbækɪŋ]",
+    "phonetics": [
+      "ˈbækɪŋ"
+    ]
+  },
   "backup": {
     "display": "미국∙영국 [ˈbækʌp]",
     "phonetics": [
       "ˈbækʌp"
+    ]
+  },
+  "backward": {
+    "display": "미국 [│ bækwərd] · 영국 [│ bækwəd]",
+    "phonetics": [
+      "│ bækwərd",
+      "│ bækwəd"
+    ]
+  },
+  "backwards": {
+    "display": "미국 [│ bækwərdz] · 영국 [│ bækwədz]",
+    "phonetics": [
+      "│ bækwərdz",
+      "│ bækwədz"
     ]
   },
   "bacon": {
@@ -5642,6 +5956,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [bæd]",
     "phonetics": [
       "bæd"
+    ]
+  },
+  "badge": {
+    "display": "미국∙영국 [bædʒ]",
+    "phonetics": [
+      "bædʒ"
     ]
   },
   "badly": {
@@ -5669,11 +5989,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "-hɑ́:-"
     ]
   },
+  "bail": {
+    "display": "미국∙영국 [beɪl]",
+    "phonetics": [
+      "beɪl"
+    ]
+  },
   "bailey": {
     "display": "미국∙영국 [ˈbeɪli] · 미국 [ˈbeɪli]",
     "phonetics": [
       "ˈbeɪli",
       "ˈbeɪli"
+    ]
+  },
+  "bake": {
+    "display": "미국∙영국 [beɪk]",
+    "phonetics": [
+      "beɪk"
     ]
   },
   "baker": {
@@ -5699,6 +6031,24 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [bɔːl]",
     "phonetics": [
       "bɔːl"
+    ]
+  },
+  "ballet": {
+    "display": "미국∙영국 [ˈbæleɪ]",
+    "phonetics": [
+      "ˈbæleɪ"
+    ]
+  },
+  "balloon": {
+    "display": "미국∙영국 [bəˈluːn]",
+    "phonetics": [
+      "bəˈluːn"
+    ]
+  },
+  "ballot": {
+    "display": "미국∙영국 [ˈbælət]",
+    "phonetics": [
+      "ˈbælət"
     ]
   },
   "baltimore": {
@@ -5808,6 +6158,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "beə(r)"
     ]
   },
+  "barely": {
+    "display": "미국 [ˈberli] · 영국 [ˈbeəli]",
+    "phonetics": [
+      "ˈberli",
+      "ˈbeəli"
+    ]
+  },
   "bargain": {
     "display": "미국 [ˈbɑːrɡən] · 영국 [ˈbɑːɡən]",
     "phonetics": [
@@ -5827,6 +6184,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "bɑːrk",
       "bɑːk"
+    ]
+  },
+  "barrel": {
+    "display": "미국∙영국 [ˈbærəl]",
+    "phonetics": [
+      "ˈbærəl"
     ]
   },
   "barrier": {
@@ -5857,6 +6220,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈbeɪslaɪn]",
     "phonetics": [
       "ˈbeɪslaɪn"
+    ]
+  },
+  "basement": {
+    "display": "미국∙영국 [ˈbeɪsmənt] · 미국 [ˈbeɪsmənt]",
+    "phonetics": [
+      "ˈbeɪsmənt",
+      "ˈbeɪsmənt"
     ]
   },
   "basic": {
@@ -6162,6 +6532,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "bɪˈfɔː(r)"
     ]
   },
+  "beg": {
+    "display": "미국∙영국 [beɡ]",
+    "phonetics": [
+      "beɡ"
+    ]
+  },
   "begin": {
     "display": "미국∙영국 [bɪˈɡɪn]",
     "phonetics": [
@@ -6184,6 +6560,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [bihǽf,-hɑ́:f]",
     "phonetics": [
       "bihǽf,-hɑ́:f"
+    ]
+  },
+  "behave": {
+    "display": "미국∙영국 [bɪˈheɪv]",
+    "phonetics": [
+      "bɪˈheɪv"
     ]
   },
   "behavior": {
@@ -6340,6 +6722,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌbenɪˈfɪʃl"
     ]
   },
+  "beneficiary": {
+    "display": "미국 [│ benɪ │ fɪʃieri] · 영국 [│ benɪ │ fɪʃəri]",
+    "phonetics": [
+      "│ benɪ │ fɪʃieri",
+      "│ benɪ │ fɪʃəri"
+    ]
+  },
   "benefit": {
     "display": "미국∙영국 [ˈbenɪfɪt]",
     "phonetics": [
@@ -6356,6 +6745,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [bénit]",
     "phonetics": [
       "bénit"
+    ]
+  },
+  "bent": {
+    "display": "미국∙영국 [bent]",
+    "phonetics": [
+      "bent"
     ]
   },
   "benz": {
@@ -6418,6 +6813,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈbeɪtə",
       "ˈbiːtə"
+    ]
+  },
+  "betray": {
+    "display": "미국∙영국 [bɪˈtreɪ]",
+    "phonetics": [
+      "bɪˈtreɪ"
     ]
   },
   "better": {
@@ -6569,6 +6970,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈbaɪnəri"
     ]
   },
+  "bind": {
+    "display": "미국∙영국 [baɪnd]",
+    "phonetics": [
+      "baɪnd"
+    ]
+  },
   "binding": {
     "display": "미국∙영국 [ˈbaɪndɪŋ]",
     "phonetics": [
@@ -6650,6 +7057,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ bɜːθdeɪ"
     ]
   },
+  "biscuit": {
+    "display": "미국∙영국 [ˈbɪskɪt]",
+    "phonetics": [
+      "ˈbɪskɪt"
+    ]
+  },
   "bishop": {
     "display": "미국∙영국 [ˈbɪʃəp]",
     "phonetics": [
@@ -6660,6 +7073,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [bɪt]",
     "phonetics": [
       "bɪt"
+    ]
+  },
+  "bite": {
+    "display": "미국∙영국 [baɪt]",
+    "phonetics": [
+      "baɪt"
     ]
   },
   "bitter": {
@@ -6738,10 +7157,28 @@ window.pronunciationDisplayOverrides = Object.assign(
       "blɑːst"
     ]
   },
+  "bleed": {
+    "display": "미국∙영국 [bliːd]",
+    "phonetics": [
+      "bliːd"
+    ]
+  },
   "blend": {
     "display": "미국∙영국 [blend]",
     "phonetics": [
       "blend"
+    ]
+  },
+  "bless": {
+    "display": "미국∙영국 [bles]",
+    "phonetics": [
+      "bles"
+    ]
+  },
+  "blessing": {
+    "display": "미국∙영국 [ˈblesɪŋ]",
+    "phonetics": [
+      "ˈblesɪŋ"
     ]
   },
   "blind": {
@@ -6851,6 +7288,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "bɔːd"
     ]
   },
+  "boast": {
+    "display": "미국 [boʊst] · 영국 [bəʊst]",
+    "phonetics": [
+      "boʊst",
+      "bəʊst"
+    ]
+  },
   "boat": {
     "display": "미국 [boʊt] · 영국 [bəʊt]",
     "phonetics": [
@@ -6893,6 +7337,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈbɒdi"
     ]
   },
+  "boil": {
+    "display": "미국∙영국 [bɔɪl]",
+    "phonetics": [
+      "bɔɪl"
+    ]
+  },
   "bold": {
     "display": "미국 [boʊld] · 영국 [bəʊld]",
     "phonetics": [
@@ -6911,6 +7361,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "bɑːm",
       "bɒm"
+    ]
+  },
+  "bombing": {
+    "display": "미국 [│ bɑːmɪŋ] · 영국 [│ bɒmɪŋ]",
+    "phonetics": [
+      "│ bɑːmɪŋ",
+      "│ bɒmɪŋ"
     ]
   },
   "bond": {
@@ -7016,11 +7473,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ bɔːdə(r)"
     ]
   },
+  "bored": {
+    "display": "미국 [bɔːrd] · 영국 [bɔːd]",
+    "phonetics": [
+      "bɔːrd",
+      "bɔːd"
+    ]
+  },
+  "boring": {
+    "display": "미국∙영국 [ˈbɔːrɪŋ] · 미국 [ˈbɔːrɪŋ]",
+    "phonetics": [
+      "ˈbɔːrɪŋ",
+      "ˈbɔːrɪŋ"
+    ]
+  },
   "born": {
     "display": "미국 [bɔːrn] · 영국 [bɔːn]",
     "phonetics": [
       "bɔːrn",
       "bɔːn"
+    ]
+  },
+  "borrow": {
+    "display": "미국 [│ bɑːroʊ; │ bɔːroʊ] · 영국 [│ bɒrəʊ]",
+    "phonetics": [
+      "│ bɑːroʊ; │ bɔːroʊ",
+      "│ bɒrəʊ"
     ]
   },
   "bosnia": {
@@ -7049,6 +7527,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "boʊθ",
       "bəʊθ"
+    ]
+  },
+  "bother": {
+    "display": "미국 [│ bɑːðə(r)] · 영국 [│ bɒðə(r)]",
+    "phonetics": [
+      "│ bɑːðə(r)",
+      "│ bɒðə(r)"
     ]
   },
   "botswana": {
@@ -7090,6 +7575,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈbʊləvɑːrd",
       "ˈbuːləvɑːd"
+    ]
+  },
+  "bounce": {
+    "display": "미국∙영국 [baʊns]",
+    "phonetics": [
+      "baʊns"
     ]
   },
   "bound": {
@@ -7150,6 +7641,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [bɔɪ]",
     "phonetics": [
       "bɔɪ"
+    ]
+  },
+  "boyfriend": {
+    "display": "미국 [ˈbɔɪfrend]",
+    "phonetics": [
+      "ˈbɔɪfrend"
     ]
   },
   "boys": {
@@ -7241,6 +7738,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "brəˈzɪliən"
     ]
   },
+  "breach": {
+    "display": "미국∙영국 [briːtʃ]",
+    "phonetics": [
+      "briːtʃ"
+    ]
+  },
   "bread": {
     "display": "미국∙영국 [bred]",
     "phonetics": [
@@ -7277,6 +7780,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "breɪk"
     ]
   },
+  "breakthrough": {
+    "display": "미국∙영국 [ˈbreɪkθruː] · 미국 [ˈbreɪkθruː]",
+    "phonetics": [
+      "ˈbreɪkθruː",
+      "ˈbreɪkθruː"
+    ]
+  },
   "breast": {
     "display": "미국∙영국 [brest]",
     "phonetics": [
@@ -7287,6 +7797,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [breθ]",
     "phonetics": [
       "breθ"
+    ]
+  },
+  "breathe": {
+    "display": "미국∙영국 [briːð]",
+    "phonetics": [
+      "briːð"
+    ]
+  },
+  "breathing": {
+    "display": "미국∙영국 [ˈbriːðɪŋ] · 미국 [ˈbriːðɪŋ]",
+    "phonetics": [
+      "ˈbriːðɪŋ",
+      "ˈbriːðɪŋ"
     ]
   },
   "breed": {
@@ -7342,6 +7865,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈbriːfɪŋ]",
     "phonetics": [
       "ˈbriːfɪŋ"
+    ]
+  },
+  "briefly": {
+    "display": "미국∙영국 [ˈbriːfli]",
+    "phonetics": [
+      "ˈbriːfli"
     ]
   },
   "bright": {
@@ -7424,11 +7953,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ brɔːdkɑːst"
     ]
   },
+  "broadcaster": {
+    "display": "미국 [│ brɔːdkæstə(r)] · 영국 [│ brɔːdkɑːstə(r)]",
+    "phonetics": [
+      "│ brɔːdkæstə(r)",
+      "│ brɔːdkɑːstə(r)"
+    ]
+  },
   "broadcasting": {
     "display": "미국 [│ brɔːdkæstɪŋ] · 영국 [│ brɔːdkɑːstɪŋ]",
     "phonetics": [
       "│ brɔːdkæstɪŋ",
       "│ brɔːdkɑːstɪŋ"
+    ]
+  },
+  "broadly": {
+    "display": "미국∙영국 [ˈbrɔːdli]",
+    "phonetics": [
+      "ˈbrɔːdli"
     ]
   },
   "broadway": {
@@ -7539,6 +8081,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "brʌ́səlz"
     ]
   },
+  "brutal": {
+    "display": "미국∙영국 [ˈbruːtl]",
+    "phonetics": [
+      "ˈbruːtl"
+    ]
+  },
   "bryan": {
     "display": "미국∙영국 [bráiən]",
     "phonetics": [
@@ -7555,6 +8103,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈbʌbl]",
     "phonetics": [
       "ˈbʌbl"
+    ]
+  },
+  "buck": {
+    "display": "미국∙영국 [bʌk]",
+    "phonetics": [
+      "bʌk"
     ]
   },
   "bud": {
@@ -7714,6 +8268,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈbjʊərəʊ"
     ]
   },
+  "bureaucracy": {
+    "display": "미국 [bjʊ │ rɑːkrəsi] · 영국 [bjʊə │ rɒkrəsi]",
+    "phonetics": [
+      "bjʊ │ rɑːkrəsi",
+      "bjʊə │ rɒkrəsi"
+    ]
+  },
+  "burial": {
+    "display": "미국∙영국 [ˈberiəl] · 미국 [ˈberiəl]",
+    "phonetics": [
+      "ˈberiəl",
+      "ˈberiəl"
+    ]
+  },
   "burn": {
     "display": "미국 [bɜːrn] · 영국 [bɜːn]",
     "phonetics": [
@@ -7742,10 +8310,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ bɜːnaʊt"
     ]
   },
+  "burst": {
+    "display": "미국 [bɜːrst] · 영국 [bɜːst]",
+    "phonetics": [
+      "bɜːrst",
+      "bɜːst"
+    ]
+  },
   "burton": {
     "display": "미국∙영국 [bə́:rtn]",
     "phonetics": [
       "bə́:rtn"
+    ]
+  },
+  "bury": {
+    "display": "미국∙영국 [ˈberi]",
+    "phonetics": [
+      "ˈberi"
     ]
   },
   "bus": {
@@ -7770,6 +8351,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈbɪznəs]",
     "phonetics": [
       "ˈbɪznəs"
+    ]
+  },
+  "businessman": {
+    "display": "발음기호 [| bɪznəsmæn; | bɪznəsmən] · 발음기호 [ˈbɪznəswʊmən]",
+    "phonetics": [
+      "| bɪznəsmæn; | bɪznəsmən",
+      "ˈbɪznəswʊmən"
     ]
   },
   "busy": {
@@ -7841,6 +8429,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     ]
   },
   "by": {
+    "display": "미국∙영국 [baɪ]",
+    "phonetics": [
+      "baɪ"
+    ]
+  },
+  "bye": {
     "display": "미국∙영국 [baɪ]",
     "phonetics": [
       "baɪ"
@@ -8161,6 +8755,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkændi"
     ]
   },
+  "cannot": {
+    "display": "미국 [│ kænɑːt] · 영국 [│ kænɒt]",
+    "phonetics": [
+      "│ kænɑːt",
+      "│ kænɒt"
+    ]
+  },
   "canon": {
     "display": "미국∙영국 [ˈkænən]",
     "phonetics": [
@@ -8219,6 +8820,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈkæpɪtl]",
     "phonetics": [
       "ˈkæpɪtl"
+    ]
+  },
+  "capitalism": {
+    "display": "미국∙영국 [ˈkæpɪtəlɪzəm] · 미국 [ˈkæpɪtəlɪzəm]",
+    "phonetics": [
+      "ˈkæpɪtəlɪzəm",
+      "ˈkæpɪtəlɪzəm"
+    ]
+  },
+  "capitalist": {
+    "display": "미국∙영국 [ˈkæpɪtəlɪst]",
+    "phonetics": [
+      "ˈkæpɪtəlɪst"
     ]
   },
   "capitol": {
@@ -8352,6 +8966,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkɑːpɪt"
     ]
   },
+  "carriage": {
+    "display": "미국∙영국 [ˈkærɪdʒ]",
+    "phonetics": [
+      "ˈkærɪdʒ"
+    ]
+  },
   "carried": {
     "display": "미국∙영국 [kǽrid]",
     "phonetics": [
@@ -8441,6 +9061,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɑːtrɪdʒ"
     ]
   },
+  "carve": {
+    "display": "미국 [kɑːrv] · 영국 [kɑːv]",
+    "phonetics": [
+      "kɑːrv",
+      "kɑːv"
+    ]
+  },
   "case": {
     "display": "미국∙영국 [keɪs]",
     "phonetics": [
@@ -8513,6 +9140,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkæʒuəl"
     ]
   },
+  "casualty": {
+    "display": "미국∙영국 [ˈkæʒuəlti]",
+    "phonetics": [
+      "ˈkæʒuəlti"
+    ]
+  },
   "cat": {
     "display": "미국∙영국 [kæt]",
     "phonetics": [
@@ -8544,6 +9177,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ kætəɡɔːri",
       "│ kætəɡəri"
+    ]
+  },
+  "cater": {
+    "display": "미국∙영국 [ˈkeɪtə(r)] · 미국 [ˈkeɪtə(r)]",
+    "phonetics": [
+      "ˈkeɪtə(r)",
+      "ˈkeɪtə(r)"
     ]
   },
   "catering": {
@@ -8601,6 +9241,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kɔːz"
     ]
   },
+  "caution": {
+    "display": "미국∙영국 [ˈkɔːʃn]",
+    "phonetics": [
+      "ˈkɔːʃn"
+    ]
+  },
+  "cautious": {
+    "display": "미국∙영국 [ˈkɔːʃəs] · 미국 [ˈkɔːʃəs]",
+    "phonetics": [
+      "ˈkɔːʃəs",
+      "ˈkɔːʃəs"
+    ]
+  },
   "cave": {
     "display": "미국∙영국 [keɪv]",
     "phonetics": [
@@ -8637,6 +9290,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˌsiː ˈiː]",
     "phonetics": [
       "ˌsiː ˈiː"
+    ]
+  },
+  "cease": {
+    "display": "미국∙영국 [siːs] · 미국 [siːs]",
+    "phonetics": [
+      "siːs",
+      "siːs"
     ]
   },
   "cedar": {
@@ -8784,6 +9444,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈsɜːrtnli",
       "ˈsɜːtnli"
+    ]
+  },
+  "certainty": {
+    "display": "미국 [ˈsɜːrtnti] · 영국 [ˈsɜːtnti]",
+    "phonetics": [
+      "ˈsɜːrtnti",
+      "ˈsɜːtnti"
     ]
   },
   "certification": {
@@ -8976,6 +9643,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌkærəktəˈrɪstɪk"
     ]
   },
+  "characterize": {
+    "display": "미국∙영국 [ˈkærəktəraɪz]",
+    "phonetics": [
+      "ˈkærəktəraɪz"
+    ]
+  },
   "charge": {
     "display": "미국 [tʃɑːrdʒ] · 영국 [tʃɑːdʒ]",
     "phonetics": [
@@ -9035,6 +9708,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "tʃɑːrm",
       "tʃɑːm"
+    ]
+  },
+  "charming": {
+    "display": "미국 [ˈtʃɑːrmɪŋ] · 영국 [ˈtʃɑːmɪŋ]",
+    "phonetics": [
+      "ˈtʃɑːrmɪŋ",
+      "ˈtʃɑːmɪŋ"
     ]
   },
   "chart": {
@@ -9122,6 +9802,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [tʃiːk]",
     "phonetics": [
       "tʃiːk"
+    ]
+  },
+  "cheer": {
+    "display": "미국 [tʃɪr] · 영국 [tʃɪə(r)]",
+    "phonetics": [
+      "tʃɪr",
+      "tʃɪə(r)"
+    ]
+  },
+  "cheerful": {
+    "display": "미국 [ˈtʃɪrfl] · 영국 [ˈtʃɪəfl]",
+    "phonetics": [
+      "ˈtʃɪrfl",
+      "ˈtʃɪəfl"
     ]
   },
   "cheers": {
@@ -9287,6 +9981,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "tʃɔɪs"
     ]
   },
+  "choir": {
+    "display": "미국∙영국 [ˈkwaɪə(r)]",
+    "phonetics": [
+      "ˈkwaɪə(r)"
+    ]
+  },
   "cholesterol": {
     "display": "미국 [kə │ lestərɔːl] · 영국 [kə │ lestərɒl]",
     "phonetics": [
@@ -9298,6 +9998,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [tʃuːz]",
     "phonetics": [
       "tʃuːz"
+    ]
+  },
+  "chop": {
+    "display": "미국 [tʃɑːp] · 영국 [tʃɒp]",
+    "phonetics": [
+      "tʃɑːp",
+      "tʃɒp"
     ]
   },
   "chorus": {
@@ -9394,6 +10101,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [tʃʌk]",
     "phonetics": [
       "tʃʌk"
+    ]
+  },
+  "chunk": {
+    "display": "미국∙영국 [tʃʌŋk]",
+    "phonetics": [
+      "tʃʌŋk"
     ]
   },
   "church": {
@@ -9521,6 +10234,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsɪtɪzn"
     ]
   },
+  "citizenship": {
+    "display": "미국∙영국 [ˈsɪtɪzənʃɪp]",
+    "phonetics": [
+      "ˈsɪtɪzənʃɪp"
+    ]
+  },
   "city": {
     "display": "미국∙영국 [ˈsɪti]",
     "phonetics": [
@@ -9537,6 +10256,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈsɪvl]",
     "phonetics": [
       "ˈsɪvl"
+    ]
+  },
+  "civilian": {
+    "display": "미국∙영국 [səˈvɪliən] · 미국 [səˈvɪliən]",
+    "phonetics": [
+      "səˈvɪliən",
+      "səˈvɪliən"
     ]
   },
   "civilization": {
@@ -9588,6 +10314,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "klɑ́:rk"
     ]
   },
+  "clash": {
+    "display": "미국∙영국 [klæʃ]",
+    "phonetics": [
+      "klæʃ"
+    ]
+  },
   "class": {
     "display": "미국 [klæs] · 영국 [klɑːs]",
     "phonetics": [
@@ -9624,6 +10356,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈklæsɪfaɪd]",
     "phonetics": [
       "ˈklæsɪfaɪd"
+    ]
+  },
+  "classify": {
+    "display": "미국∙영국 [ˈklæsɪfaɪ]",
+    "phonetics": [
+      "ˈklæsɪfaɪ"
     ]
   },
   "classroom": {
@@ -9728,16 +10466,35 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈklaɪənt"
     ]
   },
+  "cliff": {
+    "display": "미국∙영국 [klɪf] · 미국 [klɪf]",
+    "phonetics": [
+      "klɪf",
+      "klɪf"
+    ]
+  },
   "climate": {
     "display": "미국∙영국 [ˈklaɪmət]",
     "phonetics": [
       "ˈklaɪmət"
     ]
   },
+  "climb": {
+    "display": "미국∙영국 [klaɪm]",
+    "phonetics": [
+      "klaɪm"
+    ]
+  },
   "climbing": {
     "display": "미국 [ˈklaɪmɪŋ]",
     "phonetics": [
       "ˈklaɪmɪŋ"
+    ]
+  },
+  "cling": {
+    "display": "미국∙영국 [klɪŋ]",
+    "phonetics": [
+      "klɪŋ"
     ]
   },
   "clinic": {
@@ -9877,6 +10634,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "klʌb"
     ]
   },
+  "clue": {
+    "display": "미국∙영국 [kluː]",
+    "phonetics": [
+      "kluː"
+    ]
+  },
   "cluster": {
     "display": "미국∙영국 [ˈklʌstə(r)]",
     "phonetics": [
@@ -9960,6 +10723,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəʊt"
     ]
   },
+  "cocktail": {
+    "display": "미국 [│ kɑːkteɪl] · 영국 [│ kɒkteɪl]",
+    "phonetics": [
+      "│ kɑːkteɪl",
+      "│ kɒkteɪl"
+    ]
+  },
   "coconut": {
     "display": "미국 [│ koʊkənʌt] · 영국 [│ kəʊkənʌt]",
     "phonetics": [
@@ -10012,6 +10782,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kɔɪn]",
     "phonetics": [
       "kɔɪn"
+    ]
+  },
+  "coincide": {
+    "display": "미국 [│ koʊɪn │ saɪd] · 영국 [│ kəʊɪn │ saɪd]",
+    "phonetics": [
+      "│ koʊɪn │ saɪd",
+      "│ kəʊɪn │ saɪd"
+    ]
+  },
+  "coincidence": {
+    "display": "미국 [koʊ │ ɪnsɪdəns] · 영국 [kəʊ │ ɪnsɪdəns]",
+    "phonetics": [
+      "koʊ │ ɪnsɪdəns",
+      "kəʊ │ ɪnsɪdəns"
     ]
   },
   "col": {
@@ -10073,6 +10857,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɒlə(r)"
     ]
   },
+  "colleague": {
+    "display": "미국 [│ kɑːliːɡ] · 영국 [│ kɒliːɡ]",
+    "phonetics": [
+      "│ kɑːliːɡ",
+      "│ kɒliːɡ"
+    ]
+  },
   "collect": {
     "display": "미국∙영국 [kəˈlekt]",
     "phonetics": [
@@ -10123,6 +10914,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɒlɪdʒ"
     ]
   },
+  "collision": {
+    "display": "미국∙영국 [kəˈlɪʒn]",
+    "phonetics": [
+      "kəˈlɪʒn"
+    ]
+  },
   "colombia": {
     "display": "미국 [kəlʌ́mbiə] · 영국 [-lɔ́m-]",
     "phonetics": [
@@ -10137,6 +10934,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kə │ ləʊniəl"
     ]
   },
+  "colony": {
+    "display": "미국 [│ kɑːləni] · 영국 [│ kɒləni]",
+    "phonetics": [
+      "│ kɑːləni",
+      "│ kɒləni"
+    ]
+  },
   "colorado": {
     "display": "미국 [kɑ̀lərǽdou,-rɑ́:dn] · 영국 [kɔ́lərɑ́:dn]",
     "phonetics": [
@@ -10148,6 +10952,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈkʌlə(r)]",
     "phonetics": [
       "ˈkʌlə(r)"
+    ]
+  },
+  "coloured": {
+    "display": "발음기호 [| kʌlərd] · 발음기호 [| kʌləd]",
+    "phonetics": [
+      "| kʌlərd",
+      "| kʌləd"
+    ]
+  },
+  "colourful": {
+    "display": "발음기호 [| kʌlərfl] · 발음기호 [| kʌləfl]",
+    "phonetics": [
+      "| kʌlərfl",
+      "| kʌləfl"
     ]
   },
   "colours": {
@@ -10173,6 +10991,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈkɑːləm",
       "ˈkɒləm"
+    ]
+  },
+  "columnist": {
+    "display": "미국 [│ kɑːləmnɪst] · 영국 [│ kɒləmnɪst]",
+    "phonetics": [
+      "│ kɑːləmnɪst",
+      "│ kɒləmnɪst"
     ]
   },
   "columnists": {
@@ -10306,6 +11131,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəˈmɑːnd"
     ]
   },
+  "commence": {
+    "display": "미국∙영국 [kəˈmens] · 미국 [kəˈmens]",
+    "phonetics": [
+      "kəˈmens",
+      "kəˈmens"
+    ]
+  },
   "comment": {
     "display": "미국 [│ kɑːment] · 영국 [│ kɒment]",
     "phonetics": [
@@ -10318,6 +11150,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈkɑːmənteri",
       "ˈkɒməntri"
+    ]
+  },
+  "commentator": {
+    "display": "미국 [│ kɑːmənteɪtə(r)] · 영국 [│ kɒmənteɪtə(r)]",
+    "phonetics": [
+      "│ kɑːmənteɪtə(r)",
+      "│ kɒmənteɪtə(r)"
     ]
   },
   "commerce": {
@@ -10377,6 +11216,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəˈmɪti"
     ]
   },
+  "commodity": {
+    "display": "미국 [kə │ mɑːdəti] · 영국 [kə │ mɒdəti]",
+    "phonetics": [
+      "kə │ mɑːdəti",
+      "kə │ mɒdəti"
+    ]
+  },
   "common": {
     "display": "미국 [ˈkɑːmən] · 영국 [ˈkɒmən]",
     "phonetics": [
@@ -10408,6 +11254,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kəˌmjuːnɪˈkeɪʃn]",
     "phonetics": [
       "kəˌmjuːnɪˈkeɪʃn"
+    ]
+  },
+  "communist": {
+    "display": "미국 [│ kɑːmjənɪst] · 영국 [│ kɒmjənɪst]",
+    "phonetics": [
+      "│ kɑːmjənɪst",
+      "│ kɒmjənɪst"
     ]
   },
   "community": {
@@ -10493,6 +11346,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəmˈpærɪsn"
     ]
   },
+  "compassion": {
+    "display": "미국∙영국 [kəmˈpæʃn] · 미국 [kəmˈpæʃn]",
+    "phonetics": [
+      "kəmˈpæʃn",
+      "kəmˈpæʃn"
+    ]
+  },
   "compatibility": {
     "display": "미국∙영국 [kəmˌpætəˈbɪləti]",
     "phonetics": [
@@ -10503,6 +11363,25 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kəmˈpætəbl]",
     "phonetics": [
       "kəmˈpætəbl"
+    ]
+  },
+  "compel": {
+    "display": "미국∙영국 [kəmˈpel]",
+    "phonetics": [
+      "kəmˈpel"
+    ]
+  },
+  "compelling": {
+    "display": "미국∙영국 [kəmˈpelɪŋ]",
+    "phonetics": [
+      "kəmˈpelɪŋ"
+    ]
+  },
+  "compensate": {
+    "display": "미국 [│ kɑːmpenseɪt] · 영국 [│ kɒmpenseɪt]",
+    "phonetics": [
+      "│ kɑːmpenseɪt",
+      "│ kɒmpenseɪt"
     ]
   },
   "compensation": {
@@ -10516,6 +11395,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kəmˈpiːt]",
     "phonetics": [
       "kəmˈpiːt"
+    ]
+  },
+  "competence": {
+    "display": "미국 [│ kɑːmpɪtəns] · 영국 [│ kɒmpɪtəns]",
+    "phonetics": [
+      "│ kɑːmpɪtəns",
+      "│ kɒmpɪtəns"
+    ]
+  },
+  "competent": {
+    "display": "미국 [│ kɑːmpɪtənt] · 영국 [│ kɒmpɪtənt]",
+    "phonetics": [
+      "│ kɑːmpɪtənt",
+      "│ kɒmpɪtənt"
     ]
   },
   "competition": {
@@ -10536,6 +11429,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kəmˈpetətɪv]",
     "phonetics": [
       "kəmˈpetətɪv"
+    ]
+  },
+  "competitor": {
+    "display": "미국∙영국 [kəmˈpetɪtə(r)]",
+    "phonetics": [
+      "kəmˈpetɪtə(r)"
     ]
   },
   "competitors": {
@@ -10569,10 +11468,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəmˈpaɪlə(r)"
     ]
   },
+  "complain": {
+    "display": "미국∙영국 [kəmˈpleɪn] · 미국 [kəmˈpleɪn]",
+    "phonetics": [
+      "kəmˈpleɪn",
+      "kəmˈpleɪn"
+    ]
+  },
   "complaint": {
     "display": "미국∙영국 [kəmˈpleɪnt]",
     "phonetics": [
       "kəmˈpleɪnt"
+    ]
+  },
+  "complement": {
+    "display": "발음기호 [│ kɒmplɪmənt; 美 │ kɑːmplɪmənt]",
+    "phonetics": [
+      "│ kɒmplɪmənt; 美 │ kɑːmplɪmənt"
     ]
   },
   "complete": {
@@ -10633,6 +11545,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɒmplɪkeɪtɪd"
     ]
   },
+  "complication": {
+    "display": "미국 [│ kɑːmplɪ │ keɪʃn] · 영국 [│ kɒmplɪ │ keɪʃn]",
+    "phonetics": [
+      "│ kɑːmplɪ │ keɪʃn",
+      "│ kɒmplɪ │ keɪʃn"
+    ]
+  },
   "comply": {
     "display": "미국∙영국 [kəmˈplaɪ] · 미국 [kəmˈplaɪ]",
     "phonetics": [
@@ -10645,6 +11564,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kəm │ poʊnənt",
       "kəm │ pəʊnənt"
+    ]
+  },
+  "compose": {
+    "display": "미국 [kəm │ poʊz] · 영국 [kəm │ pəʊz]",
+    "phonetics": [
+      "kəm │ poʊz",
+      "kəm │ pəʊz"
     ]
   },
   "composed": {
@@ -10701,6 +11627,33 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəmˈpreʃn"
     ]
   },
+  "comprise": {
+    "display": "미국∙영국 [kəmˈpraɪz]",
+    "phonetics": [
+      "kəmˈpraɪz"
+    ]
+  },
+  "compromise": {
+    "display": "미국 [│ kɑːmprəmaɪz] · 영국 [│ kɒmprəmaɪz]",
+    "phonetics": [
+      "│ kɑːmprəmaɪz",
+      "│ kɒmprəmaɪz"
+    ]
+  },
+  "compulsory": {
+    "display": "미국∙영국 [kəmˈpʌlsəri] · 미국 [kəmˈpʌlsəri]",
+    "phonetics": [
+      "kəmˈpʌlsəri",
+      "kəmˈpʌlsəri"
+    ]
+  },
+  "compute": {
+    "display": "미국∙영국 [kəmˈpjuːt] · 미국 [kəmˈpjuːt]",
+    "phonetics": [
+      "kəmˈpjuːt",
+      "kəmˈpjuːt"
+    ]
+  },
   "computer": {
     "display": "미국∙영국 [kəmˈpjuːtə(r)] · 미국 [kəmˈpjuːtə(r)]",
     "phonetics": [
@@ -10728,6 +11681,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kɒn"
     ]
   },
+  "conceal": {
+    "display": "미국∙영국 [kənˈsiːl] · 미국 [kənˈsiːl]",
+    "phonetics": [
+      "kənˈsiːl",
+      "kənˈsiːl"
+    ]
+  },
+  "concede": {
+    "display": "미국∙영국 [kənˈsiːd]",
+    "phonetics": [
+      "kənˈsiːd"
+    ]
+  },
+  "conceive": {
+    "display": "미국∙영국 [kənˈsiːv]",
+    "phonetics": [
+      "kənˈsiːv"
+    ]
+  },
   "concentrate": {
     "display": "미국 [│ kɑːnsntreɪt] · 영국 [│ kɒnsntreɪt]",
     "phonetics": [
@@ -10747,6 +11719,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ kɑːnsept",
       "│ kɒnsept"
+    ]
+  },
+  "conception": {
+    "display": "미국∙영국 [kənˈsepʃn]",
+    "phonetics": [
+      "kənˈsepʃn"
     ]
   },
   "concern": {
@@ -10784,6 +11762,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkɒnsət"
     ]
   },
+  "concession": {
+    "display": "미국∙영국 [kənˈseʃn]",
+    "phonetics": [
+      "kənˈseʃn"
+    ]
+  },
   "conclude": {
     "display": "미국∙영국 [kənˈkluːd]",
     "phonetics": [
@@ -10813,6 +11797,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ kɑːŋkriːt",
       "│ kɒŋkriːt"
+    ]
+  },
+  "condemn": {
+    "display": "미국∙영국 [kənˈdem]",
+    "phonetics": [
+      "kənˈdem"
     ]
   },
   "condition": {
@@ -10848,6 +11838,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kən │ dʌkt"
     ]
   },
+  "confer": {
+    "display": "미국∙영국 [kənˈfɜː(r)]",
+    "phonetics": [
+      "kənˈfɜː(r)"
+    ]
+  },
   "conference": {
     "display": "미국 [│ kɑːnfərəns] · 영국 [│ kɒnfərəns]",
     "phonetics": [
@@ -10867,6 +11863,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ kɑːnfərənsɪŋ",
       "│ kɒnfərənsɪŋ"
+    ]
+  },
+  "confess": {
+    "display": "미국∙영국 [kənˈfes]",
+    "phonetics": [
+      "kənˈfes"
+    ]
+  },
+  "confession": {
+    "display": "미국∙영국 [kənˈfeʃn]",
+    "phonetics": [
+      "kənˈfeʃn"
     ]
   },
   "confidence": {
@@ -10918,6 +11926,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kən │ fɪɡə(r)"
     ]
   },
+  "confine": {
+    "display": "미국∙영국 [kənˈfaɪn]",
+    "phonetics": [
+      "kənˈfaɪn"
+    ]
+  },
   "confirm": {
     "display": "미국 [kən │ fɜːrm] · 영국 [kən │ fɜːm]",
     "phonetics": [
@@ -10939,10 +11953,36 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kən │ fɜːmd"
     ]
   },
+  "confront": {
+    "display": "미국∙영국 [kənˈfrʌnt]",
+    "phonetics": [
+      "kənˈfrʌnt"
+    ]
+  },
+  "confrontation": {
+    "display": "미국 [│ kɑːnfrən │ teɪʃn] · 영국 [│ kɒnfrʌn │ teɪʃn]",
+    "phonetics": [
+      "│ kɑːnfrən │ teɪʃn",
+      "│ kɒnfrʌn │ teɪʃn"
+    ]
+  },
+  "confuse": {
+    "display": "미국∙영국 [kənˈfjuːz]",
+    "phonetics": [
+      "kənˈfjuːz"
+    ]
+  },
   "confused": {
     "display": "미국∙영국 [kənˈfjuːzd]",
     "phonetics": [
       "kənˈfjuːzd"
+    ]
+  },
+  "confusing": {
+    "display": "미국∙영국 [kənˈfjuːzɪŋ] · 미국 [kənˈfjuːzɪŋ]",
+    "phonetics": [
+      "kənˈfjuːzɪŋ",
+      "kənˈfjuːzɪŋ"
     ]
   },
   "confusion": {
@@ -10956,6 +11996,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kɑ́ŋɡou",
       "kɔ́ŋ-"
+    ]
+  },
+  "congratulate": {
+    "display": "미국∙영국 [kənˈɡrætʃuleɪt]",
+    "phonetics": [
+      "kənˈɡrætʃuleɪt"
+    ]
+  },
+  "congregation": {
+    "display": "미국 [│ kɑːŋɡrɪ │ ɡeɪʃn] · 영국 [│ kɒŋɡrɪ │ ɡeɪʃn]",
+    "phonetics": [
+      "│ kɑːŋɡrɪ │ ɡeɪʃn",
+      "│ kɒŋɡrɪ │ ɡeɪʃn"
     ]
   },
   "congress": {
@@ -11030,11 +12083,39 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəˈnektə(r)"
     ]
   },
+  "conquer": {
+    "display": "미국 [│ kɑːŋkə(r)] · 영국 [│ kɒŋkə(r)]",
+    "phonetics": [
+      "│ kɑːŋkə(r)",
+      "│ kɒŋkə(r)"
+    ]
+  },
+  "conscience": {
+    "display": "미국 [│ kɑːnʃəns] · 영국 [│ kɒnʃəns]",
+    "phonetics": [
+      "│ kɑːnʃəns",
+      "│ kɒnʃəns"
+    ]
+  },
+  "conscious": {
+    "display": "미국 [│ kɑːnʃəs] · 영국 [│ kɒnʃəs]",
+    "phonetics": [
+      "│ kɑːnʃəs",
+      "│ kɒnʃəs"
+    ]
+  },
   "consciousness": {
     "display": "미국 [│ kɑːnʃəsnəs] · 영국 [│ kɒnʃəsnəs]",
     "phonetics": [
       "│ kɑːnʃəsnəs",
       "│ kɒnʃəsnəs"
+    ]
+  },
+  "consecutive": {
+    "display": "미국∙영국 [kənˈsekjətɪv] · 미국 [kənˈsekjətɪv]",
+    "phonetics": [
+      "kənˈsekjətɪv",
+      "kənˈsekjətɪv"
     ]
   },
   "consensus": {
@@ -11061,6 +12142,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈkɑːnsəkwens",
       "ˈkɒnsɪkwəns"
+    ]
+  },
+  "consequently": {
+    "display": "미국 [ˈkɑːnsəkwentli] · 영국 [ˈkɒnsɪkwəntli]",
+    "phonetics": [
+      "ˈkɑːnsəkwentli",
+      "ˈkɒnsɪkwəntli"
     ]
   },
   "conservation": {
@@ -11091,6 +12179,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kənˈsɪdərəbl"
     ]
   },
+  "considerably": {
+    "display": "미국∙영국 [kənˈsɪdərəbli] · 미국 [kənˈsɪdərəbli]",
+    "phonetics": [
+      "kənˈsɪdərəbli",
+      "kənˈsɪdərəbli"
+    ]
+  },
   "consideration": {
     "display": "미국∙영국 [kənˌsɪdəˈreɪʃn]",
     "phonetics": [
@@ -11116,6 +12211,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kənˈsɪdərɪŋ"
     ]
   },
+  "consistency": {
+    "display": "미국∙영국 [kənˈsɪstənsi]",
+    "phonetics": [
+      "kənˈsɪstənsi"
+    ]
+  },
   "consistent": {
     "display": "미국∙영국 [kənˈsɪstənt]",
     "phonetics": [
@@ -11127,6 +12228,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kən │ soʊl",
       "kən │ səʊl"
+    ]
+  },
+  "consolidate": {
+    "display": "미국 [kən │ sɑːlɪdeɪt] · 영국 [kən │ sɒlɪdeɪt]",
+    "phonetics": [
+      "kən │ sɑːlɪdeɪt",
+      "kən │ sɒlɪdeɪt"
     ]
   },
   "consolidated": {
@@ -11148,6 +12256,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kən │ sɔːrtiəm",
       "kən │ sɔːtiəm"
+    ]
+  },
+  "conspiracy": {
+    "display": "미국∙영국 [kənˈspɪrəsi] · 미국 [kənˈspɪrəsi]",
+    "phonetics": [
+      "kənˈspɪrəsi",
+      "kənˈspɪrəsi"
     ]
   },
   "constant": {
@@ -11299,6 +12414,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kənˈteɪn"
     ]
   },
+  "contemplate": {
+    "display": "미국 [│ kɑːntəmpleɪt] · 영국 [│ kɒntəmpleɪt]",
+    "phonetics": [
+      "│ kɑːntəmpleɪt",
+      "│ kɒntəmpleɪt"
+    ]
+  },
   "contemporary": {
     "display": "미국 [kən │ tempəreri] · 영국 [kən │ temprəri]",
     "phonetics": [
@@ -11306,11 +12428,36 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kən │ temprəri"
     ]
   },
+  "contempt": {
+    "display": "미국∙영국 [kənˈtempt]",
+    "phonetics": [
+      "kənˈtempt"
+    ]
+  },
+  "contend": {
+    "display": "미국∙영국 [kənˈtend]",
+    "phonetics": [
+      "kənˈtend"
+    ]
+  },
+  "contender": {
+    "display": "미국∙영국 [kənˈtendə(r)] · 미국 [kənˈtendə(r)]",
+    "phonetics": [
+      "kənˈtendə(r)",
+      "kənˈtendə(r)"
+    ]
+  },
   "content": {
     "display": "미국 [│ kɑːntent] · 영국 [│ kɒntent]",
     "phonetics": [
       "│ kɑːntent",
       "│ kɒntent"
+    ]
+  },
+  "contention": {
+    "display": "미국∙영국 [kənˈtenʃn]",
+    "phonetics": [
+      "kənˈtenʃn"
     ]
   },
   "contest": {
@@ -11334,6 +12481,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɒntekst"
     ]
   },
+  "continent": {
+    "display": "미국 [│ kɑːntɪnənt] · 영국 [│ kɒntɪnənt]",
+    "phonetics": [
+      "│ kɑːntɪnənt",
+      "│ kɒntɪnənt"
+    ]
+  },
   "continental": {
     "display": "미국 [│ kɑːntɪ │ nentl] · 영국 [│ kɒntɪ │ nentl]",
     "phonetics": [
@@ -11346,6 +12500,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kənˈtɪndʒənsi",
       "kənˈtɪndʒənsi"
+    ]
+  },
+  "continually": {
+    "display": "미국∙영국 [kən │ tɪnjuəli]",
+    "phonetics": [
+      "kən │ tɪnjuəli"
     ]
   },
   "continue": {
@@ -11405,6 +12565,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kən │ trækt"
     ]
   },
+  "contradiction": {
+    "display": "미국 [│ kɑːntrə │ dɪkʃn] · 영국 [│ kɒntrə │ dɪkʃn]",
+    "phonetics": [
+      "│ kɑːntrə │ dɪkʃn",
+      "│ kɒntrə │ dɪkʃn"
+    ]
+  },
   "contrary": {
     "display": "미국 [ˈkɑːntreri] · 영국 [ˈkɒntrəri]",
     "phonetics": [
@@ -11447,6 +12614,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɒntrɪ │ bjuːʃn"
     ]
   },
+  "contributor": {
+    "display": "미국∙영국 [kənˈtrɪbjətə(r)]",
+    "phonetics": [
+      "kənˈtrɪbjətə(r)"
+    ]
+  },
   "contributors": {
     "display": "미국∙영국 [kənˈtrɪbjətə(r)]",
     "phonetics": [
@@ -11472,6 +12645,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kən │ troʊlə(r)",
       "kən │ trəʊlə(r)"
+    ]
+  },
+  "controversial": {
+    "display": "미국 [ˌkɑːntrəˈvɜːrʃl] · 영국 [ˌkɒntrəˈvɜːʃl]",
+    "phonetics": [
+      "ˌkɑːntrəˈvɜːrʃl",
+      "ˌkɒntrəˈvɜːʃl"
     ]
   },
   "controversy": {
@@ -11538,10 +12718,35 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kən | vɜːtə(r)"
     ]
   },
+  "convey": {
+    "display": "미국∙영국 [kənˈveɪ]",
+    "phonetics": [
+      "kənˈveɪ"
+    ]
+  },
+  "conviction": {
+    "display": "미국∙영국 [kənˈvɪkʃn]",
+    "phonetics": [
+      "kənˈvɪkʃn"
+    ]
+  },
   "convince": {
     "display": "미국∙영국 [kənˈvɪns]",
     "phonetics": [
       "kənˈvɪns"
+    ]
+  },
+  "convinced": {
+    "display": "미국∙영국 [kənˈvɪnst]",
+    "phonetics": [
+      "kənˈvɪnst"
+    ]
+  },
+  "convincing": {
+    "display": "미국∙영국 [kənˈvɪnsɪŋ] · 미국 [kənˈvɪnsɪŋ]",
+    "phonetics": [
+      "kənˈvɪnsɪŋ",
+      "kənˈvɪnsɪŋ"
     ]
   },
   "cook": {
@@ -11554,6 +12759,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [ˈkʊkbʊk]",
     "phonetics": [
       "ˈkʊkbʊk"
+    ]
+  },
+  "cooker": {
+    "display": "미국 [ˈkʊkə(r)]",
+    "phonetics": [
+      "ˈkʊkə(r)"
     ]
   },
   "cookie": {
@@ -11626,6 +12837,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "koʊ │ ɔːrdɪ │ neɪʃn",
       "kəʊ │ ɔːdɪ │ neɪʃn"
+    ]
+  },
+  "cop": {
+    "display": "미국 [kɑːp] · 영국 [kɒp]",
+    "phonetics": [
+      "kɑːp",
+      "kɒp"
+    ]
+  },
+  "cope": {
+    "display": "미국 [koʊp] · 영국 [kəʊp]",
+    "phonetics": [
+      "koʊp",
+      "kəʊp"
     ]
   },
   "copied": {
@@ -11764,11 +12989,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəˈrekʃn"
     ]
   },
+  "correlate": {
+    "display": "미국 [│ kɔːrəleɪt; │ kɑːrəleɪt] · 영국 [│ kɒrəleɪt]",
+    "phonetics": [
+      "│ kɔːrəleɪt; │ kɑːrəleɪt",
+      "│ kɒrəleɪt"
+    ]
+  },
   "correlation": {
     "display": "미국 [│ kɔːrə │ leɪʃn; │ kɑːrə │ leɪʃn] · 영국 [│ kɒrə │ leɪʃn]",
     "phonetics": [
       "│ kɔːrə │ leɪʃn; │ kɑːrə │ leɪʃn",
       "│ kɒrə │ leɪʃn"
+    ]
+  },
+  "correspond": {
+    "display": "미국 [│ kɔːrə │ spɑːnd; │ kɑːrə │ spɑːnd] · 영국 [│ kɒrə │ spɒnd]",
+    "phonetics": [
+      "│ kɔːrə │ spɑːnd; │ kɑːrə │ spɑːnd",
+      "│ kɒrə │ spɒnd"
     ]
   },
   "correspondence": {
@@ -11778,11 +13017,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ kɒrə │ spɒndəns"
     ]
   },
+  "correspondent": {
+    "display": "미국 [│ kɔːrə │ spɑːndənt; │ kɑːrə │ spɑːndənt] · 영국 [│ kɒrə │ spɒndənt]",
+    "phonetics": [
+      "│ kɔːrə │ spɑːndənt; │ kɑːrə │ spɑːndənt",
+      "│ kɒrə │ spɒndənt"
+    ]
+  },
   "corresponding": {
     "display": "미국 [│ kɔːrə │ spɑːndɪŋ; │ kɑːrə │ spɑːndɪŋ] · 영국 [│ kɒrə │ spɒndɪŋ]",
     "phonetics": [
       "│ kɔːrə │ spɑːndɪŋ; │ kɑːrə │ spɑːndɪŋ",
       "│ kɒrə │ spɒndɪŋ"
+    ]
+  },
+  "corridor": {
+    "display": "미국 [│ kɔːrɪdɔː(r); │ kɑːrɪdɔː(r)] · 영국 [│ kɒrɪdɔː(r)]",
+    "phonetics": [
+      "│ kɔːrɪdɔː(r); │ kɑːrɪdɔː(r)",
+      "│ kɒrɪdɔː(r)"
+    ]
+  },
+  "corrupt": {
+    "display": "미국∙영국 [kəˈrʌpt]",
+    "phonetics": [
+      "kəˈrʌpt"
     ]
   },
   "corruption": {
@@ -11810,6 +13069,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "kɑ́stə,kɔ́:s-",
       "kɔ́s-"
+    ]
+  },
+  "costly": {
+    "display": "미국 [│ kɔːstli] · 영국 [│ kɒstli]",
+    "phonetics": [
+      "│ kɔːstli",
+      "│ kɒstli"
     ]
   },
   "costume": {
@@ -11852,6 +13118,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkaʊnsl"
     ]
   },
+  "councilor": {
+    "display": "미국∙영국 [káunsələr]",
+    "phonetics": [
+      "káunsələr"
+    ]
+  },
   "counsel": {
     "display": "미국∙영국 [ˈkaʊnsl]",
     "phonetics": [
@@ -11862,6 +13134,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [káunsəliŋ]",
     "phonetics": [
       "káunsəliŋ"
+    ]
+  },
+  "counselor": {
+    "display": "미국∙영국 [káunsələr]",
+    "phonetics": [
+      "káunsələr"
     ]
   },
   "count": {
@@ -11876,6 +13154,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkaʊntə(r)"
     ]
   },
+  "counterpart": {
+    "display": "미국 [│ kaʊntərpɑːrt] · 영국 [│ kaʊntəpɑːt]",
+    "phonetics": [
+      "│ kaʊntərpɑːrt",
+      "│ kaʊntəpɑːt"
+    ]
+  },
   "counters": {
     "display": "미국∙영국 [ˈkaʊntə(r)]",
     "phonetics": [
@@ -11886,6 +13171,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [káuntiŋ]",
     "phonetics": [
       "káuntiŋ"
+    ]
+  },
+  "countless": {
+    "display": "미국∙영국 [ˈkaʊntləs] · 미국 [ˈkaʊntləs]",
+    "phonetics": [
+      "ˈkaʊntləs",
+      "ˈkaʊntləs"
     ]
   },
   "countries": {
@@ -11900,10 +13192,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkʌntri"
     ]
   },
+  "countryside": {
+    "display": "미국 [ˈkʌntrisaɪd]",
+    "phonetics": [
+      "ˈkʌntrisaɪd"
+    ]
+  },
   "county": {
     "display": "미국∙영국 [ˈkaʊnti]",
     "phonetics": [
       "ˈkaʊnti"
+    ]
+  },
+  "coup": {
+    "display": "미국∙영국 [ku:] · 미국∙영국 [kuː] · 영국 [ku:]",
+    "phonetics": [
+      "ku:",
+      "kuː",
+      "ku:"
     ]
   },
   "couple": {
@@ -11924,6 +13230,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ kuːpɑːn; │ kjuːpɒn",
       "│ kuːpɒn"
+    ]
+  },
+  "courage": {
+    "display": "미국 [│ kɜːrɪdʒ] · 영국 [│ kʌrɪdʒ]",
+    "phonetics": [
+      "│ kɜːrɪdʒ",
+      "│ kʌrɪdʒ"
     ]
   },
   "courier": {
@@ -11967,6 +13280,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kɔːt"
     ]
   },
+  "cousin": {
+    "display": "미국∙영국 [ˈkʌzn]",
+    "phonetics": [
+      "ˈkʌzn"
+    ]
+  },
   "cover": {
     "display": "미국∙영국 [ˈkʌvə(r)]",
     "phonetics": [
@@ -12002,6 +13321,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kaʊ]",
     "phonetics": [
       "kaʊ"
+    ]
+  },
+  "cowboy": {
+    "display": "미국∙영국 [ˈkaʊbɔɪ]",
+    "phonetics": [
+      "ˈkaʊbɔɪ"
     ]
   },
   "cp": {
@@ -12047,6 +13372,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kræʃ]",
     "phonetics": [
       "kræʃ"
+    ]
+  },
+  "crawl": {
+    "display": "미국∙영국 [krɔːl]",
+    "phonetics": [
+      "krɔːl"
     ]
   },
   "crazy": {
@@ -12103,11 +13434,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kriˈeɪtə(r)"
     ]
   },
+  "creature": {
+    "display": "미국∙영국 [ˈkriːtʃə(r)]",
+    "phonetics": [
+      "ˈkriːtʃə(r)"
+    ]
+  },
   "credential": {
     "display": "미국∙영국 [krəˈdenʃl] · 미국 [krəˈdenʃl]",
     "phonetics": [
       "krəˈdenʃl",
       "krəˈdenʃl"
+    ]
+  },
+  "credibility": {
+    "display": "미국∙영국 [ˌkredəˈbɪləti] · 미국 [ˌkredəˈbɪləti]",
+    "phonetics": [
+      "ˌkredəˈbɪləti",
+      "ˌkredəˈbɪləti"
+    ]
+  },
+  "credible": {
+    "display": "미국∙영국 [ˈkredəbl]",
+    "phonetics": [
+      "ˈkredəbl"
     ]
   },
   "credit": {
@@ -12120,6 +13470,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kriːk]",
     "phonetics": [
       "kriːk"
+    ]
+  },
+  "creep": {
+    "display": "미국∙영국 [kriːp]",
+    "phonetics": [
+      "kriːp"
     ]
   },
   "crew": {
@@ -12158,16 +13514,47 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkraɪsɪs"
     ]
   },
+  "criterion": {
+    "display": "미국 [kraɪ │ tɪriən] · 영국 [kraɪ │ tɪəriən]",
+    "phonetics": [
+      "kraɪ │ tɪriən",
+      "kraɪ │ tɪəriən"
+    ]
+  },
+  "critic": {
+    "display": "미국∙영국 [ˈkrɪtɪk]",
+    "phonetics": [
+      "ˈkrɪtɪk"
+    ]
+  },
   "critical": {
     "display": "미국∙영국 [ˈkrɪtɪkl]",
     "phonetics": [
       "ˈkrɪtɪkl"
     ]
   },
+  "critically": {
+    "display": "미국∙영국 [│ krɪtɪkli]",
+    "phonetics": [
+      "│ krɪtɪkli"
+    ]
+  },
   "criticism": {
     "display": "미국∙영국 [ˈkrɪtɪsɪzəm]",
     "phonetics": [
       "ˈkrɪtɪsɪzəm"
+    ]
+  },
+  "criticize": {
+    "display": "미국∙영국 [ˈkrɪtɪsaɪz]",
+    "phonetics": [
+      "ˈkrɪtɪsaɪz"
+    ]
+  },
+  "critique": {
+    "display": "미국∙영국 [krɪˈtiːk]",
+    "phonetics": [
+      "krɪˈtiːk"
     ]
   },
   "croatia": {
@@ -12203,6 +13590,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kraʊd"
     ]
   },
+  "crowded": {
+    "display": "미국∙영국 [ˈkraʊdɪd]",
+    "phonetics": [
+      "ˈkraʊdɪd"
+    ]
+  },
   "crown": {
     "display": "미국∙영국 [kraʊn]",
     "phonetics": [
@@ -12214,6 +13607,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈkruːʃl",
       "ˈkruːʃl"
+    ]
+  },
+  "crude": {
+    "display": "미국∙영국 [kruːd]",
+    "phonetics": [
+      "kruːd"
     ]
   },
   "cruel": {
@@ -12232,6 +13631,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kruːz]",
     "phonetics": [
       "kruːz"
+    ]
+  },
+  "crush": {
+    "display": "미국∙영국 [krʌʃ]",
+    "phonetics": [
+      "krʌʃ"
     ]
   },
   "cry": {
@@ -12265,10 +13670,28 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kjuːb"
     ]
   },
+  "cue": {
+    "display": "미국∙영국 [kjuː]",
+    "phonetics": [
+      "kjuː"
+    ]
+  },
   "cuisine": {
     "display": "미국∙영국 [kwɪˈziːn]",
     "phonetics": [
       "kwɪˈziːn"
+    ]
+  },
+  "cult": {
+    "display": "미국∙영국 [kʌlt]",
+    "phonetics": [
+      "kʌlt"
+    ]
+  },
+  "cultivate": {
+    "display": "미국∙영국 [ˈkʌltɪveɪt]",
+    "phonetics": [
+      "ˈkʌltɪveɪt"
     ]
   },
   "cultural": {
@@ -12303,11 +13726,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kjʊə(r)"
     ]
   },
+  "curiosity": {
+    "display": "미국 [│ kjʊri │ ɑːsəti] · 영국 [│ kjʊəri │ ɒsəti]",
+    "phonetics": [
+      "│ kjʊri │ ɑːsəti",
+      "│ kjʊəri │ ɒsəti"
+    ]
+  },
   "curious": {
     "display": "미국 [│ kjʊriəs] · 영국 [│ kjʊəriəs]",
     "phonetics": [
       "│ kjʊriəs",
       "│ kjʊəriəs"
+    ]
+  },
+  "curly": {
+    "display": "미국 [ˈkɜːrli] · 영국 [ˈkɜːli]",
+    "phonetics": [
+      "ˈkɜːrli",
+      "ˈkɜːli"
     ]
   },
   "currency": {
@@ -12338,11 +13775,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kəˈrɪkjələm"
     ]
   },
+  "curtain": {
+    "display": "미국 [ˈkɜːrtn] · 영국 [ˈkɜːtn]",
+    "phonetics": [
+      "ˈkɜːrtn",
+      "ˈkɜːtn"
+    ]
+  },
   "curve": {
     "display": "미국 [kɜːrv] · 영국 [kɜːv]",
     "phonetics": [
       "kɜːrv",
       "kɜːv"
+    ]
+  },
+  "curved": {
+    "display": "미국 [kɜːrvd] · 영국 [kɜːvd]",
+    "phonetics": [
+      "kɜːrvd",
+      "kɜːvd"
     ]
   },
   "custody": {
@@ -12417,6 +13868,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [ˈsaɪklɪŋ]",
     "phonetics": [
       "ˈsaɪklɪŋ"
+    ]
+  },
+  "cynical": {
+    "display": "미국∙영국 [ˈsɪnɪkl]",
+    "phonetics": [
+      "ˈsɪnɪkl"
     ]
   },
   "cyprus": {
@@ -12514,6 +13971,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dǽmidƷd"
     ]
   },
+  "damaging": {
+    "display": "미국∙영국 [ˈdæmɪdʒɪŋ] · 미국 [ˈdæmɪdʒɪŋ]",
+    "phonetics": [
+      "ˈdæmɪdʒɪŋ",
+      "ˈdæmɪdʒɪŋ"
+    ]
+  },
   "dan": {
     "display": "미국∙영국 [dæn]",
     "phonetics": [
@@ -12570,6 +14034,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dǽni]",
     "phonetics": [
       "dǽni"
+    ]
+  },
+  "dare": {
+    "display": "미국 [der] · 영국 [deə(r)]",
+    "phonetics": [
+      "der",
+      "deə(r)"
     ]
   },
   "dark": {
@@ -12707,6 +14178,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdedlaɪn"
     ]
   },
+  "deadly": {
+    "display": "미국∙영국 [ˈdedli]",
+    "phonetics": [
+      "ˈdedli"
+    ]
+  },
   "deal": {
     "display": "미국∙영국 [diːl]",
     "phonetics": [
@@ -12760,6 +14237,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dɪˈbeɪt]",
     "phonetics": [
       "dɪˈbeɪt"
+    ]
+  },
+  "debris": {
+    "display": "미국 [də │ briː] · 영국 [│ debriː; │ deɪbriː]",
+    "phonetics": [
+      "də │ briː",
+      "│ debriː; │ deɪbriː"
     ]
   },
   "debt": {
@@ -12840,6 +14324,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈsɪʒn"
     ]
   },
+  "decisive": {
+    "display": "미국∙영국 [dɪˈsaɪsɪv]",
+    "phonetics": [
+      "dɪˈsaɪsɪv"
+    ]
+  },
   "deck": {
     "display": "미국∙영국 [dek]",
     "phonetics": [
@@ -12879,6 +14369,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdeɪkɔː(r)"
     ]
   },
+  "decorate": {
+    "display": "미국∙영국 [ˈdekəreɪt]",
+    "phonetics": [
+      "ˈdekəreɪt"
+    ]
+  },
+  "decoration": {
+    "display": "미국∙영국 [ˌdekəˈreɪʃn]",
+    "phonetics": [
+      "ˌdekəˈreɪʃn"
+    ]
+  },
   "decorative": {
     "display": "미국 [ˈdekəreɪtɪv] · 영국 [ˈdekərətɪv]",
     "phonetics": [
@@ -12890,6 +14392,25 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈdedɪkeɪtɪd]",
     "phonetics": [
       "ˈdedɪkeɪtɪd"
+    ]
+  },
+  "dedication": {
+    "display": "미국∙영국 [ˌdedɪˈkeɪʃn]",
+    "phonetics": [
+      "ˌdedɪˈkeɪʃn"
+    ]
+  },
+  "deed": {
+    "display": "미국∙영국 [diːd]",
+    "phonetics": [
+      "diːd"
+    ]
+  },
+  "deem": {
+    "display": "미국∙영국 [diːm] · 미국 [diːm]",
+    "phonetics": [
+      "diːm",
+      "diːm"
     ]
   },
   "deep": {
@@ -12955,6 +14476,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈfendənt"
     ]
   },
+  "defender": {
+    "display": "미국∙영국 [dɪˈfendə(r)]",
+    "phonetics": [
+      "dɪˈfendə(r)"
+    ]
+  },
+  "defensive": {
+    "display": "미국∙영국 [dɪˈfensɪv]",
+    "phonetics": [
+      "dɪˈfensɪv"
+    ]
+  },
+  "deficiency": {
+    "display": "미국∙영국 [dɪˈfɪʃnsi]",
+    "phonetics": [
+      "dɪˈfɪʃnsi"
+    ]
+  },
+  "deficit": {
+    "display": "미국∙영국 [ˈdefɪsɪt]",
+    "phonetics": [
+      "ˈdefɪsɪt"
+    ]
+  },
   "define": {
     "display": "미국∙영국 [dɪˈfaɪn]",
     "phonetics": [
@@ -12996,6 +14541,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˌdefɪˈnɪʃn]",
     "phonetics": [
       "ˌdefɪˈnɪʃn"
+    ]
+  },
+  "defy": {
+    "display": "미국∙영국 [dɪˈfaɪ]",
+    "phonetics": [
+      "dɪˈfaɪ"
     ]
   },
   "degree": {
@@ -13040,6 +14591,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdelɪɡeɪt"
     ]
   },
+  "delegation": {
+    "display": "미국∙영국 [ˌdelɪˈɡeɪʃn]",
+    "phonetics": [
+      "ˌdelɪˈɡeɪʃn"
+    ]
+  },
   "delete": {
     "display": "미국∙영국 [dɪˈliːt] · 미국 [dɪˈliːt]",
     "phonetics": [
@@ -13053,10 +14610,41 @@ window.pronunciationDisplayOverrides = Object.assign(
       "déli"
     ]
   },
+  "deliberate": {
+    "display": "발음기호 [dɪˈlɪbərət]",
+    "phonetics": [
+      "dɪˈlɪbərət"
+    ]
+  },
+  "deliberately": {
+    "display": "미국∙영국 [dɪˈlɪbərətli]",
+    "phonetics": [
+      "dɪˈlɪbərətli"
+    ]
+  },
+  "delicate": {
+    "display": "미국∙영국 [ˈdelɪkət]",
+    "phonetics": [
+      "ˈdelɪkət"
+    ]
+  },
   "delicious": {
     "display": "미국∙영국 [dɪˈlɪʃəs]",
     "phonetics": [
       "dɪˈlɪʃəs"
+    ]
+  },
+  "delight": {
+    "display": "미국∙영국 [dɪˈlaɪt]",
+    "phonetics": [
+      "dɪˈlaɪt"
+    ]
+  },
+  "delighted": {
+    "display": "미국∙영국 [dɪˈlaɪtɪd] · 미국 [dɪˈlaɪtɪd]",
+    "phonetics": [
+      "dɪˈlaɪtɪd",
+      "dɪˈlaɪtɪd"
     ]
   },
   "deliver": {
@@ -13149,6 +14737,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdeməkræt"
     ]
   },
+  "demon": {
+    "display": "미국∙영국 [ˈdiːmən]",
+    "phonetics": [
+      "ˈdiːmən"
+    ]
+  },
   "demonstrate": {
     "display": "미국∙영국 [ˈdemənstreɪt]",
     "phonetics": [
@@ -13173,6 +14767,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "den"
     ]
   },
+  "denial": {
+    "display": "미국∙영국 [dɪˈnaɪəl]",
+    "phonetics": [
+      "dɪˈnaɪəl"
+    ]
+  },
   "denmark": {
     "display": "미국∙영국 [dénmɑ:rk]",
     "phonetics": [
@@ -13183,6 +14783,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dénis]",
     "phonetics": [
       "dénis"
+    ]
+  },
+  "denounce": {
+    "display": "미국∙영국 [dɪˈnaʊns]",
+    "phonetics": [
+      "dɪˈnaʊns"
+    ]
+  },
+  "dense": {
+    "display": "미국∙영국 [dens]",
+    "phonetics": [
+      "dens"
     ]
   },
   "density": {
@@ -13197,6 +14809,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdentl"
     ]
   },
+  "dentist": {
+    "display": "미국∙영국 [ˈdentɪst]",
+    "phonetics": [
+      "ˈdentɪst"
+    ]
+  },
   "denver": {
     "display": "미국∙영국 [dénvər]",
     "phonetics": [
@@ -13207,6 +14825,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dɪˈnaɪ]",
     "phonetics": [
       "dɪˈnaɪ"
+    ]
+  },
+  "depart": {
+    "display": "미국 [dɪˈpɑːrt] · 영국 [dɪˈpɑːt]",
+    "phonetics": [
+      "dɪˈpɑːrt",
+      "dɪˈpɑːt"
     ]
   },
   "department": {
@@ -13229,6 +14854,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dipénd"
     ]
   },
+  "dependence": {
+    "display": "미국∙영국 [dɪˈpendəns]",
+    "phonetics": [
+      "dɪˈpendəns"
+    ]
+  },
   "dependency": {
     "display": "미국∙영국 [dɪˈpendənsi]",
     "phonetics": [
@@ -13245,6 +14876,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dɪˈpendənt]",
     "phonetics": [
       "dɪˈpendənt"
+    ]
+  },
+  "depict": {
+    "display": "미국∙영국 [dɪˈpɪkt]",
+    "phonetics": [
+      "dɪˈpɪkt"
     ]
   },
   "deploy": {
@@ -13273,10 +14910,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈpres"
     ]
   },
+  "depressed": {
+    "display": "미국∙영국 [dɪˈprest]",
+    "phonetics": [
+      "dɪˈprest"
+    ]
+  },
+  "depressing": {
+    "display": "미국∙영국 [dɪˈpresɪŋ] · 미국 [dɪˈpresɪŋ]",
+    "phonetics": [
+      "dɪˈpresɪŋ",
+      "dɪˈpresɪŋ"
+    ]
+  },
   "depression": {
     "display": "미국∙영국 [dɪˈpreʃn]",
     "phonetics": [
       "dɪˈpreʃn"
+    ]
+  },
+  "deprive": {
+    "display": "미국∙영국 [dipráiv]",
+    "phonetics": [
+      "dipráiv"
     ]
   },
   "depth": {
@@ -13301,6 +14957,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [diráivd]",
     "phonetics": [
       "diráivd"
+    ]
+  },
+  "descend": {
+    "display": "미국∙영국 [dɪˈsend]",
+    "phonetics": [
+      "dɪˈsend"
+    ]
+  },
+  "descent": {
+    "display": "미국∙영국 [dɪˈsent]",
+    "phonetics": [
+      "dɪˈsent"
     ]
   },
   "describe": {
@@ -13352,6 +15020,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈzaɪn"
     ]
   },
+  "designate": {
+    "display": "발음기호 [ˈdezɪɡneɪt]",
+    "phonetics": [
+      "ˈdezɪɡneɪt"
+    ]
+  },
   "designated": {
     "display": "미국∙영국 [déziɡnèitid]",
     "phonetics": [
@@ -13386,6 +15060,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dɪˈzaɪn]",
     "phonetics": [
       "dɪˈzaɪn"
+    ]
+  },
+  "desirable": {
+    "display": "미국∙영국 [dɪˈzaɪərəbl]",
+    "phonetics": [
+      "dɪˈzaɪərəbl"
     ]
   },
   "desire": {
@@ -13425,6 +15105,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈspaɪt"
     ]
   },
+  "dessert": {
+    "display": "미국 [dɪˈzɜːrt] · 영국 [dɪˈzɜːt]",
+    "phonetics": [
+      "dɪˈzɜːrt",
+      "dɪˈzɜːt"
+    ]
+  },
   "destination": {
     "display": "미국∙영국 [ˌdestɪˈneɪʃn]",
     "phonetics": [
@@ -13450,6 +15137,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈstrʌkʃn"
     ]
   },
+  "destructive": {
+    "display": "미국∙영국 [dɪˈstrʌktɪv] · 미국 [dɪˈstrʌktɪv]",
+    "phonetics": [
+      "dɪˈstrʌktɪv",
+      "dɪˈstrʌktɪv"
+    ]
+  },
   "detail": {
     "display": "미국∙영국 [ˈdiːteɪl] · 미국 [dɪˈteɪl]",
     "phonetics": [
@@ -13462,6 +15156,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈdiːteɪld",
       "dɪˈteɪld"
+    ]
+  },
+  "detain": {
+    "display": "미국∙영국 [dɪˈteɪn]",
+    "phonetics": [
+      "dɪˈteɪn"
     ]
   },
   "detect": {
@@ -13484,11 +15184,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈtekʃn"
     ]
   },
+  "detective": {
+    "display": "미국∙영국 [dɪˈtektɪv]",
+    "phonetics": [
+      "dɪˈtektɪv"
+    ]
+  },
   "detector": {
     "display": "미국∙영국 [dɪˈtektə(r)] · 미국 [dɪˈtektə(r)]",
     "phonetics": [
       "dɪˈtektə(r)",
       "dɪˈtektə(r)"
+    ]
+  },
+  "detention": {
+    "display": "미국∙영국 [dɪˈtenʃn]",
+    "phonetics": [
+      "dɪˈtenʃn"
+    ]
+  },
+  "deteriorate": {
+    "display": "미국 [dɪ │ tɪriəreɪt] · 영국 [dɪ │ tɪəriəreɪt]",
+    "phonetics": [
+      "dɪ │ tɪriəreɪt",
+      "dɪ │ tɪəriəreɪt"
     ]
   },
   "determination": {
@@ -13530,6 +15249,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ditrɔ́it]",
     "phonetics": [
       "ditrɔ́it"
+    ]
+  },
+  "devastate": {
+    "display": "미국∙영국 [ˈdevəsteɪt]",
+    "phonetics": [
+      "ˈdevəsteɪt"
     ]
   },
   "develop": {
@@ -13594,6 +15319,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdevl"
     ]
   },
+  "devise": {
+    "display": "미국∙영국 [dɪˈvaɪz] · 미국 [dɪˈvaɪz]",
+    "phonetics": [
+      "dɪˈvaɪz",
+      "dɪˈvaɪz"
+    ]
+  },
   "devote": {
     "display": "미국∙영국 [divóut]",
     "phonetics": [
@@ -13618,6 +15350,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [ˌdaɪəˈbiːtiːz]",
     "phonetics": [
       "ˌdaɪəˈbiːtiːz"
+    ]
+  },
+  "diagnose": {
+    "display": "미국 [│ daɪəɡ │ noʊs] · 영국 [│ daɪəɡnəʊz; │ daɪəɡ │ nəʊz]",
+    "phonetics": [
+      "│ daɪəɡ │ noʊs",
+      "│ daɪəɡnəʊz; │ daɪəɡ │ nəʊz"
     ]
   },
   "diagnosis": {
@@ -13683,6 +15422,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈdaɪəri]",
     "phonetics": [
       "ˈdaɪəri"
+    ]
+  },
+  "dictate": {
+    "display": "발음기호 [dɪkˈteɪt; 美 ˈdɪkteɪt]",
+    "phonetics": [
+      "dɪkˈteɪt; 美 ˈdɪkteɪt"
+    ]
+  },
+  "dictator": {
+    "display": "미국 [ˈdɪkteɪtər] · 영국 [dɪkˈteɪtə(r)]",
+    "phonetics": [
+      "ˈdɪkteɪtər",
+      "dɪkˈteɪtə(r)"
     ]
   },
   "dictionary": {
@@ -13754,6 +15506,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌdɪfəˈrenʃl"
     ]
   },
+  "differentiate": {
+    "display": "미국∙영국 [ˌdɪfəˈrenʃieɪt]",
+    "phonetics": [
+      "ˌdɪfəˈrenʃieɪt"
+    ]
+  },
   "difficult": {
     "display": "미국∙영국 [ˈdɪfɪkəlt]",
     "phonetics": [
@@ -13791,6 +15549,26 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ dɪdƷɪtl"
     ]
   },
+  "dignity": {
+    "display": "미국∙영국 [ˈdɪɡnəti]",
+    "phonetics": [
+      "ˈdɪɡnəti"
+    ]
+  },
+  "dilemma": {
+    "display": "미국∙영국 [dɪ │ lemə; daɪ │ lemə] · 미국 [dɪ │ lemə; daɪ │ lemə]",
+    "phonetics": [
+      "dɪ │ lemə; daɪ │ lemə",
+      "dɪ │ lemə; daɪ │ lemə"
+    ]
+  },
+  "dime": {
+    "display": "미국∙영국 [daɪm] · 미국 [daɪm]",
+    "phonetics": [
+      "daɪm",
+      "daɪm"
+    ]
+  },
   "dimension": {
     "display": "미국∙영국 [daɪ │ menʃn; dɪ │ menʃn]",
     "phonetics": [
@@ -13801,6 +15579,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [diménʃənl,dai-]",
     "phonetics": [
       "diménʃənl,dai-"
+    ]
+  },
+  "diminish": {
+    "display": "미국∙영국 [dɪˈmɪnɪʃ]",
+    "phonetics": [
+      "dɪˈmɪnɪʃ"
     ]
   },
   "dining": {
@@ -13815,11 +15599,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdɪnə(r)"
     ]
   },
+  "dip": {
+    "display": "미국∙영국 [dɪp]",
+    "phonetics": [
+      "dɪp"
+    ]
+  },
   "diploma": {
     "display": "미국 [dɪ │ ploʊmə] · 영국 [dɪ │ pləʊmə]",
     "phonetics": [
       "dɪ │ ploʊmə",
       "dɪ │ pləʊmə"
+    ]
+  },
+  "diplomat": {
+    "display": "미국∙영국 [ˈdɪpləmæt]",
+    "phonetics": [
+      "ˈdɪpləmæt"
+    ]
+  },
+  "diplomatic": {
+    "display": "미국∙영국 [ˌdɪpləˈmætɪk]",
+    "phonetics": [
+      "ˌdɪpləˈmætɪk"
     ]
   },
   "direct": {
@@ -13915,10 +15717,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪsˈeɪbld"
     ]
   },
+  "disadvantage": {
+    "display": "미국 [│ dɪsəd │ væntɪdʒ] · 영국 [│ dɪsəd │ vɑːntɪdʒ]",
+    "phonetics": [
+      "│ dɪsəd │ væntɪdʒ",
+      "│ dɪsəd │ vɑːntɪdʒ"
+    ]
+  },
   "disagree": {
     "display": "미국∙영국 [ˌdɪsəˈɡriː]",
     "phonetics": [
       "ˌdɪsəˈɡriː"
+    ]
+  },
+  "disagreement": {
+    "display": "미국∙영국 [ˌdɪsəˈɡriːmənt]",
+    "phonetics": [
+      "ˌdɪsəˈɡriːmənt"
     ]
   },
   "disappear": {
@@ -13928,6 +15743,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ dɪsə │ pɪə(r)"
     ]
   },
+  "disappoint": {
+    "display": "미국∙영국 [ˌdɪsəˈpɔɪnt]",
+    "phonetics": [
+      "ˌdɪsəˈpɔɪnt"
+    ]
+  },
+  "disappointed": {
+    "display": "미국∙영국 [ˌdɪsəˈpɔɪntɪd] · 미국 [ˌdɪsəˈpɔɪntɪd]",
+    "phonetics": [
+      "ˌdɪsəˈpɔɪntɪd",
+      "ˌdɪsəˈpɔɪntɪd"
+    ]
+  },
+  "disappointing": {
+    "display": "미국∙영국 [ˌdɪsəˈpɔɪntɪŋ] · 미국 [ˌdɪsəˈpɔɪntɪŋ]",
+    "phonetics": [
+      "ˌdɪsəˈpɔɪntɪŋ",
+      "ˌdɪsəˈpɔɪntɪŋ"
+    ]
+  },
+  "disappointment": {
+    "display": "미국∙영국 [ˌdɪsəˈpɔɪntmənt]",
+    "phonetics": [
+      "ˌdɪsəˈpɔɪntmənt"
+    ]
+  },
   "disaster": {
     "display": "미국 [dɪ │ zæstə(r)] · 영국 [dɪ │ zɑːstə(r)]",
     "phonetics": [
@@ -13935,10 +15776,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪ │ zɑːstə(r)"
     ]
   },
+  "disastrous": {
+    "display": "미국 [dɪ │ zæstrəs] · 영국 [dɪ │ zɑːstrəs]",
+    "phonetics": [
+      "dɪ │ zæstrəs",
+      "dɪ │ zɑːstrəs"
+    ]
+  },
   "disc": {
     "display": "미국∙영국 [dɪsk]",
     "phonetics": [
       "dɪsk"
+    ]
+  },
+  "discard": {
+    "display": "발음기호 [dɪs │ kɑːd; 美 dɪs │ kɑːrd]",
+    "phonetics": [
+      "dɪs │ kɑːd; 美 dɪs │ kɑːrd"
     ]
   },
   "discharge": {
@@ -13958,6 +15812,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dɪsˈkleɪmə(r)]",
     "phonetics": [
       "dɪsˈkleɪmə(r)"
+    ]
+  },
+  "disclose": {
+    "display": "미국 [dɪs │ kloʊz] · 영국 [dɪs │ kləʊz]",
+    "phonetics": [
+      "dɪs │ kloʊz",
+      "dɪs │ kləʊz"
     ]
   },
   "disclosure": {
@@ -13984,6 +15845,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "발음기호 [dɪsˈkaʊnt; 美 또한 ˈdɪskaʊnt]",
     "phonetics": [
       "dɪsˈkaʊnt; 美 또한 ˈdɪskaʊnt"
+    ]
+  },
+  "discourage": {
+    "display": "미국 [dɪs │ kɜːrɪdʒ] · 영국 [dɪs │ kʌrɪdʒ]",
+    "phonetics": [
+      "dɪs │ kɜːrɪdʒ",
+      "dɪs │ kʌrɪdʒ"
+    ]
+  },
+  "discourse": {
+    "display": "발음기호 [│ dɪskɔːs; 美 │ dɪskɔːrs]",
+    "phonetics": [
+      "│ dɪskɔːs; 美 │ dɪskɔːrs"
     ]
   },
   "discover": {
@@ -14070,10 +15944,35 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪʃ"
     ]
   },
+  "dishonest": {
+    "display": "미국 [dɪs │ ɑːnɪst] · 영국 [dɪs │ ɒnɪst]",
+    "phonetics": [
+      "dɪs │ ɑːnɪst",
+      "dɪs │ ɒnɪst"
+    ]
+  },
   "disk": {
     "display": "발음기호 [dɪsk]",
     "phonetics": [
       "dɪsk"
+    ]
+  },
+  "dislike": {
+    "display": "미국∙영국 [dɪsˈlaɪk]",
+    "phonetics": [
+      "dɪsˈlaɪk"
+    ]
+  },
+  "dismiss": {
+    "display": "미국∙영국 [dɪsˈmɪs]",
+    "phonetics": [
+      "dɪsˈmɪs"
+    ]
+  },
+  "dismissal": {
+    "display": "미국∙영국 [dɪsˈmɪsl]",
+    "phonetics": [
+      "dɪsˈmɪsl"
     ]
   },
   "disney": {
@@ -14102,6 +16001,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪˈspætʃ"
     ]
   },
+  "displace": {
+    "display": "미국∙영국 [dɪsˈpleɪs]",
+    "phonetics": [
+      "dɪsˈpleɪs"
+    ]
+  },
   "display": {
     "display": "미국∙영국 [dɪˈspleɪ]",
     "phonetics": [
@@ -14127,16 +16032,62 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dɪ │ spəʊzl"
     ]
   },
+  "dispose": {
+    "display": "미국 [dɪˈspoʊz] · 영국 [dɪˈspəʊz]",
+    "phonetics": [
+      "dɪˈspoʊz",
+      "dɪˈspəʊz"
+    ]
+  },
+  "disrupt": {
+    "display": "미국∙영국 [dɪsˈrʌpt] · 미국 [dɪsˈrʌpt]",
+    "phonetics": [
+      "dɪsˈrʌpt",
+      "dɪsˈrʌpt"
+    ]
+  },
+  "disruption": {
+    "display": "미국 [disrʌ́pʃən]",
+    "phonetics": [
+      "disrʌ́pʃən"
+    ]
+  },
+  "dissolve": {
+    "display": "미국 [dɪˈzɑːlv] · 영국 [dɪˈzɒlv]",
+    "phonetics": [
+      "dɪˈzɑːlv",
+      "dɪˈzɒlv"
+    ]
+  },
   "distance": {
     "display": "미국∙영국 [ˈdɪstəns]",
     "phonetics": [
       "ˈdɪstəns"
     ]
   },
+  "distant": {
+    "display": "미국∙영국 [ˈdɪstənt]",
+    "phonetics": [
+      "ˈdɪstənt"
+    ]
+  },
   "distinct": {
     "display": "미국∙영국 [dɪˈstɪŋkt]",
     "phonetics": [
       "dɪˈstɪŋkt"
+    ]
+  },
+  "distinction": {
+    "display": "미국∙영국 [dɪˈstɪŋkʃn]",
+    "phonetics": [
+      "dɪˈstɪŋkʃn"
+    ]
+  },
+  "distinctive": {
+    "display": "미국∙영국 [dɪˈstɪŋktɪv] · 미국 [dɪˈstɪŋktɪv]",
+    "phonetics": [
+      "dɪˈstɪŋktɪv",
+      "dɪˈstɪŋktɪv"
     ]
   },
   "distinguish": {
@@ -14149,6 +16100,26 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dɪˈstɪŋɡwɪʃt]",
     "phonetics": [
       "dɪˈstɪŋɡwɪʃt"
+    ]
+  },
+  "distort": {
+    "display": "미국 [dɪˈstɔːrt] · 영국 [dɪˈstɔːt]",
+    "phonetics": [
+      "dɪˈstɔːrt",
+      "dɪˈstɔːt"
+    ]
+  },
+  "distract": {
+    "display": "미국∙영국 [dɪˈstrækt] · 미국 [dɪˈstrækt]",
+    "phonetics": [
+      "dɪˈstrækt",
+      "dɪˈstrækt"
+    ]
+  },
+  "distress": {
+    "display": "미국∙영국 [dɪˈstres]",
+    "phonetics": [
+      "dɪˈstres"
     ]
   },
   "distribute": {
@@ -14199,11 +16170,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdɪstrɪkt"
     ]
   },
+  "disturb": {
+    "display": "미국 [dɪ │ │ stɜːrb] · 영국 [dɪ │ stɜːb]",
+    "phonetics": [
+      "dɪ │ │ stɜːrb",
+      "dɪ │ stɜːb"
+    ]
+  },
   "disturbed": {
     "display": "미국 [dɪ │ stɜːrbd] · 영국 [dɪ │ stɜːbd]",
     "phonetics": [
       "dɪ │ stɜːrbd",
       "dɪ │ stɜːbd"
+    ]
+  },
+  "disturbing": {
+    "display": "미국 [dɪ │ stɜːrbɪŋ] · 영국 [dɪ │ stɜːbɪŋ]",
+    "phonetics": [
+      "dɪ │ stɜːrbɪŋ",
+      "dɪ │ stɜːbɪŋ"
     ]
   },
   "dive": {
@@ -14224,6 +16209,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "daɪ │ vɜːrsəti",
       "daɪ │ vɜːsəti"
+    ]
+  },
+  "divert": {
+    "display": "미국 [daɪ │ vɜːrt] · 영국 [daɪ │ vɜːt]",
+    "phonetics": [
+      "daɪ │ vɜːrt",
+      "daɪ │ vɜːt"
+    ]
+  },
+  "divide": {
+    "display": "미국∙영국 [dɪˈvaɪd]",
+    "phonetics": [
+      "dɪˈvaɪd"
     ]
   },
   "divided": {
@@ -14262,6 +16260,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "dɪˈvɔːrs",
       "dɪˈvɔːs"
+    ]
+  },
+  "divorced": {
+    "display": "미국 [dɪ │ vɔːrst] · 영국 [dɪ │ vɔːst]",
+    "phonetics": [
+      "dɪ │ vɔːrst",
+      "dɪ │ vɔːst"
     ]
   },
   "diy": {
@@ -14315,6 +16320,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ dɑːktə(r)",
       "│ dɒktə(r)"
+    ]
+  },
+  "doctrine": {
+    "display": "미국 [│ dɑːktrɪn] · 영국 [│ dɒktrɪn]",
+    "phonetics": [
+      "│ dɑːktrɪn",
+      "│ dɒktrɪn"
     ]
   },
   "document": {
@@ -14421,11 +16433,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dəˈmestɪk"
     ]
   },
+  "dominance": {
+    "display": "미국 [dɑ́mənəns(i)] · 영국 [dɔ́m-]",
+    "phonetics": [
+      "dɑ́mənəns(i)",
+      "dɔ́m-"
+    ]
+  },
   "dominant": {
     "display": "미국 [│ dɑːmɪnənt] · 영국 [│ dɒmɪnənt]",
     "phonetics": [
       "│ dɑːmɪnənt",
       "│ dɒmɪnənt"
+    ]
+  },
+  "dominate": {
+    "display": "미국 [│ dɑːmɪneɪt] · 영국 [│ dɒmɪneɪt]",
+    "phonetics": [
+      "│ dɑːmɪneɪt",
+      "│ dɒmɪneɪt"
     ]
   },
   "dominican": {
@@ -14560,6 +16586,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌdaʊnˈtaʊn"
     ]
   },
+  "downward": {
+    "display": "미국 [│ daʊnwərd] · 영국 [│ daʊnwəd]",
+    "phonetics": [
+      "│ daʊnwərd",
+      "│ daʊnwəd"
+    ]
+  },
+  "downwards": {
+    "display": "미국 [│ daʊnwərdz] · 영국 [│ daʊnwədz]",
+    "phonetics": [
+      "│ daʊnwərdz",
+      "│ daʊnwədz"
+    ]
+  },
   "dozen": {
     "display": "미국∙영국 [ˈdʌzn]",
     "phonetics": [
@@ -14592,6 +16632,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdræɡən"
     ]
   },
+  "drain": {
+    "display": "미국∙영국 [dreɪn]",
+    "phonetics": [
+      "dreɪn"
+    ]
+  },
   "drama": {
     "display": "미국∙영국 [ˈdrɑːmə]",
     "phonetics": [
@@ -14602,6 +16648,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [drəˈmætɪk]",
     "phonetics": [
       "drəˈmætɪk"
+    ]
+  },
+  "dramatically": {
+    "display": "미국∙영국 [drə │ mӕtɪkli]",
+    "phonetics": [
+      "drə │ mӕtɪkli"
     ]
   },
   "draw": {
@@ -14641,10 +16693,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dres"
     ]
   },
+  "dressed": {
+    "display": "미국∙영국 [drest]",
+    "phonetics": [
+      "drest"
+    ]
+  },
   "dresses": {
     "display": "미국∙영국 [dres]",
     "phonetics": [
       "dres"
+    ]
+  },
+  "drift": {
+    "display": "미국∙영국 [drɪft]",
+    "phonetics": [
+      "drɪft"
     ]
   },
   "drill": {
@@ -14708,6 +16772,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "drɒp"
     ]
   },
+  "drought": {
+    "display": "미국 [draʊt]",
+    "phonetics": [
+      "draʊt"
+    ]
+  },
+  "drown": {
+    "display": "미국∙영국 [draʊn]",
+    "phonetics": [
+      "draʊn"
+    ]
+  },
   "drug": {
     "display": "미국∙영국 [drʌɡ]",
     "phonetics": [
@@ -14753,6 +16829,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdjuːəl"
     ]
   },
+  "dub": {
+    "display": "미국∙영국 [dʌb]",
+    "phonetics": [
+      "dʌb"
+    ]
+  },
   "dublin": {
     "display": "미국∙영국 [dʌ́blin]",
     "phonetics": [
@@ -14783,6 +16865,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dʌl]",
     "phonetics": [
       "dʌl"
+    ]
+  },
+  "dumb": {
+    "display": "미국∙영국 [dʌm]",
+    "phonetics": [
+      "dʌm"
     ]
   },
   "dump": {
@@ -14896,6 +16984,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "iːtʃ"
     ]
   },
+  "eager": {
+    "display": "미국∙영국 [ˈiːɡə(r)] · 미국 [ˈiːɡə(r)]",
+    "phonetics": [
+      "ˈiːɡə(r)",
+      "ˈiːɡə(r)"
+    ]
+  },
   "eagle": {
     "display": "미국∙영국 [ˈiːɡl]",
     "phonetics": [
@@ -14969,6 +17064,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɜːrθ",
       "ɜːθ"
+    ]
+  },
+  "earthquake": {
+    "display": "미국 [│ ɜːrθkweɪk] · 영국 [│ ɜːθkweɪk]",
+    "phonetics": [
+      "│ ɜːrθkweɪk",
+      "│ ɜːθkweɪk"
     ]
   },
   "ease": {
@@ -15081,6 +17183,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ iːkə │ nɒmɪks; │ ekə │ nɒmɪks"
     ]
   },
+  "economist": {
+    "display": "미국 [ɪ │ kɑːnəmɪst] · 영국 [ɪ │ kɒnəmɪst]",
+    "phonetics": [
+      "ɪ │ kɑːnəmɪst",
+      "ɪ │ kɒnəmɪst"
+    ]
+  },
   "economy": {
     "display": "미국 [ɪ │ kɑːnəmi] · 영국 [ɪ │ kɒnəmi]",
     "phonetics": [
@@ -15167,6 +17276,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈedʒukeɪt"
     ]
   },
+  "educated": {
+    "display": "미국∙영국 [ˈedʒukeɪtɪd]",
+    "phonetics": [
+      "ˈedʒukeɪtɪd"
+    ]
+  },
   "education": {
     "display": "미국∙영국 [ˌedʒuˈkeɪʃn]",
     "phonetics": [
@@ -15178,6 +17293,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˌedʒuˈkeɪʃənl",
       "ˌedʒuˈkeɪʃənl"
+    ]
+  },
+  "educator": {
+    "display": "미국∙영국 [ˈedʒukeɪtə(r)]",
+    "phonetics": [
+      "ˈedʒukeɪtə(r)"
     ]
   },
   "educators": {
@@ -15242,6 +17363,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "eɡ"
     ]
   },
+  "ego": {
+    "display": "미국 [ˈiːɡoʊ] · 영국 [ˈiːɡəʊ; ˈeɡəʊ]",
+    "phonetics": [
+      "ˈiːɡoʊ",
+      "ˈiːɡəʊ; ˈeɡəʊ"
+    ]
+  },
   "egypt": {
     "display": "미국∙영국 [í:dƷipt]",
     "phonetics": [
@@ -15279,6 +17407,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈaɪðə(r); ˈiːðə(r)"
     ]
   },
+  "elaborate": {
+    "display": "발음기호 [ɪˈlæbəreɪt]",
+    "phonetics": [
+      "ɪˈlæbəreɪt"
+    ]
+  },
   "elbow": {
     "display": "미국 [│ elboʊ] · 영국 [│ elbəʊ]",
     "phonetics": [
@@ -15299,6 +17433,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ eldəli"
     ]
   },
+  "elect": {
+    "display": "미국∙영국 [ɪˈlekt]",
+    "phonetics": [
+      "ɪˈlekt"
+    ]
+  },
   "elected": {
     "display": "미국∙영국 [iléktid]",
     "phonetics": [
@@ -15309,6 +17449,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪˈlekʃn]",
     "phonetics": [
       "ɪˈlekʃn"
+    ]
+  },
+  "electoral": {
+    "display": "미국∙영국 [ɪˈlektərəl] · 미국 [ɪˈlektərəl]",
+    "phonetics": [
+      "ɪˈlektərəl",
+      "ɪˈlektərəl"
     ]
   },
   "electric": {
@@ -15374,6 +17521,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈelɪfənt",
       "ˈelɪfənt"
+    ]
+  },
+  "elevate": {
+    "display": "미국∙영국 [ˈelɪveɪt]",
+    "phonetics": [
+      "ˈelɪveɪt"
+    ]
+  },
+  "elevator": {
+    "display": "미국∙영국 [ˈelɪveɪtə(r)]",
+    "phonetics": [
+      "ˈelɪveɪtə(r)"
     ]
   },
   "eleven": {
@@ -15463,10 +17622,54 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈiːmeɪl"
     ]
   },
+  "embark": {
+    "display": "미국 [ɪmˈbɑːrk] · 영국 [ɪmˈbɑːk]",
+    "phonetics": [
+      "ɪmˈbɑːrk",
+      "ɪmˈbɑːk"
+    ]
+  },
+  "embarrassed": {
+    "display": "미국∙영국 [ɪmˈbærəst]",
+    "phonetics": [
+      "ɪmˈbærəst"
+    ]
+  },
+  "embarrassing": {
+    "display": "미국∙영국 [ɪmˈbærəsɪŋ]",
+    "phonetics": [
+      "ɪmˈbærəsɪŋ"
+    ]
+  },
+  "embarrassment": {
+    "display": "미국∙영국 [ɪmˈbærəsmənt]",
+    "phonetics": [
+      "ɪmˈbærəsmənt"
+    ]
+  },
   "embassy": {
     "display": "미국∙영국 [ˈembəsi]",
     "phonetics": [
       "ˈembəsi"
+    ]
+  },
+  "embed": {
+    "display": "미국∙영국 [ɪmˈbed]",
+    "phonetics": [
+      "ɪmˈbed"
+    ]
+  },
+  "embody": {
+    "display": "미국 [ɪmˈbɑːdi] · 영국 [ɪmˈbɒdi]",
+    "phonetics": [
+      "ɪmˈbɑːdi",
+      "ɪmˈbɒdi"
+    ]
+  },
+  "embrace": {
+    "display": "미국∙영국 [ɪmˈbreɪs]",
+    "phonetics": [
+      "ɪmˈbreɪs"
     ]
   },
   "emerge": {
@@ -15474,6 +17677,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "iˈmɜːrdʒ",
       "iˈmɜːdʒ"
+    ]
+  },
+  "emergence": {
+    "display": "미국∙영국 [i │ mɜ:rdƷəns]",
+    "phonetics": [
+      "i │ mɜ:rdƷəns"
     ]
   },
   "emergency": {
@@ -15514,6 +17723,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "iˈmɪʃn"
     ]
   },
+  "emotion": {
+    "display": "미국 [ɪˈmoʊʃn] · 영국 [ɪˈməʊʃn]",
+    "phonetics": [
+      "ɪˈmoʊʃn",
+      "ɪˈməʊʃn"
+    ]
+  },
   "emotional": {
     "display": "미국 [ɪ │ moʊʃənl] · 영국 [ɪ │ məʊʃənl]",
     "phonetics": [
@@ -15544,6 +17760,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈempaɪə(r)]",
     "phonetics": [
       "ˈempaɪə(r)"
+    ]
+  },
+  "empirical": {
+    "display": "미국∙영국 [ɪmˈpɪrɪkl] · 미국 [ɪmˈpɪrɪkl]",
+    "phonetics": [
+      "ɪmˈpɪrɪkl",
+      "ɪmˈpɪrɪkl"
+    ]
+  },
+  "employ": {
+    "display": "미국∙영국 [ɪmˈplɔɪ]",
+    "phonetics": [
+      "ɪmˈplɔɪ"
     ]
   },
   "employed": {
@@ -15577,6 +17806,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪmˈplɔɪmənt"
     ]
   },
+  "empower": {
+    "display": "미국∙영국 [ɪmˈpaʊə(r)]",
+    "phonetics": [
+      "ɪmˈpaʊə(r)"
+    ]
+  },
   "empty": {
     "display": "미국∙영국 [ˈempti]",
     "phonetics": [
@@ -15607,11 +17842,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "inéibliŋ,en-"
     ]
   },
+  "enact": {
+    "display": "미국∙영국 [ɪˈnækt]",
+    "phonetics": [
+      "ɪˈnækt"
+    ]
+  },
   "encoding": {
     "display": "미국 [ɪnˈkoʊd] · 영국 [ɪnˈkəʊd]",
     "phonetics": [
       "ɪnˈkoʊd",
       "ɪnˈkəʊd"
+    ]
+  },
+  "encompass": {
+    "display": "미국∙영국 [ɪnˈkʌmpəs]",
+    "phonetics": [
+      "ɪnˈkʌmpəs"
     ]
   },
   "encounter": {
@@ -15634,6 +17881,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪn │ kʌrɪdʒ"
     ]
   },
+  "encouragement": {
+    "display": "미국 [ɪn │ kɜːrɪdʒmənt] · 영국 [ɪn │ kʌrɪdʒmənt]",
+    "phonetics": [
+      "ɪn │ kɜːrɪdʒmənt",
+      "ɪn │ kʌrɪdʒmənt"
+    ]
+  },
   "encryption": {
     "display": "미국∙영국 [ɪnˈkrɪpʃn]",
     "phonetics": [
@@ -15652,6 +17906,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "end"
     ]
   },
+  "endeavor": {
+    "display": "미국∙영국 [indévər,en-]",
+    "phonetics": [
+      "indévər,en-"
+    ]
+  },
   "ended": {
     "display": "미국∙영국 [end]",
     "phonetics": [
@@ -15662,6 +17922,33 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈendɪŋ]",
     "phonetics": [
       "ˈendɪŋ"
+    ]
+  },
+  "endless": {
+    "display": "미국∙영국 [ˈendləs]",
+    "phonetics": [
+      "ˈendləs"
+    ]
+  },
+  "endorse": {
+    "display": "미국 [ɪnˈdɔːrs] · 영국 [ɪnˈdɔːs]",
+    "phonetics": [
+      "ɪnˈdɔːrs",
+      "ɪnˈdɔːs"
+    ]
+  },
+  "endorsement": {
+    "display": "미국 [ɪn │ dɔːrsmənt] · 영국 [ɪn │ dɔːsmənt]",
+    "phonetics": [
+      "ɪn │ dɔːrsmənt",
+      "ɪn │ dɔːsmənt"
+    ]
+  },
+  "endure": {
+    "display": "미국 [ɪn │ dʊr] · 영국 [ɪn │ djʊə(r)]",
+    "phonetics": [
+      "ɪn │ dʊr",
+      "ɪn │ djʊə(r)"
     ]
   },
   "enemy": {
@@ -15675,6 +17962,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ enərdʒi",
       "│ enədʒi"
+    ]
+  },
+  "enforce": {
+    "display": "미국 [ɪnˈfɔːrs] · 영국 [ɪnˈfɔːs]",
+    "phonetics": [
+      "ɪnˈfɔːrs",
+      "ɪnˈfɔːs"
     ]
   },
   "eng": {
@@ -15700,6 +17994,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪnˈɡeɪdʒmənt]",
     "phonetics": [
       "ɪnˈɡeɪdʒmənt"
+    ]
+  },
+  "engaging": {
+    "display": "미국∙영국 [ɪnˈɡeɪdʒɪŋ] · 미국 [ɪnˈɡeɪdʒɪŋ]",
+    "phonetics": [
+      "ɪnˈɡeɪdʒɪŋ",
+      "ɪnˈɡeɪdʒɪŋ"
     ]
   },
   "engine": {
@@ -15754,6 +18055,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪnˈdʒɔɪ"
     ]
   },
+  "enjoyable": {
+    "display": "미국∙영국 [ɪnˈdʒɔɪəbl] · 미국 [ɪnˈdʒɔɪəbl]",
+    "phonetics": [
+      "ɪnˈdʒɔɪəbl",
+      "ɪnˈdʒɔɪəbl"
+    ]
+  },
   "enjoyed": {
     "display": "미국∙영국 [ɪnˈdʒɔɪ]",
     "phonetics": [
@@ -15794,10 +18102,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "美 주로 ˈɪnkwəri"
     ]
   },
+  "enrich": {
+    "display": "미국∙영국 [ɪnˈrɪtʃ]",
+    "phonetics": [
+      "ɪnˈrɪtʃ"
+    ]
+  },
+  "enroll": {
+    "display": "미국∙영국 [inróul,en-]",
+    "phonetics": [
+      "inróul,en-"
+    ]
+  },
   "enrollment": {
     "display": "미국∙영국 [inróulmənt,en-]",
     "phonetics": [
       "inróulmənt,en-"
+    ]
+  },
+  "ensue": {
+    "display": "미국 [ɪn │ suː] · 영국 [ɪn │ sjuː]",
+    "phonetics": [
+      "ɪn │ suː",
+      "ɪn │ sjuː"
     ]
   },
   "ensure": {
@@ -15853,11 +18180,46 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ entəpraɪz"
     ]
   },
+  "entertain": {
+    "display": "미국 [│ entər │ teɪn] · 영국 [│ entə │ teɪn]",
+    "phonetics": [
+      "│ entər │ teɪn",
+      "│ entə │ teɪn"
+    ]
+  },
+  "entertaining": {
+    "display": "미국 [│ entər │ teɪnɪŋ] · 영국 [│ entə │ teɪnɪŋ]",
+    "phonetics": [
+      "│ entər │ teɪnɪŋ",
+      "│ entə │ teɪnɪŋ"
+    ]
+  },
   "entertainment": {
     "display": "미국 [│ entər │ teɪnmənt] · 영국 [│ entə │ teɪnmənt]",
     "phonetics": [
       "│ entər │ teɪnmənt",
       "│ entə │ teɪnmənt"
+    ]
+  },
+  "enthusiasm": {
+    "display": "미국 [ɪn │ θuːziæzəm] · 영국 [ɪn │ θjuːziæzəm]",
+    "phonetics": [
+      "ɪn │ θuːziæzəm",
+      "ɪn │ θjuːziæzəm"
+    ]
+  },
+  "enthusiast": {
+    "display": "미국 [ɪn │ θuːziæst] · 영국 [ɪn │ θjuːziæst]",
+    "phonetics": [
+      "ɪn │ θuːziæst",
+      "ɪn │ θjuːziæst"
+    ]
+  },
+  "enthusiastic": {
+    "display": "미국 [ɪn │ θuːzi │ æstɪk] · 영국 [ɪn │ θjuːzi │ æstɪk]",
+    "phonetics": [
+      "ɪn │ θuːzi │ æstɪk",
+      "ɪn │ θjuːzi │ æstɪk"
     ]
   },
   "entire": {
@@ -15879,6 +18241,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈentəti",
       "ˈentəti"
+    ]
+  },
+  "entitle": {
+    "display": "미국∙영국 [ɪnˈtaɪtl]",
+    "phonetics": [
+      "ɪnˈtaɪtl"
     ]
   },
   "entity": {
@@ -15938,6 +18306,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "í:pí:"
     ]
   },
+  "epidemic": {
+    "display": "미국∙영국 [ˌepɪˈdemɪk]",
+    "phonetics": [
+      "ˌepɪˈdemɪk"
+    ]
+  },
   "episode": {
     "display": "미국 [│ epɪsoʊd] · 영국 [│ epɪsəʊd]",
     "phonetics": [
@@ -15977,6 +18351,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪˈkweɪʒn"
     ]
   },
+  "equip": {
+    "display": "미국∙영국 [ɪˈkwɪp]",
+    "phonetics": [
+      "ɪˈkwɪp"
+    ]
+  },
   "equipment": {
     "display": "미국∙영국 [ɪˈkwɪpmənt]",
     "phonetics": [
@@ -16009,6 +18389,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪərə"
     ]
   },
+  "erect": {
+    "display": "미국∙영국 [ɪˈrekt]",
+    "phonetics": [
+      "ɪˈrekt"
+    ]
+  },
   "error": {
     "display": "미국∙영국 [ˈerə(r)] · 미국 [ˈerə(r)]",
     "phonetics": [
@@ -16021,6 +18407,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈerə(r)",
       "ˈerə(r)"
+    ]
+  },
+  "erupt": {
+    "display": "미국∙영국 [ɪˈrʌpt]",
+    "phonetics": [
+      "ɪˈrʌpt"
     ]
   },
   "escalate": {
@@ -16149,6 +18541,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈiːθənet"
     ]
   },
+  "ethic": {
+    "display": "미국∙영국 [ˈeθɪk]",
+    "phonetics": [
+      "ˈeθɪk"
+    ]
+  },
   "ethical": {
     "display": "미국∙영국 [ˈeθɪkl]",
     "phonetics": [
@@ -16206,6 +18604,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ jʊrə │ piːən",
       "│ jʊərə │ piːən"
+    ]
+  },
+  "evacuate": {
+    "display": "미국∙영국 [ɪˈvækjueɪt]",
+    "phonetics": [
+      "ɪˈvækjueɪt"
     ]
   },
   "evaluate": {
@@ -16303,16 +18707,37 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈevɪdəns"
     ]
   },
+  "evident": {
+    "display": "미국∙영국 [ˈevɪdənt] · 미국 [ˈevɪdənt]",
+    "phonetics": [
+      "ˈevɪdənt",
+      "ˈevɪdənt"
+    ]
+  },
   "evil": {
     "display": "미국∙영국 [ˈiːvl; ˈiːvɪl]",
     "phonetics": [
       "ˈiːvl; ˈiːvɪl"
     ]
   },
+  "evoke": {
+    "display": "미국 [ɪˈvoʊk] · 영국 [ɪˈvəʊk]",
+    "phonetics": [
+      "ɪˈvoʊk",
+      "ɪˈvəʊk"
+    ]
+  },
   "evolution": {
     "display": "미국∙영국 [│ iːvə │ luːʃn; │ evə │ luːʃn]",
     "phonetics": [
       "│ iːvə │ luːʃn; │ evə │ luːʃn"
+    ]
+  },
+  "evolutionary": {
+    "display": "미국 [│ iːvə │ luːʃəneri] · 영국 [│ iːvə │ luːʃənri; │ evə │ luːʃənri]",
+    "phonetics": [
+      "│ iːvə │ luːʃəneri",
+      "│ iːvə │ luːʃənri; │ evə │ luːʃənri"
     ]
   },
   "evolve": {
@@ -16338,6 +18763,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪɡˈzæktli]",
     "phonetics": [
       "ɪɡˈzæktli"
+    ]
+  },
+  "exaggerate": {
+    "display": "미국∙영국 [ɪɡˈzædʒəreɪt] · 미국 [ɪɡˈzædʒəreɪt]",
+    "phonetics": [
+      "ɪɡˈzædʒəreɪt",
+      "ɪɡˈzædʒəreɪt"
     ]
   },
   "exam": {
@@ -16440,6 +18872,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪkˈses"
     ]
   },
+  "excessive": {
+    "display": "미국∙영국 [ɪkˈsesɪv] · 미국 [ɪkˈsesɪv]",
+    "phonetics": [
+      "ɪkˈsesɪv",
+      "ɪkˈsesɪv"
+    ]
+  },
   "exchange": {
     "display": "미국∙영국 [ɪksˈtʃeɪndʒ]",
     "phonetics": [
@@ -16456,6 +18895,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪkˈsaɪtɪd]",
     "phonetics": [
       "ɪkˈsaɪtɪd"
+    ]
+  },
+  "excitement": {
+    "display": "미국∙영국 [ɪkˈsaɪtmənt]",
+    "phonetics": [
+      "ɪkˈsaɪtmənt"
     ]
   },
   "exciting": {
@@ -16478,10 +18923,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪkˈskluːdɪŋ"
     ]
   },
+  "exclusion": {
+    "display": "미국∙영국 [ɪkˈskluːʒn]",
+    "phonetics": [
+      "ɪkˈskluːʒn"
+    ]
+  },
   "exclusive": {
     "display": "미국∙영국 [ɪkˈskluːsɪv]",
     "phonetics": [
       "ɪkˈskluːsɪv"
+    ]
+  },
+  "excuse": {
+    "display": "발음기호 [ɪkˈskjuːs] · 발음기호 [ɪkˈskjuːz]",
+    "phonetics": [
+      "ɪkˈskjuːs",
+      "ɪkˈskjuːz"
     ]
   },
   "execute": {
@@ -16528,6 +18986,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ eksəsaɪz"
     ]
   },
+  "exert": {
+    "display": "미국 [ɪɡˈzɜːrt] · 영국 [ɪɡˈzɜːt]",
+    "phonetics": [
+      "ɪɡˈzɜːrt",
+      "ɪɡˈzɜːt"
+    ]
+  },
   "exhaust": {
     "display": "미국∙영국 [ɪɡˈzɔːst]",
     "phonetics": [
@@ -16556,6 +19021,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪɡˈzɪbɪt]",
     "phonetics": [
       "ɪɡˈzɪbɪt"
+    ]
+  },
+  "exile": {
+    "display": "미국∙영국 [ˈeksaɪl; ˈeɡzaɪl]",
+    "phonetics": [
+      "ˈeksaɪl; ˈeɡzaɪl"
     ]
   },
   "exist": {
@@ -16621,11 +19092,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪkˈspekt"
     ]
   },
+  "expectation": {
+    "display": "미국∙영국 [ˌekspekˈteɪʃn]",
+    "phonetics": [
+      "ˌekspekˈteɪʃn"
+    ]
+  },
   "expected": {
     "display": "미국∙영국 [ɪkˈspektɪd] · 미국 [ɪkˈspektɪd]",
     "phonetics": [
       "ɪkˈspektɪd",
       "ɪkˈspektɪd"
+    ]
+  },
+  "expedition": {
+    "display": "미국∙영국 [ˌekspəˈdɪʃn]",
+    "phonetics": [
+      "ˌekspəˈdɪʃn"
     ]
   },
   "expenditure": {
@@ -16701,6 +19184,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ekspɜːt"
     ]
   },
+  "expire": {
+    "display": "미국∙영국 [ɪkˈspaɪə(r)]",
+    "phonetics": [
+      "ɪkˈspaɪə(r)"
+    ]
+  },
   "explain": {
     "display": "미국∙영국 [ɪkˈspleɪn]",
     "phonetics": [
@@ -16731,6 +19220,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪkˈsplɪsɪt"
     ]
   },
+  "explode": {
+    "display": "미국 [ɪkˈsploʊd] · 영국 [ɪkˈspləʊd]",
+    "phonetics": [
+      "ɪkˈsploʊd",
+      "ɪkˈspləʊd"
+    ]
+  },
+  "exploit": {
+    "display": "발음기호 [ɪkˈsplɔɪt]",
+    "phonetics": [
+      "ɪkˈsplɔɪt"
+    ]
+  },
+  "exploitation": {
+    "display": "미국∙영국 [ˌeksplɔɪˈteɪʃn]",
+    "phonetics": [
+      "ˌeksplɔɪˈteɪʃn"
+    ]
+  },
   "exploration": {
     "display": "미국∙영국 [ˌekspləˈreɪʃn]",
     "phonetics": [
@@ -16754,6 +19262,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪkˈsplɔː(r)]",
     "phonetics": [
       "ɪkˈsplɔː(r)"
+    ]
+  },
+  "explosion": {
+    "display": "미국 [ɪk │ sploʊʒn] · 영국 [ɪk │ spləʊʒn]",
+    "phonetics": [
+      "ɪk │ sploʊʒn",
+      "ɪk │ spləʊʒn"
+    ]
+  },
+  "explosive": {
+    "display": "미국 [ɪk │ │ sploʊsɪv] · 영국 [ɪk │ spləʊsɪv; ɪk │ spləʊzɪv]",
+    "phonetics": [
+      "ɪk │ │ sploʊsɪv",
+      "ɪk │ spləʊsɪv; ɪk │ spləʊzɪv"
     ]
   },
   "expo": {
@@ -16911,6 +19433,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪkˈstriːmli"
     ]
   },
+  "extremist": {
+    "display": "미국∙영국 [ɪkˈstriːmɪst] · 미국 [ɪkˈstriːmɪst]",
+    "phonetics": [
+      "ɪkˈstriːmɪst",
+      "ɪkˈstriːmɪst"
+    ]
+  },
   "eye": {
     "display": "미국∙영국 [aɪ]",
     "phonetics": [
@@ -16990,6 +19519,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fækt"
     ]
   },
+  "faction": {
+    "display": "미국∙영국 [ˈfækʃn]",
+    "phonetics": [
+      "ˈfækʃn"
+    ]
+  },
   "factor": {
     "display": "미국∙영국 [ˈfæktə(r)]",
     "phonetics": [
@@ -17013,6 +19548,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈfæklti]",
     "phonetics": [
       "ˈfæklti"
+    ]
+  },
+  "fade": {
+    "display": "미국∙영국 [feɪd]",
+    "phonetics": [
+      "feɪd"
     ]
   },
   "fail": {
@@ -17052,6 +19593,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈferli",
       "ˈfeəli"
+    ]
+  },
+  "fairness": {
+    "display": "미국 [ˈfernəs] · 영국 [ˈfeənəs]",
+    "phonetics": [
+      "ˈfernəs",
+      "ˈfeənəs"
     ]
   },
   "faith": {
@@ -17153,6 +19701,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fɑː(r)"
     ]
   },
+  "fare": {
+    "display": "미국 [fer] · 영국 [feə(r)]",
+    "phonetics": [
+      "fer",
+      "feə(r)"
+    ]
+  },
   "farm": {
     "display": "미국 [fɑːrm] · 영국 [fɑːm]",
     "phonetics": [
@@ -17181,10 +19736,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fɑːm"
     ]
   },
+  "fascinating": {
+    "display": "미국∙영국 [ˈfæsɪneɪtɪŋ] · 미국 [ˈfæsɪneɪtɪŋ]",
+    "phonetics": [
+      "ˈfæsɪneɪtɪŋ",
+      "ˈfæsɪneɪtɪŋ"
+    ]
+  },
   "fashion": {
     "display": "미국∙영국 [ˈfæʃn]",
     "phonetics": [
       "ˈfæʃn"
+    ]
+  },
+  "fashionable": {
+    "display": "미국∙영국 [ˈfæʃnəbl]",
+    "phonetics": [
+      "ˈfæʃnəbl"
     ]
   },
   "fast": {
@@ -17192,6 +19760,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "fæst",
       "fɑːst"
+    ]
+  },
+  "fasten": {
+    "display": "미국 [ˈfæsn] · 영국 [ˈfɑːsn]",
+    "phonetics": [
+      "ˈfæsn",
+      "ˈfɑːsn"
     ]
   },
   "fastest": {
@@ -17205,6 +19780,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [fæt]",
     "phonetics": [
       "fæt"
+    ]
+  },
+  "fatal": {
+    "display": "미국∙영국 [ˈfeɪtl]",
+    "phonetics": [
+      "ˈfeɪtl"
     ]
   },
   "fate": {
@@ -17231,10 +19812,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "féivər"
     ]
   },
+  "favorable": {
+    "display": "미국∙영국 [féivərəbl]",
+    "phonetics": [
+      "féivərəbl"
+    ]
+  },
   "favorite": {
     "display": "미국∙영국 [féivərit]",
     "phonetics": [
       "féivərit"
+    ]
+  },
+  "favour": {
+    "display": "미국∙영국 [ˈfeɪvə(r)]",
+    "phonetics": [
+      "ˈfeɪvə(r)"
     ]
   },
   "favourite": {
@@ -17275,6 +19868,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "fɪr",
       "fɪə(r)"
+    ]
+  },
+  "feat": {
+    "display": "미국∙영국 [fiːt] · 미국 [fiːt]",
+    "phonetics": [
+      "fiːt",
+      "fiːt"
+    ]
+  },
+  "feather": {
+    "display": "미국∙영국 [ˈfeðə(r)]",
+    "phonetics": [
+      "ˈfeðə(r)"
     ]
   },
   "feature": {
@@ -17377,6 +19983,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ feləʊʃɪp"
     ]
   },
+  "felony": {
+    "display": "미국∙영국 [ˈfeləni] · 미국 [ˈfeləni]",
+    "phonetics": [
+      "ˈfeləni",
+      "ˈfeləni"
+    ]
+  },
   "felt": {
     "display": "미국∙영국 [felt] · 미국 [felt]",
     "phonetics": [
@@ -17394,6 +20007,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈfiːmeɪl]",
     "phonetics": [
       "ˈfiːmeɪl"
+    ]
+  },
+  "feminist": {
+    "display": "미국∙영국 [ˈfemənɪst] · 미국 [ˈfemənɪst]",
+    "phonetics": [
+      "ˈfemənɪst",
+      "ˈfemənɪst"
+    ]
+  },
+  "fence": {
+    "display": "미국∙영국 [fens]",
+    "phonetics": [
+      "fens"
     ]
   },
   "ferry": {
@@ -17454,6 +20080,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [fiːld]",
     "phonetics": [
       "fiːld"
+    ]
+  },
+  "fierce": {
+    "display": "미국 [fɪrs] · 영국 [fɪəs]",
+    "phonetics": [
+      "fɪrs",
+      "fɪəs"
     ]
   },
   "fifteen": {
@@ -17559,6 +20192,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [fɪlm]",
     "phonetics": [
       "fɪlm"
+    ]
+  },
+  "filmmaker": {
+    "display": "미국∙영국 [fílmmèikər]",
+    "phonetics": [
+      "fílmmèikər"
     ]
   },
   "filter": {
@@ -17702,11 +20341,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈfaɪə(r)"
     ]
   },
+  "firearm": {
+    "display": "미국 [│ faɪərɑːrm] · 영국 [│ faɪərɑːm]",
+    "phonetics": [
+      "│ faɪərɑːrm",
+      "│ faɪərɑːm"
+    ]
+  },
+  "firefighter": {
+    "display": "미국 [│ faɪərfaɪtə(r)] · 영국 [│ faɪəfaɪtə(r)]",
+    "phonetics": [
+      "│ faɪərfaɪtə(r)",
+      "│ faɪəfaɪtə(r)"
+    ]
+  },
   "firewall": {
     "display": "미국 [│ faɪərwɔːl] · 영국 [│ faɪəwɔːl]",
     "phonetics": [
       "│ faɪərwɔːl",
       "│ faɪəwɔːl"
+    ]
+  },
+  "firework": {
+    "display": "미국 [ˈfaɪərwɜːrk] · 영국 [ˈfaɪəwɜːk]",
+    "phonetics": [
+      "ˈfaɪərwɜːrk",
+      "ˈfaɪəwɜːk"
     ]
   },
   "firm": {
@@ -17716,11 +20376,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fɜːm"
     ]
   },
+  "firmly": {
+    "display": "미국 [│ fɜːrmli] · 영국 [│ fɜːmli]",
+    "phonetics": [
+      "│ fɜːrmli",
+      "│ fɜːmli"
+    ]
+  },
   "first": {
     "display": "미국 [fɜːrst] · 영국 [fɜːst]",
     "phonetics": [
       "fɜːrst",
       "fɜːst"
+    ]
+  },
+  "firstly": {
+    "display": "미국 [│ fɜːrstli] · 영국 [│ fɜːstli]",
+    "phonetics": [
+      "│ fɜːrstli",
+      "│ fɜːstli"
     ]
   },
   "fiscal": {
@@ -17847,10 +20521,47 @@ window.pronunciationDisplayOverrides = Object.assign(
       "flæt"
     ]
   },
+  "flavor": {
+    "display": "미국∙영국 [fléivər]",
+    "phonetics": [
+      "fléivər"
+    ]
+  },
+  "flavour": {
+    "display": "미국∙영국 [ˈfleɪvə(r)]",
+    "phonetics": [
+      "ˈfleɪvə(r)"
+    ]
+  },
+  "flaw": {
+    "display": "미국∙영국 [flɔː]",
+    "phonetics": [
+      "flɔː"
+    ]
+  },
+  "flawed": {
+    "display": "미국∙영국 [flɔːd] · 미국 [flɔːd]",
+    "phonetics": [
+      "flɔːd",
+      "flɔːd"
+    ]
+  },
+  "flee": {
+    "display": "미국 [fliː]",
+    "phonetics": [
+      "fliː"
+    ]
+  },
   "fleet": {
     "display": "미국∙영국 [fliːt]",
     "phonetics": [
       "fliːt"
+    ]
+  },
+  "flesh": {
+    "display": "미국∙영국 [fleʃ]",
+    "phonetics": [
+      "fleʃ"
     ]
   },
   "flexibility": {
@@ -17934,6 +20645,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ flɔːrɪst; │ flɑːrɪst",
       "│ flɒrɪst"
+    ]
+  },
+  "flour": {
+    "display": "미국∙영국 [ˈflaʊə(r)]",
+    "phonetics": [
+      "ˈflaʊə(r)"
+    ]
+  },
+  "flourish": {
+    "display": "미국 [ˈflɜːrɪʃ] · 영국 [ˈflʌrɪʃ]",
+    "phonetics": [
+      "ˈflɜːrɪʃ",
+      "ˈflʌrɪʃ"
     ]
   },
   "flow": {
@@ -18065,6 +20789,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈfɒləʊ"
     ]
   },
+  "fond": {
+    "display": "미국 [fɑːnd] · 영국 [fɒnd]",
+    "phonetics": [
+      "fɑːnd",
+      "fɒnd"
+    ]
+  },
   "font": {
     "display": "미국 [fɑːnt] · 영국 [fɒnt]",
     "phonetics": [
@@ -18128,6 +20859,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fə(r) 강형 fɔː(r)"
     ]
   },
+  "forbid": {
+    "display": "미국 [fər │ bɪd] · 영국 [fə │ bɪd]",
+    "phonetics": [
+      "fər │ bɪd",
+      "fə │ bɪd"
+    ]
+  },
   "force": {
     "display": "미국 [fɔːrs] · 영국 [fɔːs]",
     "phonetics": [
@@ -18177,6 +20915,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈfɒrən"
     ]
   },
+  "foreigner": {
+    "display": "미국 [│ fɔːrənə(r); │ fɑːrənə(r)] · 영국 [│ fɒrənə(r)]",
+    "phonetics": [
+      "│ fɔːrənə(r); │ fɑːrənə(r)",
+      "│ fɒrənə(r)"
+    ]
+  },
   "forest": {
     "display": "미국 [│ fɔːrɪst; │ fɑːrɪst] · 영국 [│ fɒrɪst]",
     "phonetics": [
@@ -18197,11 +20942,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fərˈevə(r)"
     ]
   },
+  "forge": {
+    "display": "미국 [fɔːrdʒ] · 영국 [fɔːdʒ]",
+    "phonetics": [
+      "fɔːrdʒ",
+      "fɔːdʒ"
+    ]
+  },
   "forget": {
     "display": "미국 [fər │ ɡet] · 영국 [fə │ ɡet]",
     "phonetics": [
       "fər │ ɡet",
       "fə │ ɡet"
+    ]
+  },
+  "forgive": {
+    "display": "미국 [fərˈɡɪv] · 영국 [fəˈɡɪv]",
+    "phonetics": [
+      "fərˈɡɪv",
+      "fəˈɡɪv"
     ]
   },
   "fork": {
@@ -18273,6 +21032,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ fɔːmjələ"
     ]
   },
+  "formulate": {
+    "display": "미국 [│ fɔːrmjuleɪt] · 영국 [│ fɔːmjuleɪt]",
+    "phonetics": [
+      "│ fɔːrmjuleɪt",
+      "│ fɔːmjuleɪt"
+    ]
+  },
   "fort": {
     "display": "미국 [fɔːrt] · 영국 [fɔːt]",
     "phonetics": [
@@ -18287,10 +21053,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fɔːθ"
     ]
   },
+  "forthcoming": {
+    "display": "미국 [│ fɔːrθ │ kʌmɪŋ] · 영국 [│ fɔːθ │ kʌmɪŋ]",
+    "phonetics": [
+      "│ fɔːrθ │ kʌmɪŋ",
+      "│ fɔːθ │ kʌmɪŋ"
+    ]
+  },
   "fortieth": {
     "display": "미국∙영국 [fɔ́:rtiiθ]",
     "phonetics": [
       "fɔ́:rtiiθ"
+    ]
+  },
+  "fortunate": {
+    "display": "미국 [│ fɔːrtʃənət] · 영국 [│ fɔːtʃənət]",
+    "phonetics": [
+      "│ fɔːrtʃənət",
+      "│ fɔːtʃənət"
+    ]
+  },
+  "fortunately": {
+    "display": "미국 [│ fɔːrtʃənətli] · 영국 [│ fɔːtʃənətli]",
+    "phonetics": [
+      "│ fɔːrtʃənətli",
+      "│ fɔːtʃənətli"
     ]
   },
   "fortune": {
@@ -18318,6 +21105,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈfɔːrwərd",
       "ˈfɔːwəd"
+    ]
+  },
+  "fossil": {
+    "display": "미국 [ˈfɑːsl] · 영국 [ˈfɒsl]",
+    "phonetics": [
+      "ˈfɑːsl",
+      "ˈfɒsl"
     ]
   },
   "foster": {
@@ -18397,6 +21191,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈfrækʃn"
     ]
   },
+  "fragile": {
+    "display": "미국 [│ frædʒl] · 영국 [│ frædʒaɪl]",
+    "phonetics": [
+      "│ frædʒl",
+      "│ frædʒaɪl"
+    ]
+  },
   "fragrance": {
     "display": "미국∙영국 [ˈfreɪɡrəns]",
     "phonetics": [
@@ -18454,6 +21255,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "frǽŋklin"
     ]
   },
+  "frankly": {
+    "display": "미국∙영국 [ˈfræŋkli]",
+    "phonetics": [
+      "ˈfræŋkli"
+    ]
+  },
   "fraud": {
     "display": "미국∙영국 [frɔːd]",
     "phonetics": [
@@ -18491,11 +21298,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ friːlɑːns"
     ]
   },
+  "freely": {
+    "display": "미국∙영국 [ˈfriːli]",
+    "phonetics": [
+      "ˈfriːli"
+    ]
+  },
   "freeware": {
     "display": "미국 [│ friːwer] · 영국 [│ friːweə(r)]",
     "phonetics": [
       "│ friːwer",
       "│ friːweə(r)"
+    ]
+  },
+  "freeze": {
+    "display": "미국∙영국 [friːz]",
+    "phonetics": [
+      "friːz"
     ]
   },
   "freight": {
@@ -18529,11 +21348,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "freʃ"
     ]
   },
+  "freshman": {
+    "display": "미국∙영국 [ˈfreʃmən]",
+    "phonetics": [
+      "ˈfreʃmən"
+    ]
+  },
   "friday": {
     "display": "미국∙영국 [│ fraɪdeɪ; │ fraɪdi] · 미국 [│ fraɪdeɪ; │ fraɪdi]",
     "phonetics": [
       "│ fraɪdeɪ; │ fraɪdi",
       "│ fraɪdeɪ; │ fraɪdi"
+    ]
+  },
+  "fridge": {
+    "display": "발음기호 [frɪdʒ]",
+    "phonetics": [
+      "frɪdʒ"
     ]
   },
   "friend": {
@@ -18552,6 +21383,26 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈfrendʃɪp]",
     "phonetics": [
       "ˈfrendʃɪp"
+    ]
+  },
+  "frighten": {
+    "display": "미국∙영국 [ˈfraɪtn]",
+    "phonetics": [
+      "ˈfraɪtn"
+    ]
+  },
+  "frightened": {
+    "display": "미국∙영국 [ˈfraɪtnd] · 미국 [ˈfraɪtnd]",
+    "phonetics": [
+      "ˈfraɪtnd",
+      "ˈfraɪtnd"
+    ]
+  },
+  "frightening": {
+    "display": "미국∙영국 [ˈfraɪtnɪŋ] · 미국 [ˈfraɪtnɪŋ]",
+    "phonetics": [
+      "ˈfraɪtnɪŋ",
+      "ˈfraɪtnɪŋ"
     ]
   },
   "frog": {
@@ -18587,6 +21438,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "fruːt"
     ]
   },
+  "frustrated": {
+    "display": "미국 [ˈfrʌstreɪtɪd] · 영국 [frʌˈstreɪtɪd]",
+    "phonetics": [
+      "ˈfrʌstreɪtɪd",
+      "frʌˈstreɪtɪd"
+    ]
+  },
+  "frustrating": {
+    "display": "미국 [ˈfrʌstreɪtɪŋ] · 영국 [frʌˈstreɪtɪŋ]",
+    "phonetics": [
+      "ˈfrʌstreɪtɪŋ",
+      "frʌˈstreɪtɪŋ"
+    ]
+  },
+  "frustration": {
+    "display": "미국∙영국 [frʌˈstreɪʃn]",
+    "phonetics": [
+      "frʌˈstreɪʃn"
+    ]
+  },
+  "fry": {
+    "display": "미국∙영국 [fraɪ]",
+    "phonetics": [
+      "fraɪ"
+    ]
+  },
   "ftp": {
     "display": "미국∙영국 [ˌef tiː ˈpiː] · 미국 [ˌef tiː ˈpiː]",
     "phonetics": [
@@ -18598,6 +21475,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈfjuːəl]",
     "phonetics": [
       "ˈfjuːəl"
+    ]
+  },
+  "fulfil": {
+    "display": "미국∙영국 [fʊlˈfɪl]",
+    "phonetics": [
+      "fʊlˈfɪl"
+    ]
+  },
+  "fulfill": {
+    "display": "미국∙영국 [fulfíl]",
+    "phonetics": [
+      "fulfíl"
     ]
   },
   "full": {
@@ -18648,6 +21537,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌfʌndəˈmentl"
     ]
   },
+  "fundamentally": {
+    "display": "미국∙영국 [ˌfʌndəˈmentəli]",
+    "phonetics": [
+      "ˌfʌndəˈmentəli"
+    ]
+  },
   "funding": {
     "display": "미국∙영국 [ˈfʌndɪŋ] · 미국 [ˈfʌndɪŋ]",
     "phonetics": [
@@ -18666,6 +21561,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈfʌni]",
     "phonetics": [
       "ˈfʌni"
+    ]
+  },
+  "fur": {
+    "display": "미국∙영국 [fɜː(r)]",
+    "phonetics": [
+      "fɜː(r)"
+    ]
+  },
+  "furious": {
+    "display": "미국 [│ fjʊriəs] · 영국 [│ fjʊəriəs]",
+    "phonetics": [
+      "│ fjʊriəs",
+      "│ fjʊəriəs"
     ]
   },
   "furnished": {
@@ -18757,6 +21665,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɡæləri"
     ]
   },
+  "gallon": {
+    "display": "미국∙영국 [ˈɡælən] · 미국 [ˈɡælən]",
+    "phonetics": [
+      "ˈɡælən",
+      "ˈɡælən"
+    ]
+  },
   "gambling": {
     "display": "미국∙영국 [ˈɡæmblɪŋ] · 미국 [ˈɡæmblɪŋ]",
     "phonetics": [
@@ -18806,6 +21721,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɡə │ rɑːʒ; ɡə │ rɑːdʒ",
       "│ ɡærɑːʒ; │ ɡærɑːdʒ; │ ɡærɪdʒ"
+    ]
+  },
+  "garbage": {
+    "display": "미국 [│ ɡɑːrbɪdʒ] · 영국 [│ ɡɑːbɪdʒ]",
+    "phonetics": [
+      "│ ɡɑːrbɪdʒ",
+      "│ ɡɑːbɪdʒ"
     ]
   },
   "garden": {
@@ -18882,6 +21804,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɡeɪ]",
     "phonetics": [
       "ɡeɪ"
+    ]
+  },
+  "gaze": {
+    "display": "미국∙영국 [ɡeɪz]",
+    "phonetics": [
+      "ɡeɪz"
     ]
   },
   "gdp": {
@@ -18986,6 +21914,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dʒəˈnerɪk"
     ]
   },
+  "generous": {
+    "display": "미국∙영국 [ˈdʒenərəs]",
+    "phonetics": [
+      "ˈdʒenərəs"
+    ]
+  },
   "genes": {
     "display": "미국∙영국 [dʒiːn] · 미국 [dʒiːn]",
     "phonetics": [
@@ -19020,6 +21954,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dƷəní:və"
     ]
   },
+  "genius": {
+    "display": "미국∙영국 [ˈdʒiːniəs]",
+    "phonetics": [
+      "ˈdʒiːniəs"
+    ]
+  },
+  "genocide": {
+    "display": "미국∙영국 [ˈdʒenəsaɪd] · 미국 [ˈdʒenəsaɪd]",
+    "phonetics": [
+      "ˈdʒenəsaɪd",
+      "ˈdʒenəsaɪd"
+    ]
+  },
   "genome": {
     "display": "미국 [│ dʒiːnoʊm] · 영국 [│ dʒiːnəʊm]",
     "phonetics": [
@@ -19045,6 +21992,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈdʒentl]",
     "phonetics": [
       "ˈdʒentl"
+    ]
+  },
+  "gentleman": {
+    "display": "미국∙영국 [ˈdʒentlmən]",
+    "phonetics": [
+      "ˈdʒentlmən"
     ]
   },
   "genuine": {
@@ -19096,6 +22049,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [dƷə́:rməni]",
     "phonetics": [
       "dƷə́:rməni"
+    ]
+  },
+  "gesture": {
+    "display": "미국∙영국 [ˈdʒestʃə(r)]",
+    "phonetics": [
+      "ˈdʒestʃə(r)"
     ]
   },
   "get": {
@@ -19161,6 +22120,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡɪft"
     ]
   },
+  "gig": {
+    "display": "미국∙영국 [ɡɪɡ]",
+    "phonetics": [
+      "ɡɪɡ"
+    ]
+  },
   "gin": {
     "display": "미국∙영국 [dʒɪn]",
     "phonetics": [
@@ -19179,6 +22144,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɡɜːrl",
       "ɡɜːl"
+    ]
+  },
+  "girlfriend": {
+    "display": "영국 [│ ɡɜːlfrend]",
+    "phonetics": [
+      "│ ɡɜːlfrend"
     ]
   },
   "give": {
@@ -19239,6 +22210,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡlen"
     ]
   },
+  "glimpse": {
+    "display": "미국∙영국 [ɡlɪmps]",
+    "phonetics": [
+      "ɡlɪmps"
+    ]
+  },
   "global": {
     "display": "미국 [ˈɡloʊbl] · 영국 [ˈɡləʊbl]",
     "phonetics": [
@@ -19246,11 +22223,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɡləʊbl"
     ]
   },
+  "globalization": {
+    "display": "미국 [│ ɡloʊbələ │ zeɪʃn] · 영국 [│ ɡləʊbəlaɪ │ zeɪʃn]",
+    "phonetics": [
+      "│ ɡloʊbələ │ zeɪʃn",
+      "│ ɡləʊbəlaɪ │ zeɪʃn"
+    ]
+  },
   "globe": {
     "display": "미국 [ɡloʊb] · 영국 [ɡləʊb]",
     "phonetics": [
       "ɡloʊb",
       "ɡləʊb"
+    ]
+  },
+  "glorious": {
+    "display": "미국∙영국 [ˈɡlɔːriəs]",
+    "phonetics": [
+      "ˈɡlɔːriəs"
     ]
   },
   "glory": {
@@ -19315,6 +22305,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡəʊt"
     ]
   },
+  "god": {
+    "display": "미국 [ɡɑːd] · 영국 [ɡɒd]",
+    "phonetics": [
+      "ɡɑːd",
+      "ɡɒd"
+    ]
+  },
   "goes": {
     "display": "미국∙영국 [ɡóuz]",
     "phonetics": [
@@ -19369,6 +22366,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡʊd"
     ]
   },
+  "goodbye": {
+    "display": "미국∙영국 [ˌɡʊdˈbaɪ] · 미국 [ˌɡʊdˈbaɪ]",
+    "phonetics": [
+      "ˌɡʊdˈbaɪ",
+      "ˌɡʊdˈbaɪ"
+    ]
+  },
+  "goodness": {
+    "display": "미국∙영국 [ˈɡʊdnəs]",
+    "phonetics": [
+      "ˈɡʊdnəs"
+    ]
+  },
   "goods": {
     "display": "미국∙영국 [ɡʊdz]",
     "phonetics": [
@@ -19413,6 +22423,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ɡʊrmeɪ",
       "│ ɡʊəmeɪ"
+    ]
+  },
+  "govern": {
+    "display": "미국 [ˈɡʌvərn] · 영국 [ˈɡʌvn]",
+    "phonetics": [
+      "ˈɡʌvərn",
+      "ˈɡʌvn"
     ]
   },
   "governance": {
@@ -19494,6 +22511,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɡrædʒuəl"
     ]
   },
+  "gradually": {
+    "display": "미국∙영국 [ˈɡrædʒuəli] · 미국 [ˈɡrædʒuəli]",
+    "phonetics": [
+      "ˈɡrædʒuəli",
+      "ˈɡrædʒuəli"
+    ]
+  },
   "graduate": {
     "display": "발음기호 [ˈɡrædʒuət] · 발음기호 [ˈɡrædʒueɪt]",
     "phonetics": [
@@ -19537,6 +22561,26 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɡrænd]",
     "phonetics": [
       "ɡrænd"
+    ]
+  },
+  "grandfather": {
+    "display": "미국∙영국 [ˈɡrænfɑːðə(r)] · 미국 [ˈɡrænfɑːðə(r)]",
+    "phonetics": [
+      "ˈɡrænfɑːðə(r)",
+      "ˈɡrænfɑːðə(r)"
+    ]
+  },
+  "grandmother": {
+    "display": "미국 [ˈɡrænmʌðə(r)]",
+    "phonetics": [
+      "ˈɡrænmʌðə(r)"
+    ]
+  },
+  "grandparent": {
+    "display": "미국 [│ ɡrænperənt] · 영국 [│ ɡrænpeərənt]",
+    "phonetics": [
+      "│ ɡrænperənt",
+      "│ ɡrænpeərənt"
     ]
   },
   "grant": {
@@ -19591,6 +22635,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɡrǽs]",
     "phonetics": [
       "ɡrǽs"
+    ]
+  },
+  "grasp": {
+    "display": "미국 [ɡræsp] · 영국 [ɡrɑːsp]",
+    "phonetics": [
+      "ɡræsp",
+      "ɡrɑːsp"
     ]
   },
   "grass": {
@@ -19674,6 +22725,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡriːn"
     ]
   },
+  "greenhouse": {
+    "display": "미국 [ˈɡriːnhaʊs]",
+    "phonetics": [
+      "ˈɡriːnhaʊs"
+    ]
+  },
+  "greet": {
+    "display": "미국∙영국 [ɡriːt]",
+    "phonetics": [
+      "ɡriːt"
+    ]
+  },
   "greeting": {
     "display": "미국∙영국 [ˈɡriːtɪŋ]",
     "phonetics": [
@@ -19698,10 +22761,28 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡrɪd"
     ]
   },
+  "grief": {
+    "display": "미국∙영국 [ɡriːf]",
+    "phonetics": [
+      "ɡriːf"
+    ]
+  },
   "grill": {
     "display": "미국∙영국 [ɡrɪl]",
     "phonetics": [
       "ɡrɪl"
+    ]
+  },
+  "grin": {
+    "display": "미국∙영국 [ɡrɪn]",
+    "phonetics": [
+      "ɡrɪn"
+    ]
+  },
+  "grind": {
+    "display": "미국∙영국 [ɡraɪnd]",
+    "phonetics": [
+      "ɡraɪnd"
     ]
   },
   "grip": {
@@ -19816,6 +22897,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡwɑ̀:təmɑ́:lə"
     ]
   },
+  "guerrilla": {
+    "display": "발음기호 [ɡəˈrɪlə]",
+    "phonetics": [
+      "ɡəˈrɪlə"
+    ]
+  },
   "guess": {
     "display": "미국∙영국 [ɡes]",
     "phonetics": [
@@ -19860,6 +22947,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɡaɪdɪd"
     ]
   },
+  "guideline": {
+    "display": "미국∙영국 [ˈɡaɪdlaɪn]",
+    "phonetics": [
+      "ˈɡaɪdlaɪn"
+    ]
+  },
   "guides": {
     "display": "미국∙영국 [ɡaɪd]",
     "phonetics": [
@@ -19870,6 +22963,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɡɪld]",
     "phonetics": [
       "ɡɪld"
+    ]
+  },
+  "guilt": {
+    "display": "미국∙영국 [ɡɪlt]",
+    "phonetics": [
+      "ɡɪlt"
     ]
   },
   "guilty": {
@@ -19904,6 +23003,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɡʌn"
     ]
   },
+  "gut": {
+    "display": "미국∙영국 [ɡʌt]",
+    "phonetics": [
+      "ɡʌt"
+    ]
+  },
   "guy": {
     "display": "미국∙영국 [ɡaɪ]",
     "phonetics": [
@@ -19934,6 +23039,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hɑː"
     ]
   },
+  "habit": {
+    "display": "미국∙영국 [ˈhæbɪt]",
+    "phonetics": [
+      "ˈhæbɪt"
+    ]
+  },
   "habitat": {
     "display": "미국∙영국 [ˈhæbɪtæt] · 미국 [ˈhæbɪtæt]",
     "phonetics": [
@@ -19953,6 +23064,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "həd; əd,; 강형 hæd",
       "həd; əd,; 강형 hæd"
+    ]
+  },
+  "hail": {
+    "display": "미국∙영국 [heɪl]",
+    "phonetics": [
+      "heɪl"
     ]
   },
   "hair": {
@@ -19982,6 +23099,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hɑːf"
     ]
   },
+  "halfway": {
+    "display": "미국 [│ hæfweɪ] · 영국 [│ hɑːf │ weɪ]",
+    "phonetics": [
+      "│ hæfweɪ",
+      "│ hɑːf │ weɪ"
+    ]
+  },
   "hall": {
     "display": "미국∙영국 [hɔːl]",
     "phonetics": [
@@ -19993,6 +23117,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ hæloʊ │ iːn",
       "│ hæləʊ │ iːn"
+    ]
+  },
+  "halt": {
+    "display": "미국∙영국 [hɔːlt] · 영국 [hɒlt]",
+    "phonetics": [
+      "hɔːlt",
+      "hɒlt"
     ]
   },
   "ham": {
@@ -20036,6 +23167,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [hǽndid]",
     "phonetics": [
       "hǽndid"
+    ]
+  },
+  "handful": {
+    "display": "미국∙영국 [ˈhændfʊl]",
+    "phonetics": [
+      "ˈhændfʊl"
     ]
   },
   "handheld": {
@@ -20123,6 +23260,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈhæpən"
     ]
   },
+  "happily": {
+    "display": "미국∙영국 [ˈhæpɪli]",
+    "phonetics": [
+      "ˈhæpɪli"
+    ]
+  },
   "happy": {
     "display": "미국∙영국 [ˈhæpi]",
     "phonetics": [
@@ -20177,6 +23320,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hɑːm"
     ]
   },
+  "harmful": {
+    "display": "미국 [ˈhɑːrmfl] · 영국 [ˈhɑːmfl]",
+    "phonetics": [
+      "ˈhɑːrmfl",
+      "ˈhɑːmfl"
+    ]
+  },
   "harmony": {
     "display": "미국 [│ hɑːrməni] · 영국 [│ hɑːməni]",
     "phonetics": [
@@ -20200,6 +23350,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈhæri]",
     "phonetics": [
       "ˈhæri"
+    ]
+  },
+  "harsh": {
+    "display": "미국 [hɑːrʃ] · 영국 [hɑːʃ]",
+    "phonetics": [
+      "hɑːrʃ",
+      "hɑːʃ"
     ]
   },
   "hart": {
@@ -20245,6 +23402,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [heɪt]",
     "phonetics": [
       "heɪt"
+    ]
+  },
+  "hatred": {
+    "display": "미국∙영국 [ˈheɪtrɪd] · 미국 [ˈheɪtrɪd]",
+    "phonetics": [
+      "ˈheɪtrɪd",
+      "ˈheɪtrɪd"
+    ]
+  },
+  "haunt": {
+    "display": "미국∙영국 [hɔːnt]",
+    "phonetics": [
+      "hɔːnt"
     ]
   },
   "have": {
@@ -20313,6 +23483,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hed"
     ]
   },
+  "headache": {
+    "display": "미국∙영국 [ˈhedeɪk]",
+    "phonetics": [
+      "ˈhedeɪk"
+    ]
+  },
   "headed": {
     "display": "미국∙영국 [ˈhedɪd]",
     "phonetics": [
@@ -20329,6 +23505,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈhedɪŋ]",
     "phonetics": [
       "ˈhedɪŋ"
+    ]
+  },
+  "headline": {
+    "display": "미국∙영국 [ˈhedlaɪn]",
+    "phonetics": [
+      "ˈhedlaɪn"
     ]
   },
   "headlines": {
@@ -20362,6 +23544,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈhedset",
       "ˈhedset"
+    ]
+  },
+  "heal": {
+    "display": "미국∙영국 [hiːl]",
+    "phonetics": [
+      "hiːl"
     ]
   },
   "healing": {
@@ -20471,6 +23659,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "haɪt"
     ]
   },
+  "heighten": {
+    "display": "미국∙영국 [ˈhaɪtn] · 미국 [ˈhaɪtn]",
+    "phonetics": [
+      "ˈhaɪtn",
+      "ˈhaɪtn"
+    ]
+  },
   "heights": {
     "display": "미국∙영국 [haɪt]",
     "phonetics": [
@@ -20484,11 +23679,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "-in"
     ]
   },
+  "helicopter": {
+    "display": "미국 [│ helɪkɑːptə(r)] · 영국 [│ helɪkɒptə(r)]",
+    "phonetics": [
+      "│ helɪkɑːptə(r)",
+      "│ helɪkɒptə(r)"
+    ]
+  },
+  "hell": {
+    "display": "미국∙영국 [hel]",
+    "phonetics": [
+      "hel"
+    ]
+  },
   "hello": {
     "display": "미국 [həˈloʊ] · 영국 [həˈləʊ]",
     "phonetics": [
       "həˈloʊ",
       "həˈləʊ"
+    ]
+  },
+  "helmet": {
+    "display": "미국∙영국 [ˈhelmɪt] · 미국 [ˈhelmɪt]",
+    "phonetics": [
+      "ˈhelmɪt",
+      "ˈhelmɪt"
     ]
   },
   "help": {
@@ -20548,6 +23763,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈherəld"
     ]
   },
+  "herb": {
+    "display": "미국 [ɜːrb; hɜːrb] · 영국 [hɜːb]",
+    "phonetics": [
+      "ɜːrb; hɜːrb",
+      "hɜːb"
+    ]
+  },
   "herbal": {
     "display": "미국 [ˈɜːrbl; ˈhɜːrbl] · 영국 [ˈhɜːbl]",
     "phonetics": [
@@ -20597,6 +23819,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ hɪərəʊ"
     ]
   },
+  "hers": {
+    "display": "미국 [hɜːrz] · 영국 [hɜːz]",
+    "phonetics": [
+      "hɜːrz",
+      "hɜːz"
+    ]
+  },
   "herself": {
     "display": "미국 [hɜːr │ self; hər │ self] · 영국 [hɜː │ self 약형 hə │ self]",
     "phonetics": [
@@ -20640,6 +23869,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [haɪd]",
     "phonetics": [
       "haɪd"
+    ]
+  },
+  "hierarchy": {
+    "display": "미국 [│ haɪərɑːrki] · 영국 [│ haɪərɑːki]",
+    "phonetics": [
+      "│ haɪərɑːrki",
+      "│ haɪərɑːki"
     ]
   },
   "high": {
@@ -20691,6 +23927,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈhaɪkɪŋ"
     ]
   },
+  "hilarious": {
+    "display": "미국 [hɪ │ leriəs] · 영국 [hɪ │ leəriəs]",
+    "phonetics": [
+      "hɪ │ leriəs",
+      "hɪ │ leəriəs"
+    ]
+  },
   "hill": {
     "display": "미국∙영국 [hɪl]",
     "phonetics": [
@@ -20707,6 +23950,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [hɪmˈself]",
     "phonetics": [
       "hɪmˈself"
+    ]
+  },
+  "hint": {
+    "display": "미국∙영국 [hɪnt]",
+    "phonetics": [
+      "hɪnt"
     ]
   },
   "hip": {
@@ -20743,6 +23992,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [st;híst]",
     "phonetics": [
       "st;híst"
+    ]
+  },
+  "historian": {
+    "display": "미국∙영국 [hɪˈstɔːriən] · 미국 [hɪˈstɔːriən]",
+    "phonetics": [
+      "hɪˈstɔːriən",
+      "hɪˈstɔːriən"
     ]
   },
   "historic": {
@@ -20863,6 +24119,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hɔ́l-"
     ]
   },
+  "hollow": {
+    "display": "미국 [ˈhɑːloʊ] · 영국 [ˈhɒləʊ]",
+    "phonetics": [
+      "ˈhɑːloʊ",
+      "ˈhɒləʊ"
+    ]
+  },
   "hollywood": {
     "display": "미국 [│ hɑːliwʊd] · 영국 [│ hɒliwʊd]",
     "phonetics": [
@@ -20898,6 +24161,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ həʊmlænd"
     ]
   },
+  "homeless": {
+    "display": "미국 [│ hoʊmləs] · 영국 [│ həʊmləs]",
+    "phonetics": [
+      "│ hoʊmləs",
+      "│ həʊmləs"
+    ]
+  },
   "homes": {
     "display": "미국 [hoʊm] · 영국 [həʊm]",
     "phonetics": [
@@ -20926,6 +24196,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ɒnɪst"
     ]
   },
+  "honesty": {
+    "display": "미국 [│ ɑːnəsti] · 영국 [│ ɒnəsti]",
+    "phonetics": [
+      "│ ɑːnəsti",
+      "│ ɒnəsti"
+    ]
+  },
   "honey": {
     "display": "미국∙영국 [ˈhʌni]",
     "phonetics": [
@@ -20944,6 +24221,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "hɑ̀nəlú:lu:",
       "hɔ́n-"
+    ]
+  },
+  "honour": {
+    "display": "미국 [ˈɑːnər] · 영국 [ˈɒnə(r)]",
+    "phonetics": [
+      "ˈɑːnər",
+      "ˈɒnə(r)"
     ]
   },
   "hood": {
@@ -20970,6 +24254,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "hoʊp",
       "həʊp"
+    ]
+  },
+  "hopeful": {
+    "display": "미국 [│ hoʊpfl] · 영국 [│ həʊpfl]",
+    "phonetics": [
+      "│ hoʊpfl",
+      "│ həʊpfl"
     ]
   },
   "hopefully": {
@@ -21020,6 +24311,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hɔːn"
     ]
   },
+  "horrible": {
+    "display": "미국 [│ hɔːrəbl; │ hɑːrəbl] · 영국 [│ hɒrəbl]",
+    "phonetics": [
+      "│ hɔːrəbl; │ hɑːrəbl",
+      "│ hɒrəbl"
+    ]
+  },
   "horror": {
     "display": "미국 [│ hɔːrə(r); │ hɑːrə(r)] · 영국 [│ hɒrə(r)]",
     "phonetics": [
@@ -21062,11 +24360,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "həʊst"
     ]
   },
+  "hostage": {
+    "display": "미국 [│ hɑːstɪdʒ] · 영국 [│ hɒstɪdʒ]",
+    "phonetics": [
+      "│ hɑːstɪdʒ",
+      "│ hɒstɪdʒ"
+    ]
+  },
   "hosted": {
     "display": "미국 [hoʊst] · 영국 [həʊst]",
     "phonetics": [
       "hoʊst",
       "həʊst"
+    ]
+  },
+  "hostile": {
+    "display": "미국 [│ hɑːstl; │ hɑːstaɪl] · 영국 [│ hɒstaɪl]",
+    "phonetics": [
+      "│ hɑːstl; │ hɑːstaɪl",
+      "│ hɒstaɪl"
+    ]
+  },
+  "hostility": {
+    "display": "미국 [hɑː │ stɪləti] · 영국 [hɒ │ stɪləti]",
+    "phonetics": [
+      "hɑː │ stɪləti",
+      "hɒ │ stɪləti"
     ]
   },
   "hosts": {
@@ -21204,6 +24523,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈhjuːmən"
     ]
   },
+  "humanitarian": {
+    "display": "미국 [hjuː │ mænɪ │ teriən] · 영국 [hjuː │ mænɪ │ teəriən]",
+    "phonetics": [
+      "hjuː │ mænɪ │ teriən",
+      "hjuː │ mænɪ │ teəriən"
+    ]
+  },
   "humanity": {
     "display": "미국∙영국 [hjuːˈmænəti]",
     "phonetics": [
@@ -21216,10 +24542,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈhjuːmən"
     ]
   },
+  "humble": {
+    "display": "미국∙영국 [ˈhʌmbl]",
+    "phonetics": [
+      "ˈhʌmbl"
+    ]
+  },
   "humidity": {
     "display": "미국∙영국 [hjuːˈmɪdəti]",
     "phonetics": [
       "hjuːˈmɪdəti"
+    ]
+  },
+  "humorous": {
+    "display": "미국∙영국 [ˈhjuːmərəs] · 미국 [ˈhjuːmərəs]",
+    "phonetics": [
+      "ˈhjuːmərəs",
+      "ˈhjuːmərəs"
+    ]
+  },
+  "humour": {
+    "display": "미국∙영국 [ˈhjuːmə(r)]",
+    "phonetics": [
+      "ˈhjuːmə(r)"
     ]
   },
   "hundred": {
@@ -21258,6 +24603,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "hʌ́ŋɡəri"
     ]
   },
+  "hunger": {
+    "display": "미국∙영국 [ˈhʌŋɡə(r)]",
+    "phonetics": [
+      "ˈhʌŋɡə(r)"
+    ]
+  },
+  "hungry": {
+    "display": "미국∙영국 [ˈhʌŋɡri]",
+    "phonetics": [
+      "ˈhʌŋɡri"
+    ]
+  },
   "hunt": {
     "display": "미국∙영국 [hʌnt]",
     "phonetics": [
@@ -21281,6 +24638,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ hɜːrəkən; │ hɜːrəkeɪn",
       "│ hʌrɪkən"
+    ]
+  },
+  "hurry": {
+    "display": "미국 [ˈhɜːri] · 영국 [ˈhʌri]",
+    "phonetics": [
+      "ˈhɜːri",
+      "ˈhʌri"
     ]
   },
   "hurt": {
@@ -21307,6 +24671,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈhaɪdrədʒən",
       "ˈhaɪdrədʒən"
+    ]
+  },
+  "hypothesis": {
+    "display": "미국 [haɪ │ pɑːθəsɪs] · 영국 [haɪ │ pɒθəsɪs]",
+    "phonetics": [
+      "haɪ │ pɑːθəsɪs",
+      "haɪ │ pɒθəsɪs"
     ]
   },
   "i": {
@@ -21397,10 +24768,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "aɪˈdentəti"
     ]
   },
+  "ideology": {
+    "display": "미국 [│ aɪdi │ ɑːlədʒi] · 영국 [│ aɪdi │ ɒlədʒi]",
+    "phonetics": [
+      "│ aɪdi │ ɑːlədʒi",
+      "│ aɪdi │ ɒlədʒi"
+    ]
+  },
+  "idiot": {
+    "display": "미국∙영국 [ˈɪdiət]",
+    "phonetics": [
+      "ˈɪdiət"
+    ]
+  },
   "if": {
     "display": "미국∙영국 [ɪf]",
     "phonetics": [
       "ɪf"
+    ]
+  },
+  "ignorance": {
+    "display": "미국∙영국 [ˈɪɡnərəns] · 미국 [ˈɪɡnərəns]",
+    "phonetics": [
+      "ˈɪɡnərəns",
+      "ˈɪɡnərəns"
     ]
   },
   "ignore": {
@@ -21431,6 +24822,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈɪlnəs]",
     "phonetics": [
       "ˈɪlnəs"
+    ]
+  },
+  "illusion": {
+    "display": "미국∙영국 [ɪˈluːʒn]",
+    "phonetics": [
+      "ɪˈluːʒn"
     ]
   },
   "illustrate": {
@@ -21464,10 +24861,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪmɪdʒ"
     ]
   },
+  "imagery": {
+    "display": "미국∙영국 [ˈɪmɪdʒəri]",
+    "phonetics": [
+      "ˈɪmɪdʒəri"
+    ]
+  },
   "images": {
     "display": "미국∙영국 [ˈɪmɪdʒ]",
     "phonetics": [
       "ˈɪmɪdʒ"
+    ]
+  },
+  "imaginary": {
+    "display": "미국 [ɪ │ mædʒɪneri] · 영국 [ɪ │ mædʒɪnəri]",
+    "phonetics": [
+      "ɪ │ mædʒɪneri",
+      "ɪ │ mædʒɪnəri"
     ]
   },
   "imagination": {
@@ -21500,10 +24910,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪˈmiːdiətli"
     ]
   },
+  "immense": {
+    "display": "미국∙영국 [ɪˈmens] · 미국 [ɪˈmens]",
+    "phonetics": [
+      "ɪˈmens",
+      "ɪˈmens"
+    ]
+  },
+  "immigrant": {
+    "display": "미국∙영국 [ˈɪmɪɡrənt] · 미국 [ˈɪmɪɡrənt]",
+    "phonetics": [
+      "ˈɪmɪɡrənt",
+      "ˈɪmɪɡrənt"
+    ]
+  },
   "immigration": {
     "display": "미국∙영국 [ˌɪmɪˈɡreɪʃn]",
     "phonetics": [
       "ˌɪmɪˈɡreɪʃn"
+    ]
+  },
+  "imminent": {
+    "display": "미국∙영국 [ˈɪmɪnənt] · 미국 [ˈɪmɪnənt]",
+    "phonetics": [
+      "ˈɪmɪnənt",
+      "ˈɪmɪnənt"
     ]
   },
   "immune": {
@@ -21526,6 +24957,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪmˈpækt"
     ]
   },
+  "impatient": {
+    "display": "미국∙영국 [ɪmˈpeɪʃnt]",
+    "phonetics": [
+      "ɪmˈpeɪʃnt"
+    ]
+  },
   "imperial": {
     "display": "미국 [ɪm │ pɪriəl] · 영국 [ɪm │ pɪəriəl]",
     "phonetics": [
@@ -21537,6 +24974,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˌɪmplɪmenˈteɪʃn]",
     "phonetics": [
       "ˌɪmplɪmenˈteɪʃn"
+    ]
+  },
+  "implication": {
+    "display": "미국∙영국 [ˌɪmplɪˈkeɪʃn]",
+    "phonetics": [
+      "ˌɪmplɪˈkeɪʃn"
     ]
   },
   "implied": {
@@ -21585,11 +25028,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪmˈpɔːt; 美 ɪmˈpɔːrt"
     ]
   },
+  "impose": {
+    "display": "미국 [ɪmˈpoʊz] · 영국 [ɪmˈpəʊz]",
+    "phonetics": [
+      "ɪmˈpoʊz",
+      "ɪmˈpəʊz"
+    ]
+  },
   "impossible": {
     "display": "미국 [ɪm │ pɑːsəbl] · 영국 [ɪm │ pɒsəbl]",
     "phonetics": [
       "ɪm │ pɑːsəbl",
       "ɪm │ pɒsəbl"
+    ]
+  },
+  "impress": {
+    "display": "미국∙영국 [ɪmˈpres]",
+    "phonetics": [
+      "ɪmˈpres"
+    ]
+  },
+  "impressed": {
+    "display": "미국∙영국 [ɪmˈprest] · 미국 [ɪmˈprest]",
+    "phonetics": [
+      "ɪmˈprest",
+      "ɪmˈprest"
     ]
   },
   "impression": {
@@ -21603,6 +25066,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɪmˈpresɪv",
       "ɪmˈpresɪv"
+    ]
+  },
+  "imprison": {
+    "display": "미국∙영국 [ɪmˈprɪzn] · 미국 [ɪmˈprɪzn]",
+    "phonetics": [
+      "ɪmˈprɪzn",
+      "ɪmˈprɪzn"
     ]
   },
   "improve": {
@@ -21630,6 +25100,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪn"
     ]
   },
+  "inability": {
+    "display": "미국∙영국 [ˌɪnəˈbɪləti] · 미국 [ˌɪnəˈbɪləti]",
+    "phonetics": [
+      "ˌɪnəˈbɪləti",
+      "ˌɪnəˈbɪləti"
+    ]
+  },
+  "inadequate": {
+    "display": "미국∙영국 [ɪnˈædɪkwət]",
+    "phonetics": [
+      "ɪnˈædɪkwət"
+    ]
+  },
   "inappropriate": {
     "display": "미국 [│ ɪnə │ proʊpriət] · 영국 [│ ɪnə │ prəʊpriət]",
     "phonetics": [
@@ -21642,6 +25125,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ɪnbɑːks",
       "│ ɪnbɒks"
+    ]
+  },
+  "incarcerate": {
+    "display": "미국 [ɪn │ kɑːrsəreɪt] · 영국 [ɪn │ kɑːsəreɪt]",
+    "phonetics": [
+      "ɪn │ kɑːrsəreɪt",
+      "ɪn │ kɑːsəreɪt"
+    ]
+  },
+  "incarceration": {
+    "display": "미국∙영국 [inkɑ̀:rsəréiʃən]",
+    "phonetics": [
+      "inkɑ̀:rsəréiʃən"
     ]
   },
   "incentive": {
@@ -21664,10 +25160,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪntʃ"
     ]
   },
+  "incidence": {
+    "display": "미국∙영국 [ˈɪnsɪdəns]",
+    "phonetics": [
+      "ˈɪnsɪdəns"
+    ]
+  },
   "incident": {
     "display": "미국∙영국 [ˈɪnsɪdənt]",
     "phonetics": [
       "ˈɪnsɪdənt"
+    ]
+  },
+  "inclined": {
+    "display": "미국∙영국 [ɪnˈklaɪnd]",
+    "phonetics": [
+      "ɪnˈklaɪnd"
     ]
   },
   "include": {
@@ -21765,6 +25273,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪnˈkredəbl"
     ]
   },
+  "incredibly": {
+    "display": "미국∙영국 [ɪnˈkredəbli]",
+    "phonetics": [
+      "ɪnˈkredəbli"
+    ]
+  },
+  "incur": {
+    "display": "미국∙영국 [ɪnˈkɜː(r)]",
+    "phonetics": [
+      "ɪnˈkɜː(r)"
+    ]
+  },
   "indeed": {
     "display": "미국∙영국 [ɪnˈdiːd]",
     "phonetics": [
@@ -21837,10 +25357,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪndɪkeɪt"
     ]
   },
+  "indication": {
+    "display": "미국∙영국 [ˌɪndɪˈkeɪʃn] · 미국 [ˌɪndɪˈkeɪʃn]",
+    "phonetics": [
+      "ˌɪndɪˈkeɪʃn",
+      "ˌɪndɪˈkeɪʃn"
+    ]
+  },
   "indicator": {
     "display": "미국∙영국 [ˈɪndɪkeɪtə(r)]",
     "phonetics": [
       "ˈɪndɪkeɪtə(r)"
+    ]
+  },
+  "indictment": {
+    "display": "미국∙영국 [ɪnˈdaɪtmənt]",
+    "phonetics": [
+      "ɪnˈdaɪtmənt"
     ]
   },
   "indie": {
@@ -21895,11 +25428,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪndɔː(r)"
     ]
   },
+  "indoors": {
+    "display": "미국 [ˌɪnˈdɔːrz] · 영국 [ˌɪnˈdɔːz]",
+    "phonetics": [
+      "ˌɪnˈdɔːrz",
+      "ˌɪnˈdɔːz"
+    ]
+  },
+  "induce": {
+    "display": "미국 [ɪn │ duːs] · 영국 [ɪn │ djuːs]",
+    "phonetics": [
+      "ɪn │ duːs",
+      "ɪn │ djuːs"
+    ]
+  },
   "induced": {
     "display": "미국 [ɪn │ duːs] · 영국 [ɪn │ djuːs]",
     "phonetics": [
       "ɪn │ duːs",
       "ɪn │ djuːs"
+    ]
+  },
+  "indulge": {
+    "display": "미국∙영국 [ɪnˈdʌldʒ]",
+    "phonetics": [
+      "ɪnˈdʌldʒ"
     ]
   },
   "industrial": {
@@ -21920,10 +25473,42 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪndəstri"
     ]
   },
+  "inequality": {
+    "display": "미국 [│ ɪnɪ │ kwɑːləti] · 영국 [│ ɪnɪ │ kwɒləti]",
+    "phonetics": [
+      "│ ɪnɪ │ kwɑːləti",
+      "│ ɪnɪ │ kwɒləti"
+    ]
+  },
+  "inevitable": {
+    "display": "미국∙영국 [ɪnˈevɪtəbl]",
+    "phonetics": [
+      "ɪnˈevɪtəbl"
+    ]
+  },
+  "inevitably": {
+    "display": "미국∙영국 [ɪnˈevɪtəbli]",
+    "phonetics": [
+      "ɪnˈevɪtəbli"
+    ]
+  },
+  "infamous": {
+    "display": "미국∙영국 [ˈɪnfəməs] · 미국 [ˈɪnfəməs]",
+    "phonetics": [
+      "ˈɪnfəməs",
+      "ˈɪnfəməs"
+    ]
+  },
   "infant": {
     "display": "미국∙영국 [ˈɪnfənt]",
     "phonetics": [
       "ˈɪnfənt"
+    ]
+  },
+  "infect": {
+    "display": "미국∙영국 [ɪnˈfekt]",
+    "phonetics": [
+      "ɪnˈfekt"
     ]
   },
   "infected": {
@@ -21945,16 +25530,36 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪnˈfekʃn"
     ]
   },
+  "infer": {
+    "display": "미국∙영국 [ɪnˈfɜː(r)]",
+    "phonetics": [
+      "ɪnˈfɜː(r)"
+    ]
+  },
   "inflation": {
     "display": "미국∙영국 [ɪnˈfleɪʃn]",
     "phonetics": [
       "ɪnˈfleɪʃn"
     ]
   },
+  "inflict": {
+    "display": "미국∙영국 [ɪnˈflɪkt] · 미국 [ɪnˈflɪkt]",
+    "phonetics": [
+      "ɪnˈflɪkt",
+      "ɪnˈflɪkt"
+    ]
+  },
   "influence": {
     "display": "미국∙영국 [ˈɪnfluəns]",
     "phonetics": [
       "ˈɪnfluəns"
+    ]
+  },
+  "influential": {
+    "display": "미국∙영국 [ˌɪnfluˈenʃl] · 미국 [ˌɪnfluˈenʃl]",
+    "phonetics": [
+      "ˌɪnfluˈenʃl",
+      "ˌɪnfluˈenʃl"
     ]
   },
   "info": {
@@ -22012,10 +25617,42 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪnfrəstrʌktʃə(r)"
     ]
   },
+  "ingredient": {
+    "display": "미국∙영국 [ɪnˈɡriːdiənt]",
+    "phonetics": [
+      "ɪnˈɡriːdiənt"
+    ]
+  },
   "ingredients": {
     "display": "미국∙영국 [ɪnˈɡriːdiənt]",
     "phonetics": [
       "ɪnˈɡriːdiənt"
+    ]
+  },
+  "inhabitant": {
+    "display": "미국∙영국 [ɪnˈhæbɪtənt] · 미국 [ɪnˈhæbɪtənt]",
+    "phonetics": [
+      "ɪnˈhæbɪtənt",
+      "ɪnˈhæbɪtənt"
+    ]
+  },
+  "inherent": {
+    "display": "미국 [ɪn │ hɪrənt] · 영국 [ɪn │ hɪərənt; ɪn │ herənt]",
+    "phonetics": [
+      "ɪn │ hɪrənt",
+      "ɪn │ hɪərənt; ɪn │ herənt"
+    ]
+  },
+  "inherit": {
+    "display": "미국∙영국 [ɪnˈherɪt]",
+    "phonetics": [
+      "ɪnˈherɪt"
+    ]
+  },
+  "inhibit": {
+    "display": "미국∙영국 [ɪnˈhɪbɪt]",
+    "phonetics": [
+      "ɪnˈhɪbɪt"
     ]
   },
   "initial": {
@@ -22029,6 +25666,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɪˈnɪʃəli",
       "ɪˈnɪʃəli"
+    ]
+  },
+  "initiate": {
+    "display": "발음기호 [ɪˈnɪʃieɪt]",
+    "phonetics": [
+      "ɪˈnɪʃieɪt"
     ]
   },
   "initiated": {
@@ -22049,10 +25692,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪˈnɪʃətɪv"
     ]
   },
+  "inject": {
+    "display": "미국∙영국 [ɪnˈdʒekt]",
+    "phonetics": [
+      "ɪnˈdʒekt"
+    ]
+  },
   "injection": {
     "display": "미국∙영국 [ɪnˈdʒekʃn]",
     "phonetics": [
       "ɪnˈdʒekʃn"
+    ]
+  },
+  "injure": {
+    "display": "미국∙영국 [ˈɪndʒə(r)]",
+    "phonetics": [
+      "ˈɪndʒə(r)"
     ]
   },
   "injured": {
@@ -22068,10 +25723,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪndʒəri"
     ]
   },
+  "injustice": {
+    "display": "미국∙영국 [ɪnˈdʒʌstɪs] · 미국 [ɪnˈdʒʌstɪs]",
+    "phonetics": [
+      "ɪnˈdʒʌstɪs",
+      "ɪnˈdʒʌstɪs"
+    ]
+  },
   "ink": {
     "display": "미국∙영국 [ɪŋk]",
     "phonetics": [
       "ɪŋk"
+    ]
+  },
+  "inmate": {
+    "display": "미국∙영국 [ˈɪnmeɪt] · 미국 [ˈɪnmeɪt]",
+    "phonetics": [
+      "ˈɪnmeɪt",
+      "ˈɪnmeɪt"
     ]
   },
   "inn": {
@@ -22146,11 +25815,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌaɪ en ˈes"
     ]
   },
+  "insect": {
+    "display": "미국∙영국 [ˈɪnsekt] · 미국 [ˈɪnsekt]",
+    "phonetics": [
+      "ˈɪnsekt",
+      "ˈɪnsekt"
+    ]
+  },
   "insert": {
     "display": "발음기호 [ˈɪnsɜːt; 美 ˈɪnsɜːrt] · 발음기호 [ɪnˈsɜːt; 美 ɪnˈsɜːrt]",
     "phonetics": [
       "ˈɪnsɜːt; 美 ˈɪnsɜːrt",
       "ɪnˈsɜːt; 美 ɪnˈsɜːrt"
+    ]
+  },
+  "insertion": {
+    "display": "미국 [ɪnˈsɜːrʃn] · 영국 [ɪnˈsɜːʃn]",
+    "phonetics": [
+      "ɪnˈsɜːrʃn",
+      "ɪnˈsɜːʃn"
     ]
   },
   "inside": {
@@ -22176,6 +25859,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈɪnsaɪt]",
     "phonetics": [
       "ˈɪnsaɪt"
+    ]
+  },
+  "insist": {
+    "display": "미국∙영국 [ɪnˈsɪst]",
+    "phonetics": [
+      "ɪnˈsɪst"
     ]
   },
   "inspect": {
@@ -22271,6 +25960,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪnˈsted"
     ]
   },
+  "instinct": {
+    "display": "미국∙영국 [ˈɪnstɪŋkt]",
+    "phonetics": [
+      "ˈɪnstɪŋkt"
+    ]
+  },
   "institute": {
     "display": "미국 [│ ɪnstɪtuːt] · 영국 [│ ɪnstɪtjuːt]",
     "phonetics": [
@@ -22322,10 +26017,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈɪnstrəmənt"
     ]
   },
+  "instrumental": {
+    "display": "미국∙영국 [ˌɪnstrəˈmentl]",
+    "phonetics": [
+      "ˌɪnstrəˈmentl"
+    ]
+  },
   "instruments": {
     "display": "미국∙영국 [ˈɪnstrəmənt]",
     "phonetics": [
       "ˈɪnstrəmənt"
+    ]
+  },
+  "insufficient": {
+    "display": "미국∙영국 [ˌɪnsəˈfɪʃnt] · 미국 [ˌɪnsəˈfɪʃnt]",
+    "phonetics": [
+      "ˌɪnsəˈfɪʃnt",
+      "ˌɪnsəˈfɪʃnt"
     ]
   },
   "insurance": {
@@ -22333,6 +26041,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɪn │ ʃʊrəns",
       "ɪn │ ʃʊərəns; ɪnʃɔːrəns"
+    ]
+  },
+  "intact": {
+    "display": "미국∙영국 [ɪnˈtækt] · 미국 [ɪnˈtækt]",
+    "phonetics": [
+      "ɪnˈtækt",
+      "ɪnˈtækt"
     ]
   },
   "intake": {
@@ -22419,6 +26134,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪnˈtens]",
     "phonetics": [
       "ɪnˈtens"
+    ]
+  },
+  "intensify": {
+    "display": "미국∙영국 [ɪnˈtensɪfaɪ] · 미국 [ɪnˈtensɪfaɪ]",
+    "phonetics": [
+      "ɪnˈtensɪfaɪ",
+      "ɪnˈtensɪfaɪ"
     ]
   },
   "intensity": {
@@ -22510,6 +26232,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ɪntəfeɪs"
     ]
   },
+  "interfere": {
+    "display": "미국 [ˌɪntərˈfɪr] · 영국 [ˌɪntəˈfɪə(r)]",
+    "phonetics": [
+      "ˌɪntərˈfɪr",
+      "ˌɪntəˈfɪə(r)"
+    ]
+  },
+  "interference": {
+    "display": "미국 [│ ɪntər │ fɪrəns] · 영국 [│ ɪntə │ fɪərəns]",
+    "phonetics": [
+      "│ ɪntər │ fɪrəns",
+      "│ ɪntə │ fɪərəns"
+    ]
+  },
   "interim": {
     "display": "미국∙영국 [ˈɪntərɪm]",
     "phonetics": [
@@ -22578,11 +26314,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌɪntəˈrʌpt"
     ]
   },
+  "intersection": {
+    "display": "미국 [│ ɪntər │ sekʃn] · 영국 [│ ɪntə │ sekʃn]",
+    "phonetics": [
+      "│ ɪntər │ sekʃn",
+      "│ ɪntə │ sekʃn"
+    ]
+  },
   "interval": {
     "display": "미국 [ˈɪntərvl] · 영국 [ˈɪntəvl]",
     "phonetics": [
       "ˈɪntərvl",
       "ˈɪntəvl"
+    ]
+  },
+  "intervene": {
+    "display": "미국 [│ ɪntər │ viːn] · 영국 [│ ɪntə │ viːn]",
+    "phonetics": [
+      "│ ɪntər │ viːn",
+      "│ ɪntə │ viːn"
     ]
   },
   "intervention": {
@@ -22606,10 +26356,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ɪntəvjuː"
     ]
   },
+  "intimate": {
+    "display": "발음기호 [ˈɪntɪmət]",
+    "phonetics": [
+      "ˈɪntɪmət"
+    ]
+  },
   "into": {
     "display": "미국∙영국 [ˈɪntə 모음 앞에서 강형 ˈɪntu 강형 ˈɪntuː]",
     "phonetics": [
       "ˈɪntə 모음 앞에서 강형 ˈɪntu 강형 ˈɪntuː"
+    ]
+  },
+  "intriguing": {
+    "display": "미국∙영국 [ɪnˈtriːɡɪŋ] · 미국 [ɪnˈtriːɡɪŋ]",
+    "phonetics": [
+      "ɪnˈtriːɡɪŋ",
+      "ɪnˈtriːɡɪŋ"
     ]
   },
   "intro": {
@@ -22632,6 +26395,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌɪntrəˈdʌkʃn"
     ]
   },
+  "invade": {
+    "display": "미국∙영국 [ɪnˈveɪd]",
+    "phonetics": [
+      "ɪnˈveɪd"
+    ]
+  },
   "invalid": {
     "display": "발음기호 [ɪnˈvælɪd]",
     "phonetics": [
@@ -22642,6 +26411,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ɪnˈveɪʒn]",
     "phonetics": [
       "ɪnˈveɪʒn"
+    ]
+  },
+  "invent": {
+    "display": "미국∙영국 [ɪnˈvent]",
+    "phonetics": [
+      "ɪnˈvent"
     ]
   },
   "invention": {
@@ -22708,6 +26483,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɪnˈvestə(r)"
     ]
   },
+  "invisible": {
+    "display": "미국∙영국 [ɪnˈvɪzəbl]",
+    "phonetics": [
+      "ɪnˈvɪzəbl"
+    ]
+  },
   "invitation": {
     "display": "미국∙영국 [ˌɪnvɪˈteɪʃn]",
     "phonetics": [
@@ -22730,6 +26511,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈɪnvɔɪs]",
     "phonetics": [
       "ˈɪnvɔɪs"
+    ]
+  },
+  "invoke": {
+    "display": "미국 [ɪnˈvoʊk] · 영국 [ɪnˈvəʊk]",
+    "phonetics": [
+      "ɪnˈvoʊk",
+      "ɪnˈvəʊk"
     ]
   },
   "involve": {
@@ -22828,6 +26616,33 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈaɪən"
     ]
   },
+  "ironic": {
+    "display": "미국 [aɪ │ rɑːnɪk] · 영국 [aɪ │ rɒnɪk]",
+    "phonetics": [
+      "aɪ │ rɑːnɪk",
+      "aɪ │ rɒnɪk"
+    ]
+  },
+  "ironically": {
+    "display": "미국∙영국 [aɪ │ rɑ:nɪkli]",
+    "phonetics": [
+      "aɪ │ rɑ:nɪkli",
+      "aɪ │ rɑ:nɪkli"
+    ]
+  },
+  "irony": {
+    "display": "미국∙영국 [ˈaɪrəni]",
+    "phonetics": [
+      "ˈaɪrəni"
+    ]
+  },
+  "irrelevant": {
+    "display": "미국∙영국 [ɪˈreləvənt] · 미국 [ɪˈreləvənt]",
+    "phonetics": [
+      "ɪˈreləvənt",
+      "ɪˈreləvənt"
+    ]
+  },
   "is": {
     "display": "미국∙영국 [ɪz] · 미국 [ɪz]",
     "phonetics": [
@@ -22871,6 +26686,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈoʊ",
       "ˌaɪ es ˈəʊ"
+    ]
+  },
+  "isolate": {
+    "display": "미국∙영국 [ˈaɪsəleɪt]",
+    "phonetics": [
+      "ˈaɪsəleɪt"
     ]
   },
   "isolated": {
@@ -23376,6 +27197,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "dʒʌdʒ"
     ]
   },
+  "judgement": {
+    "display": "발음기호 [ˈdʒʌdʒmənt]",
+    "phonetics": [
+      "ˈdʒʌdʒmənt"
+    ]
+  },
   "judgment": {
     "display": "미국∙영국 [dƷʌ́dƷmənt]",
     "phonetics": [
@@ -23484,6 +27311,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈdʒʌstɪs"
     ]
   },
+  "justification": {
+    "display": "미국∙영국 [ˌdʒʌstɪfɪˈkeɪʃn] · 미국 [ˌdʒʌstɪfɪˈkeɪʃn]",
+    "phonetics": [
+      "ˌdʒʌstɪfɪˈkeɪʃn",
+      "ˌdʒʌstɪfɪˈkeɪʃn"
+    ]
+  },
   "justify": {
     "display": "미국∙영국 [ˈdʒʌstɪfaɪ]",
     "phonetics": [
@@ -23544,6 +27378,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kéi]",
     "phonetics": [
       "kéi"
+    ]
+  },
+  "keen": {
+    "display": "미국∙영국 [kiːn]",
+    "phonetics": [
+      "kiːn"
     ]
   },
   "keep": {
@@ -23659,6 +27499,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "kɪd"
     ]
   },
+  "kidnap": {
+    "display": "미국∙영국 [ˈkɪdnæp] · 미국 [ˈkɪdnæp]",
+    "phonetics": [
+      "ˈkɪdnæp",
+      "ˈkɪdnæp"
+    ]
+  },
   "kidney": {
     "display": "미국∙영국 [ˈkɪdni]",
     "phonetics": [
@@ -23695,10 +27542,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkɪlɪŋ"
     ]
   },
+  "kilometer": {
+    "display": "미국 [kilɑ́mətər,kíləmì:-] · 영국 [kíləmì:-]",
+    "phonetics": [
+      "kilɑ́mətər,kíləmì:-",
+      "kíləmì:-"
+    ]
+  },
+  "kilometre": {
+    "display": "미국 [kɪ │ lɑːmiːtə(r)] · 영국 [kɪ │ lɒmɪtə(r)]",
+    "phonetics": [
+      "│ kɪləmiːtə(r)",
+      "kɪ │ lɑːmiːtə(r)",
+      "kɪ │ lɒmɪtə(r)"
+    ]
+  },
   "kind": {
     "display": "미국∙영국 [kaɪnd]",
     "phonetics": [
       "kaɪnd"
+    ]
+  },
+  "kindergarten": {
+    "display": "미국 [│ kɪndərɡɑːrtn] · 영국 [│ kɪndəɡɑːtn]",
+    "phonetics": [
+      "│ kɪndərɡɑːrtn",
+      "│ kɪndəɡɑːtn"
     ]
   },
   "king": {
@@ -23778,6 +27647,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [naɪt]",
     "phonetics": [
       "naɪt"
+    ]
+  },
+  "knock": {
+    "display": "미국 [nɑːk] · 영국 [nɒk]",
+    "phonetics": [
+      "nɑːk",
+      "nɒk"
     ]
   },
   "know": {
@@ -23968,6 +27844,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈlændɪŋ"
     ]
   },
+  "landlord": {
+    "display": "미국 [│ lændlɔːrd] · 영국 [│ lændlɔːd]",
+    "phonetics": [
+      "│ lændlɔːrd",
+      "│ lændlɔːd"
+    ]
+  },
+  "landmark": {
+    "display": "미국 [│ lændmɑːrk] · 영국 [│ lændmɑːk]",
+    "phonetics": [
+      "│ lændmɑːrk",
+      "│ lændmɑːk"
+    ]
+  },
   "lands": {
     "display": "미국∙영국 [lænd]",
     "phonetics": [
@@ -24002,6 +27892,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈlæŋɡwɪdʒ]",
     "phonetics": [
       "ˈlæŋɡwɪdʒ"
+    ]
+  },
+  "lap": {
+    "display": "미국∙영국 [læp]",
+    "phonetics": [
+      "læp"
     ]
   },
   "laptop": {
@@ -24055,6 +27951,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [leɪt]",
     "phonetics": [
       "leɪt"
+    ]
+  },
+  "lately": {
+    "display": "미국∙영국 [ˈleɪtli] · 미국 [ˈleɪtli]",
+    "phonetics": [
+      "ˈleɪtli",
+      "ˈleɪtli"
     ]
   },
   "later": {
@@ -24123,6 +28026,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "lɑːf"
     ]
   },
+  "laughter": {
+    "display": "미국 [│ læftə(r)] · 영국 [│ lɑːftə(r)]",
+    "phonetics": [
+      "│ læftə(r)",
+      "│ lɑːftə(r)"
+    ]
+  },
   "launch": {
     "display": "미국∙영국 [lɔːntʃ]",
     "phonetics": [
@@ -24159,6 +28069,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "lɔː"
     ]
   },
+  "lawmaker": {
+    "display": "미국∙영국 [ˈlɔːmeɪkə(r)] · 미국 [ˈlɔːmeɪkə(r)]",
+    "phonetics": [
+      "ˈlɔːmeɪkə(r)",
+      "ˈlɔːmeɪkə(r)"
+    ]
+  },
   "lawn": {
     "display": "미국∙영국 [lɔːn]",
     "phonetics": [
@@ -24176,6 +28093,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [lɔ́:z]",
     "phonetics": [
       "lɔ́:z"
+    ]
+  },
+  "lawsuit": {
+    "display": "발음기호 [| lɔːsuːt] · 발음기호 [| lɔːsjuːt]",
+    "phonetics": [
+      "| lɔːsuːt",
+      "| lɔːsjuːt"
     ]
   },
   "lawyer": {
@@ -24255,10 +28179,34 @@ window.pronunciationDisplayOverrides = Object.assign(
       "liːf"
     ]
   },
+  "leaflet": {
+    "display": "미국∙영국 [ˈliːflət]",
+    "phonetics": [
+      "ˈliːflət"
+    ]
+  },
   "league": {
     "display": "미국∙영국 [liːɡ]",
     "phonetics": [
       "liːɡ"
+    ]
+  },
+  "leak": {
+    "display": "미국∙영국 [liːk]",
+    "phonetics": [
+      "liːk"
+    ]
+  },
+  "lean": {
+    "display": "미국∙영국 [liːn]",
+    "phonetics": [
+      "liːn"
+    ]
+  },
+  "leap": {
+    "display": "미국∙영국 [liːp]",
+    "phonetics": [
+      "liːp"
     ]
   },
   "learn": {
@@ -24372,6 +28320,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈledʒənd"
     ]
   },
+  "legendary": {
+    "display": "미국 [│ ledʒənderi] · 영국 [│ ledʒəndri]",
+    "phonetics": [
+      "│ ledʒənderi",
+      "│ ledʒəndri"
+    ]
+  },
   "legislation": {
     "display": "미국∙영국 [ˌledʒɪsˈleɪʃn]",
     "phonetics": [
@@ -24416,6 +28371,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌleməˈneɪd"
     ]
   },
+  "lend": {
+    "display": "미국∙영국 [lend]",
+    "phonetics": [
+      "lend"
+    ]
+  },
   "lender": {
     "display": "미국 [ˈlendə(r)]",
     "phonetics": [
@@ -24439,6 +28400,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [leŋθ]",
     "phonetics": [
       "leŋθ"
+    ]
+  },
+  "lengthy": {
+    "display": "미국∙영국 [ˈleŋθi] · 미국 [ˈleŋθi]",
+    "phonetics": [
+      "ˈleŋθi",
+      "ˈleŋθi"
     ]
   },
   "lens": {
@@ -24492,6 +28460,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "les"
     ]
   },
+  "lesser": {
+    "display": "미국∙영국 [ˈlesə(r)]",
+    "phonetics": [
+      "ˈlesə(r)"
+    ]
+  },
   "lesson": {
     "display": "미국∙영국 [ˈlesn]",
     "phonetics": [
@@ -24508,6 +28482,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [let]",
     "phonetics": [
       "let"
+    ]
+  },
+  "lethal": {
+    "display": "미국∙영국 [ˈliːθl]",
+    "phonetics": [
+      "ˈliːθl"
     ]
   },
   "letter": {
@@ -24578,6 +28558,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈlɪbərəl"
     ]
   },
+  "liberation": {
+    "display": "미국∙영국 [│ lɪbə │ reɪʃn]",
+    "phonetics": [
+      "│ lɪbə │ reɪʃn"
+    ]
+  },
   "liberty": {
     "display": "미국 [│ lɪbərti] · 영국 [│ lɪbəti]",
     "phonetics": [
@@ -24638,6 +28624,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [laɪf]",
     "phonetics": [
       "laɪf"
+    ]
+  },
+  "lifelong": {
+    "display": "미국 [│ laɪflɔːŋ] · 영국 [│ laɪflɒŋ]",
+    "phonetics": [
+      "│ laɪflɔːŋ",
+      "│ laɪflɒŋ"
     ]
   },
   "lifestyle": {
@@ -24702,10 +28695,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "laɪk"
     ]
   },
+  "likelihood": {
+    "display": "미국∙영국 [ˈlaɪklihʊd] · 미국 [ˈlaɪklihʊd]",
+    "phonetics": [
+      "ˈlaɪklihʊd",
+      "ˈlaɪklihʊd"
+    ]
+  },
   "likely": {
     "display": "미국∙영국 [ˈlaɪkli]",
     "phonetics": [
       "ˈlaɪkli"
+    ]
+  },
+  "likewise": {
+    "display": "미국∙영국 [ˈlaɪkwaɪz] · 미국 [│ laɪkwaɪz]",
+    "phonetics": [
+      "ˈlaɪkwaɪz",
+      "│ laɪkwaɪz"
     ]
   },
   "lily": {
@@ -24713,6 +28720,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈlɪli",
       "ˈlɪli"
+    ]
+  },
+  "limb": {
+    "display": "미국∙영국 [lɪm]",
+    "phonetics": [
+      "lɪm"
     ]
   },
   "lime": {
@@ -24767,6 +28780,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈlɪniə(r)]",
     "phonetics": [
       "ˈlɪniə(r)"
+    ]
+  },
+  "lineup": {
+    "display": "미국∙영국 [láinʌ̀p]",
+    "phonetics": [
+      "láinʌ̀p"
+    ]
+  },
+  "linger": {
+    "display": "미국∙영국 [ˈlɪŋɡə(r)]",
+    "phonetics": [
+      "ˈlɪŋɡə(r)"
     ]
   },
   "lingerie": {
@@ -24852,6 +28877,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈlɪsn"
     ]
   },
+  "listener": {
+    "display": "미국∙영국 [ˈlɪsənə(r)]",
+    "phonetics": [
+      "ˈlɪsənə(r)"
+    ]
+  },
   "listening": {
     "display": "미국∙영국 [lísniŋ]",
     "phonetics": [
@@ -24923,6 +28954,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌlɪtɪˈɡeɪʃn"
     ]
   },
+  "litre": {
+    "display": "미국∙영국 [ˈliːtə(r)] · 미국 [ˈliːtə(r)]",
+    "phonetics": [
+      "ˈliːtə(r)",
+      "ˈliːtə(r)"
+    ]
+  },
+  "litter": {
+    "display": "미국∙영국 [ˈlɪtə(r)]",
+    "phonetics": [
+      "ˈlɪtə(r)"
+    ]
+  },
   "little": {
     "display": "미국∙영국 [ˈlɪtl]",
     "phonetics": [
@@ -24940,6 +28984,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "láivd,lívd",
       "lívd"
+    ]
+  },
+  "lively": {
+    "display": "미국∙영국 [ˈlaɪvli]",
+    "phonetics": [
+      "ˈlaɪvli"
     ]
   },
   "liver": {
@@ -25006,6 +29056,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "loʊn",
       "ləʊn"
+    ]
+  },
+  "lobby": {
+    "display": "미국 [ˈlɑːbi] · 영국 [ˈlɒbi]",
+    "phonetics": [
+      "ˈlɑːbi",
+      "ˈlɒbi"
     ]
   },
   "lobster": {
@@ -25181,6 +29238,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "lɒŋ"
     ]
   },
+  "longtime": {
+    "display": "미국∙영국 [-tàim]",
+    "phonetics": [
+      "-tàim"
+    ]
+  },
   "look": {
     "display": "미국∙영국 [lʊk]",
     "phonetics": [
@@ -25205,6 +29268,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "-ʌ̀p"
     ]
   },
+  "loom": {
+    "display": "미국∙영국 [luːm]",
+    "phonetics": [
+      "luːm"
+    ]
+  },
   "loop": {
     "display": "미국∙영국 [luːp]",
     "phonetics": [
@@ -25222,6 +29291,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "lɔːrd",
       "lɔːd"
+    ]
+  },
+  "lorry": {
+    "display": "발음기호 [ˈlɔːri] · 발음기호 [ˈlɒri]",
+    "phonetics": [
+      "ˈlɔːri",
+      "ˈlɒri"
     ]
   },
   "lose": {
@@ -25357,6 +29433,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈlɔɪəl",
       "ˈlɔɪəl"
+    ]
+  },
+  "loyalty": {
+    "display": "미국∙영국 [ˈlɔɪəlti]",
+    "phonetics": [
+      "ˈlɔɪəlti"
     ]
   },
   "lp": {
@@ -25510,10 +29592,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmædʒɪk"
     ]
   },
+  "magical": {
+    "display": "미국∙영국 [ˈmædʒɪkl]",
+    "phonetics": [
+      "ˈmædʒɪkl"
+    ]
+  },
   "magnetic": {
     "display": "미국∙영국 [mæɡˈnetɪk]",
     "phonetics": [
       "mæɡˈnetɪk"
+    ]
+  },
+  "magnificent": {
+    "display": "미국∙영국 [mæɡˈnɪfɪsnt] · 미국 [mæɡˈnɪfɪsnt]",
+    "phonetics": [
+      "mæɡˈnɪfɪsnt",
+      "mæɡˈnɪfɪsnt"
+    ]
+  },
+  "magnitude": {
+    "display": "미국 [│ mæɡnɪtuːd] · 영국 [│ mæɡnɪtjuːd]",
+    "phonetics": [
+      "│ mæɡnɪtuːd",
+      "│ mæɡnɪtjuːd"
     ]
   },
   "mail": {
@@ -25618,6 +29720,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [meɪk]",
     "phonetics": [
       "meɪk"
+    ]
+  },
+  "makeup": {
+    "display": "미국∙영국 [méikʌ̀p]",
+    "phonetics": [
+      "méikʌ̀p"
     ]
   },
   "making": {
@@ -25731,6 +29839,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌmænˈhætn"
     ]
   },
+  "manifest": {
+    "display": "미국∙영국 [ˈmænɪfest]",
+    "phonetics": [
+      "ˈmænɪfest"
+    ]
+  },
+  "manipulate": {
+    "display": "미국∙영국 [məˈnɪpjuleɪt]",
+    "phonetics": [
+      "məˈnɪpjuleɪt"
+    ]
+  },
+  "manipulation": {
+    "display": "미국∙영국 [mə │ nɪpju │ leɪʃn]",
+    "phonetics": [
+      "mə │ nɪpju │ leɪʃn"
+    ]
+  },
   "manitoba": {
     "display": "미국∙영국 [mæ̀nətóubə]",
     "phonetics": [
@@ -25773,6 +29899,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌmænjuˈfæktʃərɪŋ"
     ]
   },
+  "manuscript": {
+    "display": "미국∙영국 [ˈmænjuskrɪpt]",
+    "phonetics": [
+      "ˈmænjuskrɪpt"
+    ]
+  },
   "many": {
     "display": "미국∙영국 [ˈmeni]",
     "phonetics": [
@@ -25796,6 +29928,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "mɑː(r)",
       "mɑː(r)"
+    ]
+  },
+  "marathon": {
+    "display": "미국 [│ mærəθɑːn] · 영국 [│ mærəθən]",
+    "phonetics": [
+      "│ mærəθɑːn",
+      "│ mærəθən"
     ]
   },
   "marc": {
@@ -25823,6 +29962,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈmɑːrdʒən",
       "ˈmɑːdʒɪn"
+    ]
+  },
+  "marginal": {
+    "display": "미국 [│ mɑːrdʒɪnl] · 영국 [│ mɑːdʒɪnl]",
+    "phonetics": [
+      "│ mɑːrdʒɪnl",
+      "│ mɑːdʒɪnl"
     ]
   },
   "maria": {
@@ -25930,6 +30076,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmærid"
     ]
   },
+  "marry": {
+    "display": "미국∙영국 [ˈmæri]",
+    "phonetics": [
+      "ˈmæri"
+    ]
+  },
   "mars": {
     "display": "미국 [mɑːrz] · 영국 [mɑːz]",
     "phonetics": [
@@ -25999,6 +30151,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [mæ̀sətʃú:sits]",
     "phonetics": [
       "mæ̀sətʃú:sits"
+    ]
+  },
+  "massacre": {
+    "display": "미국∙영국 [ˈmæsəkə(r)]",
+    "phonetics": [
+      "ˈmæsəkə(r)"
     ]
   },
   "massage": {
@@ -26096,6 +30254,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌmæθəˈmætɪks"
     ]
   },
+  "maths": {
+    "display": "미국∙영국 [mǽθs]",
+    "phonetics": [
+      "mǽθs"
+    ]
+  },
   "matrix": {
     "display": "미국∙영국 [ˈmeɪtrɪks]",
     "phonetics": [
@@ -26144,6 +30308,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [mæks]",
     "phonetics": [
       "mæks"
+    ]
+  },
+  "maximize": {
+    "display": "발음기호 [ˈmæksɪmaɪz]",
+    "phonetics": [
+      "ˈmæksɪmaɪz"
     ]
   },
   "maximum": {
@@ -26227,10 +30397,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmiːnɪŋ"
     ]
   },
+  "meaningful": {
+    "display": "미국∙영국 [ˈmiːnɪŋfl]",
+    "phonetics": [
+      "ˈmiːnɪŋfl"
+    ]
+  },
   "means": {
     "display": "미국∙영국 [miːnz]",
     "phonetics": [
       "miːnz"
+    ]
+  },
+  "meantime": {
+    "display": "미국∙영국 [ˈmiːntaɪm]",
+    "phonetics": [
+      "ˈmiːntaɪm"
     ]
   },
   "meanwhile": {
@@ -26263,6 +30445,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [miːt]",
     "phonetics": [
       "miːt"
+    ]
+  },
+  "mechanic": {
+    "display": "미국∙영국 [məˈkænɪk]",
+    "phonetics": [
+      "məˈkænɪk"
     ]
   },
   "mechanical": {
@@ -26353,6 +30541,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ miːdi │ iːvl"
     ]
   },
+  "meditation": {
+    "display": "미국∙영국 [ˌmedɪˈteɪʃn]",
+    "phonetics": [
+      "ˌmedɪˈteɪʃn"
+    ]
+  },
   "mediterranean": {
     "display": "미국∙영국 [ˌmedɪtəˈreɪniən] · 미국 [ˌmedɪtəˈreɪniən]",
     "phonetics": [
@@ -26409,10 +30603,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "məlísə"
     ]
   },
+  "melody": {
+    "display": "미국∙영국 [ˈmelədi]",
+    "phonetics": [
+      "ˈmelədi"
+    ]
+  },
   "melon": {
     "display": "미국 [ˈmelən]",
     "phonetics": [
       "ˈmelən"
+    ]
+  },
+  "melt": {
+    "display": "미국∙영국 [melt]",
+    "phonetics": [
+      "melt"
     ]
   },
   "mem": {
@@ -26446,11 +30652,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmembreɪn"
     ]
   },
+  "memo": {
+    "display": "발음기호 [| memoʊ] · 발음기호 [| meməʊ]",
+    "phonetics": [
+      "| memoʊ",
+      "| meməʊ"
+    ]
+  },
+  "memoir": {
+    "display": "미국∙영국 [ˈmemwɑː(r)]",
+    "phonetics": [
+      "ˈmemwɑː(r)"
+    ]
+  },
   "memorabilia": {
     "display": "미국∙영국 [ˌmemərəˈbɪliə] · 미국 [ˌmemərəˈbɪliə]",
     "phonetics": [
       "ˌmemərəˈbɪliə",
       "ˌmemərəˈbɪliə"
+    ]
+  },
+  "memorable": {
+    "display": "미국∙영국 [ˈmemərəbl] · 미국 [ˈmemərəbl]",
+    "phonetics": [
+      "ˈmemərəbl",
+      "ˈmemərəbl"
     ]
   },
   "memorial": {
@@ -26487,6 +30713,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ménʃənd]",
     "phonetics": [
       "ménʃənd"
+    ]
+  },
+  "mentor": {
+    "display": "미국∙영국 [ˈmentɔː(r)] · 미국 [ˈmentɔː(r)]",
+    "phonetics": [
+      "ˈmentɔː(r)",
+      "ˈmentɔː(r)"
     ]
   },
   "menu": {
@@ -26535,6 +30768,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ mɜːkjəri"
     ]
   },
+  "mercy": {
+    "display": "미국 [ˈmɜːrsi] · 영국 [ˈmɜːsi]",
+    "phonetics": [
+      "ˈmɜːrsi",
+      "ˈmɜːsi"
+    ]
+  },
   "mere": {
     "display": "미국 [mɪr] · 영국 [mɪə(r)]",
     "phonetics": [
@@ -26547,6 +30787,26 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈmɪrli",
       "ˈmɪəli"
+    ]
+  },
+  "merge": {
+    "display": "미국 [mɜːrdʒ] · 영국 [mɜːdʒ]",
+    "phonetics": [
+      "mɜːrdʒ",
+      "mɜːdʒ"
+    ]
+  },
+  "merger": {
+    "display": "미국 [│ mɜːrdʒə(r)] · 영국 [│ mɜːdʒə(r)]",
+    "phonetics": [
+      "│ mɜːrdʒə(r)",
+      "│ mɜːdʒə(r)"
+    ]
+  },
+  "merit": {
+    "display": "미국∙영국 [ˈmerɪt]",
+    "phonetics": [
+      "ˈmerɪt"
     ]
   },
   "mesh": {
@@ -26600,6 +30860,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmetl"
     ]
   },
+  "metaphor": {
+    "display": "미국∙영국 [ˈmetəfə(r)] · 미국 [ˈmetəfə(r)]",
+    "phonetics": [
+      "ˈmetəfə(r)",
+      "ˈmetəfə(r)"
+    ]
+  },
   "meter": {
     "display": "미국∙영국 [ˈmiːtə(r)]",
     "phonetics": [
@@ -26623,6 +30890,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ meθə │ dɑːlədʒi",
       "│ meθə │ dɒlədʒi"
+    ]
+  },
+  "metre": {
+    "display": "미국∙영국 [ˈmiːtə(r)]",
+    "phonetics": [
+      "ˈmiːtə(r)"
     ]
   },
   "metric": {
@@ -26721,6 +30994,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmɪdnaɪt"
     ]
   },
+  "midst": {
+    "display": "미국∙영국 [mɪdst] · 미국 [mɪdst]",
+    "phonetics": [
+      "mɪdst",
+      "mɪdst"
+    ]
+  },
   "midwest": {
     "display": "미국∙영국 [ˌmɪdˈwest] · 미국 [ˌmɪdˈwest]",
     "phonetics": [
@@ -26759,6 +31039,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "-lǽn"
     ]
   },
+  "mild": {
+    "display": "미국∙영국 [maɪld]",
+    "phonetics": [
+      "maɪld"
+    ]
+  },
   "mile": {
     "display": "미국∙영국 [maɪl]",
     "phonetics": [
@@ -26778,11 +31064,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ maɪlstəʊn"
     ]
   },
+  "militant": {
+    "display": "미국∙영국 [ˈmɪlɪtənt] · 미국 [ˈmɪlɪtənt]",
+    "phonetics": [
+      "ˈmɪlɪtənt",
+      "ˈmɪlɪtənt"
+    ]
+  },
   "military": {
     "display": "미국 [│ mɪləteri] · 영국 [│ mɪlətri]",
     "phonetics": [
       "│ mɪləteri",
       "│ mɪlətri"
+    ]
+  },
+  "militia": {
+    "display": "미국∙영국 [məˈlɪʃə] · 미국 [məˈlɪʃə]",
+    "phonetics": [
+      "məˈlɪʃə",
+      "məˈlɪʃə"
     ]
   },
   "milk": {
@@ -26851,6 +31151,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [maɪn]",
     "phonetics": [
       "maɪn"
+    ]
+  },
+  "miner": {
+    "display": "미국 [ˈmaɪnə(r)]",
+    "phonetics": [
+      "ˈmaɪnə(r)"
     ]
   },
   "mineral": {
@@ -26958,6 +31264,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈmɪnɪt"
     ]
   },
+  "miracle": {
+    "display": "미국∙영국 [ˈmɪrəkl]",
+    "phonetics": [
+      "ˈmɪrəkl"
+    ]
+  },
   "mirror": {
     "display": "미국∙영국 [ˈmɪrə(r)]",
     "phonetics": [
@@ -26977,10 +31289,36 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌmɪsəˈleɪniəs"
     ]
   },
+  "miserable": {
+    "display": "미국∙영국 [ˈmɪzrəbl]",
+    "phonetics": [
+      "ˈmɪzrəbl"
+    ]
+  },
+  "misery": {
+    "display": "미국∙영국 [ˈmɪzəri]",
+    "phonetics": [
+      "ˈmɪzəri"
+    ]
+  },
+  "misleading": {
+    "display": "미국∙영국 [ˌmɪsˈliːdɪŋ] · 미국 [ˌmɪsˈliːdɪŋ]",
+    "phonetics": [
+      "ˌmɪsˈliːdɪŋ",
+      "ˌmɪsˈliːdɪŋ"
+    ]
+  },
   "miss": {
     "display": "미국∙영국 [mɪs]",
     "phonetics": [
       "mɪs"
+    ]
+  },
+  "missile": {
+    "display": "미국 [ˈmɪsl] · 영국 [ˈmɪsaɪl]",
+    "phonetics": [
+      "ˈmɪsl",
+      "ˈmɪsaɪl"
     ]
   },
   "missing": {
@@ -27069,6 +31407,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "məʊ"
     ]
   },
+  "mob": {
+    "display": "미국 [mɑːb] · 영국 [mɒb]",
+    "phonetics": [
+      "mɑːb",
+      "mɒb"
+    ]
+  },
   "mobile": {
     "display": "미국 [ˈmoʊbl] · 영국 [ˈməʊbaɪl]",
     "phonetics": [
@@ -27081,6 +31426,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "moʊ │ bɪləti",
       "məʊ │ bɪləti"
+    ]
+  },
+  "mobilize": {
+    "display": "미국 [│ moʊbəlaɪz] · 영국 [│ məʊbəlaɪz]",
+    "phonetics": [
+      "│ moʊbəlaɪz",
+      "│ məʊbəlaɪz"
     ]
   },
   "mod": {
@@ -27153,6 +31505,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "məʊd"
     ]
   },
+  "modest": {
+    "display": "미국 [│ mɑːdɪst] · 영국 [│ mɒdɪst]",
+    "phonetics": [
+      "│ mɑːdɪst",
+      "│ mɒdɪst"
+    ]
+  },
   "modification": {
     "display": "미국 [│ mɑːdɪfɪ │ keɪʃn] · 영국 [│ mɒdɪfɪ │ keɪʃn]",
     "phonetics": [
@@ -27208,6 +31567,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ məʊmənt"
     ]
   },
+  "momentum": {
+    "display": "미국 [moʊ │ mentəm] · 영국 [mə │ mentəm]",
+    "phonetics": [
+      "moʊ │ mentəm",
+      "mə │ mentəm"
+    ]
+  },
   "monaco": {
     "display": "미국 [mɑ́nəkòu,mənɑ́:kou] · 영국 [mɔ́n-]",
     "phonetics": [
@@ -27256,6 +31622,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ mɒnɪtə(r)"
     ]
   },
+  "monk": {
+    "display": "미국∙영국 [mʌŋk] · 미국 [mʌŋk]",
+    "phonetics": [
+      "mʌŋk",
+      "mʌŋk"
+    ]
+  },
   "monkey": {
     "display": "미국∙영국 [ˈmʌŋki]",
     "phonetics": [
@@ -27267,6 +31640,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈmɑːnoʊ",
       "ˈmɒnəʊ"
+    ]
+  },
+  "monopoly": {
+    "display": "미국 [mə │ nɑːpəli] · 영국 [mə │ nɒpəli]",
+    "phonetics": [
+      "mə │ nɑːpəli",
+      "mə │ nɒpəli"
     ]
   },
   "monroe": {
@@ -27320,6 +31700,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "mɔ́nt-"
     ]
   },
+  "monument": {
+    "display": "미국 [│ mɑːnjumənt] · 영국 [│ mɒnjumənt]",
+    "phonetics": [
+      "│ mɑːnjumənt",
+      "│ mɒnjumənt"
+    ]
+  },
   "mood": {
     "display": "미국∙영국 [muːd]",
     "phonetics": [
@@ -27337,6 +31724,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ mɔːrəl; │ mɑːrəl",
       "│ mɒrəl"
+    ]
+  },
+  "morality": {
+    "display": "미국∙영국 [məˈræləti]",
+    "phonetics": [
+      "məˈræləti"
     ]
   },
   "more": {
@@ -27400,6 +31793,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "mɔ́skou"
     ]
   },
+  "mosque": {
+    "display": "영국 [mɒsk]",
+    "phonetics": [
+      "mɒsk"
+    ]
+  },
   "mosquito": {
     "display": "미국 [mə │ skiːtoʊ; mɒskiːtəʊ] · 영국 [mə │ skiːtəʊ]",
     "phonetics": [
@@ -27460,6 +31859,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ moʊtɪ │ veɪʃn",
       "│ məʊtɪ │ veɪʃn"
+    ]
+  },
+  "motive": {
+    "display": "미국 [│ moʊtɪv] · 영국 [│ məʊtɪv]",
+    "phonetics": [
+      "│ moʊtɪv",
+      "│ məʊtɪv"
     ]
   },
   "motor": {
@@ -27619,6 +32025,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "mʌtʃ"
     ]
   },
+  "mud": {
+    "display": "미국∙영국 [mʌd] · 미국 [mʌd]",
+    "phonetics": [
+      "mʌd",
+      "mʌd"
+    ]
+  },
   "multi": {
     "display": "미국 [mʌ́lti,-tai] · 영국 [-ti]",
     "phonetics": [
@@ -27636,6 +32049,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈmʌltɪpl]",
     "phonetics": [
       "ˈmʌltɪpl"
+    ]
+  },
+  "multiply": {
+    "display": "미국∙영국 [ˈmʌltɪplaɪ]",
+    "phonetics": [
+      "ˈmʌltɪplaɪ"
+    ]
+  },
+  "mum": {
+    "display": "미국∙영국 [mʌm]",
+    "phonetics": [
+      "mʌm"
     ]
   },
   "municipal": {
@@ -27760,10 +32185,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "maɪˈself"
     ]
   },
+  "mysterious": {
+    "display": "미국 [mɪ │ stɪriəs] · 영국 [mɪ │ stɪəriəs]",
+    "phonetics": [
+      "mɪ │ stɪriəs",
+      "mɪ │ stɪəriəs"
+    ]
+  },
   "mystery": {
     "display": "미국∙영국 [ˈmɪstri]",
     "phonetics": [
       "ˈmɪstri"
+    ]
+  },
+  "myth": {
+    "display": "미국∙영국 [mɪθ]",
+    "phonetics": [
+      "mɪθ"
     ]
   },
   "n": {
@@ -27802,6 +32240,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "néimd"
     ]
   },
+  "namely": {
+    "display": "미국∙영국 [ˈneɪmli] · 미국 [ˈneɪmli]",
+    "phonetics": [
+      "ˈneɪmli",
+      "ˈneɪmli"
+    ]
+  },
   "namibia": {
     "display": "미국∙영국 [nəmíbiə]",
     "phonetics": [
@@ -27813,6 +32258,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈnænsi",
       "ˈnænsi"
+    ]
+  },
+  "narrative": {
+    "display": "미국∙영국 [ˈnærətɪv]",
+    "phonetics": [
+      "ˈnærətɪv"
     ]
   },
   "narrow": {
@@ -27975,6 +32426,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈnɪəli"
     ]
   },
+  "neat": {
+    "display": "미국∙영국 [niːt]",
+    "phonetics": [
+      "niːt"
+    ]
+  },
   "nebraska": {
     "display": "미국∙영국 [nəbrǽskə]",
     "phonetics": [
@@ -27994,6 +32451,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ nesəseri",
       "│ nesəsəri"
+    ]
+  },
+  "necessity": {
+    "display": "미국∙영국 [nəˈsesəti]",
+    "phonetics": [
+      "nəˈsesəti"
     ]
   },
   "neck": {
@@ -28020,6 +32483,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "niːd"
     ]
   },
+  "needle": {
+    "display": "미국∙영국 [ˈniːdl]",
+    "phonetics": [
+      "ˈniːdl"
+    ]
+  },
   "needs": {
     "display": "미국∙영국 [niːdz] · 미국 [niːdz]",
     "phonetics": [
@@ -28033,11 +32502,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈneɡətɪv"
     ]
   },
+  "neglect": {
+    "display": "미국∙영국 [nɪˈɡlekt]",
+    "phonetics": [
+      "nɪˈɡlekt"
+    ]
+  },
   "negotiate": {
     "display": "미국 [nɪ │ ɡoʊʃieɪt] · 영국 [nɪ │ ɡəʊʃieɪt]",
     "phonetics": [
       "nɪ │ ɡoʊʃieɪt",
       "nɪ │ ɡəʊʃieɪt"
+    ]
+  },
+  "negotiation": {
+    "display": "미국 [nɪ │ ɡoʊʃi │ eɪʃn] · 영국 [nɪ │ ɡəʊʃi │ eɪʃn]",
+    "phonetics": [
+      "nɪ │ ɡoʊʃi │ eɪʃn",
+      "nɪ │ ɡəʊʃi │ eɪʃn"
     ]
   },
   "neighbor": {
@@ -28052,6 +32534,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "néibərhùd"
     ]
   },
+  "neighboring": {
+    "display": "미국∙영국 [néibəriŋ]",
+    "phonetics": [
+      "néibəriŋ"
+    ]
+  },
   "neighbors": {
     "display": "미국∙영국 [ˈneɪbə(r)]",
     "phonetics": [
@@ -28062,6 +32550,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈneɪbə(r)]",
     "phonetics": [
       "ˈneɪbə(r)"
+    ]
+  },
+  "neighbourhood": {
+    "display": "미국 [│ neɪbərhʊd] · 영국 [│ neɪbəhʊd]",
+    "phonetics": [
+      "│ neɪbərhʊd",
+      "│ neɪbəhʊd"
     ]
   },
   "neil": {
@@ -28090,11 +32585,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "nipɔ́:l,-pɑ́:l"
     ]
   },
+  "nerve": {
+    "display": "미국 [nɜːrv] · 영국 [nɜːv]",
+    "phonetics": [
+      "nɜːrv",
+      "nɜːv"
+    ]
+  },
   "nervous": {
     "display": "미국 [ˈnɜːrvəs] · 영국 [ˈnɜːvəs]",
     "phonetics": [
       "ˈnɜːrvəs",
       "ˈnɜːvəs"
+    ]
+  },
+  "nest": {
+    "display": "미국∙영국 [nest]",
+    "phonetics": [
+      "nest"
     ]
   },
   "net": {
@@ -28237,6 +32745,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "naɪs"
     ]
   },
+  "niche": {
+    "display": "미국 [nɪtʃ; niːʃ] · 영국 [niːʃ; nɪtʃ]",
+    "phonetics": [
+      "nɪtʃ; niːʃ",
+      "niːʃ; nɪtʃ"
+    ]
+  },
   "nicholas": {
     "display": "미국∙영국 [níkələs]",
     "phonetics": [
@@ -28247,6 +32762,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [nɪk]",
     "phonetics": [
       "nɪk"
+    ]
+  },
+  "nickel": {
+    "display": "미국∙영국 [ˈnɪkl]",
+    "phonetics": [
+      "ˈnɪkl"
     ]
   },
   "nickname": {
@@ -28272,6 +32793,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈnaɪtlaɪf",
       "ˈnaɪtlaɪf"
+    ]
+  },
+  "nightmare": {
+    "display": "미국 [│ naɪtmer] · 영국 [│ naɪtmeə(r)]",
+    "phonetics": [
+      "│ naɪtmer",
+      "│ naɪtmeə(r)"
     ]
   },
   "nike": {
@@ -28327,6 +32855,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ nəʊbədi"
     ]
   },
+  "nod": {
+    "display": "미국 [nɑːd] · 영국 [nɒd]",
+    "phonetics": [
+      "nɑːd",
+      "nɒd"
+    ]
+  },
   "node": {
     "display": "미국 [noʊd] · 영국 [nəʊd]",
     "phonetics": [
@@ -28346,6 +32881,27 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈnɔɪzi"
     ]
   },
+  "nominate": {
+    "display": "미국 [│ nɑːmɪneɪt] · 영국 [│ nɒmɪneɪt]",
+    "phonetics": [
+      "│ nɑːmɪneɪt",
+      "│ nɒmɪneɪt"
+    ]
+  },
+  "nomination": {
+    "display": "미국 [│ nɑːmɪ │ neɪʃn] · 영국 [│ nɒmɪ │ neɪʃn]",
+    "phonetics": [
+      "│ nɑːmɪ │ neɪʃn",
+      "│ nɒmɪ │ neɪʃn"
+    ]
+  },
+  "nominee": {
+    "display": "미국 [│ nɑːmɪ │ niː] · 영국 [│ nɒmɪ │ niː]",
+    "phonetics": [
+      "│ nɑːmɪ │ niː",
+      "│ nɒmɪ │ niː"
+    ]
+  },
   "non": {
     "display": "미국∙영국 [nɑ́n,nóun]",
     "phonetics": [
@@ -28358,11 +32914,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "nʌn"
     ]
   },
+  "nonetheless": {
+    "display": "미국∙영국 [ˌnʌnðəˈles] · 미국 [ˌnʌnðəˈles]",
+    "phonetics": [
+      "ˌnʌnðəˈles",
+      "ˌnʌnðəˈles"
+    ]
+  },
   "nonprofit": {
     "display": "미국 [nɑ̀nprɑ́fit] · 영국 [nɔ́nprɔ́f-]",
     "phonetics": [
       "nɑ̀nprɑ́fit",
       "nɔ́nprɔ́f-"
+    ]
+  },
+  "nonsense": {
+    "display": "미국 [│ nɑːnsens; │ nɑːnsns] · 영국 [│ nɒnsns]",
+    "phonetics": [
+      "│ nɑːnsens; │ nɑːnsns",
+      "│ nɒnsns"
     ]
   },
   "noodle": {
@@ -28388,6 +32958,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [nɔ́:rfək]",
     "phonetics": [
       "nɔ́:rfək"
+    ]
+  },
+  "norm": {
+    "display": "미국 [nɔːrm] · 영국 [nɔːm]",
+    "phonetics": [
+      "nɔːrm",
+      "nɔːm"
     ]
   },
   "normal": {
@@ -28461,6 +33038,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "nɑːt",
       "nɒt"
+    ]
+  },
+  "notable": {
+    "display": "미국 [│ noʊtəbl] · 영국 [│ nəʊtəbl]",
+    "phonetics": [
+      "│ noʊtəbl",
+      "│ nəʊtəbl"
+    ]
+  },
+  "notably": {
+    "display": "미국 [│ noʊtəbli] · 영국 [│ nəʊtəbli]",
+    "phonetics": [
+      "│ noʊtəbli",
+      "│ nəʊtəbli"
     ]
   },
   "note": {
@@ -28560,6 +33151,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈnəʊʃn"
     ]
   },
+  "notorious": {
+    "display": "미국 [noʊ │ tɔːriəs] · 영국 [nəʊ │ tɔːriəs]",
+    "phonetics": [
+      "noʊ │ tɔːriəs",
+      "nəʊ │ tɔːriəs"
+    ]
+  },
   "nov": {
     "display": "미국 [noʊ │ vembə(r)] · 영국 [nəʊ │ vembə(r)]",
     "phonetics": [
@@ -28581,6 +33179,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈnɒvl"
     ]
   },
+  "novelist": {
+    "display": "미국 [│ nɑːvəlɪst] · 영국 [│ nɒvəlɪst]",
+    "phonetics": [
+      "│ nɑːvəlɪst",
+      "│ nɒvəlɪst"
+    ]
+  },
   "november": {
     "display": "미국 [noʊ │ vembə(r)] · 영국 [nəʊ │ vembə(r)]",
     "phonetics": [
@@ -28592,6 +33197,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [naʊ]",
     "phonetics": [
       "naʊ"
+    ]
+  },
+  "nowadays": {
+    "display": "미국∙영국 [ˈnaʊədeɪz] · 미국 [ˈnaʊədeɪz]",
+    "phonetics": [
+      "ˈnaʊədeɪz",
+      "ˈnaʊədeɪz"
+    ]
+  },
+  "nowhere": {
+    "display": "미국 [ˈnoʊwer] · 영국 [ˈnəʊweə(r)]",
+    "phonetics": [
+      "ˈnoʊwer",
+      "ˈnəʊweə(r)"
     ]
   },
   "nu": {
@@ -28728,6 +33347,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əʊ │ eɪsɪs"
     ]
   },
+  "obesity": {
+    "display": "미국∙영국 [oubí:səti]",
+    "phonetics": [
+      "oubí:səti"
+    ]
+  },
+  "obey": {
+    "display": "미국∙영국 [əˈbeɪ] · 미국 [əˈbeɪ]",
+    "phonetics": [
+      "əˈbeɪ",
+      "əˈbeɪ"
+    ]
+  },
   "obituaries": {
     "display": "미국 [oʊˈbɪtʃueri] · 영국 [əˈbɪtʃuəri]",
     "phonetics": [
@@ -28740,6 +33372,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ɒbdʒɪkt; 美 │ ɑːbdʒekt; │ ɑːbdʒɪkt",
       "əb │ dʒekt"
+    ]
+  },
+  "objection": {
+    "display": "미국∙영국 [əbˈdʒekʃn] · 미국 [əbˈdʒekʃn]",
+    "phonetics": [
+      "əbˈdʒekʃn",
+      "əbˈdʒekʃn"
     ]
   },
   "objective": {
@@ -28767,6 +33406,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ɑːblɪ │ ɡeɪʃn",
       "│ ɒblɪ │ ɡeɪʃn"
+    ]
+  },
+  "oblige": {
+    "display": "미국∙영국 [əˈblaɪdʒ]",
+    "phonetics": [
+      "əˈblaɪdʒ"
     ]
   },
   "observation": {
@@ -28804,6 +33449,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əb │ zɜːvə(r)"
     ]
   },
+  "obsess": {
+    "display": "미국∙영국 [əbˈses]",
+    "phonetics": [
+      "əbˈses"
+    ]
+  },
+  "obsession": {
+    "display": "미국∙영국 [əbˈseʃn]",
+    "phonetics": [
+      "əbˈseʃn"
+    ]
+  },
+  "obstacle": {
+    "display": "미국 [│ ɑːbstəkl] · 영국 [│ ɒbstəkl]",
+    "phonetics": [
+      "│ ɑːbstəkl",
+      "│ ɒbstəkl"
+    ]
+  },
   "obtain": {
     "display": "미국∙영국 [əbˈteɪn]",
     "phonetics": [
@@ -28834,6 +33498,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [əˈkeɪʒn]",
     "phonetics": [
       "əˈkeɪʒn"
+    ]
+  },
+  "occasional": {
+    "display": "미국∙영국 [əˈkeɪʒənl] · 미국 [əˈkeɪʒənl]",
+    "phonetics": [
+      "əˈkeɪʒənl",
+      "əˈkeɪʒənl"
     ]
   },
   "occasionally": {
@@ -28870,6 +33541,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ɒkjupaɪd"
     ]
   },
+  "occupy": {
+    "display": "미국 [│ ɑːkjupaɪ] · 영국 [│ ɒkjupaɪ]",
+    "phonetics": [
+      "│ ɑːkjupaɪ",
+      "│ ɒkjupaɪ"
+    ]
+  },
   "occur": {
     "display": "미국∙영국 [əˈkɜː(r)]",
     "phonetics": [
@@ -28880,6 +33558,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [əˈkɜː(r)]",
     "phonetics": [
       "əˈkɜː(r)"
+    ]
+  },
+  "occurrence": {
+    "display": "미국 [ə │ kɜːrəns] · 영국 [ə │ kʌrəns]",
+    "phonetics": [
+      "ə │ kɜːrəns",
+      "ə │ kʌrəns"
     ]
   },
   "ocean": {
@@ -28922,6 +33607,24 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ɔːf; ɑːf",
       "ɒf"
+    ]
+  },
+  "offence": {
+    "display": "발음기호 [əˈfens]",
+    "phonetics": [
+      "əˈfens"
+    ]
+  },
+  "offend": {
+    "display": "미국∙영국 [əˈfend]",
+    "phonetics": [
+      "əˈfend"
+    ]
+  },
+  "offender": {
+    "display": "미국∙영국 [əˈfendə(r)]",
+    "phonetics": [
+      "əˈfendə(r)"
     ]
   },
   "offensive": {
@@ -29010,6 +33713,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ɔːf │ ʃɔː(r); │ ɑːf │ ʃɔː(r)",
       "│ ɒf │ ʃɔː(r)"
+    ]
+  },
+  "offspring": {
+    "display": "미국 [│ ɔːfsprɪŋ; │ ɑːfsprɪŋ] · 영국 [│ ɒfsprɪŋ]",
+    "phonetics": [
+      "│ ɔːfsprɪŋ; │ ɑːfsprɪŋ",
+      "│ ɒfsprɪŋ"
     ]
   },
   "often": {
@@ -29221,6 +33931,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ əʊpnɪŋ"
     ]
   },
+  "openly": {
+    "display": "미국 [│ oʊpənli] · 영국 [│ əʊpənli]",
+    "phonetics": [
+      "│ oʊpənli",
+      "│ əʊpənli"
+    ]
+  },
   "opens": {
     "display": "미국 [│ oʊpən] · 영국 [│ əʊpən]",
     "phonetics": [
@@ -29289,6 +34006,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əˈpɪnjən"
     ]
   },
+  "opponent": {
+    "display": "미국 [ə │ poʊnənt] · 영국 [ə │ pəʊnənt]",
+    "phonetics": [
+      "ə │ poʊnənt",
+      "ə │ pəʊnənt"
+    ]
+  },
   "opportunity": {
     "display": "미국 [│ ɑːpər │ tuːnəti] · 영국 [│ ɒpə │ tjuːnəti]",
     "phonetics": [
@@ -29350,6 +34074,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ɑːptɪməl",
       "│ ɒptɪməl"
+    ]
+  },
+  "optimism": {
+    "display": "미국 [│ ɑːptɪmɪzəm] · 영국 [│ ɒptɪmɪzəm]",
+    "phonetics": [
+      "│ ɑːptɪmɪzəm",
+      "│ ɒptɪmɪzəm"
+    ]
+  },
+  "optimistic": {
+    "display": "미국 [│ ɑːptɪ │ mɪstɪk] · 영국 [│ ɒptɪ │ mɪstɪk]",
+    "phonetics": [
+      "│ ɑːptɪ │ mɪstɪk",
+      "│ ɒptɪ │ mɪstɪk"
     ]
   },
   "option": {
@@ -29541,6 +34279,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "əˈrɪdʒənəli"
     ]
   },
+  "originate": {
+    "display": "미국∙영국 [əˈrɪdʒɪneɪt]",
+    "phonetics": [
+      "əˈrɪdʒɪneɪt"
+    ]
+  },
   "orlando": {
     "display": "미국∙영국 [ɔ:rlǽndou]",
     "phonetics": [
@@ -29607,6 +34351,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ɑː(r); ˈaʊə(r)"
     ]
   },
+  "ours": {
+    "display": "미국 [ɑːrz; ˈaʊərz] · 영국 [ɑːz; ˈaʊəz]",
+    "phonetics": [
+      "ɑːrz; ˈaʊərz",
+      "ɑːz; ˈaʊəz"
+    ]
+  },
   "ourselves": {
     "display": "미국 [ɑːr │ selvz; │ aʊər │ selvz] · 영국 [ɑː │ selvz; │ aʊə │ selvz]",
     "phonetics": [
@@ -29618,6 +34369,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [aʊt]",
     "phonetics": [
       "aʊt"
+    ]
+  },
+  "outbreak": {
+    "display": "미국 [ˈaʊtbreɪk]",
+    "phonetics": [
+      "ˈaʊtbreɪk"
     ]
   },
   "outcome": {
@@ -29647,6 +34404,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈaʊtə(r)"
     ]
   },
+  "outfit": {
+    "display": "미국∙영국 [ˈaʊtfɪt]",
+    "phonetics": [
+      "ˈaʊtfɪt"
+    ]
+  },
+  "outing": {
+    "display": "미국∙영국 [ˈaʊtɪŋ]",
+    "phonetics": [
+      "ˈaʊtɪŋ"
+    ]
+  },
   "outlet": {
     "display": "미국∙영국 [ˈaʊtlet]",
     "phonetics": [
@@ -29671,6 +34440,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈaʊtpʊt"
     ]
   },
+  "outrage": {
+    "display": "미국∙영국 [ˈaʊtreɪdʒ]",
+    "phonetics": [
+      "ˈaʊtreɪdʒ"
+    ]
+  },
   "outreach": {
     "display": "미국∙영국 [ˈaʊtriːtʃ] · 미국 [ˈaʊtriːtʃ]",
     "phonetics": [
@@ -29684,6 +34459,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "aʊtˈsaɪd",
       "ˈaʊtsaɪd",
       "ˌaʊtˈsaɪd"
+    ]
+  },
+  "outsider": {
+    "display": "미국∙영국 [ˌaʊtˈsaɪdə(r)]",
+    "phonetics": [
+      "ˌaʊtˈsaɪdə(r)"
     ]
   },
   "outsourcing": {
@@ -29739,6 +34520,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈəʊvəhed; 美 ˈoʊvərhed"
     ]
   },
+  "overlook": {
+    "display": "미국 [ˌoʊvərˈlʊk] · 영국 [ˌəʊvəˈlʊk]",
+    "phonetics": [
+      "ˌoʊvərˈlʊk",
+      "ˌəʊvəˈlʊk"
+    ]
+  },
+  "overly": {
+    "display": "미국 [ˈoʊvərli] · 영국 [ˈəʊvəli]",
+    "phonetics": [
+      "ˈoʊvərli",
+      "ˈəʊvəli"
+    ]
+  },
   "overnight": {
     "display": "발음기호 [│ əʊvənaɪt; 美 │ oʊvərn] · 발음기호 [│ əʊvə │ naɪt; 美 │ oʊvər │ naɪt]",
     "phonetics": [
@@ -29753,6 +34548,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ əʊvə │ siːz"
     ]
   },
+  "oversee": {
+    "display": "미국 [ˌoʊvərˈsiː] · 영국 [ˌəʊvəˈsiː]",
+    "phonetics": [
+      "ˌoʊvərˈsiː",
+      "ˌəʊvəˈsiː"
+    ]
+  },
   "overtime": {
     "display": "미국 [│ oʊvərtaɪm] · 영국 [│ əʊvətaɪm]",
     "phonetics": [
@@ -29760,11 +34562,39 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ əʊvətaɪm"
     ]
   },
+  "overturn": {
+    "display": "미국 [ˌoʊvərˈtɜːrn] · 영국 [ˌəʊvəˈtɜːn]",
+    "phonetics": [
+      "ˌoʊvərˈtɜːrn",
+      "ˌəʊvəˈtɜːn"
+    ]
+  },
   "overview": {
     "display": "미국 [│ oʊvərvjuː] · 영국 [│ əʊvəvjuː]",
     "phonetics": [
       "│ oʊvərvjuː",
       "│ əʊvəvjuː"
+    ]
+  },
+  "overwhelm": {
+    "display": "미국 [│ oʊvər │ welm] · 영국 [│ əʊvə │ welm]",
+    "phonetics": [
+      "│ oʊvər │ welm",
+      "│ əʊvə │ welm"
+    ]
+  },
+  "overwhelming": {
+    "display": "미국 [│ oʊvər │ welmɪŋ] · 영국 [│ əʊvə │ welmɪŋ]",
+    "phonetics": [
+      "│ oʊvər │ welmɪŋ",
+      "│ əʊvə │ welmɪŋ"
+    ]
+  },
+  "owe": {
+    "display": "미국 [oʊ] · 영국 [əʊ]",
+    "phonetics": [
+      "oʊ",
+      "əʊ"
     ]
   },
   "owl": {
@@ -29920,6 +34750,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "peɪn"
     ]
   },
+  "painful": {
+    "display": "미국∙영국 [ˈpeɪnfl]",
+    "phonetics": [
+      "ˈpeɪnfl"
+    ]
+  },
   "paint": {
     "display": "미국∙영국 [peɪnt]",
     "phonetics": [
@@ -30025,6 +34861,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈpænl"
     ]
   },
+  "panic": {
+    "display": "미국∙영국 [ˈpænɪk]",
+    "phonetics": [
+      "ˈpænɪk"
+    ]
+  },
   "pants": {
     "display": "미국∙영국 [pænts]",
     "phonetics": [
@@ -30101,6 +34943,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ perənt",
       "│ peərənt"
+    ]
+  },
+  "parental": {
+    "display": "미국∙영국 [pəˈrentl] · 미국 [pəˈrentl]",
+    "phonetics": [
+      "pəˈrentl",
+      "pəˈrentl"
     ]
   },
   "parenting": {
@@ -30320,6 +35169,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈpæʃn"
     ]
   },
+  "passionate": {
+    "display": "미국∙영국 [ˈpæʃənət]",
+    "phonetics": [
+      "ˈpæʃənət"
+    ]
+  },
+  "passive": {
+    "display": "미국∙영국 [ˈpæsɪv]",
+    "phonetics": [
+      "ˈpæsɪv"
+    ]
+  },
   "passport": {
     "display": "미국 [ˈpæspɔːrt] · 영국 [ˈpɑːspɔːt]",
     "phonetics": [
@@ -30352,6 +35213,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [peɪst]",
     "phonetics": [
       "peɪst"
+    ]
+  },
+  "pastor": {
+    "display": "미국 [│ pæstə(r)] · 영국 [│ pɑːstə(r)]",
+    "phonetics": [
+      "│ pæstə(r)",
+      "│ pɑːstə(r)"
     ]
   },
   "pat": {
@@ -30399,6 +35267,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pɑːθ"
     ]
   },
+  "pathway": {
+    "display": "미국 [│ pæθweɪ] · 영국 [│ pɑːθweɪ]",
+    "phonetics": [
+      "│ pæθweɪ",
+      "│ pɑːθweɪ"
+    ]
+  },
+  "patience": {
+    "display": "미국∙영국 [ˈpeɪʃns]",
+    "phonetics": [
+      "ˈpeɪʃns"
+    ]
+  },
   "patient": {
     "display": "미국∙영국 [ˈpeɪʃnt]",
     "phonetics": [
@@ -30424,6 +35305,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pǽtrik"
     ]
   },
+  "patrol": {
+    "display": "미국 [pəˈtroʊl] · 영국 [pəˈtrəʊl]",
+    "phonetics": [
+      "pəˈtroʊl",
+      "pəˈtrəʊl"
+    ]
+  },
+  "patron": {
+    "display": "미국∙영국 [ˈpeɪtrən]",
+    "phonetics": [
+      "ˈpeɪtrən"
+    ]
+  },
   "pattern": {
     "display": "미국 [│ pætərn] · 영국 [│ pætn]",
     "phonetics": [
@@ -30442,6 +35336,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [pɔ́:l]",
     "phonetics": [
       "pɔ́:l"
+    ]
+  },
+  "pause": {
+    "display": "미국∙영국 [pɔːz]",
+    "phonetics": [
+      "pɔːz"
     ]
   },
   "pay": {
@@ -30576,6 +35476,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "pɜːrl",
       "pɜːl"
+    ]
+  },
+  "peasant": {
+    "display": "미국∙영국 [ˈpeznt]",
+    "phonetics": [
+      "ˈpeznt"
+    ]
+  },
+  "peculiar": {
+    "display": "미국∙영국 [pɪˈkjuːliə(r)]",
+    "phonetics": [
+      "pɪˈkjuːliə(r)"
     ]
   },
   "pee": {
@@ -30839,6 +35751,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈperi"
     ]
   },
+  "persist": {
+    "display": "미국 [pər │ sɪst] · 영국 [pə │ sɪst]",
+    "phonetics": [
+      "pər │ sɪst",
+      "pə │ sɪst"
+    ]
+  },
+  "persistent": {
+    "display": "미국 [pər │ sɪstənt] · 영국 [pə │ sɪstənt]",
+    "phonetics": [
+      "pər │ sɪstənt",
+      "pə │ sɪstənt"
+    ]
+  },
   "person": {
     "display": "미국 [ˈpɜːrsn] · 영국 [ˈpɜːsn]",
     "phonetics": [
@@ -30916,6 +35842,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [pəˈtɪʃn]",
     "phonetics": [
       "pəˈtɪʃn"
+    ]
+  },
+  "petrol": {
+    "display": "미국∙영국 [ˈpetrəl] · 미국 [ˈpetrəl]",
+    "phonetics": [
+      "ˈpetrəl",
+      "ˈpetrəl"
     ]
   },
   "petroleum": {
@@ -31017,6 +35950,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈfɪlɪps",
       "ˈfɪlɪps"
+    ]
+  },
+  "philosopher": {
+    "display": "미국 [fə │ lɑːsəfə(r)] · 영국 [fə │ lɒsəfə(r)]",
+    "phonetics": [
+      "fə │ lɑːsəfə(r)",
+      "fə │ lɒsəfə(r)"
+    ]
+  },
+  "philosophical": {
+    "display": "미국 [│ fɪlə │ sɑːfɪkl] · 영국 [│ fɪlə │ sɒfɪkl]",
+    "phonetics": [
+      "│ fɪlə │ sɑːfɪkl",
+      "│ fɪlə │ sɒfɪkl"
     ]
   },
   "philosophy": {
@@ -31190,6 +36137,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pɪɡ"
     ]
   },
+  "pile": {
+    "display": "미국∙영국 [paɪl]",
+    "phonetics": [
+      "paɪl"
+    ]
+  },
   "pill": {
     "display": "미국∙영국 [pɪl]",
     "phonetics": [
@@ -31258,6 +36211,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈpaɪplaɪn"
     ]
   },
+  "pirate": {
+    "display": "미국∙영국 [ˈpaɪrət]",
+    "phonetics": [
+      "ˈpaɪrət"
+    ]
+  },
   "pit": {
     "display": "미국∙영국 [pɪt]",
     "phonetics": [
@@ -31274,6 +36233,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [pítsbə:rɡ]",
     "phonetics": [
       "pítsbə:rɡ"
+    ]
+  },
+  "pity": {
+    "display": "미국∙영국 [ˈpɪti]",
+    "phonetics": [
+      "ˈpɪti"
     ]
   },
   "pixel": {
@@ -31467,6 +36432,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌpiː el ˈsiː"
     ]
   },
+  "plea": {
+    "display": "미국∙영국 [pliː]",
+    "phonetics": [
+      "pliː"
+    ]
+  },
+  "plead": {
+    "display": "미국∙영국 [pliːd]",
+    "phonetics": [
+      "pliːd"
+    ]
+  },
   "pleasant": {
     "display": "미국∙영국 [ˈpleznt]",
     "phonetics": [
@@ -31489,6 +36466,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈpleʒə(r)]",
     "phonetics": [
       "ˈpleʒə(r)"
+    ]
+  },
+  "pledge": {
+    "display": "미국∙영국 [pledʒ]",
+    "phonetics": [
+      "pledʒ"
     ]
   },
   "plenty": {
@@ -31514,6 +36497,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈplʌmɪŋ]",
     "phonetics": [
       "ˈplʌmɪŋ"
+    ]
+  },
+  "plunge": {
+    "display": "미국∙영국 [plʌndʒ]",
+    "phonetics": [
+      "plʌndʒ"
     ]
   },
   "plus": {
@@ -31594,6 +36583,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pɔɪnt"
     ]
   },
+  "poison": {
+    "display": "미국∙영국 [ˈpɔɪzn]",
+    "phonetics": [
+      "ˈpɔɪzn"
+    ]
+  },
+  "poisonous": {
+    "display": "미국∙영국 [ˈpɔɪzənəs]",
+    "phonetics": [
+      "ˈpɔɪzənəs"
+    ]
+  },
   "poker": {
     "display": "미국 [│ poʊkə(r)] · 영국 [│ pəʊkə(r)]",
     "phonetics": [
@@ -31627,6 +36628,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pəˈliːs"
     ]
   },
+  "policeman": {
+    "display": "미국∙영국 [pəˈliːsmən] · 미국 [pəˈliːsmən]",
+    "phonetics": [
+      "pəˈliːsmən",
+      "pəˈliːsmən"
+    ]
+  },
   "policy": {
     "display": "미국 [│ pɑːləsi] · 영국 [│ pɒləsi]",
     "phonetics": [
@@ -31651,6 +36659,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [pəˈlɪtɪkl]",
     "phonetics": [
       "pəˈlɪtɪkl"
+    ]
+  },
+  "politician": {
+    "display": "미국 [│ pɑːlə │ tɪʃn] · 영국 [│ pɒlə │ tɪʃn]",
+    "phonetics": [
+      "│ pɑːlə │ tɪʃn",
+      "│ pɒlə │ tɪʃn"
     ]
   },
   "politicians": {
@@ -31845,6 +36860,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ pɔːtreɪt; │ pɔːtrət"
     ]
   },
+  "portray": {
+    "display": "미국 [pɔːr │ treɪ] · 영국 [pɔː │ treɪ]",
+    "phonetics": [
+      "pɔːr │ treɪ",
+      "pɔː │ treɪ"
+    ]
+  },
   "ports": {
     "display": "미국 [pɔːrt] · 영국 [pɔːt]",
     "phonetics": [
@@ -31865,6 +36887,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ pɔːtʃu │ ɡiːz"
     ]
   },
+  "pose": {
+    "display": "미국 [poʊz] · 영국 [pəʊz]",
+    "phonetics": [
+      "poʊz",
+      "pəʊz"
+    ]
+  },
   "position": {
     "display": "미국∙영국 [pəˈzɪʃn]",
     "phonetics": [
@@ -31882,6 +36911,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ pɑːzətɪv",
       "│ pɒzətɪv"
+    ]
+  },
+  "possess": {
+    "display": "미국∙영국 [pəˈzes]",
+    "phonetics": [
+      "pəˈzes"
     ]
   },
   "possession": {
@@ -31971,6 +37006,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "poʊˈspoʊn",
       "pəˈspəʊn"
+    ]
+  },
+  "postwar": {
+    "display": "미국∙영국 [póustwɔ́:r]",
+    "phonetics": [
+      "póustwɔ́:r"
     ]
   },
   "pot": {
@@ -32082,6 +37123,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈpræktɪs"
     ]
   },
+  "practise": {
+    "display": "미국∙영국 [ˈpræktɪs]",
+    "phonetics": [
+      "ˈpræktɪs"
+    ]
+  },
+  "practitioner": {
+    "display": "미국∙영국 [prækˈtɪʃənə(r)]",
+    "phonetics": [
+      "prækˈtɪʃənə(r)"
+    ]
+  },
   "practitioners": {
     "display": "미국∙영국 [prækˈtɪʃənə(r)]",
     "phonetics": [
@@ -32120,6 +37173,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "preə(r)"
     ]
   },
+  "preach": {
+    "display": "미국∙영국 [priːtʃ]",
+    "phonetics": [
+      "priːtʃ"
+    ]
+  },
+  "precede": {
+    "display": "미국∙영국 [prɪˈsiːd]",
+    "phonetics": [
+      "prɪˈsiːd"
+    ]
+  },
+  "precedent": {
+    "display": "미국∙영국 [ˈpresɪdənt]",
+    "phonetics": [
+      "ˈpresɪdənt"
+    ]
+  },
   "precious": {
     "display": "미국∙영국 [ˈpreʃəs]",
     "phonetics": [
@@ -32138,11 +37209,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prɪˈsaɪs"
     ]
   },
+  "precisely": {
+    "display": "미국∙영국 [prɪˈsaɪsli]",
+    "phonetics": [
+      "prɪˈsaɪsli"
+    ]
+  },
   "precision": {
     "display": "미국∙영국 [prɪˈsɪʒn] · 미국 [prɪˈsɪʒn]",
     "phonetics": [
       "prɪˈsɪʒn",
       "prɪˈsɪʒn"
+    ]
+  },
+  "predator": {
+    "display": "미국∙영국 [ˈpredətə(r)]",
+    "phonetics": [
+      "ˈpredətə(r)"
+    ]
+  },
+  "predecessor": {
+    "display": "미국 [│ predəsesə(r)] · 영국 [│ priːdɪsesə(r)]",
+    "phonetics": [
+      "│ predəsesə(r)",
+      "│ priːdɪsesə(r)"
     ]
   },
   "predict": {
@@ -32152,11 +37242,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prɪˈdɪkt"
     ]
   },
+  "predictable": {
+    "display": "미국∙영국 [prɪˈdɪktəbl]",
+    "phonetics": [
+      "prɪˈdɪktəbl"
+    ]
+  },
   "prediction": {
     "display": "미국∙영국 [prɪˈdɪkʃn] · 미국 [prɪˈdɪkʃn]",
     "phonetics": [
       "prɪˈdɪkʃn",
       "prɪˈdɪkʃn"
+    ]
+  },
+  "predominantly": {
+    "display": "미국 [prɪ │ dɑːmɪnəntli] · 영국 [prɪ │ dɒmɪnəntli]",
+    "phonetics": [
+      "prɪ │ dɑːmɪnəntli",
+      "prɪ │ dɒmɪnəntli"
     ]
   },
   "prefer": {
@@ -32191,6 +37294,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈpreɡnənt"
     ]
   },
+  "prejudice": {
+    "display": "미국∙영국 [ˈpredʒudɪs]",
+    "phonetics": [
+      "ˈpredʒudɪs"
+    ]
+  },
   "preliminary": {
     "display": "미국 [prɪ │ lɪmɪneri] · 영국 [prɪ │ lɪmɪnəri]",
     "phonetics": [
@@ -32210,6 +37319,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "prɪ │ mɪr; prɪ │ mjɪr",
       "│ premieə(r)"
+    ]
+  },
+  "premise": {
+    "display": "미국∙영국 [ˈpremɪs] · 미국 [ˈpremɪs]",
+    "phonetics": [
+      "ˈpremɪs",
+      "ˈpremɪs"
     ]
   },
   "premises": {
@@ -32258,6 +37374,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prɪ │ peə(r)"
     ]
   },
+  "prescribe": {
+    "display": "미국∙영국 [prɪˈskraɪb]",
+    "phonetics": [
+      "prɪˈskraɪb"
+    ]
+  },
   "prescribed": {
     "display": "미국∙영국 [priskráibd]",
     "phonetics": [
@@ -32304,6 +37426,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prɪˈzent"
     ]
   },
+  "presently": {
+    "display": "미국∙영국 [ˈprezntli]",
+    "phonetics": [
+      "ˈprezntli"
+    ]
+  },
   "presents": {
     "display": "발음기호 [ˈpreznt] · 발음기호 [prɪˈzent]",
     "phonetics": [
@@ -32323,6 +37451,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "prɪ │ zɜːrv",
       "prɪ │ zɜːv"
+    ]
+  },
+  "preside": {
+    "display": "미국∙영국 [prɪˈzaɪd] · 미국 [prɪˈzaɪd]",
+    "phonetics": [
+      "prɪˈzaɪd",
+      "prɪˈzaɪd"
+    ]
+  },
+  "presidency": {
+    "display": "미국∙영국 [ˈprezɪdənsi] · 미국 [ˈprezɪdənsi]",
+    "phonetics": [
+      "ˈprezɪdənsi",
+      "ˈprezɪdənsi"
     ]
   },
   "president": {
@@ -32349,10 +37491,49 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈpreʃə(r)"
     ]
   },
+  "prestigious": {
+    "display": "미국∙영국 [preˈstɪdʒəs] · 미국 [preˈstɪdʒəs]",
+    "phonetics": [
+      "preˈstɪdʒəs",
+      "preˈstɪdʒəs"
+    ]
+  },
+  "presumably": {
+    "display": "미국 [prɪ │ │ zuːməbli] · 영국 [prɪ │ zjuːməbli]",
+    "phonetics": [
+      "prɪ │ │ zuːməbli",
+      "prɪ │ zjuːməbli"
+    ]
+  },
+  "presume": {
+    "display": "미국 [prɪ │ zuːm] · 영국 [prɪ │ zjuːm]",
+    "phonetics": [
+      "prɪ │ zuːm",
+      "prɪ │ zjuːm"
+    ]
+  },
+  "pretend": {
+    "display": "미국∙영국 [prɪˈtend]",
+    "phonetics": [
+      "prɪˈtend"
+    ]
+  },
   "pretty": {
     "display": "미국∙영국 [ˈprɪti]",
     "phonetics": [
       "ˈprɪti"
+    ]
+  },
+  "prevail": {
+    "display": "미국∙영국 [prɪˈveɪl]",
+    "phonetics": [
+      "prɪˈveɪl"
+    ]
+  },
+  "prevalence": {
+    "display": "미국∙영국 [prévələns(i)]",
+    "phonetics": [
+      "prévələns(i)"
     ]
   },
   "prevent": {
@@ -32385,6 +37566,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈpriːviəs]",
     "phonetics": [
       "ˈpriːviəs"
+    ]
+  },
+  "prey": {
+    "display": "미국∙영국 [preɪ]",
+    "phonetics": [
+      "preɪ"
     ]
   },
   "price": {
@@ -32538,6 +37725,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈprɪzn"
     ]
   },
+  "prisoner": {
+    "display": "미국∙영국 [ˈprɪznə(r)]",
+    "phonetics": [
+      "ˈprɪznə(r)"
+    ]
+  },
   "prisoners": {
     "display": "미국∙영국 [ˈprɪznə(r)]",
     "phonetics": [
@@ -32555,6 +37748,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈpraɪvət]",
     "phonetics": [
       "ˈpraɪvət"
+    ]
+  },
+  "privatization": {
+    "display": "미국 [│ praɪvətə │ zeɪʃn] · 영국 [│ praɪvətaɪ │ zeɪʃn]",
+    "phonetics": [
+      "│ praɪvətə │ zeɪʃn",
+      "│ praɪvətaɪ │ zeɪʃn"
+    ]
+  },
+  "privilege": {
+    "display": "미국∙영국 [ˈprɪvəlɪdʒ]",
+    "phonetics": [
+      "ˈprɪvəlɪdʒ"
     ]
   },
   "prize": {
@@ -32590,6 +37796,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ prɒbə │ bɪləti"
     ]
   },
+  "probable": {
+    "display": "미국 [│ prɑːbəbl] · 영국 [│ prɒbəbl]",
+    "phonetics": [
+      "│ prɑːbəbl",
+      "│ prɒbəbl"
+    ]
+  },
   "probably": {
     "display": "미국 [│ prɑːbəbli] · 영국 [│ prɒbəbli]",
     "phonetics": [
@@ -32609,6 +37822,14 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ prɑːbləm",
       "│ prɒbləm"
+    ]
+  },
+  "problematic": {
+    "display": "발음기호 [| prɑːblə | mætɪk] · 발음기호 [| prɒblə | mætɪk] · 발음기호 [|prɑːblə|mætɪkl]",
+    "phonetics": [
+      "| prɑːblə | mætɪk",
+      "| prɒblə | mætɪk",
+      "|prɑːblə|mætɪkl"
     ]
   },
   "procedure": {
@@ -32663,6 +37884,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ prɑːsesər; │ proʊsesər",
       "│ prəʊsesə(r)"
+    ]
+  },
+  "proclaim": {
+    "display": "미국∙영국 [prəˈkleɪm]",
+    "phonetics": [
+      "prəˈkleɪm"
     ]
   },
   "procurement": {
@@ -32778,6 +38005,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈprɒfɪt"
     ]
   },
+  "profitable": {
+    "display": "미국 [│ prɑːfɪtəbl] · 영국 [│ prɒfɪtəbl]",
+    "phonetics": [
+      "│ prɑːfɪtəbl",
+      "│ prɒfɪtəbl"
+    ]
+  },
+  "profound": {
+    "display": "미국∙영국 [prəˈfaʊnd]",
+    "phonetics": [
+      "prəˈfaʊnd"
+    ]
+  },
   "program": {
     "display": "미국 [│ proʊɡræm] · 영국 [│ prəʊɡræm]",
     "phonetics": [
@@ -32833,6 +38073,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prəˈɡresɪv"
     ]
   },
+  "prohibit": {
+    "display": "미국∙영국 [prə │ hɪbɪt] · 미국 [proʊ │ hɪbɪt]",
+    "phonetics": [
+      "prə │ hɪbɪt",
+      "proʊ │ hɪbɪt"
+    ]
+  },
   "project": {
     "display": "발음기호 [│ prɒdʒekt; 美 │ prɑːdʒekt] · 발음기호 [prə │ dʒekt]",
     "phonetics": [
@@ -32865,6 +38112,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prə │ dʒekt"
     ]
   },
+  "prominent": {
+    "display": "미국 [│ prɑːmɪnənt] · 영국 [│ prɒmɪnənt]",
+    "phonetics": [
+      "│ prɑːmɪnənt",
+      "│ prɒmɪnənt"
+    ]
+  },
   "promise": {
     "display": "미국 [│ prɑːmɪs] · 영국 [│ prɒmɪs]",
     "phonetics": [
@@ -32877,6 +38131,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ prɑːmɪs",
       "│ prɒmɪs"
+    ]
+  },
+  "promising": {
+    "display": "미국 [│ prɑːmɪsɪŋ] · 영국 [│ prɒmɪsɪŋ]",
+    "phonetics": [
+      "│ prɑːmɪsɪŋ",
+      "│ prɒmɪsɪŋ"
     ]
   },
   "promote": {
@@ -32921,10 +38182,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prɒmpt"
     ]
   },
+  "pronounce": {
+    "display": "미국∙영국 [prəˈnaʊns]",
+    "phonetics": [
+      "prəˈnaʊns"
+    ]
+  },
+  "pronounced": {
+    "display": "미국∙영국 [prəˈnaʊnst] · 미국 [prəˈnaʊnst]",
+    "phonetics": [
+      "prəˈnaʊnst",
+      "prəˈnaʊnst"
+    ]
+  },
   "proof": {
     "display": "미국∙영국 [pruːf]",
     "phonetics": [
       "pruːf"
+    ]
+  },
+  "propaganda": {
+    "display": "미국 [│ prɑːpə │ ɡændə] · 영국 [│ prɒpə │ ɡændə]",
+    "phonetics": [
+      "│ prɑːpə │ ɡændə",
+      "│ prɒpə │ ɡændə"
     ]
   },
   "proper": {
@@ -32969,11 +38250,46 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prə │ pəʊzl"
     ]
   },
+  "propose": {
+    "display": "미국 [prə │ poʊz] · 영국 [prə │ pəʊz]",
+    "phonetics": [
+      "prə │ poʊz",
+      "prə │ pəʊz"
+    ]
+  },
+  "proposition": {
+    "display": "미국 [│ prɑːpə │ zɪʃn] · 영국 [│ prɒpə │ zɪʃn]",
+    "phonetics": [
+      "│ prɑːpə │ zɪʃn",
+      "│ prɒpə │ zɪʃn"
+    ]
+  },
   "proprietary": {
     "display": "미국 [prə │ praɪəteri] · 영국 [prə │ praɪətri]",
     "phonetics": [
       "prə │ praɪəteri",
       "prə │ praɪətri"
+    ]
+  },
+  "prosecute": {
+    "display": "미국 [│ prɑːsɪkjuːt] · 영국 [│ prɒsɪkjuːt]",
+    "phonetics": [
+      "│ prɑːsɪkjuːt",
+      "│ prɒsɪkjuːt"
+    ]
+  },
+  "prosecution": {
+    "display": "미국 [│ prɑːsɪ │ kjuːʃn] · 영국 [│ prɒsɪ │ kjuːʃn]",
+    "phonetics": [
+      "│ prɑːsɪ │ kjuːʃn",
+      "│ prɒsɪ │ kjuːʃn"
+    ]
+  },
+  "prosecutor": {
+    "display": "미국 [│ prɑːsɪkjuːtə(r)] · 영국 [│ prɒsɪkjuːtə(r)]",
+    "phonetics": [
+      "│ prɑːsɪkjuːtə(r)",
+      "│ prɒsɪkjuːtə(r)"
     ]
   },
   "prospect": {
@@ -32986,6 +38302,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [prəˈspektɪv]",
     "phonetics": [
       "prəˈspektɪv"
+    ]
+  },
+  "prosperity": {
+    "display": "미국 [prɑˈspɛrədi] · 영국 [prɒˈspɛrᵻti; prəˈspɛrᵻti]",
+    "phonetics": [
+      "prɑˈspɛrədi",
+      "prɒˈspɛrᵻti; prəˈspɛrᵻti"
     ]
   },
   "protect": {
@@ -33017,6 +38340,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "발음기호 [prə │ test; 美 또한 │ proʊtest]",
     "phonetics": [
       "prə │ test; 美 또한 │ proʊtest"
+    ]
+  },
+  "protester": {
+    "display": "미국∙영국 [prəˈtestə(r)] · 미국 [prəˈtestə(r)]",
+    "phonetics": [
+      "prəˈtestə(r)",
+      "prəˈtestə(r)"
     ]
   },
   "protocol": {
@@ -33111,6 +38441,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "prəˈvɪʒn"
     ]
   },
+  "provoke": {
+    "display": "미국 [prə │ │ voʊk] · 영국 [prə │ vəʊk]",
+    "phonetics": [
+      "prə │ │ voʊk",
+      "prə │ vəʊk"
+    ]
+  },
   "proxy": {
     "display": "미국 [ˈprɑːksi] · 영국 [ˈprɒksi]",
     "phonetics": [
@@ -33131,11 +38468,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌpiː es ˈtiː"
     ]
   },
+  "psychiatric": {
+    "display": "미국∙영국 [ˌsaɪkiˈætrɪk] · 미국 [ˌsaɪkiˈætrɪk]",
+    "phonetics": [
+      "ˌsaɪkiˈætrɪk",
+      "ˌsaɪkiˈætrɪk"
+    ]
+  },
   "psychological": {
     "display": "미국 [│ saɪkə │ lɑːdʒɪkl] · 영국 [│ saɪkə │ lɒdʒɪkl]",
     "phonetics": [
       "│ saɪkə │ lɑːdʒɪkl",
       "│ saɪkə │ lɒdʒɪkl"
+    ]
+  },
+  "psychologist": {
+    "display": "미국 [saɪ │ kɑːlədʒɪst] · 영국 [saɪ │ kɒlədʒɪst]",
+    "phonetics": [
+      "saɪ │ kɑːlədʒɪst",
+      "saɪ │ kɒlədʒɪst"
     ]
   },
   "psychology": {
@@ -33162,6 +38513,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˌpʌblɪˈkeɪʃn]",
     "phonetics": [
       "ˌpʌblɪˈkeɪʃn"
+    ]
+  },
+  "publicity": {
+    "display": "미국∙영국 [pʌbˈlɪsəti]",
+    "phonetics": [
+      "pʌbˈlɪsəti"
     ]
   },
   "publicly": {
@@ -33213,6 +38570,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pʌmp"
     ]
   },
+  "punch": {
+    "display": "미국∙영국 [pʌntʃ]",
+    "phonetics": [
+      "pʌntʃ"
+    ]
+  },
+  "punish": {
+    "display": "미국∙영국 [ˈpʌnɪʃ]",
+    "phonetics": [
+      "ˈpʌnɪʃ"
+    ]
+  },
   "punishment": {
     "display": "미국∙영국 [ˈpʌnɪʃmənt]",
     "phonetics": [
@@ -33223,6 +38592,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [pʌŋk]",
     "phonetics": [
       "pʌŋk"
+    ]
+  },
+  "pupil": {
+    "display": "미국∙영국 [ˈpjuːpl]",
+    "phonetics": [
+      "ˈpjuːpl"
     ]
   },
   "pupils": {
@@ -33259,6 +38634,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "pjʊə(r)"
     ]
   },
+  "purely": {
+    "display": "미국 [ˈpjʊrli] · 영국 [ˈpjʊəli]",
+    "phonetics": [
+      "ˈpjʊrli",
+      "ˈpjʊəli"
+    ]
+  },
   "purple": {
     "display": "미국 [ˈpɜːrpl] · 영국 [ˈpɜːpl]",
     "phonetics": [
@@ -33292,6 +38674,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "pərˈsuː",
       "pəˈsjuː"
+    ]
+  },
+  "pursuit": {
+    "display": "미국 [pərˈsuːt] · 영국 [pəˈsjuːt]",
+    "phonetics": [
+      "pərˈsuːt",
+      "pəˈsjuːt"
     ]
   },
   "push": {
@@ -33335,6 +38724,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kjuː]",
     "phonetics": [
       "kjuː"
+    ]
+  },
+  "qualification": {
+    "display": "미국 [│ kwɑːlɪfɪ │ keɪʃn] · 영국 [│ kwɒlɪfɪ │ keɪʃn]",
+    "phonetics": [
+      "│ kwɑːlɪfɪ │ keɪʃn",
+      "│ kwɒlɪfɪ │ keɪʃn"
     ]
   },
   "qualified": {
@@ -33431,6 +38827,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈkwestʃən"
     ]
   },
+  "questionnaire": {
+    "display": "미국 [│ kwestʃə │ ner] · 영국 [│ kwestʃə │ neə(r)]",
+    "phonetics": [
+      "│ kwestʃə │ ner",
+      "│ kwestʃə │ neə(r)"
+    ]
+  },
   "queue": {
     "display": "미국∙영국 [kjuː]",
     "phonetics": [
@@ -33471,6 +38874,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [kwɪz]",
     "phonetics": [
       "kwɪz"
+    ]
+  },
+  "quota": {
+    "display": "미국 [ˈkwoʊtə] · 영국 [ˈkwəʊtə]",
+    "phonetics": [
+      "ˈkwoʊtə",
+      "ˈkwəʊtə"
     ]
   },
   "quotation": {
@@ -33523,6 +38933,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈreɪsɪŋ"
     ]
   },
+  "racism": {
+    "display": "미국∙영국 [ˈreɪsɪzəm]",
+    "phonetics": [
+      "ˈreɪsɪzəm"
+    ]
+  },
+  "racist": {
+    "display": "미국∙영국 [ˈreɪsɪst]",
+    "phonetics": [
+      "ˈreɪsɪst"
+    ]
+  },
   "rack": {
     "display": "미국∙영국 [ræk]",
     "phonetics": [
@@ -33564,6 +38986,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈreɪdiəs]",
     "phonetics": [
       "ˈreɪdiəs"
+    ]
+  },
+  "rage": {
+    "display": "미국∙영국 [reɪdʒ]",
+    "phonetics": [
+      "reɪdʒ"
     ]
   },
   "raid": {
@@ -33707,6 +39135,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ræp]",
     "phonetics": [
       "ræp"
+    ]
+  },
+  "rape": {
+    "display": "미국∙영국 [reɪp]",
+    "phonetics": [
+      "reɪp"
     ]
   },
   "rapid": {
@@ -33856,6 +39290,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈriːdə(r)"
     ]
   },
+  "readily": {
+    "display": "미국∙영국 [ˈredɪli]",
+    "phonetics": [
+      "ˈredɪli"
+    ]
+  },
   "reading": {
     "display": "미국∙영국 [ˈriːdɪŋ]",
     "phonetics": [
@@ -33895,6 +39335,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "riˈæləti"
     ]
   },
+  "realization": {
+    "display": "발음기호 [| riːələ | zeɪʃn] · 발음기호 [| riːəlaɪ | zeɪʃn; | rɪəlaɪ | zeɪʃn]",
+    "phonetics": [
+      "| riːələ | zeɪʃn",
+      "| riːəlaɪ | zeɪʃn; | rɪəlaɪ | zeɪʃn"
+    ]
+  },
   "realize": {
     "display": "발음기호 [| riːəlaɪz] · 발음기호 [| rɪəlaɪz]",
     "phonetics": [
@@ -33907,6 +39354,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈriːəli",
       "ˈrɪəli"
+    ]
+  },
+  "realm": {
+    "display": "미국∙영국 [relm]",
+    "phonetics": [
+      "relm"
     ]
   },
   "realty": {
@@ -33941,10 +39394,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈriːznəbli"
     ]
   },
+  "reasoning": {
+    "display": "미국∙영국 [ˈriːzənɪŋ] · 미국 [ˈriːzənɪŋ]",
+    "phonetics": [
+      "ˈriːzənɪŋ",
+      "ˈriːzənɪŋ"
+    ]
+  },
   "reasons": {
     "display": "미국∙영국 [ˈriːzn]",
     "phonetics": [
       "ˈriːzn"
+    ]
+  },
+  "reassure": {
+    "display": "미국 [│ riːə │ ʃʊr] · 영국 [│ riːə │ ʃʊə(r); │ riːə │ ʃɔː(r)]",
+    "phonetics": [
+      "│ riːə │ ʃʊr",
+      "│ riːə │ ʃʊə(r); │ riːə │ ʃɔː(r)"
     ]
   },
   "rebate": {
@@ -33957,6 +39424,24 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ribékə]",
     "phonetics": [
       "ribékə"
+    ]
+  },
+  "rebel": {
+    "display": "발음기호 [ˈrebl]",
+    "phonetics": [
+      "ˈrebl"
+    ]
+  },
+  "rebellion": {
+    "display": "미국∙영국 [rɪˈbeljən]",
+    "phonetics": [
+      "rɪˈbeljən"
+    ]
+  },
+  "rebuild": {
+    "display": "미국∙영국 [ˌriːˈbɪld]",
+    "phonetics": [
+      "ˌriːˈbɪld"
     ]
   },
   "rec": {
@@ -34041,6 +39526,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈseptə(r)"
     ]
   },
+  "recession": {
+    "display": "미국∙영국 [rɪˈseʃn]",
+    "phonetics": [
+      "rɪˈseʃn"
+    ]
+  },
   "recipe": {
     "display": "미국∙영국 [ˈresəpi]",
     "phonetics": [
@@ -34065,6 +39556,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "rɪˈsɪpiənt",
       "rɪˈsɪpiənt"
+    ]
+  },
+  "reckon": {
+    "display": "미국∙영국 [ˈrekən]",
+    "phonetics": [
+      "ˈrekən"
     ]
   },
   "recognition": {
@@ -34131,6 +39628,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪ │ kɔːdɪŋ"
     ]
   },
+  "recount": {
+    "display": "미국∙영국 [ˌriːˈkaʊnt] · 미국 [ˌriːˈkaʊnt]",
+    "phonetics": [
+      "ˌriːˈkaʊnt",
+      "ˌriːˈkaʊnt"
+    ]
+  },
   "recover": {
     "display": "미국∙영국 [rɪˈkʌvə(r)]",
     "phonetics": [
@@ -34160,6 +39664,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [rɪˈkruːt]",
     "phonetics": [
       "rɪˈkruːt"
+    ]
+  },
+  "recycle": {
+    "display": "미국∙영국 [ˌriːˈsaɪkl]",
+    "phonetics": [
+      "ˌriːˈsaɪkl"
     ]
   },
   "red": {
@@ -34227,10 +39737,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rifə́:r"
     ]
   },
+  "referee": {
+    "display": "미국∙영국 [ˌrefəˈriː]",
+    "phonetics": [
+      "ˌrefəˈriː"
+    ]
+  },
   "reference": {
     "display": "미국∙영국 [ˈrefrəns]",
     "phonetics": [
       "ˈrefrəns"
+    ]
+  },
+  "referendum": {
+    "display": "미국∙영국 [ˌrefəˈrendəm] · 미국 [ˌrefəˈrendəm]",
+    "phonetics": [
+      "ˌrefəˈrendəm",
+      "ˌrefəˈrendəm"
     ]
   },
   "referral": {
@@ -34303,6 +39826,26 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈfrɪdʒəreɪtə(r)"
     ]
   },
+  "refuge": {
+    "display": "미국∙영국 [ˈrefjuːdʒ]",
+    "phonetics": [
+      "ˈrefjuːdʒ"
+    ]
+  },
+  "refugee": {
+    "display": "미국∙영국 [ˌrefjuˈdʒiː] · 미국 [ˌrefjuˈdʒiː]",
+    "phonetics": [
+      "ˌrefjuˈdʒiː",
+      "ˌrefjuˈdʒiː"
+    ]
+  },
+  "refusal": {
+    "display": "미국∙영국 [rɪˈfjuːzl] · 미국 [rɪˈfjuːzl]",
+    "phonetics": [
+      "rɪˈfjuːzl",
+      "rɪˈfjuːzl"
+    ]
+  },
   "refuse": {
     "display": "미국∙영국 [rɪˈfjuːz]",
     "phonetics": [
@@ -34314,6 +39857,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "redʒ",
       "redʒ"
+    ]
+  },
+  "regain": {
+    "display": "미국∙영국 [rɪˈɡeɪn]",
+    "phonetics": [
+      "rɪˈɡeɪn"
     ]
   },
   "regard": {
@@ -34393,6 +39942,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈredʒɪstri"
     ]
   },
+  "regret": {
+    "display": "미국∙영국 [rɪˈɡret]",
+    "phonetics": [
+      "rɪˈɡret"
+    ]
+  },
   "regular": {
     "display": "미국∙영국 [ˈreɡjələ(r)]",
     "phonetics": [
@@ -34406,10 +39961,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ reɡjələli"
     ]
   },
+  "regulate": {
+    "display": "미국∙영국 [ˈreɡjuleɪt]",
+    "phonetics": [
+      "ˈreɡjuleɪt"
+    ]
+  },
   "regulation": {
     "display": "미국∙영국 [ˌreɡjuˈleɪʃn]",
     "phonetics": [
       "ˌreɡjuˈleɪʃn"
+    ]
+  },
+  "regulator": {
+    "display": "미국∙영국 [ˈreɡjuleɪtə(r)]",
+    "phonetics": [
+      "ˈreɡjuleɪtə(r)"
     ]
   },
   "regulatory": {
@@ -34425,11 +39992,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ri:ə │ bɪlɪ │ teɪʃn"
     ]
   },
+  "reign": {
+    "display": "미국∙영국 [reɪn]",
+    "phonetics": [
+      "reɪn"
+    ]
+  },
+  "reinforce": {
+    "display": "미국 [│ riːɪn │ fɔːrs] · 영국 [│ riːɪn │ fɔːs]",
+    "phonetics": [
+      "│ riːɪn │ fɔːrs",
+      "│ riːɪn │ fɔːs"
+    ]
+  },
   "reject": {
     "display": "발음기호 [ˈriːdʒekt] · 발음기호 [rɪˈdʒekt]",
     "phonetics": [
       "ˈriːdʒekt",
       "rɪˈdʒekt"
+    ]
+  },
+  "rejection": {
+    "display": "미국∙영국 [rɪˈdʒekʃn]",
+    "phonetics": [
+      "rɪˈdʒekʃn"
     ]
   },
   "relate": {
@@ -34487,6 +40073,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈlæks"
     ]
   },
+  "relaxed": {
+    "display": "미국∙영국 [rɪˈlækst]",
+    "phonetics": [
+      "rɪˈlækst"
+    ]
+  },
+  "relaxing": {
+    "display": "미국 [rɪˈlæksɪŋ]",
+    "phonetics": [
+      "rɪˈlæksɪŋ"
+    ]
+  },
   "relay": {
     "display": "발음기호 [ˈriːleɪ]",
     "phonetics": [
@@ -34535,6 +40133,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈliːf"
     ]
   },
+  "relieve": {
+    "display": "미국∙영국 [rɪˈliːv]",
+    "phonetics": [
+      "rɪˈliːv"
+    ]
+  },
+  "relieved": {
+    "display": "미국∙영국 [rɪˈliːvd] · 미국 [rɪˈliːvd]",
+    "phonetics": [
+      "rɪˈliːvd",
+      "rɪˈliːvd"
+    ]
+  },
   "religion": {
     "display": "미국∙영국 [rɪˈlɪdʒən]",
     "phonetics": [
@@ -34561,10 +40172,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ riːləʊ │ keɪʃn"
     ]
   },
+  "reluctant": {
+    "display": "미국∙영국 [rɪˈlʌktənt] · 미국 [rɪˈlʌktənt]",
+    "phonetics": [
+      "rɪˈlʌktənt",
+      "rɪˈlʌktənt"
+    ]
+  },
   "remain": {
     "display": "미국∙영국 [rɪˈmeɪn]",
     "phonetics": [
       "rɪˈmeɪn"
+    ]
+  },
+  "remainder": {
+    "display": "미국∙영국 [rɪˈmeɪndə(r)]",
+    "phonetics": [
+      "rɪˈmeɪndə(r)"
     ]
   },
   "remained": {
@@ -34586,11 +40210,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈmeɪnz"
     ]
   },
+  "remark": {
+    "display": "미국 [rɪ │ mɑːrk] · 영국 [rɪ │ mɑːk]",
+    "phonetics": [
+      "rɪ │ mɑːrk",
+      "rɪ │ mɑːk"
+    ]
+  },
   "remarkable": {
     "display": "미국 [rɪ │ mɑːrkəbl] · 영국 [rɪ │ mɑːkəbl]",
     "phonetics": [
       "rɪ │ mɑːrkəbl",
       "rɪ │ mɑːkəbl"
+    ]
+  },
+  "remarkably": {
+    "display": "미국 [rɪ │ mɑːrkəbli] · 영국 [rɪ │ mɑːkəbli]",
+    "phonetics": [
+      "rɪ │ mɑːrkəbli",
+      "rɪ │ mɑːkəbli"
+    ]
+  },
+  "remedy": {
+    "display": "미국∙영국 [ˈremədi]",
+    "phonetics": [
+      "ˈremədi"
     ]
   },
   "remember": {
@@ -34603,6 +40247,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [rɪˈmembə(r)]",
     "phonetics": [
       "rɪˈmembə(r)"
+    ]
+  },
+  "remind": {
+    "display": "미국∙영국 [rɪˈmaɪnd] · 미국 [rɪˈmaɪnd]",
+    "phonetics": [
+      "rɪˈmaɪnd",
+      "rɪˈmaɪnd"
     ]
   },
   "reminder": {
@@ -34650,6 +40301,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈneɪsns"
     ]
   },
+  "render": {
+    "display": "미국∙영국 [ˈrendə(r)]",
+    "phonetics": [
+      "ˈrendə(r)"
+    ]
+  },
+  "renew": {
+    "display": "미국 [rɪ │ nuː] · 영국 [rɪ │ njuː]",
+    "phonetics": [
+      "rɪ │ nuː",
+      "rɪ │ njuː"
+    ]
+  },
   "renewal": {
     "display": "미국 [rɪ │ nuːəl] · 영국 [rɪ │ njuːəl]",
     "phonetics": [
@@ -34661,6 +40325,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [rí:nou]",
     "phonetics": [
       "rí:nou"
+    ]
+  },
+  "renowned": {
+    "display": "미국∙영국 [rɪˈnaʊnd] · 미국 [rɪˈnaʊnd]",
+    "phonetics": [
+      "rɪˈnaʊnd",
+      "rɪˈnaʊnd"
     ]
   },
   "rent": {
@@ -34744,6 +40415,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈpɔːt"
     ]
   },
+  "reportedly": {
+    "display": "미국 [rɪ │ pɔːrtɪdli] · 영국 [rɪ │ pɔːtɪdli]",
+    "phonetics": [
+      "rɪ │ pɔːrtɪdli",
+      "rɪ │ pɔːtɪdli"
+    ]
+  },
   "reporter": {
     "display": "미국 [rɪ │ pɔːrtə(r)] · 영국 [rɪ │ pɔːtə(r)]",
     "phonetics": [
@@ -34811,6 +40489,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "발음기호 [ˈriːprɪnt]",
     "phonetics": [
       "ˈriːprɪnt"
+    ]
+  },
+  "reproduce": {
+    "display": "미국 [│ riːprə │ duːs] · 영국 [│ riːprə │ djuːs]",
+    "phonetics": [
+      "│ riːprə │ duːs",
+      "│ riːprə │ djuːs"
     ]
   },
   "reproduced": {
@@ -34902,6 +40587,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈreskjuː"
     ]
   },
+  "researcher": {
+    "display": "미국∙영국 [risə́:rtʃər,rí:sə:rtʃ-]",
+    "phonetics": [
+      "risə́:rtʃər,rí:sə:rtʃ-"
+    ]
+  },
+  "resemble": {
+    "display": "미국∙영국 [rɪˈzembl] · 미국 [rɪˈzembl]",
+    "phonetics": [
+      "rɪˈzembl",
+      "rɪˈzembl"
+    ]
+  },
   "reservation": {
     "display": "미국 [│ rezər │ veɪʃn] · 영국 [│ rezə │ veɪʃn]",
     "phonetics": [
@@ -34936,6 +40634,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌriːˈset"
     ]
   },
+  "reside": {
+    "display": "미국∙영국 [rɪˈzaɪd] · 미국 [rɪˈzaɪd]",
+    "phonetics": [
+      "rɪˈzaɪd",
+      "rɪˈzaɪd"
+    ]
+  },
   "residence": {
     "display": "미국∙영국 [ˈrezɪdəns]",
     "phonetics": [
@@ -34954,11 +40659,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌrezɪˈdenʃl"
     ]
   },
+  "residue": {
+    "display": "미국 [│ rezɪduː] · 영국 [│ rezɪdjuː]",
+    "phonetics": [
+      "│ rezɪduː",
+      "│ rezɪdjuː"
+    ]
+  },
   "resign": {
     "display": "미국∙영국 [rɪˈzaɪn] · 미국 [rɪˈzaɪn]",
     "phonetics": [
       "rɪˈzaɪn",
       "rɪˈzaɪn"
+    ]
+  },
+  "resignation": {
+    "display": "미국∙영국 [ˌrezɪɡˈneɪʃn]",
+    "phonetics": [
+      "ˌrezɪɡˈneɪʃn"
+    ]
+  },
+  "resist": {
+    "display": "미국∙영국 [rɪˈzɪst]",
+    "phonetics": [
+      "rɪˈzɪst"
     ]
   },
   "resistance": {
@@ -35142,6 +40866,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈstɔː(r)"
     ]
   },
+  "restraint": {
+    "display": "미국∙영국 [rɪˈstreɪnt]",
+    "phonetics": [
+      "rɪˈstreɪnt"
+    ]
+  },
   "restrict": {
     "display": "미국∙영국 [rɪˈstrɪkt]",
     "phonetics": [
@@ -35209,6 +40939,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈtenʃn"
     ]
   },
+  "retire": {
+    "display": "미국∙영국 [rɪˈtaɪə(r)]",
+    "phonetics": [
+      "rɪˈtaɪə(r)"
+    ]
+  },
   "retired": {
     "display": "미국 [rɪˈtaɪərd] · 영국 [rɪˈtaɪəd]",
     "phonetics": [
@@ -35221,6 +40957,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "rɪ │ │ taɪərmənt",
       "rɪ │ taɪəmənt"
+    ]
+  },
+  "retreat": {
+    "display": "미국∙영국 [rɪˈtriːt]",
+    "phonetics": [
+      "rɪˈtriːt"
+    ]
+  },
+  "retrieve": {
+    "display": "미국∙영국 [rɪˈtriːv]",
+    "phonetics": [
+      "rɪˈtriːv"
     ]
   },
   "retrieved": {
@@ -35285,6 +41033,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈviːl"
     ]
   },
+  "revelation": {
+    "display": "미국∙영국 [ˌrevəˈleɪʃn]",
+    "phonetics": [
+      "ˌrevəˈleɪʃn"
+    ]
+  },
+  "revenge": {
+    "display": "미국∙영국 [rɪˈvendʒ]",
+    "phonetics": [
+      "rɪˈvendʒ"
+    ]
+  },
   "revenue": {
     "display": "발음기호 [| revənuː] · 발음기호 [| revənjuː]",
     "phonetics": [
@@ -35336,10 +41096,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪˈvɪʒn"
     ]
   },
+  "revival": {
+    "display": "미국∙영국 [rɪˈvaɪvl]",
+    "phonetics": [
+      "rɪˈvaɪvl"
+    ]
+  },
+  "revive": {
+    "display": "미국∙영국 [rɪˈvaɪv]",
+    "phonetics": [
+      "rɪˈvaɪv"
+    ]
+  },
   "revolution": {
     "display": "미국∙영국 [ˌrevəˈluːʃn]",
     "phonetics": [
       "ˌrevəˈluːʃn"
+    ]
+  },
+  "revolutionary": {
+    "display": "미국 [│ revə │ luːʃəneri] · 영국 [│ revə │ luːʃənəri]",
+    "phonetics": [
+      "│ revə │ luːʃəneri",
+      "│ revə │ luːʃənəri"
     ]
   },
   "reward": {
@@ -35347,6 +41126,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "rɪˈwɔːrd",
       "rɪˈwɔːd"
+    ]
+  },
+  "rhetoric": {
+    "display": "미국∙영국 [ˈretərɪk]",
+    "phonetics": [
+      "ˈretərɪk"
     ]
   },
   "rhythm": {
@@ -35415,10 +41200,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rɪdʒ"
     ]
   },
+  "ridiculous": {
+    "display": "미국∙영국 [rɪˈdɪkjələs] · 미국 [rɪˈdɪkjələs]",
+    "phonetics": [
+      "rɪˈdɪkjələs",
+      "rɪˈdɪkjələs"
+    ]
+  },
   "riding": {
     "display": "미국∙영국 [ˈraɪdɪŋ]",
     "phonetics": [
       "ˈraɪdɪŋ"
+    ]
+  },
+  "rifle": {
+    "display": "미국∙영국 [ˈraɪfl]",
+    "phonetics": [
+      "ˈraɪfl"
     ]
   },
   "right": {
@@ -35458,6 +41256,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "rí:ou"
     ]
   },
+  "riot": {
+    "display": "미국∙영국 [ˈraɪət]",
+    "phonetics": [
+      "ˈraɪət"
+    ]
+  },
   "rip": {
     "display": "미국∙영국 [rɪp]",
     "phonetics": [
@@ -35487,6 +41291,25 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [rɪsk]",
     "phonetics": [
       "rɪsk"
+    ]
+  },
+  "risky": {
+    "display": "미국∙영국 [ˈrɪski] · 미국 [ˈrɪski]",
+    "phonetics": [
+      "ˈrɪski",
+      "ˈrɪski"
+    ]
+  },
+  "ritual": {
+    "display": "미국∙영국 [ˈrɪtʃuəl]",
+    "phonetics": [
+      "ˈrɪtʃuəl"
+    ]
+  },
+  "rival": {
+    "display": "미국∙영국 [ˈraɪvl]",
+    "phonetics": [
+      "ˈraɪvl"
     ]
   },
   "river": {
@@ -35534,6 +41357,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "rɑːb",
       "rɒb"
+    ]
+  },
+  "robbery": {
+    "display": "미국 [│ rɑːbəri] · 영국 [│ rɒbəri]",
+    "phonetics": [
+      "│ rɑːbəri",
+      "│ rɒbəri"
     ]
   },
   "robert": {
@@ -35694,6 +41524,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ruːf"
     ]
   },
+  "rookie": {
+    "display": "미국∙영국 [ˈrʊki]",
+    "phonetics": [
+      "ˈrʊki"
+    ]
+  },
   "room": {
     "display": "미국∙영국 [ruːm; rʊm]",
     "phonetics": [
@@ -35734,6 +41570,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ rɒstə(r)"
     ]
   },
+  "rotate": {
+    "display": "미국 [ˈroʊteɪt] · 영국 [rəʊˈteɪt]",
+    "phonetics": [
+      "ˈroʊteɪt",
+      "rəʊˈteɪt"
+    ]
+  },
   "rotation": {
     "display": "미국 [roʊ │ teɪʃn] · 영국 [rəʊ │ teɪʃn]",
     "phonetics": [
@@ -35745,6 +41588,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [rʌf]",
     "phonetics": [
       "rʌf"
+    ]
+  },
+  "roughly": {
+    "display": "미국∙영국 [ˈrʌfli]",
+    "phonetics": [
+      "ˈrʌfli"
     ]
   },
   "roulette": {
@@ -35866,10 +41715,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌɑːr es ˈes"
     ]
   },
+  "rub": {
+    "display": "미국∙영국 [rʌb]",
+    "phonetics": [
+      "rʌb"
+    ]
+  },
   "rubber": {
     "display": "미국∙영국 [ˈrʌbə(r)]",
     "phonetics": [
       "ˈrʌbə(r)"
+    ]
+  },
+  "rubbish": {
+    "display": "미국∙영국 [ˈrʌbɪʃ]",
+    "phonetics": [
+      "ˈrʌbɪʃ"
     ]
   },
   "ruby": {
@@ -35894,6 +41755,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [rʌɡ]",
     "phonetics": [
       "rʌɡ"
+    ]
+  },
+  "ruin": {
+    "display": "미국∙영국 [ˈruːɪn]",
+    "phonetics": [
+      "ˈruːɪn"
     ]
   },
   "rule": {
@@ -36000,10 +41867,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈseɪkrɪd"
     ]
   },
+  "sacrifice": {
+    "display": "미국∙영국 [ˈsækrɪfaɪs]",
+    "phonetics": [
+      "ˈsækrɪfaɪs"
+    ]
+  },
   "sad": {
     "display": "미국∙영국 [sæd]",
     "phonetics": [
       "sæd"
+    ]
+  },
+  "sadly": {
+    "display": "미국∙영국 [ˈsædli]",
+    "phonetics": [
+      "ˈsædli"
     ]
   },
   "safari": {
@@ -36042,16 +41921,34 @@ window.pronunciationDisplayOverrides = Object.assign(
       "sed"
     ]
   },
+  "sail": {
+    "display": "미국∙영국 [seɪl]",
+    "phonetics": [
+      "seɪl"
+    ]
+  },
   "sailing": {
     "display": "미국∙영국 [ˈseɪlɪŋ]",
     "phonetics": [
       "ˈseɪlɪŋ"
     ]
   },
+  "sailor": {
+    "display": "미국∙영국 [ˈseɪlə(r)]",
+    "phonetics": [
+      "ˈseɪlə(r)"
+    ]
+  },
   "saint": {
     "display": "미국∙영국 [seɪnt 또는, 영국 영어에서 이름 앞에 쓰일 때에는 snt]",
     "phonetics": [
       "seɪnt 또는, 영국 영어에서 이름 앞에 쓰일 때에는 snt"
+    ]
+  },
+  "sake": {
+    "display": "발음기호 [ˈsɑːki]",
+    "phonetics": [
+      "ˈsɑːki"
     ]
   },
   "salad": {
@@ -36170,6 +42067,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "sǽn"
     ]
   },
+  "sanction": {
+    "display": "미국∙영국 [ˈsæŋkʃn]",
+    "phonetics": [
+      "ˈsæŋkʃn"
+    ]
+  },
   "sand": {
     "display": "미국∙영국 [sænd]",
     "phonetics": [
@@ -36181,6 +42084,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "sǽndrə",
       "sɑ́:n-"
+    ]
+  },
+  "sandwich": {
+    "display": "미국∙영국 [│ sænwɪtʃ; │ sænwɪdʒ]",
+    "phonetics": [
+      "│ sænwɪtʃ; │ sænwɪdʒ"
     ]
   },
   "sandy": {
@@ -36319,6 +42228,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skæn"
     ]
   },
+  "scandal": {
+    "display": "미국∙영국 [ˈskændl]",
+    "phonetics": [
+      "ˈskændl"
+    ]
+  },
   "scanner": {
     "display": "미국∙영국 [ˈskænə(r)]",
     "phonetics": [
@@ -36337,11 +42252,39 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skǽniŋ"
     ]
   },
+  "scare": {
+    "display": "미국 [sker] · 영국 [skeə(r)]",
+    "phonetics": [
+      "sker",
+      "skeə(r)"
+    ]
+  },
+  "scared": {
+    "display": "미국 [skerd] · 영국 [skeəd]",
+    "phonetics": [
+      "skerd",
+      "skeəd"
+    ]
+  },
   "scarf": {
     "display": "미국 [skɑːrf] · 영국 [skɑːf]",
     "phonetics": [
       "skɑːrf",
       "skɑːf"
+    ]
+  },
+  "scary": {
+    "display": "미국 [ˈskeri] · 영국 [ˈskeəri]",
+    "phonetics": [
+      "ˈskeri",
+      "ˈskeəri"
+    ]
+  },
+  "scattered": {
+    "display": "미국 [│ skætərd] · 영국 [│ skætəd]",
+    "phonetics": [
+      "│ skætərd",
+      "│ skætəd"
     ]
   },
   "scenario": {
@@ -36387,6 +42330,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [skiːm]",
     "phonetics": [
       "skiːm"
+    ]
+  },
+  "scholar": {
+    "display": "미국 [│ skɑːlə(r)] · 영국 [│ skɒlə(r)]",
+    "phonetics": [
+      "│ skɑːlə(r)",
+      "│ skɒlə(r)"
     ]
   },
   "scholars": {
@@ -36497,6 +42447,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skrætʃ"
     ]
   },
+  "scream": {
+    "display": "미국∙영국 [skriːm]",
+    "phonetics": [
+      "skriːm"
+    ]
+  },
   "screen": {
     "display": "미국∙영국 [skriːn]",
     "phonetics": [
@@ -36539,6 +42495,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "skroʊl",
       "skrəʊl"
+    ]
+  },
+  "scrutiny": {
+    "display": "미국∙영국 [ˈskruːtəni] · 미국 [ˈskruːtəni]",
+    "phonetics": [
+      "ˈskruːtəni",
+      "ˈskruːtəni"
     ]
   },
   "scsi": {
@@ -36668,6 +42631,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ sekəndri"
     ]
   },
+  "secondly": {
+    "display": "미국∙영국 [ˈsekəndli] · 미국 [ˈsekəndli]",
+    "phonetics": [
+      "ˈsekəndli",
+      "ˈsekəndli"
+    ]
+  },
   "seconds": {
     "display": "미국∙영국 [ˈsekənd]",
     "phonetics": [
@@ -36715,6 +42685,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈsektə(r)]",
     "phonetics": [
       "ˈsektə(r)"
+    ]
+  },
+  "secular": {
+    "display": "미국∙영국 [ˈsekjələ(r)]",
+    "phonetics": [
+      "ˈsekjələ(r)"
     ]
   },
   "secure": {
@@ -36780,6 +42756,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "siːm"
     ]
   },
+  "seemingly": {
+    "display": "미국∙영국 [ˈsiːmɪŋli]",
+    "phonetics": [
+      "ˈsiːmɪŋli"
+    ]
+  },
   "seems": {
     "display": "미국∙영국 [siːm]",
     "phonetics": [
@@ -36796,6 +42778,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "발음기호 [ˈseɡmənt]",
     "phonetics": [
       "ˈseɡmənt"
+    ]
+  },
+  "seize": {
+    "display": "미국∙영국 [siːz]",
+    "phonetics": [
+      "siːz"
     ]
   },
   "select": {
@@ -36820,6 +42808,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [sɪˈlekʃn]",
     "phonetics": [
       "sɪˈlekʃn"
+    ]
+  },
+  "selective": {
+    "display": "미국∙영국 [sɪˈlektɪv]",
+    "phonetics": [
+      "sɪˈlektɪv"
     ]
   },
   "self": {
@@ -36927,10 +42921,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsiːniə(r)"
     ]
   },
+  "sensation": {
+    "display": "미국∙영국 [senˈseɪʃn]",
+    "phonetics": [
+      "senˈseɪʃn"
+    ]
+  },
   "sense": {
     "display": "미국∙영국 [sens]",
     "phonetics": [
       "sens"
+    ]
+  },
+  "sensible": {
+    "display": "미국∙영국 [ˈsensəbl]",
+    "phonetics": [
+      "ˈsensəbl"
     ]
   },
   "sensitive": {
@@ -36961,6 +42967,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈsentəns]",
     "phonetics": [
       "ˈsentəns"
+    ]
+  },
+  "sentiment": {
+    "display": "미국∙영국 [ˈsentɪmənt]",
+    "phonetics": [
+      "ˈsentɪmənt"
     ]
   },
   "seo": {
@@ -37055,6 +43067,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ sɪəriəsli"
     ]
   },
+  "servant": {
+    "display": "미국 [│ sɜːrvənt] · 영국 [│ sɜːvənt]",
+    "phonetics": [
+      "│ sɜːrvənt",
+      "│ sɜːvənt"
+    ]
+  },
   "serve": {
     "display": "미국 [sɜːrv] · 영국 [sɜːv]",
     "phonetics": [
@@ -37128,6 +43147,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsetɪŋ"
     ]
   },
+  "settle": {
+    "display": "미국∙영국 [ˈsetl]",
+    "phonetics": [
+      "ˈsetl"
+    ]
+  },
   "settled": {
     "display": "미국∙영국 [ˈsetld]",
     "phonetics": [
@@ -37138,6 +43163,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈsetlmənt]",
     "phonetics": [
       "ˈsetlmənt"
+    ]
+  },
+  "settler": {
+    "display": "미국∙영국 [ˈsetlə(r)] · 미국 [ˈsetlə(r)]",
+    "phonetics": [
+      "ˈsetlə(r)",
+      "ˈsetlə(r)"
     ]
   },
   "setup": {
@@ -37185,10 +43217,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "sɪ │ vɪə(r)"
     ]
   },
+  "sex": {
+    "display": "미국∙영국 [seks]",
+    "phonetics": [
+      "seks"
+    ]
+  },
   "sexual": {
     "display": "미국∙영국 [ˈsekʃuəl]",
     "phonetics": [
       "ˈsekʃuəl"
+    ]
+  },
+  "sexuality": {
+    "display": "미국∙영국 [ˌsekʃuˈæləti] · 미국 [ˌsekʃuˈæləti]",
+    "phonetics": [
+      "ˌsekʃuˈæləti",
+      "ˌsekʃuˈæləti"
+    ]
+  },
+  "sexy": {
+    "display": "미국∙영국 [ˈseksi]",
+    "phonetics": [
+      "ˈseksi"
     ]
   },
   "sf": {
@@ -37216,6 +43267,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ʃædəʊ"
     ]
   },
+  "shake": {
+    "display": "미국∙영국 [ʃeɪk]",
+    "phonetics": [
+      "ʃeɪk"
+    ]
+  },
   "shakespeare": {
     "display": "미국∙영국 [ʃéikspiər]",
     "phonetics": [
@@ -37233,6 +43290,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ʃæloʊ",
       "│ ʃæləʊ"
+    ]
+  },
+  "shame": {
+    "display": "미국∙영국 [ʃeɪm]",
+    "phonetics": [
+      "ʃeɪm"
     ]
   },
   "shanghai": {
@@ -37268,6 +43331,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʃeə(r)"
     ]
   },
+  "shareholder": {
+    "display": "미국 [│ ʃerhoʊldə(r)] · 영국 [│ ʃeəhəʊldə(r)]",
+    "phonetics": [
+      "│ ʃerhoʊldə(r)",
+      "│ ʃeəhəʊldə(r)"
+    ]
+  },
   "shareware": {
     "display": "미국 [ˈʃerwer] · 영국 [ˈʃeəweə(r)]",
     "phonetics": [
@@ -37295,6 +43365,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʃɑːp"
     ]
   },
+  "shatter": {
+    "display": "미국∙영국 [ˈʃætə(r)]",
+    "phonetics": [
+      "ˈʃætə(r)"
+    ]
+  },
   "shaved": {
     "display": "미국∙영국 [ʃéivd]",
     "phonetics": [
@@ -37313,11 +43389,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʃi 강형 ʃiː"
     ]
   },
+  "shed": {
+    "display": "미국∙영국 [ʃed]",
+    "phonetics": [
+      "ʃed"
+    ]
+  },
   "sheep": {
     "display": "미국∙영국 [ʃiːp] · 미국 [ʃiːp]",
     "phonetics": [
       "ʃiːp",
       "ʃiːp"
+    ]
+  },
+  "sheer": {
+    "display": "미국 [ʃɪr] · 영국 [ʃɪə(r)]",
+    "phonetics": [
+      "ʃɪr",
+      "ʃɪə(r)"
     ]
   },
   "sheet": {
@@ -37368,6 +43457,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʃɪft"
     ]
   },
+  "shine": {
+    "display": "미국∙영국 [ʃaɪn]",
+    "phonetics": [
+      "ʃaɪn"
+    ]
+  },
+  "shiny": {
+    "display": "미국∙영국 [ˈʃaɪni] · 미국 [ˈʃaɪni]",
+    "phonetics": [
+      "ˈʃaɪni",
+      "ˈʃaɪni"
+    ]
+  },
   "ship": {
     "display": "미국∙영국 [ʃɪp]",
     "phonetics": [
@@ -37398,6 +43500,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ʃɑːk",
       "ʃɒk"
+    ]
+  },
+  "shocking": {
+    "display": "미국 [│ ʃɑːkɪŋ] · 영국 [│ ʃɒkɪŋ]",
+    "phonetics": [
+      "│ ʃɑːkɪŋ",
+      "│ ʃɒkɪŋ"
     ]
   },
   "shoe": {
@@ -37466,6 +43575,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʃɔːt"
     ]
   },
+  "shortage": {
+    "display": "미국 [│ ʃɔːrtɪdʒ] · 영국 [│ ʃɔːtɪdʒ]",
+    "phonetics": [
+      "│ ʃɔːrtɪdʒ",
+      "│ ʃɔːtɪdʒ"
+    ]
+  },
   "shortly": {
     "display": "미국 [│ ʃɔːrtli] · 영국 [│ ʃɔːtli]",
     "phonetics": [
@@ -37505,6 +43621,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ʃoʊldə(r)",
       "│ ʃəʊldə(r)"
+    ]
+  },
+  "shout": {
+    "display": "미국∙영국 [ʃaʊt]",
+    "phonetics": [
+      "ʃaʊt"
     ]
   },
   "show": {
@@ -37560,6 +43682,19 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʃrɪmp"
     ]
   },
+  "shrink": {
+    "display": "미국∙영국 [ʃrɪŋk]",
+    "phonetics": [
+      "ʃrɪŋk"
+    ]
+  },
+  "shrug": {
+    "display": "미국∙영국 [ʃrʌɡ] · 미국 [ʃrʌɡ]",
+    "phonetics": [
+      "ʃrʌɡ",
+      "ʃrʌɡ"
+    ]
+  },
   "shut": {
     "display": "미국∙영국 [ʃʌt]",
     "phonetics": [
@@ -37572,11 +43707,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈʃʌtl"
     ]
   },
+  "shy": {
+    "display": "미국∙영국 [ʃaɪ]",
+    "phonetics": [
+      "ʃaɪ"
+    ]
+  },
   "si": {
     "display": "미국∙영국 [ˌes ˈaɪ] · 미국 [ˌes ˈaɪ]",
     "phonetics": [
       "ˌes ˈaɪ",
       "ˌes ˈaɪ"
+    ]
+  },
+  "sibling": {
+    "display": "미국 [ˈsɪblɪŋ]",
+    "phonetics": [
+      "ˈsɪblɪŋ"
     ]
   },
   "sick": {
@@ -37591,6 +43738,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "saɪd"
     ]
   },
+  "sidewalk": {
+    "display": "미국∙영국 [ˈsaɪdwɔːk] · 미국 [ˈsaɪdwɔːk]",
+    "phonetics": [
+      "ˈsaɪdwɔːk",
+      "ˈsaɪdwɔːk"
+    ]
+  },
   "siemens": {
     "display": "미국∙영국 [ˈsiːmənz] · 미국 [ˈsiːmənz]",
     "phonetics": [
@@ -37603,6 +43757,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "siˈerə",
       "siˈerə"
+    ]
+  },
+  "sigh": {
+    "display": "미국∙영국 [saɪ]",
+    "phonetics": [
+      "saɪ"
     ]
   },
   "sight": {
@@ -37691,6 +43851,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "sɪlk"
     ]
   },
+  "silly": {
+    "display": "미국∙영국 [ˈsɪli]",
+    "phonetics": [
+      "ˈsɪli"
+    ]
+  },
   "silver": {
     "display": "미국∙영국 [ˈsɪlvə(r)]",
     "phonetics": [
@@ -37709,6 +43875,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈsɪmələ(r)",
       "ˈsɪmələ(r)"
+    ]
+  },
+  "similarity": {
+    "display": "미국∙영국 [ˌsɪməˈlærəti]",
+    "phonetics": [
+      "ˌsɪməˈlærəti"
     ]
   },
   "similarly": {
@@ -37736,6 +43908,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsɪmpli"
     ]
   },
+  "simulate": {
+    "display": "미국∙영국 [ˈsɪmjuleɪt]",
+    "phonetics": [
+      "ˈsɪmjuleɪt"
+    ]
+  },
   "simulation": {
     "display": "미국∙영국 [ˌsɪmjuˈleɪʃn]",
     "phonetics": [
@@ -37752,6 +43930,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [sɪns]",
     "phonetics": [
       "sɪns"
+    ]
+  },
+  "sincere": {
+    "display": "미국 [sɪn │ sɪr] · 영국 [sɪn │ sɪə(r)]",
+    "phonetics": [
+      "sɪn │ sɪr",
+      "sɪn │ sɪə(r)"
     ]
   },
   "sing": {
@@ -37900,6 +44085,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈskeɪtɪŋ"
     ]
   },
+  "skeptical": {
+    "display": "미국∙영국 [sképtikəl]",
+    "phonetics": [
+      "sképtikəl"
+    ]
+  },
+  "sketch": {
+    "display": "미국∙영국 [sketʃ]",
+    "phonetics": [
+      "sketʃ"
+    ]
+  },
   "ski": {
     "display": "미국∙영국 [ski ː]",
     "phonetics": [
@@ -37943,6 +44140,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skɜːt"
     ]
   },
+  "skull": {
+    "display": "미국∙영국 [skʌl]",
+    "phonetics": [
+      "skʌl"
+    ]
+  },
   "sky": {
     "display": "미국∙영국 [skaɪ]",
     "phonetics": [
@@ -37956,10 +44159,34 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skaɪp"
     ]
   },
+  "slam": {
+    "display": "미국∙영국 [slæm]",
+    "phonetics": [
+      "slæm"
+    ]
+  },
+  "slap": {
+    "display": "미국∙영국 [slæp]",
+    "phonetics": [
+      "slæp"
+    ]
+  },
+  "slash": {
+    "display": "미국∙영국 [slæʃ]",
+    "phonetics": [
+      "slæʃ"
+    ]
+  },
   "slave": {
     "display": "미국∙영국 [sleɪv]",
     "phonetics": [
       "sleɪv"
+    ]
+  },
+  "slavery": {
+    "display": "미국∙영국 [ˈsleɪvəri]",
+    "phonetics": [
+      "ˈsleɪvəri"
     ]
   },
   "sleep": {
@@ -37978,6 +44205,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [sliːv]",
     "phonetics": [
       "sliːv"
+    ]
+  },
+  "slice": {
+    "display": "미국∙영국 [slaɪs]",
+    "phonetics": [
+      "slaɪs"
     ]
   },
   "slide": {
@@ -38014,6 +44247,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [slɪp]",
     "phonetics": [
       "slɪp"
+    ]
+  },
+  "slogan": {
+    "display": "미국 [│ sloʊɡən] · 영국 [│ sləʊɡən]",
+    "phonetics": [
+      "│ sloʊɡən",
+      "│ sləʊɡən"
+    ]
+  },
+  "slope": {
+    "display": "미국 [sloʊp] · 영국 [sləʊp]",
+    "phonetics": [
+      "sloʊp",
+      "sləʊp"
     ]
   },
   "slot": {
@@ -38062,6 +44309,25 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "smɑːrt",
       "smɑːt"
+    ]
+  },
+  "smartphone": {
+    "display": "미국 [ˈsmɑːrtfoʊn] · 영국 [ˈsmɑːtfəʊn]",
+    "phonetics": [
+      "ˈsmɑːrtfoʊn",
+      "ˈsmɑːtfəʊn"
+    ]
+  },
+  "smash": {
+    "display": "미국∙영국 [smæʃ]",
+    "phonetics": [
+      "smæʃ"
+    ]
+  },
+  "smell": {
+    "display": "미국∙영국 [smel]",
+    "phonetics": [
+      "smel"
     ]
   },
   "smile": {
@@ -38129,6 +44395,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ snæpʃɒt"
     ]
   },
+  "sneaker": {
+    "display": "미국∙영국 [ˈsniːkə(r)] · 미국 [ˈsniːkə(r)]",
+    "phonetics": [
+      "ˈsniːkə(r)",
+      "ˈsniːkə(r)"
+    ]
+  },
   "snow": {
     "display": "미국 [snoʊ] · 영국 [snəʊ]",
     "phonetics": [
@@ -38143,11 +44416,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "səʊ"
     ]
   },
+  "soak": {
+    "display": "미국 [soʊk] · 영국 [səʊk]",
+    "phonetics": [
+      "soʊk",
+      "səʊk"
+    ]
+  },
   "soap": {
     "display": "미국 [soʊp] · 영국 [səʊp]",
     "phonetics": [
       "soʊp",
       "səʊp"
+    ]
+  },
+  "soar": {
+    "display": "미국∙영국 [sɔː(r)]",
+    "phonetics": [
+      "sɔː(r)"
     ]
   },
   "soccer": {
@@ -38162,6 +44448,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈsoʊʃl",
       "ˈsəʊʃl"
+    ]
+  },
+  "socialist": {
+    "display": "미국 [│ soʊʃəlɪst] · 영국 [│ səʊʃəlɪst]",
+    "phonetics": [
+      "│ soʊʃəlɪst",
+      "│ səʊʃəlɪst"
     ]
   },
   "societies": {
@@ -38294,6 +44587,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ sɒlɪd"
     ]
   },
+  "solidarity": {
+    "display": "미국 [│ sɑːlɪ │ dærəti] · 영국 [│ sɒlɪ │ dærəti]",
+    "phonetics": [
+      "│ sɑːlɪ │ dærəti",
+      "│ sɒlɪ │ dærəti"
+    ]
+  },
   "solo": {
     "display": "미국 [ˈsoʊloʊ] · 영국 [ˈsəʊləʊ]",
     "phonetics": [
@@ -38365,6 +44665,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsʌmθɪŋ"
     ]
   },
+  "sometime": {
+    "display": "미국∙영국 [ˈsʌmtaɪm]",
+    "phonetics": [
+      "ˈsʌmtaɪm"
+    ]
+  },
   "sometimes": {
     "display": "미국∙영국 [ˈsʌmtaɪmz] · 미국 [ˈsʌmtaɪmz]",
     "phonetics": [
@@ -38422,6 +44728,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [səˈfɪstɪkeɪtɪd]",
     "phonetics": [
       "səˈfɪstɪkeɪtɪd"
+    ]
+  },
+  "sophomore": {
+    "display": "미국 [│ sɑːfəmɔː(r)] · 영국 [│ sɒfəmɔː(r)]",
+    "phonetics": [
+      "│ sɑːfəmɔː(r)",
+      "│ sɒfəmɔː(r)"
     ]
   },
   "sorry": {
@@ -38515,6 +44828,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "sàuθwést; (항해) sauwést"
     ]
   },
+  "sovereignty": {
+    "display": "미국 [│ sɑːvrənti] · 영국 [│ sɒvrənti]",
+    "phonetics": [
+      "│ sɑːvrənti",
+      "│ sɒvrənti"
+    ]
+  },
   "soviet": {
     "display": "미국 [│ soʊviet; │ sɑːviet] · 영국 [│ səʊviət; │ sɒviet]",
     "phonetics": [
@@ -38590,6 +44910,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "speə(r)"
     ]
   },
+  "spark": {
+    "display": "미국 [spɑːrk] · 영국 [spɑːk]",
+    "phonetics": [
+      "spɑːrk",
+      "spɑːk"
+    ]
+  },
   "spatial": {
     "display": "발음기호 [ˈspeɪʃl]",
     "phonetics": [
@@ -38651,6 +44978,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈspeʃəlɪst"
     ]
   },
+  "specialize": {
+    "display": "미국∙영국 [ˈspeʃəlaɪz] · 미국 [ˈspeʃəlaɪz]",
+    "phonetics": [
+      "ˈspeʃəlaɪz",
+      "ˈspeʃəlaɪz"
+    ]
+  },
   "specialized": {
     "display": "미국∙영국 [ˈspeʃəlaɪzd] · 미국 [ˈspeʃəlaɪzd]",
     "phonetics": [
@@ -38704,10 +45038,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈspesɪfaɪ"
     ]
   },
+  "specimen": {
+    "display": "미국∙영국 [ˈspesɪmən]",
+    "phonetics": [
+      "ˈspesɪmən"
+    ]
+  },
   "specs": {
     "display": "미국∙영국 [speks]",
     "phonetics": [
       "speks"
+    ]
+  },
+  "spectacle": {
+    "display": "미국∙영국 [ˈspektəkl]",
+    "phonetics": [
+      "ˈspektəkl"
     ]
   },
   "spectacular": {
@@ -38716,10 +45062,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "spekˈtækjələ(r)"
     ]
   },
+  "spectator": {
+    "display": "미국 [ˈspekteɪtər] · 영국 [spekˈteɪtə(r)]",
+    "phonetics": [
+      "ˈspekteɪtər",
+      "spekˈteɪtə(r)"
+    ]
+  },
   "spectrum": {
     "display": "미국∙영국 [ˈspektrəm]",
     "phonetics": [
       "ˈspektrəm"
+    ]
+  },
+  "speculate": {
+    "display": "미국∙영국 [ˈspekjuleɪt]",
+    "phonetics": [
+      "ˈspekjuleɪt"
+    ]
+  },
+  "speculation": {
+    "display": "미국∙영국 [ˌspekjuˈleɪʃn]",
+    "phonetics": [
+      "ˌspekjuˈleɪʃn"
     ]
   },
   "speech": {
@@ -38776,10 +45141,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "spent"
     ]
   },
+  "sphere": {
+    "display": "미국 [sfɪr] · 영국 [sfɪə(r)]",
+    "phonetics": [
+      "sfɪr",
+      "sfɪə(r)"
+    ]
+  },
   "spice": {
     "display": "미국∙영국 [spaɪs]",
     "phonetics": [
       "spaɪs"
+    ]
+  },
+  "spicy": {
+    "display": "미국∙영국 [ˈspaɪsi]",
+    "phonetics": [
+      "ˈspaɪsi"
     ]
   },
   "spider": {
@@ -38787,6 +45165,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈspaɪdə(r)",
       "ˈspaɪdə(r)"
+    ]
+  },
+  "spill": {
+    "display": "미국∙영국 [spɪl]",
+    "phonetics": [
+      "spɪl"
     ]
   },
   "spin": {
@@ -38800,6 +45184,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ spɪnɪtʃ; │ spɪnɪdʒ",
       "│ spɪnɪtʃ; │ spɪnɪdʒ"
+    ]
+  },
+  "spine": {
+    "display": "미국∙영국 [spaɪn]",
+    "phonetics": [
+      "spaɪn"
     ]
   },
   "spirit": {
@@ -38821,10 +45211,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌspɪrɪtʃuˈæləti"
     ]
   },
+  "spite": {
+    "display": "미국∙영국 [spaɪt]",
+    "phonetics": [
+      "spaɪt"
+    ]
+  },
   "split": {
     "display": "미국∙영국 [splɪt]",
     "phonetics": [
       "splɪt"
+    ]
+  },
+  "spoil": {
+    "display": "미국∙영국 [spɔɪl]",
+    "phonetics": [
+      "spɔɪl"
     ]
   },
   "spoke": {
@@ -38839,6 +45241,28 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ spoʊkən",
       "│ spəʊkən"
+    ]
+  },
+  "spokesman": {
+    "display": "발음기호 [| spoʊksmən] · 발음기호 [| spəʊksmən] · 발음기호 [ˈspəʊkswʊmən] · 발음기호 [ˈspoʊkswʊmən]",
+    "phonetics": [
+      "| spoʊksmən",
+      "| spəʊksmən",
+      "ˈspəʊkswʊmən",
+      "ˈspoʊkswʊmən"
+    ]
+  },
+  "spokesperson": {
+    "display": "미국 [ˈspoʊkspɜːrsn] · 영국 [ˈspəʊkspɜːsn]",
+    "phonetics": [
+      "ˈspoʊkspɜːrsn",
+      "ˈspəʊkspɜːsn"
+    ]
+  },
+  "spokeswoman": {
+    "display": "미국∙영국 [-wùmən]",
+    "phonetics": [
+      "-wùmən"
     ]
   },
   "sponsor": {
@@ -38966,6 +45390,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skweə(r)"
     ]
   },
+  "squeeze": {
+    "display": "미국∙영국 [skwiːz]",
+    "phonetics": [
+      "skwiːz"
+    ]
+  },
   "squid": {
     "display": "미국∙영국 [skwɪd] · 미국 [skwɪd]",
     "phonetics": [
@@ -38973,11 +45403,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "skwɪd"
     ]
   },
+  "stab": {
+    "display": "미국∙영국 [stæb]",
+    "phonetics": [
+      "stæb"
+    ]
+  },
   "stability": {
     "display": "미국∙영국 [stəˈbɪləti] · 미국 [stəˈbɪləti]",
     "phonetics": [
       "stəˈbɪləti",
       "stəˈbɪləti"
+    ]
+  },
+  "stabilize": {
+    "display": "발음기호 [ˈsteɪbəlaɪz]",
+    "phonetics": [
+      "ˈsteɪbəlaɪz"
     ]
   },
   "stable": {
@@ -39024,11 +45466,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "stéinlis"
     ]
   },
+  "stair": {
+    "display": "미국 [ster] · 영국 [steə(r)]",
+    "phonetics": [
+      "ster",
+      "steə(r)"
+    ]
+  },
+  "stake": {
+    "display": "미국∙영국 [steɪk]",
+    "phonetics": [
+      "steɪk"
+    ]
+  },
   "stakeholder": {
     "display": "미국 [│ steɪkhoʊldə(r)] · 영국 [│ steɪkhəʊldə(r)]",
     "phonetics": [
       "│ steɪkhoʊldə(r)",
       "│ steɪkhəʊldə(r)"
+    ]
+  },
+  "stall": {
+    "display": "미국∙영국 [stɔːl]",
+    "phonetics": [
+      "stɔːl"
     ]
   },
   "stamp": {
@@ -39041,6 +45502,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [stæmp]",
     "phonetics": [
       "stæmp"
+    ]
+  },
+  "stance": {
+    "display": "미국∙영국 [stæns] · 영국 [stɑːns]",
+    "phonetics": [
+      "stæns",
+      "stɑːns"
     ]
   },
   "stand": {
@@ -39072,6 +45540,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [stɑː(r)]",
     "phonetics": [
       "stɑː(r)"
+    ]
+  },
+  "stare": {
+    "display": "미국 [ster] · 영국 [steə(r)]",
+    "phonetics": [
+      "ster",
+      "steə(r)"
+    ]
+  },
+  "stark": {
+    "display": "미국 [stɑːrk] · 영국 [stɑːk]",
+    "phonetics": [
+      "stɑːrk",
+      "stɑːk"
     ]
   },
   "start": {
@@ -39106,6 +45588,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "stɑːrt",
       "stɑːt"
+    ]
+  },
+  "starve": {
+    "display": "미국 [stɑːrv] · 영국 [stɑːv]",
+    "phonetics": [
+      "stɑːrv",
+      "stɑːv"
     ]
   },
   "stat": {
@@ -39164,6 +45653,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsteɪʃn"
     ]
   },
+  "statistic": {
+    "display": "미국∙영국 [stəˈtɪstɪk]",
+    "phonetics": [
+      "stəˈtɪstɪk"
+    ]
+  },
   "statistical": {
     "display": "미국∙영국 [stə │ tɪstɪkl]",
     "phonetics": [
@@ -39181,6 +45676,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "stæts",
       "stæts"
+    ]
+  },
+  "statue": {
+    "display": "미국∙영국 [ˈstætʃuː] · 미국 [ˈstætʃuː]",
+    "phonetics": [
+      "ˈstætʃuː",
+      "ˈstætʃuː"
     ]
   },
   "status": {
@@ -39239,6 +45741,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈstedi"
     ]
   },
+  "steal": {
+    "display": "미국∙영국 [stiːl]",
+    "phonetics": [
+      "stiːl"
+    ]
+  },
   "steam": {
     "display": "미국∙영국 [stiːm]",
     "phonetics": [
@@ -39249,6 +45757,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [stiːl]",
     "phonetics": [
       "stiːl"
+    ]
+  },
+  "steep": {
+    "display": "미국∙영국 [stiːp]",
+    "phonetics": [
+      "stiːp"
+    ]
+  },
+  "steer": {
+    "display": "미국 [stɪr] · 영국 [stɪə(r)]",
+    "phonetics": [
+      "stɪr",
+      "stɪə(r)"
     ]
   },
   "steering": {
@@ -39281,6 +45802,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ sterioʊ",
       "│ steriəʊ"
+    ]
+  },
+  "stereotype": {
+    "display": "미국∙영국 [ˈsteriətaɪp]",
+    "phonetics": [
+      "ˈsteriətaɪp"
     ]
   },
   "sterling": {
@@ -39322,10 +45849,40 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈstɪkə(r)"
     ]
   },
+  "sticky": {
+    "display": "미국∙영국 [ˈstɪki]",
+    "phonetics": [
+      "ˈstɪki"
+    ]
+  },
+  "stiff": {
+    "display": "미국∙영국 [stɪf]",
+    "phonetics": [
+      "stɪf"
+    ]
+  },
   "still": {
     "display": "미국∙영국 [stɪl]",
     "phonetics": [
       "stɪl"
+    ]
+  },
+  "stimulate": {
+    "display": "미국∙영국 [ˈstɪmjuleɪt]",
+    "phonetics": [
+      "ˈstɪmjuleɪt"
+    ]
+  },
+  "stimulus": {
+    "display": "미국∙영국 [ˈstɪmjələs]",
+    "phonetics": [
+      "ˈstɪmjələs"
+    ]
+  },
+  "stir": {
+    "display": "미국∙영국 [stɜː(r)]",
+    "phonetics": [
+      "stɜː(r)"
     ]
   },
   "stock": {
@@ -39411,16 +45968,35 @@ window.pronunciationDisplayOverrides = Object.assign(
       "streɪt"
     ]
   },
+  "straightforward": {
+    "display": "미국 [│ streɪt │ fɔːrwərd] · 영국 [│ streɪt │ fɔːwəd]",
+    "phonetics": [
+      "│ streɪt │ fɔːrwərd",
+      "│ streɪt │ fɔːwəd"
+    ]
+  },
   "strain": {
     "display": "미국∙영국 [streɪn]",
     "phonetics": [
       "streɪn"
     ]
   },
+  "strand": {
+    "display": "미국∙영국 [strænd]",
+    "phonetics": [
+      "strænd"
+    ]
+  },
   "strange": {
     "display": "미국∙영국 [streɪndʒ]",
     "phonetics": [
       "streɪndʒ"
+    ]
+  },
+  "stranger": {
+    "display": "미국∙영국 [ˈstreɪndʒə(r)]",
+    "phonetics": [
+      "ˈstreɪndʒə(r)"
     ]
   },
   "strap": {
@@ -39536,6 +46112,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "straɪk"
     ]
   },
+  "striking": {
+    "display": "미국∙영국 [ˈstraɪkɪŋ]",
+    "phonetics": [
+      "ˈstraɪkɪŋ"
+    ]
+  },
   "string": {
     "display": "미국∙영국 [strɪŋ]",
     "phonetics": [
@@ -39546,6 +46128,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [strɪp]",
     "phonetics": [
       "strɪp"
+    ]
+  },
+  "strive": {
+    "display": "미국∙영국 [straɪv] · 미국 [straɪv]",
+    "phonetics": [
+      "straɪv",
+      "straɪv"
     ]
   },
   "stroke": {
@@ -39652,6 +46241,18 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [stʌf]",
     "phonetics": [
       "stʌf"
+    ]
+  },
+  "stumble": {
+    "display": "미국∙영국 [ˈstʌmbl]",
+    "phonetics": [
+      "ˈstʌmbl"
+    ]
+  },
+  "stun": {
+    "display": "미국∙영국 [stʌn]",
+    "phonetics": [
+      "stʌn"
     ]
   },
   "stunning": {
@@ -39801,6 +46402,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "səb │ sɪdiəri"
     ]
   },
+  "subsidy": {
+    "display": "미국∙영국 [ˈsʌbsədi] · 미국 [ˈsʌbsədi]",
+    "phonetics": [
+      "ˈsʌbsədi",
+      "ˈsʌbsədi"
+    ]
+  },
   "substance": {
     "display": "미국∙영국 [ˈsʌbstəns]",
     "phonetics": [
@@ -39824,6 +46432,39 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ sʌbstɪtuːt",
       "│ sʌbstɪtjuːt"
+    ]
+  },
+  "substitution": {
+    "display": "미국 [│ sʌbstɪ │ tuːʃn] · 영국 [│ sʌbstɪ │ tjuːʃn]",
+    "phonetics": [
+      "│ sʌbstɪ │ tuːʃn",
+      "│ sʌbstɪ │ tjuːʃn"
+    ]
+  },
+  "subtle": {
+    "display": "미국∙영국 [ˈsʌtl]",
+    "phonetics": [
+      "ˈsʌtl"
+    ]
+  },
+  "suburb": {
+    "display": "미국 [│ sʌbɜːrb] · 영국 [│ sʌbɜːb]",
+    "phonetics": [
+      "│ sʌbɜːrb",
+      "│ sʌbɜːb"
+    ]
+  },
+  "suburban": {
+    "display": "미국 [sə │ bɜːrbən] · 영국 [sə │ bɜːbən]",
+    "phonetics": [
+      "sə │ bɜːrbən",
+      "sə │ bɜːbən"
+    ]
+  },
+  "subway": {
+    "display": "미국∙영국 [ˈsʌbweɪ]",
+    "phonetics": [
+      "ˈsʌbweɪ"
     ]
   },
   "succeed": {
@@ -39850,10 +46491,36 @@ window.pronunciationDisplayOverrides = Object.assign(
       "səksésfəli"
     ]
   },
+  "succession": {
+    "display": "미국∙영국 [səkˈseʃn]",
+    "phonetics": [
+      "səkˈseʃn"
+    ]
+  },
+  "successive": {
+    "display": "미국∙영국 [səkˈsesɪv] · 미국 [səkˈsesɪv]",
+    "phonetics": [
+      "səkˈsesɪv",
+      "səkˈsesɪv"
+    ]
+  },
+  "successor": {
+    "display": "미국∙영국 [səkˈsesə(r)] · 미국 [səkˈsesə(r)]",
+    "phonetics": [
+      "səkˈsesə(r)",
+      "səkˈsesə(r)"
+    ]
+  },
   "such": {
     "display": "미국∙영국 [sʌtʃ]",
     "phonetics": [
       "sʌtʃ"
+    ]
+  },
+  "suck": {
+    "display": "미국∙영국 [sʌk]",
+    "phonetics": [
+      "sʌk"
     ]
   },
   "sucking": {
@@ -40085,11 +46752,32 @@ window.pronunciationDisplayOverrides = Object.assign(
       "suː │ pɜːb; sjuː │ pɜːb"
     ]
   },
+  "superintendent": {
+    "display": "미국∙영국 [│ suːpərɪn │ tendənt] · 영국 [│ sjuːpərɪn │ tendənt]",
+    "phonetics": [
+      "│ suːpərɪn │ tendənt",
+      "│ sjuːpərɪn │ tendənt"
+    ]
+  },
   "superior": {
     "display": "미국 [suː │ pɪriə(r)] · 영국 [suː │ pɪəriə(r); sjuː │ pɪəriə(r)]",
     "phonetics": [
       "suː │ pɪriə(r)",
       "suː │ pɪəriə(r); sjuː │ pɪəriə(r)"
+    ]
+  },
+  "supermarket": {
+    "display": "미국 [│ suːpərmɑːrkət] · 영국 [│ suːpəmɑːkɪt; │ sjuːpəmɑːkɪt]",
+    "phonetics": [
+      "│ suːpərmɑːrkət",
+      "│ suːpəmɑːkɪt; │ sjuːpəmɑːkɪt"
+    ]
+  },
+  "supervise": {
+    "display": "미국 [│ suːpərvaɪz] · 영국 [│ suːpəvaɪz; │ sjuːpəvaɪz]",
+    "phonetics": [
+      "│ suːpərvaɪz",
+      "│ suːpəvaɪz; │ sjuːpəvaɪz"
     ]
   },
   "supervision": {
@@ -40151,6 +46839,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "səˈpɔːt"
     ]
   },
+  "supporter": {
+    "display": "미국 [sə │ pɔːrtə(r)] · 영국 [sə │ pɔːtə(r)]",
+    "phonetics": [
+      "sə │ pɔːrtə(r)",
+      "sə │ pɔːtə(r)"
+    ]
+  },
   "supporters": {
     "display": "미국 [sə │ pɔːrtə(r)] · 영국 [sə │ pɔːtə(r)]",
     "phonetics": [
@@ -40163,6 +46858,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "sə │ pɔːrtɪŋ",
       "sə │ pɔːtɪŋ"
+    ]
+  },
+  "supportive": {
+    "display": "미국 [sə │ pɔːrtɪv] · 영국 [sə │ pɔːtɪv]",
+    "phonetics": [
+      "sə │ pɔːrtɪv",
+      "sə │ pɔːtɪv"
     ]
   },
   "supports": {
@@ -40184,6 +46886,19 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "səˈpoʊzd",
       "səˈpəʊzd"
+    ]
+  },
+  "supposedly": {
+    "display": "미국 [sə │ poʊzɪdli] · 영국 [sə │ pəʊzɪdli]",
+    "phonetics": [
+      "sə │ poʊzɪdli",
+      "sə │ pəʊzɪdli"
+    ]
+  },
+  "suppress": {
+    "display": "미국∙영국 [səˈpres]",
+    "phonetics": [
+      "səˈpres"
     ]
   },
   "supreme": {
@@ -40228,6 +46943,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ sɜːfɪŋ"
     ]
   },
+  "surge": {
+    "display": "미국 [sɜːrdʒ] · 영국 [sɜːdʒ]",
+    "phonetics": [
+      "sɜːrdʒ",
+      "sɜːdʒ"
+    ]
+  },
+  "surgeon": {
+    "display": "미국 [ˈsɜːrdʒən] · 영국 [ˈsɜːdʒən]",
+    "phonetics": [
+      "ˈsɜːrdʒən",
+      "ˈsɜːdʒən"
+    ]
+  },
   "surgery": {
     "display": "미국 [│ sɜːrdʒəri] · 영국 [│ sɜːdʒəri]",
     "phonetics": [
@@ -40261,6 +46990,25 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "sər │ praɪzd",
       "sə │ praɪzd"
+    ]
+  },
+  "surprising": {
+    "display": "미국 [sər │ praɪzɪŋ] · 영국 [sə │ praɪzɪŋ]",
+    "phonetics": [
+      "sər │ praɪzɪŋ",
+      "sə │ praɪzɪŋ"
+    ]
+  },
+  "surrender": {
+    "display": "미국∙영국 [səˈrendə(r)]",
+    "phonetics": [
+      "səˈrendə(r)"
+    ]
+  },
+  "surround": {
+    "display": "미국∙영국 [səˈraʊnd]",
+    "phonetics": [
+      "səˈraʊnd"
     ]
   },
   "surrounding": {
@@ -40305,6 +47053,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "sə │ vaɪv"
     ]
   },
+  "survivor": {
+    "display": "미국 [sər │ vaɪvə(r)] · 영국 [sə │ vaɪvə(r)]",
+    "phonetics": [
+      "sər │ vaɪvə(r)",
+      "sə │ vaɪvə(r)"
+    ]
+  },
   "susan": {
     "display": "미국∙영국 [sú:zn]",
     "phonetics": [
@@ -40318,16 +47073,40 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsʌspekt"
     ]
   },
+  "suspend": {
+    "display": "미국∙영국 [səˈspend]",
+    "phonetics": [
+      "səˈspend"
+    ]
+  },
   "suspension": {
     "display": "미국∙영국 [səˈspenʃn]",
     "phonetics": [
       "səˈspenʃn"
     ]
   },
+  "suspicion": {
+    "display": "미국∙영국 [səˈspɪʃn]",
+    "phonetics": [
+      "səˈspɪʃn"
+    ]
+  },
+  "suspicious": {
+    "display": "미국∙영국 [səˈspɪʃəs]",
+    "phonetics": [
+      "səˈspɪʃəs"
+    ]
+  },
   "sussex": {
     "display": "미국∙영국 [sʌ́siks]",
     "phonetics": [
       "sʌ́siks"
+    ]
+  },
+  "sustain": {
+    "display": "미국∙영국 [səˈsteɪn]",
+    "phonetics": [
+      "səˈsteɪn"
     ]
   },
   "sustainable": {
@@ -40342,11 +47121,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "səstéind"
     ]
   },
+  "swallow": {
+    "display": "미국 [ˈswɑːloʊ] · 영국 [ˈswɒləʊ]",
+    "phonetics": [
+      "ˈswɑːloʊ",
+      "ˈswɒləʊ"
+    ]
+  },
   "swap": {
     "display": "발음기호 [swɑːp] · 발음기호 [swɒp]",
     "phonetics": [
       "swɑːp",
       "swɒp"
+    ]
+  },
+  "swear": {
+    "display": "미국 [swer] · 영국 [sweə(r)]",
+    "phonetics": [
+      "swer",
+      "sweə(r)"
     ]
   },
   "sweater": {
@@ -40365,6 +47158,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [swí:diʃ]",
     "phonetics": [
       "swí:diʃ"
+    ]
+  },
+  "sweep": {
+    "display": "미국∙영국 [swiːp]",
+    "phonetics": [
+      "swiːp"
     ]
   },
   "sweet": {
@@ -40440,6 +47239,25 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsɪmbl"
     ]
   },
+  "symbolic": {
+    "display": "미국 [sɪm │ bɑːlɪk] · 영국 [sɪm │ bɒlɪk]",
+    "phonetics": [
+      "sɪm │ bɑːlɪk",
+      "sɪm │ bɒlɪk"
+    ]
+  },
+  "sympathetic": {
+    "display": "미국∙영국 [ˌsɪmpəˈθetɪk]",
+    "phonetics": [
+      "ˌsɪmpəˈθetɪk"
+    ]
+  },
+  "sympathy": {
+    "display": "미국∙영국 [ˈsɪmpəθi]",
+    "phonetics": [
+      "ˈsɪmpəθi"
+    ]
+  },
   "symphony": {
     "display": "미국∙영국 [ˈsɪmfəni] · 미국 [ˈsɪmfəni]",
     "phonetics": [
@@ -40452,6 +47270,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "sɪm │ poʊziəm",
       "sɪm │ pəʊziəm"
+    ]
+  },
+  "symptom": {
+    "display": "미국∙영국 [ˈsɪmptəm]",
+    "phonetics": [
+      "ˈsɪmptəm"
     ]
   },
   "syndication": {
@@ -40504,6 +47328,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈsɪstəm"
     ]
   },
+  "systematic": {
+    "display": "미국∙영국 [ˌsɪstəˈmætɪk] · 미국 [ˌsɪstəˈmætɪk]",
+    "phonetics": [
+      "ˌsɪstəˈmætɪk",
+      "ˌsɪstəˈmætɪk"
+    ]
+  },
   "systems": {
     "display": "미국∙영국 [ˈsɪstəm]",
     "phonetics": [
@@ -40553,10 +47384,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "tæb"
     ]
   },
+  "tackle": {
+    "display": "미국∙영국 [ˈtækl]",
+    "phonetics": [
+      "ˈtækl"
+    ]
+  },
   "tactic": {
     "display": "미국∙영국 [ˈtæktɪk]",
     "phonetics": [
       "ˈtæktɪk"
+    ]
+  },
+  "tactical": {
+    "display": "미국∙영국 [ˈtæktɪkl]",
+    "phonetics": [
+      "ˈtæktɪkl"
     ]
   },
   "tag": {
@@ -40611,6 +47454,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈtælənt]",
     "phonetics": [
       "ˈtælənt"
+    ]
+  },
+  "talented": {
+    "display": "미국∙영국 [ˈtæləntɪd] · 미국 [ˈtæləntɪd]",
+    "phonetics": [
+      "ˈtæləntɪd",
+      "ˈtæləntɪd"
     ]
   },
   "tales": {
@@ -40731,6 +47581,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtæksi"
     ]
   },
+  "taxpayer": {
+    "display": "미국∙영국 [ˈtækspeɪə(r)] · 미국 [ˈtækspeɪə(r)]",
+    "phonetics": [
+      "ˈtækspeɪə(r)",
+      "ˈtækspeɪə(r)"
+    ]
+  },
   "taylor": {
     "display": "미국∙영국 [téilər]",
     "phonetics": [
@@ -40786,6 +47643,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [tiːm]",
     "phonetics": [
       "tiːm"
+    ]
+  },
+  "tear": {
+    "display": "미국 [ter] · 영국 [teə(r)]",
+    "phonetics": [
+      "ter",
+      "teə(r)"
     ]
   },
   "tech": {
@@ -40857,6 +47721,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [ˈtiːneɪdʒ]",
     "phonetics": [
       "ˈtiːneɪdʒ"
+    ]
+  },
+  "teenager": {
+    "display": "발음기호 [ˈtiːneɪdʒə(r)]",
+    "phonetics": [
+      "ˈtiːneɪdʒə(r)"
     ]
   },
   "teens": {
@@ -40943,11 +47813,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtempl"
     ]
   },
+  "temporarily": {
+    "display": "미국 [ˌtempəˈrerəli] · 영국 [ˈtemprərəli]",
+    "phonetics": [
+      "ˌtempəˈrerəli",
+      "ˈtemprərəli"
+    ]
+  },
   "temporary": {
     "display": "미국 [│ tempəreri] · 영국 [│ temprəri]",
     "phonetics": [
       "│ tempəreri",
       "│ temprəri"
+    ]
+  },
+  "tempt": {
+    "display": "미국∙영국 [tempt]",
+    "phonetics": [
+      "tempt"
     ]
   },
   "ten": {
@@ -40957,10 +47840,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ten"
     ]
   },
+  "tenant": {
+    "display": "미국∙영국 [ˈtenənt]",
+    "phonetics": [
+      "ˈtenənt"
+    ]
+  },
   "tend": {
     "display": "미국∙영국 [tend]",
     "phonetics": [
       "tend"
+    ]
+  },
+  "tendency": {
+    "display": "미국∙영국 [ˈtendənsi]",
+    "phonetics": [
+      "ˈtendənsi"
     ]
   },
   "tender": {
@@ -40987,10 +47882,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtenʃn"
     ]
   },
+  "tent": {
+    "display": "미국∙영국 [tent] · 미국 [tent]",
+    "phonetics": [
+      "tent",
+      "tent"
+    ]
+  },
   "tenth": {
     "display": "미국∙영국 [tenθ]",
     "phonetics": [
       "tenθ"
+    ]
+  },
+  "tenure": {
+    "display": "미국∙영국 [ˈtenjə(r)]",
+    "phonetics": [
+      "ˈtenjə(r)"
     ]
   },
   "term": {
@@ -41005,6 +47913,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ tɜːrmɪnl",
       "│ tɜːmɪnl"
+    ]
+  },
+  "terminate": {
+    "display": "미국 [│ tɜːrmɪneɪt] · 영국 [│ tɜːmɪneɪt]",
+    "phonetics": [
+      "│ tɜːrmɪneɪt",
+      "│ tɜːmɪneɪt"
     ]
   },
   "termination": {
@@ -41027,10 +47942,36 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈterəs"
     ]
   },
+  "terrain": {
+    "display": "미국∙영국 [təˈreɪn] · 미국 [təˈreɪn]",
+    "phonetics": [
+      "təˈreɪn",
+      "təˈreɪn"
+    ]
+  },
   "terrible": {
     "display": "미국∙영국 [ˈterəbl]",
     "phonetics": [
       "ˈterəbl"
+    ]
+  },
+  "terribly": {
+    "display": "미국∙영국 [ˈterəbli]",
+    "phonetics": [
+      "ˈterəbli"
+    ]
+  },
+  "terrific": {
+    "display": "미국∙영국 [təˈrɪfɪk]",
+    "phonetics": [
+      "təˈrɪfɪk"
+    ]
+  },
+  "terrify": {
+    "display": "미국∙영국 [ˈterɪfaɪ] · 미국 [ˈterɪfaɪ]",
+    "phonetics": [
+      "ˈterɪfaɪ",
+      "ˈterɪfaɪ"
     ]
   },
   "territories": {
@@ -41099,6 +48040,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "téstid"
     ]
   },
+  "testify": {
+    "display": "미국∙영국 [ˈtestɪfaɪ]",
+    "phonetics": [
+      "ˈtestɪfaɪ"
+    ]
+  },
   "testimony": {
     "display": "미국 [│ testɪmoʊni] · 영국 [│ testɪməni]",
     "phonetics": [
@@ -41136,6 +48083,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "tekst"
     ]
   },
+  "texture": {
+    "display": "미국∙영국 [ˈtekstʃə(r)]",
+    "phonetics": [
+      "ˈtekstʃə(r)"
+    ]
+  },
   "tft": {
     "display": "미국∙영국 [ˌtiː ef ˈtiː]",
     "phonetics": [
@@ -41166,6 +48119,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "θæŋk",
       "θæŋk"
+    ]
+  },
+  "thankfully": {
+    "display": "미국∙영국 [ˈθæŋkfəli]",
+    "phonetics": [
+      "ˈθæŋkfəli"
     ]
   },
   "thanks": {
@@ -41213,6 +48172,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈθɪətə(r)"
     ]
   },
+  "theatrical": {
+    "display": "미국∙영국 [θiˈætrɪkl]",
+    "phonetics": [
+      "θiˈætrɪkl"
+    ]
+  },
   "thee": {
     "display": "미국∙영국 [ðiː] · 미국 [ðiː]",
     "phonetics": [
@@ -41232,6 +48197,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ðer",
       "ðeə(r)"
+    ]
+  },
+  "theirs": {
+    "display": "미국 [ðerz] · 영국 [ðeəz]",
+    "phonetics": [
+      "ðerz",
+      "ðeəz"
     ]
   },
   "them": {
@@ -41264,6 +48236,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ðen"
     ]
   },
+  "theology": {
+    "display": "미국 [θi │ ɑːlədʒi] · 영국 [θi │ ɒlədʒi]",
+    "phonetics": [
+      "θi │ ɑːlədʒi",
+      "θi │ ɒlədʒi"
+    ]
+  },
   "theorem": {
     "display": "미국 [│ θiːərəm; │ θɪrəm] · 영국 [│ θɪərəm]",
     "phonetics": [
@@ -41291,6 +48270,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌθerəˈpjuːtɪk"
     ]
   },
+  "therapist": {
+    "display": "미국∙영국 [ˈθerəpɪst]",
+    "phonetics": [
+      "ˈθerəpɪst"
+    ]
+  },
   "therapy": {
     "display": "미국∙영국 [ˈθerəpi]",
     "phonetics": [
@@ -41302,6 +48287,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ðer",
       "ðeə(r)"
+    ]
+  },
+  "thereafter": {
+    "display": "미국 [│ ðer │ æftə(r)] · 영국 [│ ðeər │ ɑːftə(r)]",
+    "phonetics": [
+      "│ ðer │ æftə(r)",
+      "│ ðeər │ ɑːftə(r)"
     ]
   },
   "thereby": {
@@ -41357,6 +48349,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "θɪk"
     ]
   },
+  "thief": {
+    "display": "미국∙영국 [θiːf] · 미국 [θiːf]",
+    "phonetics": [
+      "θiːf",
+      "θiːf"
+    ]
+  },
   "thin": {
     "display": "미국∙영국 [θɪn]",
     "phonetics": [
@@ -41392,6 +48391,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "θɜːrd",
       "θɜːd"
+    ]
+  },
+  "thirsty": {
+    "display": "미국 [ˈθɜːrsti] · 영국 [ˈθɜːsti]",
+    "phonetics": [
+      "ˈθɜːrsti",
+      "ˈθɜːsti"
     ]
   },
   "thirteen": {
@@ -41440,6 +48446,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "θɒŋ"
     ]
   },
+  "thorough": {
+    "display": "미국 [ˈθɜːroʊ] · 영국 [ˈθʌrə]",
+    "phonetics": [
+      "ˈθɜːroʊ",
+      "ˈθʌrə"
+    ]
+  },
+  "thoroughly": {
+    "display": "미국 [│ θɜːrəli] · 영국 [│ θʌrəli]",
+    "phonetics": [
+      "│ θɜːrəli",
+      "│ θʌrəli"
+    ]
+  },
   "thou": {
     "display": "미국∙영국 [ðaʊ] · 미국 [ðaʊ]",
     "phonetics": [
@@ -41458,6 +48478,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [θɔːt]",
     "phonetics": [
       "θɔːt"
+    ]
+  },
+  "thoughtful": {
+    "display": "미국∙영국 [ˈθɔːtfl]",
+    "phonetics": [
+      "ˈθɔːtfl"
     ]
   },
   "thoughts": {
@@ -41491,6 +48517,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "θret"
     ]
   },
+  "threaten": {
+    "display": "미국∙영국 [ˈθretn]",
+    "phonetics": [
+      "ˈθretn"
+    ]
+  },
   "threatened": {
     "display": "미국∙영국 [θrétnd]",
     "phonetics": [
@@ -41514,6 +48546,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ θreʃhoʊld",
       "│ θreʃhəʊld"
+    ]
+  },
+  "thrilled": {
+    "display": "미국∙영국 [θrɪld] · 미국 [θrɪld]",
+    "phonetics": [
+      "θrɪld",
+      "θrɪld"
+    ]
+  },
+  "thrive": {
+    "display": "미국∙영국 [θraɪv] · 미국 [θraɪv]",
+    "phonetics": [
+      "θraɪv",
+      "θraɪv"
     ]
   },
   "throat": {
@@ -41599,6 +48645,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtɪkɪt"
     ]
   },
+  "tide": {
+    "display": "미국∙영국 [taɪd]",
+    "phonetics": [
+      "taɪd"
+    ]
+  },
+  "tidy": {
+    "display": "미국∙영국 [ˈtaɪdi]",
+    "phonetics": [
+      "ˈtaɪdi"
+    ]
+  },
   "tie": {
     "display": "미국∙영국 [taɪ]",
     "phonetics": [
@@ -41643,6 +48701,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [taɪt]",
     "phonetics": [
       "taɪt"
+    ]
+  },
+  "tighten": {
+    "display": "미국∙영국 [ˈtaɪtn]",
+    "phonetics": [
+      "ˈtaɪtn"
     ]
   },
   "tile": {
@@ -41822,6 +48886,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ tɒlərəns"
     ]
   },
+  "tolerate": {
+    "display": "미국 [│ tɑːləreɪt] · 영국 [│ tɒləreɪt]",
+    "phonetics": [
+      "│ tɑːləreɪt",
+      "│ tɒləreɪt"
+    ]
+  },
   "toll": {
     "display": "미국 [toʊl] · 영국 [təʊl]",
     "phonetics": [
@@ -41834,6 +48905,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "tɑːm",
       "tɒm"
+    ]
+  },
+  "tomato": {
+    "display": "미국 [təˈmeɪtoʊ] · 영국 [təˈmɑːtəʊ]",
+    "phonetics": [
+      "təˈmeɪtoʊ",
+      "təˈmɑːtəʊ"
     ]
   },
   "tommy": {
@@ -41887,6 +48965,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [təˈnaɪt]",
     "phonetics": [
       "təˈnaɪt"
+    ]
+  },
+  "tonne": {
+    "display": "미국∙영국 [tʌn] · 미국 [tʌn]",
+    "phonetics": [
+      "tʌn",
+      "tʌn"
     ]
   },
   "tony": {
@@ -41961,6 +49046,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ tɔːrtʃə(r)",
       "│ tɔːtʃə(r)"
+    ]
+  },
+  "toss": {
+    "display": "미국 [tɔːs] · 영국 [tɒs]",
+    "phonetics": [
+      "tɔːs",
+      "tɒs"
     ]
   },
   "total": {
@@ -42043,6 +49135,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "tɔːrdz",
       "təˈwɔːdz"
+    ]
+  },
+  "towel": {
+    "display": "미국∙영국 [ˈtaʊəl]",
+    "phonetics": [
+      "ˈtaʊəl"
     ]
   },
   "tower": {
@@ -42177,6 +49275,18 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtræfɪk"
     ]
   },
+  "tragedy": {
+    "display": "미국∙영국 [ˈtrædʒədi]",
+    "phonetics": [
+      "ˈtrædʒədi"
+    ]
+  },
+  "tragic": {
+    "display": "미국∙영국 [ˈtrædʒɪk]",
+    "phonetics": [
+      "ˈtrædʒɪk"
+    ]
+  },
   "trail": {
     "display": "미국∙영국 [treɪl]",
     "phonetics": [
@@ -42217,6 +49327,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [treɪn]",
     "phonetics": [
       "treɪn"
+    ]
+  },
+  "trait": {
+    "display": "미국∙영국 [treɪt] · 미국 [treɪt]",
+    "phonetics": [
+      "treɪt",
+      "treɪt"
     ]
   },
   "trance": {
@@ -42309,10 +49426,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "træns │ mɪʃn; trænz │ mɪʃn"
     ]
   },
+  "transmit": {
+    "display": "미국∙영국 [træns │ mɪt; trænz │ mɪt]",
+    "phonetics": [
+      "træns │ mɪt; trænz │ mɪt"
+    ]
+  },
   "transmitted": {
     "display": "미국∙영국 [træns │ mɪt; trænz │ mɪt]",
     "phonetics": [
       "træns │ mɪt; trænz │ mɪt"
+    ]
+  },
+  "transparency": {
+    "display": "미국∙영국 [trænsˈpærənsi]",
+    "phonetics": [
+      "trænsˈpærənsi"
     ]
   },
   "transparent": {
@@ -42347,6 +49476,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "træʃ"
     ]
   },
+  "trauma": {
+    "display": "미국 [ˈtraʊmə] · 영국 [ˈtrɔːmə]",
+    "phonetics": [
+      "ˈtraʊmə",
+      "ˈtrɔːmə"
+    ]
+  },
   "travel": {
     "display": "미국∙영국 [ˈtrævl]",
     "phonetics": [
@@ -42363,6 +49499,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [trǽvəliŋ]",
     "phonetics": [
       "trǽvəliŋ"
+    ]
+  },
+  "traveller": {
+    "display": "미국∙영국 [ˈtrævələ(r)]",
+    "phonetics": [
+      "ˈtrævələ(r)"
     ]
   },
   "tray": {
@@ -42432,6 +49574,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [trek]",
     "phonetics": [
       "trek"
+    ]
+  },
+  "tremendous": {
+    "display": "미국∙영국 [trəˈmendəs]",
+    "phonetics": [
+      "trəˈmendəs"
     ]
   },
   "trend": {
@@ -42508,6 +49656,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtrɪɡə(r)"
     ]
   },
+  "trillion": {
+    "display": "미국∙영국 [ˈtrɪljən]",
+    "phonetics": [
+      "ˈtrɪljən"
+    ]
+  },
   "trim": {
     "display": "미국∙영국 [trɪm]",
     "phonetics": [
@@ -42545,10 +49699,29 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtrɪpl"
     ]
   },
+  "triumph": {
+    "display": "미국∙영국 [ˈtraɪʌmf]",
+    "phonetics": [
+      "ˈtraɪʌmf"
+    ]
+  },
   "trivia": {
     "display": "미국∙영국 [ˈtrɪviə]",
     "phonetics": [
       "ˈtrɪviə"
+    ]
+  },
+  "troop": {
+    "display": "미국∙영국 [truːp]",
+    "phonetics": [
+      "truːp"
+    ]
+  },
+  "trophy": {
+    "display": "미국 [ˈtroʊfi] · 영국 [ˈtrəʊfi]",
+    "phonetics": [
+      "ˈtroʊfi",
+      "ˈtrəʊfi"
     ]
   },
   "tropical": {
@@ -42564,11 +49737,24 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtrʌbl"
     ]
   },
+  "troubled": {
+    "display": "미국∙영국 [ˈtrʌbld]",
+    "phonetics": [
+      "ˈtrʌbld"
+    ]
+  },
   "troubleshoot": {
     "display": "미국∙영국 [ˈtrʌblʃuːt]",
     "phonetics": [
       "ˈtrʌblʃuːt",
       "ˈtrʌblʃuːt"
+    ]
+  },
+  "trousers": {
+    "display": "발음기호 [| traʊzərz] · 발음기호 [| traʊzəz]",
+    "phonetics": [
+      "| traʊzərz",
+      "| traʊzəz"
     ]
   },
   "troy": {
@@ -42620,6 +49806,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "trʌst"
     ]
   },
+  "trustee": {
+    "display": "미국∙영국 [trʌˈstiː]",
+    "phonetics": [
+      "trʌˈstiː"
+    ]
+  },
   "trustees": {
     "display": "미국∙영국 [trʌˈstiː]",
     "phonetics": [
@@ -42643,6 +49835,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈtraɪɪŋ",
       "ˈtraɪɪŋ"
+    ]
+  },
+  "tsunami": {
+    "display": "미국∙영국 [tsuːˈnɑːmi] · 미국 [tsuːˈnɑːmi]",
+    "phonetics": [
+      "tsuːˈnɑːmi",
+      "tsuːˈnɑːmi"
     ]
   },
   "tub": {
@@ -42757,6 +49956,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈtɜːrnɪŋ",
       "ˈtɜːnɪŋ"
+    ]
+  },
+  "turnout": {
+    "display": "미국 [│ tɜːrnaʊt] · 영국 [│ tɜːnaʊt]",
+    "phonetics": [
+      "│ tɜːrnaʊt",
+      "│ tɜːnaʊt"
+    ]
+  },
+  "turnover": {
+    "display": "미국 [│ tɜːrnoʊvə(r)] · 영국 [│ tɜːnəʊvə(r)]",
+    "phonetics": [
+      "│ tɜːrnoʊvə(r)",
+      "│ tɜːnəʊvə(r)"
     ]
   },
   "turns": {
@@ -42881,6 +50094,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈtɪpɪkli"
     ]
   },
+  "tyre": {
+    "display": "미국∙영국 [ˈtaɪə(r)] · 미국 [ˈtaɪə(r)]",
+    "phonetics": [
+      "ˈtaɪə(r)",
+      "ˈtaɪə(r)"
+    ]
+  },
   "u": {
     "display": "미국∙영국 [juː]",
     "phonetics": [
@@ -42931,6 +50151,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈʌltrə"
     ]
   },
+  "umbrella": {
+    "display": "미국∙영국 [ʌmˈbrelə]",
+    "phonetics": [
+      "ʌmˈbrelə"
+    ]
+  },
   "un": {
     "display": "미국∙영국 [ˌjuː ˈen] · 미국 [ˌjuː ˈen]",
     "phonetics": [
@@ -42945,10 +50171,31 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʌnˈeɪbl"
     ]
   },
+  "unacceptable": {
+    "display": "미국∙영국 [ˌʌnəkˈseptəbl] · 미국 [ˌʌnəkˈseptəbl]",
+    "phonetics": [
+      "ˌʌnəkˈseptəbl",
+      "ˌʌnəkˈseptəbl"
+    ]
+  },
   "unavailable": {
     "display": "미국∙영국 [ˌʌnəˈveɪləbl]",
     "phonetics": [
       "ˌʌnəˈveɪləbl"
+    ]
+  },
+  "unaware": {
+    "display": "미국 [│ ʌnə │ wer] · 영국 [│ ʌnə │ weə(r)]",
+    "phonetics": [
+      "│ ʌnə │ wer",
+      "│ ʌnə │ weə(r)"
+    ]
+  },
+  "uncertain": {
+    "display": "미국 [ʌnˈsɜːrtn] · 영국 [ʌnˈsɜːtn]",
+    "phonetics": [
+      "ʌnˈsɜːrtn",
+      "ʌnˈsɜːtn"
     ]
   },
   "uncertainty": {
@@ -42964,6 +50211,56 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈʌŋkl"
     ]
   },
+  "unclear": {
+    "display": "미국 [│ ʌn │ klɪr] · 영국 [│ ʌn │ klɪə(r)]",
+    "phonetics": [
+      "│ ʌn │ klɪr",
+      "│ ʌn │ klɪə(r)"
+    ]
+  },
+  "uncomfortable": {
+    "display": "미국 [ʌnˈkʌmfərtəbl] · 영국 [ʌnˈkʌmfətəbl]",
+    "phonetics": [
+      "ʌnˈkʌmftəbl",
+      "ʌnˈkʌmfərtəbl",
+      "ʌnˈkʌmfətəbl"
+    ]
+  },
+  "uncommon": {
+    "display": "미국 [ʌn │ kɑːmən] · 영국 [ʌn │ kɒmən]",
+    "phonetics": [
+      "ʌn │ kɑːmən",
+      "ʌn │ kɒmən"
+    ]
+  },
+  "unconscious": {
+    "display": "미국 [ʌn │ kɑːnʃəs] · 영국 [ʌn │ kɒnʃəs]",
+    "phonetics": [
+      "ʌn │ kɑːnʃəs",
+      "ʌn │ kɒnʃəs"
+    ]
+  },
+  "unconstitutional": {
+    "display": "미국 [│ ʌn │ kɑːnstə │ tuːʃənl] · 영국 [│ ʌn │ kɒnstɪ │ tjuːʃənl]",
+    "phonetics": [
+      "│ ʌn │ kɑːnstə │ tuːʃənl",
+      "│ ʌn │ kɒnstɪ │ tjuːʃənl"
+    ]
+  },
+  "uncontrolled": {
+    "display": "미국 [│ ʌnkən │ troʊld] · 영국 [│ ʌnkən │ trəʊld]",
+    "phonetics": [
+      "│ ʌnkən │ troʊld",
+      "│ ʌnkən │ trəʊld"
+    ]
+  },
+  "unconventional": {
+    "display": "미국∙영국 [ˌʌnkənˈvenʃənl] · 미국 [ˌʌnkənˈvenʃənl]",
+    "phonetics": [
+      "ˌʌnkənˈvenʃənl",
+      "ˌʌnkənˈvenʃənl"
+    ]
+  },
   "undefined": {
     "display": "미국∙영국 [ˌʌndɪˈfaɪnd] · 미국 [ˌʌndɪˈfaɪnd]",
     "phonetics": [
@@ -42975,6 +50272,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈʌndə(r)]",
     "phonetics": [
       "ˈʌndə(r)"
+    ]
+  },
+  "undergo": {
+    "display": "미국 [ˌʌndərˈɡoʊ] · 영국 [ˌʌndəˈɡəʊ]",
+    "phonetics": [
+      "ˌʌndərˈɡoʊ",
+      "ˌʌndəˈɡəʊ"
     ]
   },
   "undergraduate": {
@@ -42998,6 +50302,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ ʌndə │ laɪɪŋ"
     ]
   },
+  "undermine": {
+    "display": "미국 [│ ʌndər │ maɪn] · 영국 [│ ʌndə │ maɪn]",
+    "phonetics": [
+      "│ ʌndər │ maɪn",
+      "│ ʌndə │ maɪn"
+    ]
+  },
   "understand": {
     "display": "미국 [│ ʌndər │ stænd] · 영국 [│ ʌndə │ stænd]",
     "phonetics": [
@@ -43010,6 +50321,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ ʌndər │ stændɪŋ",
       "│ ʌndə │ stændɪŋ"
+    ]
+  },
+  "undertake": {
+    "display": "미국 [│ ʌndər │ teɪk] · 영국 [│ ʌndə │ teɪk]",
+    "phonetics": [
+      "│ ʌndər │ teɪk",
+      "│ ʌndə │ teɪk"
     ]
   },
   "undertaken": {
@@ -43025,10 +50343,84 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈʌndəweə(r)"
     ]
   },
+  "unemployed": {
+    "display": "미국∙영국 [ˌʌnɪmˈplɔɪd] · 미국 [ˌʌnɪmˈplɔɪd]",
+    "phonetics": [
+      "ˌʌnɪmˈplɔɪd",
+      "ˌʌnɪmˈplɔɪd"
+    ]
+  },
   "unemployment": {
     "display": "미국∙영국 [ˌʌnɪmˈplɔɪmənt]",
     "phonetics": [
       "ˌʌnɪmˈplɔɪmənt"
+    ]
+  },
+  "unequal": {
+    "display": "미국∙영국 [ʌnˈiːkwəl]",
+    "phonetics": [
+      "ʌnˈiːkwəl"
+    ]
+  },
+  "unethical": {
+    "display": "미국∙영국 [ʌnˈeθɪkl] · 미국 [ʌnˈeθɪkl]",
+    "phonetics": [
+      "ʌnˈeθɪkl",
+      "ʌnˈeθɪkl"
+    ]
+  },
+  "unexpected": {
+    "display": "미국∙영국 [ˌʌnɪkˈspektɪd] · 미국 [ˌʌnɪkˈspektɪd]",
+    "phonetics": [
+      "ˌʌnɪkˈspektɪd",
+      "ˌʌnɪkˈspektɪd"
+    ]
+  },
+  "unfair": {
+    "display": "미국 [│ ʌn │ fer] · 영국 [│ ʌn │ feə(r)]",
+    "phonetics": [
+      "│ ʌn │ fer",
+      "│ ʌn │ feə(r)"
+    ]
+  },
+  "unfamiliar": {
+    "display": "미국∙영국 [ˌʌnfəˈmɪliə(r)]",
+    "phonetics": [
+      "ˌʌnfəˈmɪliə(r)"
+    ]
+  },
+  "unfashionable": {
+    "display": "미국∙영국 [ʌnˈfæʃnəbl] · 미국 [ʌnˈfæʃnəbl]",
+    "phonetics": [
+      "ʌnˈfæʃnəbl",
+      "ʌnˈfæʃnəbl"
+    ]
+  },
+  "unfit": {
+    "display": "미국∙영국 [ʌnˈfɪt]",
+    "phonetics": [
+      "ʌnˈfɪt"
+    ]
+  },
+  "unfold": {
+    "display": "미국 [ʌnˈfoʊld] · 영국 [ʌnˈfəʊld]",
+    "phonetics": [
+      "ʌnˈfoʊld",
+      "ʌnˈfəʊld"
+    ]
+  },
+  "unforgettable": {
+    "display": "미국 [│ ʌnfər │ ɡetəbl] · 영국 [│ ʌnfə │ ɡetəbl]",
+    "phonetics": [
+      "│ ʌnfər │ ɡetəbl",
+      "│ ʌnfə │ ɡetəbl"
+    ]
+  },
+  "unfortunate": {
+    "display": "미국 [ʌn │ fɔːrtʃənət] · 영국 [ʌn │ fɔːtʃənət]",
+    "phonetics": [
+      "ʌn │ fɔːrtʃənət",
+      "ʌn │ fɔːtʃənət"
     ]
   },
   "unfortunately": {
@@ -43038,11 +50430,65 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʌn │ fɔːtʃənətli"
     ]
   },
+  "unfriendly": {
+    "display": "미국∙영국 [ʌnˈfrendli] · 미국 [ʌnˈfrendli]",
+    "phonetics": [
+      "ʌnˈfrendli",
+      "ʌnˈfrendli"
+    ]
+  },
+  "unhappy": {
+    "display": "미국∙영국 [ʌnˈhæpi]",
+    "phonetics": [
+      "ʌnˈhæpi"
+    ]
+  },
+  "unhealthy": {
+    "display": "미국∙영국 [ʌnˈhelθi]",
+    "phonetics": [
+      "ʌnˈhelθi"
+    ]
+  },
+  "unhelpful": {
+    "display": "미국∙영국 [ʌnˈhelpfl] · 미국 [ʌnˈhelpfl]",
+    "phonetics": [
+      "ʌnˈhelpfl",
+      "ʌnˈhelpfl"
+    ]
+  },
+  "unidentified": {
+    "display": "미국∙영국 [ˌʌnaɪˈdentɪfaɪd] · 미국 [ˌʌnaɪˈdentɪfaɪd]",
+    "phonetics": [
+      "ˌʌnaɪˈdentɪfaɪd",
+      "ˌʌnaɪˈdentɪfaɪd"
+    ]
+  },
   "uniform": {
     "display": "미국 [│ juːnɪfɔːrm] · 영국 [│ juːnɪfɔːm]",
     "phonetics": [
       "│ juːnɪfɔːrm",
       "│ juːnɪfɔːm"
+    ]
+  },
+  "unify": {
+    "display": "미국∙영국 [ˈjuːnɪfaɪ] · 미국 [ˈjuːnɪfaɪ]",
+    "phonetics": [
+      "ˈjuːnɪfaɪ",
+      "ˈjuːnɪfaɪ"
+    ]
+  },
+  "unimportant": {
+    "display": "미국 [│ ʌnɪm │ pɔːrtnt] · 영국 [│ ʌnɪm │ pɔːtnt]",
+    "phonetics": [
+      "│ ʌnɪm │ pɔːrtnt",
+      "│ ʌnɪm │ pɔːtnt"
+    ]
+  },
+  "unintended": {
+    "display": "미국∙영국 [ˌʌnɪnˈtendɪd] · 미국 [ˌʌnɪnˈtendɪd]",
+    "phonetics": [
+      "ˌʌnɪnˈtendɪd",
+      "ˌʌnɪnˈtendɪd"
     ]
   },
   "union": {
@@ -43067,6 +50513,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈjuːnɪt]",
     "phonetics": [
       "ˈjuːnɪt"
+    ]
+  },
+  "unite": {
+    "display": "미국∙영국 [juˈnaɪt]",
+    "phonetics": [
+      "juˈnaɪt"
     ]
   },
   "united": {
@@ -43109,6 +50561,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈjuːnɪks"
     ]
   },
+  "unkind": {
+    "display": "미국∙영국 [ˌʌnˈkaɪnd] · 미국 [ˌʌnˈkaɪnd]",
+    "phonetics": [
+      "ˌʌnˈkaɪnd",
+      "ˌʌnˈkaɪnd"
+    ]
+  },
   "unknown": {
     "display": "미국 [│ ʌn │ noʊn] · 영국 [│ ʌn │ nəʊn]",
     "phonetics": [
@@ -43147,10 +50606,108 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ʌnˈlʌki"
     ]
   },
+  "unnatural": {
+    "display": "미국∙영국 [ʌnˈnætʃrəl]",
+    "phonetics": [
+      "ʌnˈnætʃrəl"
+    ]
+  },
+  "unnecessary": {
+    "display": "미국 [ʌn │ nesəseri] · 영국 [ʌn │ nesəsəri]",
+    "phonetics": [
+      "ʌn │ nesəseri",
+      "ʌn │ nesəsəri"
+    ]
+  },
+  "unofficial": {
+    "display": "미국∙영국 [ˌʌnəˈfɪʃl]",
+    "phonetics": [
+      "ˌʌnəˈfɪʃl"
+    ]
+  },
+  "unpaid": {
+    "display": "미국∙영국 [ˌʌnˈpeɪd]",
+    "phonetics": [
+      "ˌʌnˈpeɪd"
+    ]
+  },
+  "unpleasant": {
+    "display": "미국∙영국 [ʌnˈpleznt]",
+    "phonetics": [
+      "ʌnˈpleznt"
+    ]
+  },
+  "unpopular": {
+    "display": "미국 [ʌn │ pɑːpjələ(r)] · 영국 [ʌn │ pɒpjələ(r)]",
+    "phonetics": [
+      "ʌn │ pɑːpjələ(r)",
+      "ʌn │ pɒpjələ(r)"
+    ]
+  },
+  "unprecedented": {
+    "display": "미국∙영국 [ʌnˈpresɪdentɪd] · 미국 [ʌnˈpresɪdentɪd]",
+    "phonetics": [
+      "ʌnˈpresɪdentɪd",
+      "ʌnˈpresɪdentɪd"
+    ]
+  },
+  "unpredictable": {
+    "display": "미국∙영국 [ˌʌnprɪˈdɪktəbl]",
+    "phonetics": [
+      "ˌʌnprɪˈdɪktəbl"
+    ]
+  },
+  "unprepared": {
+    "display": "미국 [│ ʌnprɪ │ perd] · 영국 [│ ʌnprɪ │ peəd]",
+    "phonetics": [
+      "│ ʌnprɪ │ perd",
+      "│ ʌnprɪ │ peəd"
+    ]
+  },
+  "unprofessional": {
+    "display": "미국∙영국 [ˌʌnprəˈfeʃənl] · 미국 [ˌʌnprəˈfeʃənl]",
+    "phonetics": [
+      "ˌʌnprəˈfeʃənl",
+      "ˌʌnprəˈfeʃənl"
+    ]
+  },
+  "unreasonable": {
+    "display": "미국∙영국 [ʌnˈriːznəbl] · 미국 [ʌnˈriːznəbl]",
+    "phonetics": [
+      "ʌnˈriːznəbl",
+      "ʌnˈriːznəbl"
+    ]
+  },
+  "unreliable": {
+    "display": "미국∙영국 [ˌʌnrɪˈlaɪəbl] · 미국 [ˌʌnrɪˈlaɪəbl]",
+    "phonetics": [
+      "ˌʌnrɪˈlaɪəbl",
+      "ˌʌnrɪˈlaɪəbl"
+    ]
+  },
+  "unsafe": {
+    "display": "미국∙영국 [ʌnˈseɪf]",
+    "phonetics": [
+      "ʌnˈseɪf"
+    ]
+  },
+  "unsatisfactory": {
+    "display": "미국∙영국 [ˌʌnˌsætɪsˈfæktəri] · 미국 [ˌʌnˌsætɪsˈfæktəri]",
+    "phonetics": [
+      "ˌʌnˌsætɪsˈfæktəri",
+      "ˌʌnˌsætɪsˈfæktəri"
+    ]
+  },
   "unsigned": {
     "display": "미국∙영국 [ʌ̀nsáind]",
     "phonetics": [
       "ʌ̀nsáind"
+    ]
+  },
+  "unstable": {
+    "display": "미국∙영국 [ʌnˈsteɪbl]",
+    "phonetics": [
+      "ʌnˈsteɪbl"
     ]
   },
   "unsubscribe": {
@@ -43158,6 +50715,34 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˌʌnsəbˈskraɪb",
       "ˌʌnsəbˈskraɪb"
+    ]
+  },
+  "unsuccessful": {
+    "display": "미국∙영국 [ˌʌnsəkˈsesfl] · 미국 [ˌʌnsəkˈsesfl]",
+    "phonetics": [
+      "ˌʌnsəkˈsesfl",
+      "ˌʌnsəkˈsesfl"
+    ]
+  },
+  "unsuitable": {
+    "display": "미국 [ʌn │ suːtəbl] · 영국 [ʌn │ sjuːtəbl]",
+    "phonetics": [
+      "ʌn │ suːtəbl",
+      "ʌn │ suːtəbl",
+      "ʌn │ sjuːtəbl"
+    ]
+  },
+  "unsure": {
+    "display": "미국 [│ ʌn │ ʃʊr] · 영국 [│ ʌn │ ʃʊə(r); │ ʌn │ ʃɔː(r)]",
+    "phonetics": [
+      "│ ʌn │ ʃʊr",
+      "│ ʌn │ ʃʊə(r); │ ʌn │ ʃɔː(r)"
+    ]
+  },
+  "untidy": {
+    "display": "미국∙영국 [ʌnˈtaɪdi]",
+    "phonetics": [
+      "ʌnˈtaɪdi"
     ]
   },
   "until": {
@@ -43180,10 +50765,63 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈʌntə 모음 앞에서 ˈʌntu"
     ]
   },
+  "untrue": {
+    "display": "미국∙영국 [ʌnˈtruː]",
+    "phonetics": [
+      "ʌnˈtruː"
+    ]
+  },
+  "unused": {
+    "display": "미국∙영국 [ˌʌnˈjuːzd] · 미국 [ˌʌnˈjuːzd]",
+    "phonetics": [
+      "ˌʌnˈjuːzd",
+      "ˌʌnˈjuːzd"
+    ]
+  },
   "unusual": {
     "display": "미국∙영국 [ʌn │ juːʒuəl; ʌn │ juːʒəl]",
     "phonetics": [
       "ʌn │ juːʒuəl; ʌn │ juːʒəl"
+    ]
+  },
+  "unveil": {
+    "display": "미국∙영국 [ˌʌnˈveɪl]",
+    "phonetics": [
+      "ˌʌnˈveɪl"
+    ]
+  },
+  "unwanted": {
+    "display": "미국 [│ ʌn │ wɑːntɪd] · 영국 [│ ʌn │ wɒntɪd]",
+    "phonetics": [
+      "│ ʌn │ wɑːntɪd",
+      "│ ʌn │ wɒntɪd"
+    ]
+  },
+  "unwelcome": {
+    "display": "미국∙영국 [ʌnˈwelkəm] · 미국 [ʌnˈwelkəm]",
+    "phonetics": [
+      "ʌnˈwelkəm",
+      "ʌnˈwelkəm"
+    ]
+  },
+  "unwell": {
+    "display": "미국∙영국 [ʌnˈwel] · 미국 [ʌnˈwel]",
+    "phonetics": [
+      "ʌnˈwel",
+      "ʌnˈwel"
+    ]
+  },
+  "unwilling": {
+    "display": "미국∙영국 [ʌnˈwɪlɪŋ]",
+    "phonetics": [
+      "ʌnˈwɪlɪŋ"
+    ]
+  },
+  "unwise": {
+    "display": "미국∙영국 [ˌʌnˈwaɪz] · 미국 [ˌʌnˈwaɪz]",
+    "phonetics": [
+      "ˌʌnˈwaɪz",
+      "ˌʌnˈwaɪz"
     ]
   },
   "up": {
@@ -43223,6 +50861,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˌʌpˈɡreɪd"
     ]
   },
+  "uphold": {
+    "display": "미국 [ʌp │ hoʊld] · 영국 [ʌp │ həʊld]",
+    "phonetics": [
+      "ʌp │ hoʊld",
+      "ʌp │ həʊld"
+    ]
+  },
   "upon": {
     "display": "미국 [əˈpɑːn] · 영국 [əˈpɒn]",
     "phonetics": [
@@ -43236,11 +50881,33 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈʌpə(r)"
     ]
   },
+  "upset": {
+    "display": "발음기호 [ˈʌpset] · 발음기호 [ʌpˈset] · 발음기호 [ˌʌpˈset]",
+    "phonetics": [
+      "ˈʌpset",
+      "ʌpˈset",
+      "ˌʌpˈset"
+    ]
+  },
   "upstairs": {
     "display": "미국 [│ ʌp │ sterz] · 영국 [│ ʌp │ steəz]",
     "phonetics": [
       "│ ʌp │ sterz",
       "│ ʌp │ steəz"
+    ]
+  },
+  "upward": {
+    "display": "미국 [│ ʌpwərd] · 영국 [│ ʌpwəd]",
+    "phonetics": [
+      "│ ʌpwərd",
+      "│ ʌpwəd"
+    ]
+  },
+  "upwards": {
+    "display": "미국 [│ ʌpwərdz] · 영국 [│ ʌpwədz]",
+    "phonetics": [
+      "│ ʌpwərdz",
+      "│ ʌpwədz"
     ]
   },
   "ur": {
@@ -43254,6 +50921,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈɜːrbən",
       "ˈɜːbən"
+    ]
+  },
+  "urge": {
+    "display": "미국 [ɜːrdʒ] · 영국 [ɜːdʒ]",
+    "phonetics": [
+      "ɜːrdʒ",
+      "ɜːdʒ"
+    ]
+  },
+  "urgent": {
+    "display": "미국 [│ ɜːrdʒənt] · 영국 [│ ɜːdʒənt]",
+    "phonetics": [
+      "│ ɜːrdʒənt",
+      "│ ɜːdʒənt"
     ]
   },
   "url": {
@@ -43367,6 +51048,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "juːˈtɪləti"
     ]
   },
+  "utilize": {
+    "display": "발음기호 [ˈjuːtəlaɪz]",
+    "phonetics": [
+      "ˈjuːtəlaɪz"
+    ]
+  },
   "uv": {
     "display": "미국∙영국 [ˌjuː ˈviː] · 미국 [ˌjuː ˈviː]",
     "phonetics": [
@@ -43405,6 +51092,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈvækjuəm"
     ]
   },
+  "vague": {
+    "display": "미국∙영국 [veɪɡ]",
+    "phonetics": [
+      "veɪɡ"
+    ]
+  },
   "val": {
     "display": "미국∙영국 [vǽl]",
     "phonetics": [
@@ -43421,6 +51114,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈvælɪd]",
     "phonetics": [
       "ˈvælɪd"
+    ]
+  },
+  "validity": {
+    "display": "미국∙영국 [vəˈlɪdəti]",
+    "phonetics": [
+      "vəˈlɪdəti"
     ]
   },
   "valium": {
@@ -43465,6 +51164,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [vænkú:vər]",
     "phonetics": [
       "vænkú:vər"
+    ]
+  },
+  "vanish": {
+    "display": "미국∙영국 [ˈvænɪʃ]",
+    "phonetics": [
+      "ˈvænɪʃ"
     ]
   },
   "var": {
@@ -43560,6 +51265,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈviːhɪkl"
     ]
   },
+  "vein": {
+    "display": "미국∙영국 [veɪn]",
+    "phonetics": [
+      "veɪn"
+    ]
+  },
   "velocity": {
     "display": "미국 [və │ lɑːsəti] · 영국 [və │ lɒsəti]",
     "phonetics": [
@@ -43608,6 +51319,20 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국 [ˈvenjuː]",
     "phonetics": [
       "ˈvenjuː"
+    ]
+  },
+  "verbal": {
+    "display": "미국 [ˈvɜːrbl] · 영국 [ˈvɜːbl]",
+    "phonetics": [
+      "ˈvɜːrbl",
+      "ˈvɜːbl"
+    ]
+  },
+  "verdict": {
+    "display": "미국 [│ vɜːrdɪkt] · 영국 [│ vɜːdɪkt]",
+    "phonetics": [
+      "│ vɜːrdɪkt",
+      "│ vɜːdɪkt"
     ]
   },
   "verification": {
@@ -43720,10 +51445,28 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈvaɪə; ˈviːə"
     ]
   },
+  "viable": {
+    "display": "미국∙영국 [ˈvaɪəbl]",
+    "phonetics": [
+      "ˈvaɪəbl"
+    ]
+  },
+  "vibrant": {
+    "display": "미국∙영국 [ˈvaɪbrənt]",
+    "phonetics": [
+      "ˈvaɪbrənt"
+    ]
+  },
   "vice": {
     "display": "미국∙영국 [vaɪs]",
     "phonetics": [
       "vaɪs"
+    ]
+  },
+  "vicious": {
+    "display": "미국∙영국 [ˈvɪʃəs]",
+    "phonetics": [
+      "ˈvɪʃəs"
     ]
   },
   "victim": {
@@ -43813,6 +51556,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "vjú:iŋ"
     ]
   },
+  "viewpoint": {
+    "display": "미국∙영국 [ˈvjuːpɔɪnt]",
+    "phonetics": [
+      "ˈvjuːpɔɪnt"
+    ]
+  },
   "villa": {
     "display": "미국∙영국 [ˈvɪlə]",
     "phonetics": [
@@ -43848,6 +51597,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈvaɪnl]",
     "phonetics": [
       "ˈvaɪnl"
+    ]
+  },
+  "violate": {
+    "display": "미국∙영국 [ˈvaɪəleɪt]",
+    "phonetics": [
+      "ˈvaɪəleɪt"
     ]
   },
   "violation": {
@@ -43893,6 +51648,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ vɜːrtʃuəli",
       "│ vɜːtʃuəli"
+    ]
+  },
+  "virtue": {
+    "display": "미국 [ˈvɜːrtʃuː] · 영국 [ˈvɜːtʃuː]",
+    "phonetics": [
+      "ˈvɜːrtʃuː",
+      "ˈvɜːtʃuː"
     ]
   },
   "virus": {
@@ -44139,6 +51901,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ vəʊtɪŋ"
     ]
   },
+  "vow": {
+    "display": "미국∙영국 [vaʊ]",
+    "phonetics": [
+      "vaʊ"
+    ]
+  },
   "vp": {
     "display": "미국∙영국 [ˌviː ˈpiː] · 미국 [ˌviː ˈpiː]",
     "phonetics": [
@@ -44188,6 +51956,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [weɪt]",
     "phonetics": [
       "weɪt"
+    ]
+  },
+  "waiter": {
+    "display": "미국 [ˈweɪtə(r)]",
+    "phonetics": [
+      "ˈweɪtə(r)"
     ]
   },
   "waiting": {
@@ -44275,6 +52049,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wɔ́:ltər"
     ]
   },
+  "wander": {
+    "display": "미국 [│ wɑːndə(r)] · 영국 [│ wɒndə(r)]",
+    "phonetics": [
+      "│ wɑːndə(r)",
+      "│ wɒndə(r)"
+    ]
+  },
   "wanna": {
     "display": "미국 [ˈwɑːnə; ˈwɔːnə; ˈwʌnə] · 영국 [ˈwɒnə]",
     "phonetics": [
@@ -44323,6 +52104,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ weəhaʊs"
     ]
   },
+  "warfare": {
+    "display": "미국 [ˈwɔːrfer] · 영국 [ˈwɔːfeə(r)]",
+    "phonetics": [
+      "ˈwɔːrfer",
+      "ˈwɔːfeə(r)"
+    ]
+  },
   "warm": {
     "display": "미국 [wɔːrm] · 영국 [wɔːm]",
     "phonetics": [
@@ -44335,6 +52123,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "ˈwɔːrmɪŋ",
       "ˈwɔːmɪŋ"
+    ]
+  },
+  "warn": {
+    "display": "미국 [wɔːrn] · 영국 [wɔːn]",
+    "phonetics": [
+      "wɔːrn",
+      "wɔːn"
     ]
   },
   "warning": {
@@ -44503,6 +52298,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wiːk"
     ]
   },
+  "weaken": {
+    "display": "미국∙영국 [ˈwiːkən]",
+    "phonetics": [
+      "ˈwiːkən"
+    ]
+  },
   "weakness": {
     "display": "미국∙영국 [ˈwiːknəs]",
     "phonetics": [
@@ -44513,6 +52314,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [welθ]",
     "phonetics": [
       "welθ"
+    ]
+  },
+  "wealthy": {
+    "display": "미국∙영국 [ˈwelθi]",
+    "phonetics": [
+      "ˈwelθi"
     ]
   },
   "weapon": {
@@ -44539,6 +52346,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈweðə(r)]",
     "phonetics": [
       "ˈweðə(r)"
+    ]
+  },
+  "weave": {
+    "display": "미국∙영국 [wiːv]",
+    "phonetics": [
+      "wiːv"
     ]
   },
   "web": {
@@ -44607,6 +52420,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ wenzdeɪ; │ wenzdi"
     ]
   },
+  "weed": {
+    "display": "미국∙영국 [wiːd]",
+    "phonetics": [
+      "wiːd"
+    ]
+  },
   "week": {
     "display": "미국∙영국 [wiːk]",
     "phonetics": [
@@ -44630,6 +52449,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈwiːkli]",
     "phonetics": [
       "ˈwiːkli"
+    ]
+  },
+  "weigh": {
+    "display": "미국∙영국 [weɪ]",
+    "phonetics": [
+      "weɪ"
     ]
   },
   "weight": {
@@ -44736,6 +52561,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wɒt │ evə(r)"
     ]
   },
+  "whatsoever": {
+    "display": "미국 [hwʌ̀tsouévər,hwɑ̀t-] · 영국 [wɔ́t-]",
+    "phonetics": [
+      "hwʌ̀tsouévər,hwɑ̀t-",
+      "wɔ́t-"
+    ]
+  },
   "wheat": {
     "display": "미국∙영국 [wiːt] · 미국 [wiːt]",
     "phonetics": [
@@ -44781,6 +52613,20 @@ window.pronunciationDisplayOverrides = Object.assign(
       "│ weər │ æz"
     ]
   },
+  "whereby": {
+    "display": "미국 [wer │ baɪ] · 영국 [weə │ baɪ]",
+    "phonetics": [
+      "wer │ baɪ",
+      "weə │ baɪ"
+    ]
+  },
+  "wherever": {
+    "display": "미국 [wer │ evə(r)] · 영국 [weər │ evə(r)]",
+    "phonetics": [
+      "wer │ evə(r)",
+      "weər │ evə(r)"
+    ]
+  },
   "whether": {
     "display": "미국∙영국 [ˈweðə(r)]",
     "phonetics": [
@@ -44806,11 +52652,23 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wáilst"
     ]
   },
+  "whip": {
+    "display": "미국∙영국 [wɪp]",
+    "phonetics": [
+      "wɪp"
+    ]
+  },
   "whiskey": {
     "display": "미국 [hwíski] · 영국 [wís-]",
     "phonetics": [
       "hwíski",
       "wís-"
+    ]
+  },
+  "whisper": {
+    "display": "미국∙영국 [ˈwɪspə(r)]",
+    "phonetics": [
+      "ˈwɪspə(r)"
     ]
   },
   "white": {
@@ -44825,6 +52683,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "huː"
     ]
   },
+  "whoever": {
+    "display": "미국∙영국 [huːˈevə(r)]",
+    "phonetics": [
+      "huːˈevə(r)"
+    ]
+  },
   "whole": {
     "display": "미국 [hoʊl] · 영국 [həʊl]",
     "phonetics": [
@@ -44837,6 +52701,13 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "│ hoʊlseɪl",
       "│ həʊlseɪl"
+    ]
+  },
+  "wholly": {
+    "display": "미국 [ˈhoʊlli] · 영국 [ˈhəʊlli]",
+    "phonetics": [
+      "ˈhoʊlli",
+      "ˈhəʊlli"
     ]
   },
   "whom": {
@@ -44870,10 +52741,30 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈwaɪdli"
     ]
   },
+  "widen": {
+    "display": "미국∙영국 [ˈwaɪdn]",
+    "phonetics": [
+      "ˈwaɪdn"
+    ]
+  },
   "widescreen": {
     "display": "미국 [ˈwaɪdskriːn]",
     "phonetics": [
       "ˈwaɪdskriːn"
+    ]
+  },
+  "widespread": {
+    "display": "미국∙영국 [ˈwaɪdspred] · 미국 [ˈwaɪdspred]",
+    "phonetics": [
+      "ˈwaɪdspred",
+      "ˈwaɪdspred"
+    ]
+  },
+  "widow": {
+    "display": "미국 [ˈwɪdoʊ] · 영국 [ˈwɪdəʊ]",
+    "phonetics": [
+      "ˈwɪdoʊ",
+      "ˈwɪdəʊ"
     ]
   },
   "width": {
@@ -44936,6 +52827,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [ˈwɪlɪŋ]",
     "phonetics": [
       "ˈwɪlɪŋ"
+    ]
+  },
+  "willingness": {
+    "display": "미국∙영국 [wíliŋnis]",
+    "phonetics": [
+      "wíliŋnis"
     ]
   },
   "wilson": {
@@ -45017,6 +52914,12 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈwɪntə(r)"
     ]
   },
+  "wipe": {
+    "display": "미국∙영국 [waɪp]",
+    "phonetics": [
+      "waɪp"
+    ]
+  },
   "wire": {
     "display": "미국∙영국 [ˈwaɪə(r)]",
     "phonetics": [
@@ -45068,10 +52971,22 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wɪʃ"
     ]
   },
+  "wit": {
+    "display": "미국∙영국 [wɪt]",
+    "phonetics": [
+      "wɪt"
+    ]
+  },
   "with": {
     "display": "미국∙영국 [wɪð; wɪθ]",
     "phonetics": [
       "wɪð; wɪθ"
+    ]
+  },
+  "withdraw": {
+    "display": "미국∙영국 [wɪð │ drɔː; wɪθ │ drɔː]",
+    "phonetics": [
+      "wɪð │ drɔː; wɪθ │ drɔː"
     ]
   },
   "withdrawal": {
@@ -45227,6 +53142,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "ˈwɜːkləʊd"
     ]
   },
+  "workout": {
+    "display": "미국 [│ wɜːrkaʊt] · 영국 [│ wɜːkaʊt]",
+    "phonetics": [
+      "│ wɜːrkaʊt",
+      "│ wɜːkaʊt"
+    ]
+  },
   "workplace": {
     "display": "미국 [│ wɜːrkpleɪs] · 영국 [│ wɜːkpleɪs]",
     "phonetics": [
@@ -45269,6 +53191,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wɔːn"
     ]
   },
+  "worried": {
+    "display": "미국 [│ wɜːrid] · 영국 [│ wʌrid]",
+    "phonetics": [
+      "│ wɜːrid",
+      "│ wʌrid"
+    ]
+  },
   "worry": {
     "display": "미국 [ˈwɜːri] · 영국 [ˈwʌri]",
     "phonetics": [
@@ -45304,6 +53233,13 @@ window.pronunciationDisplayOverrides = Object.assign(
       "wɜːθ"
     ]
   },
+  "worthwhile": {
+    "display": "미국 [│ wɜːrθ │ waɪl] · 영국 [│ wɜːθ │ waɪl]",
+    "phonetics": [
+      "│ wɜːrθ │ waɪl",
+      "│ wɜːθ │ waɪl"
+    ]
+  },
   "worthy": {
     "display": "미국 [ˈwɜːrði] · 영국 [ˈwɜːði]",
     "phonetics": [
@@ -45315,6 +53251,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "display": "미국∙영국 [강형 wʊd 약형 wəd; əd]",
     "phonetics": [
       "강형 wʊd 약형 wəd; əd"
+    ]
+  },
+  "wound": {
+    "display": "미국∙영국 [wuːnd]",
+    "phonetics": [
+      "wuːnd"
     ]
   },
   "wow": {
@@ -45488,6 +53430,12 @@ window.pronunciationDisplayOverrides = Object.assign(
     "phonetics": [
       "jɪr",
       "jɪə(r); jɜː(r)"
+    ]
+  },
+  "yell": {
+    "display": "미국∙영국 [jel]",
+    "phonetics": [
+      "jel"
     ]
   },
   "yellow": {

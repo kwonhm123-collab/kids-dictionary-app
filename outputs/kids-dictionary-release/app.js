@@ -2445,7 +2445,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v86";
+const APP_RELEASE_VERSION = "v87";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -2578,7 +2578,13 @@ const pronunciationDisplayOverrides = {
     phonetics: ["\u02C8va\u026A\u0259bl"],
   },
 };
-Object.assign(pronunciationDisplayOverrides, window.pronunciationDisplayOverrides || {});
+for (const [word, pronunciationInfo] of Object.entries(window.pronunciationDisplayOverrides || {})) {
+  pronunciationDisplayOverrides[word] = Object.assign(
+    {},
+    pronunciationDisplayOverrides[word] || {},
+    pronunciationInfo
+  );
+}
 
 function trimIpaEnding(ipa) {
   return String(ipa || "").replace(/[ˈˌ.\s]+$/g, "");
@@ -2942,6 +2948,37 @@ function isSingleEnglishWord(text) {
   return /^[a-z]+$/i.test(text.trim());
 }
 
+function hasPronunciationData(info) {
+  return Boolean(info?.display || info?.phonetics?.length);
+}
+
+function getNonSinglePronunciationReason(word) {
+  const cleanWord = normalize(word);
+  if (/\s/.test(cleanWord)) {
+    return "발음기호 미표시: 숙어·구는 단일 IPA 대신 미국식·영국식 전체 듣기를 제공해요.";
+  }
+  if (cleanWord.includes("-")) {
+    return "발음기호 미표시: 하이픈 결합어의 독립 IPA 자료가 없어 전체 단어 듣기를 제공해요.";
+  }
+  if (/[’']/.test(cleanWord)) {
+    return "발음기호 미표시: 축약형·소유격의 독립 IPA 자료가 없어 전체 단어 듣기를 제공해요.";
+  }
+  return "발음기호 미표시: 이 표기는 자동 IPA 조회 대상이 아니며 전체 듣기는 사용할 수 있어요.";
+}
+
+function buildLocalPronunciationInfo(cleanWord) {
+  const override = pronunciationDisplayOverrides[cleanWord];
+  const derived = hasPronunciationData(override) ? null : getDerivedPronunciationInfo(cleanWord);
+  return {
+    override,
+    derived,
+    audioUrl: override?.audioUrl ?? null,
+    audioUrls: override?.audioUrls ?? { us: null, uk: null, other: null },
+    phonetics: override?.phonetics?.length ? override.phonetics : derived?.phonetics ?? [],
+    pronunciationDisplay: override?.display ?? derived?.display ?? null,
+  };
+}
+
 function uniqueItems(items) {
   return [...new Set(items.filter(Boolean))];
 }
@@ -2956,15 +2993,19 @@ function normalizeIpaForDisplay(text) {
 
 async function getExternalWordInfo(word) {
   const cleanWord = normalize(word);
-  const override = pronunciationDisplayOverrides[cleanWord];
-  const derived = override ? null : getDerivedPronunciationInfo(cleanWord);
+  const localInfo = buildLocalPronunciationInfo(cleanWord);
+  const { override, derived } = localInfo;
   if (!isSingleEnglishWord(cleanWord)) {
     return {
-      audioUrl: override?.audioUrl ?? null,
-      audioUrls: override?.audioUrls ?? { us: null, uk: null },
-      phonetics: override?.phonetics ?? derived?.phonetics ?? [],
+      audioUrl: localInfo.audioUrl,
+      audioUrls: localInfo.audioUrls,
+      phonetics: localInfo.phonetics,
       synonyms: localSynonyms[cleanWord] ?? [],
-      pronunciationDisplay: override?.display ?? derived?.display ?? null,
+      pronunciationDisplay: localInfo.pronunciationDisplay,
+      pronunciationStatus: hasPronunciationData(override) ? "local" : derived ? "derived" : "unsupported_entry_type",
+      pronunciationReason: localInfo.pronunciationDisplay || localInfo.phonetics.length
+        ? null
+        : getNonSinglePronunciationReason(cleanWord),
     };
   }
 
@@ -2976,11 +3017,17 @@ async function getExternalWordInfo(word) {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord)}`);
     if (!response.ok) {
       const emptyInfo = {
-        audioUrl: override?.audioUrl ?? null,
-        audioUrls: override?.audioUrls ?? { us: null, uk: null },
-        phonetics: override?.phonetics ?? derived?.phonetics ?? [],
+        audioUrl: localInfo.audioUrl,
+        audioUrls: localInfo.audioUrls,
+        phonetics: localInfo.phonetics,
         synonyms: localSynonyms[cleanWord] ?? [],
-        pronunciationDisplay: override?.display ?? derived?.display ?? null,
+        pronunciationDisplay: localInfo.pronunciationDisplay,
+        pronunciationStatus: localInfo.phonetics.length || localInfo.pronunciationDisplay ? "local" : "not_found",
+        pronunciationReason: localInfo.phonetics.length || localInfo.pronunciationDisplay
+          ? null
+          : override?.unavailableReason
+            ? `발음기호 미표시: ${override.unavailableReason}`
+            : "발음기호 미표시: 연결된 발음 사전에 해당 표제어의 IPA 자료가 없어요.",
       };
       externalWordInfoCache.set(cleanWord, emptyInfo);
       return emptyInfo;
@@ -3009,19 +3056,29 @@ async function getExternalWordInfo(word) {
     const info = {
       audioUrl: override?.audioUrl ?? audioUrl ?? null,
       audioUrls,
-      phonetics: override?.phonetics ?? (ipaList.length ? ipaList : derived?.phonetics ?? []),
+      phonetics: override?.phonetics?.length ? override.phonetics : ipaList.length ? ipaList : derived?.phonetics ?? [],
       synonyms,
       pronunciationDisplay: override?.display ?? (ipaList.length ? null : derived?.display ?? null),
+      pronunciationStatus: hasPronunciationData(override) ? "local" : ipaList.length ? "external" : derived ? "derived" : "no_phonetics",
+      pronunciationReason: hasPronunciationData(override) || ipaList.length || derived
+        ? null
+        : override?.unavailableReason
+          ? `발음기호 미표시: ${override.unavailableReason}`
+          : "발음기호 미표시: 외부 사전에 뜻은 있지만 IPA 자료를 제공하지 않아요.",
     };
     externalWordInfoCache.set(cleanWord, info);
     return info;
   } catch {
     const fallbackInfo = {
-      audioUrl: override?.audioUrl ?? null,
-      audioUrls: override?.audioUrls ?? { us: null, uk: null },
-      phonetics: override?.phonetics ?? derived?.phonetics ?? [],
+      audioUrl: localInfo.audioUrl,
+      audioUrls: localInfo.audioUrls,
+      phonetics: localInfo.phonetics,
       synonyms: localSynonyms[cleanWord] ?? [],
-      pronunciationDisplay: override?.display ?? derived?.display ?? null,
+      pronunciationDisplay: localInfo.pronunciationDisplay,
+      pronunciationStatus: localInfo.phonetics.length || localInfo.pronunciationDisplay ? "local" : "network_error",
+      pronunciationReason: localInfo.phonetics.length || localInfo.pronunciationDisplay
+        ? null
+        : "발음기호 확인 실패: 인터넷 연결 또는 외부 발음 사전 접속 상태를 확인해 주세요.",
     };
     externalWordInfoCache.set(cleanWord, fallbackInfo);
     return fallbackInfo;
@@ -3076,16 +3133,19 @@ function speakWithDeviceVoice(text, accent = "us") {
   const utterance = new SpeechSynthesisUtterance(text);
   const voices = window.speechSynthesis.getVoices();
   const targetLanguage = accent === "uk" ? "en-GB" : "en-US";
+  const normalizedTargetLanguage = targetLanguage.toLowerCase();
   const preferredVoice =
-    voices.find((voice) => voice.lang === targetLanguage && /google|samantha|natural|premium/i.test(voice.name)) ??
-    voices.find((voice) => voice.lang === targetLanguage) ??
-    voices.find((voice) => voice.lang.startsWith("en"));
+    voices.find(
+      (voice) => String(voice.lang || "").toLowerCase() === normalizedTargetLanguage &&
+        /google|samantha|natural|premium/i.test(voice.name)
+    ) ??
+    voices.find((voice) => String(voice.lang || "").toLowerCase() === normalizedTargetLanguage);
 
   if (preferredVoice) {
     utterance.voice = preferredVoice;
   }
 
-  utterance.lang = preferredVoice?.lang ?? targetLanguage;
+  utterance.lang = targetLanguage;
   utterance.rate = 0.78;
   utterance.pitch = 1;
   window.speechSynthesis.speak(utterance);
@@ -3118,9 +3178,12 @@ function formatPronunciationText(word, phonetics, pronunciationDisplay = null) {
 
 function renderFallbackPronunciation(entry) {
   const helper = entry.pronunciation && entry.pronunciation !== entry.word ? `읽기 도움: ${entry.pronunciation}` : "읽기 도움 표기 없음";
-  const override = pronunciationDisplayOverrides[normalize(entry.word)];
-  const derived = override ? null : getDerivedPronunciationInfo(entry.word);
-  const initialStatus = override?.display ?? derived?.display ?? "발음기호: 불러오는 중...";
+  const cleanWord = normalize(entry.word);
+  const localInfo = buildLocalPronunciationInfo(cleanWord);
+  const initialStatus = localInfo.pronunciationDisplay ??
+    (localInfo.phonetics.length ? formatPronunciationText(cleanWord, localInfo.phonetics) : null) ??
+    (localInfo.override?.unavailableReason ? `발음기호 미표시: ${localInfo.override.unavailableReason}` : null) ??
+    (!isSingleEnglishWord(cleanWord) ? getNonSinglePronunciationReason(cleanWord) : "발음기호: 불러오는 중...");
   return `
     <p class="pronunciation" data-ipa-for="${entry.word}">
       <span class="ipa-status">${escapeHtml(initialStatus)}</span>
@@ -3179,7 +3242,7 @@ async function enrichWordDetails(entry) {
   if (ipaElement) {
     ipaElement.textContent = info.phonetics.length || info.pronunciationDisplay
       ? formatPronunciationText(entry.word, info.phonetics, info.pronunciationDisplay)
-      : "발음기호: 사전 데이터 없음";
+      : info.pronunciationReason || "발음기호 미표시: 확인 가능한 IPA 자료가 없어요.";
   }
 
   const synonymList = resultPanel.querySelector(`[data-synonyms-for="${wordAtRequestTime}"] .synonym-list`);
