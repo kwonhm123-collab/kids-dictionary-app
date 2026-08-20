@@ -1617,6 +1617,7 @@ const top1000SupplementMeanings = window.top1000SupplementMeanings ?? {};
 const ministry3000Supplement = window.ministry3000Supplement ?? {};
 const verifiedBankSupplement = window.verifiedBankSupplement ?? {};
 const verifiedMeaningOverrides = window.verifiedMeaningOverrides ?? {};
+const detailedSenseOverrides = window.detailedSenseOverrides ?? {};
 const manualDictionaryAdditions = Array.isArray(window.manualDictionaryAdditions) ? window.manualDictionaryAdditions : [];
 const manualPhraseAdditions = Array.isArray(window.manualPhraseAdditions) ? window.manualPhraseAdditions : [];
 const negativePrefixWordPairs = window.negativePrefixWordPairs ?? {};
@@ -2421,6 +2422,124 @@ if (Object.keys(properNounOverrides).length) {
   });
 }
 
+function normalizeSensePart(part) {
+  const value = String(part || "");
+  const labels = ["동사", "명사", "형용사", "부사", "대명사", "전치사", "접속사", "감탄사", "관사", "조동사", "수사", "고유명사", "약어", "숙어"];
+  const trimmed = value.trim();
+  if (labels.includes(trimmed)) return trimmed;
+  const matches = labels
+    .map((label) => ({ label, index: value.indexOf(label) }))
+    .filter((item) => item.index >= 0)
+    .sort((left, right) => left.index - right.index);
+  if (matches.length === 1) return matches[0].label;
+  if (matches.some((item) => item.label === "명사")) return "명사";
+  return matches[0]?.label ?? (value.trim() || "단어");
+}
+
+const knownFunctionParts = Object.fromEntries([
+  [["a", "an", "the"], "관사"],
+  [["and", "although", "as", "because", "but", "if", "nor", "once", "or", "since", "so", "than", "though", "unless", "until", "when", "whereas", "whether", "while", "yet"], "접속사"],
+  [["about", "above", "across", "after", "against", "along", "among", "around", "at", "before", "behind", "below", "beneath", "beside", "between", "beyond", "by", "despite", "during", "except", "for", "from", "in", "inside", "into", "near", "of", "off", "on", "onto", "outside", "over", "past", "through", "throughout", "to", "toward", "towards", "under", "underneath", "up", "upon", "with", "within", "without"], "전치사"],
+  [["he", "her", "hers", "herself", "him", "himself", "i", "it", "itself", "me", "mine", "myself", "one", "oneself", "ours", "ourselves", "she", "someone", "somebody", "something", "that", "their", "theirs", "them", "themselves", "these", "they", "this", "those", "us", "we", "what", "whatever", "which", "who", "whoever", "whom", "whose", "you", "yours", "yourself", "yourselves"], "대명사"],
+].flatMap(([words, part]) => words.map((word) => [word, part])));
+
+function inferSensePart(meaning, entryPart, word = "") {
+  const knownPart = knownFunctionParts[String(word || "").trim().toLowerCase()];
+  if (knownPart) return knownPart;
+  const text = String(meaning || "")
+    .trim()
+    .replace(/[)\].,;:]+$/g, "")
+    .trim();
+  const normalizedPart = normalizeSensePart(entryPart);
+  if (["부사", "대명사", "전치사", "접속사", "감탄사", "관사", "조동사", "수사", "고유명사", "약어", "숙어"].includes(normalizedPart)) {
+    return normalizedPart;
+  }
+  const koreanChunks = text.match(/[가-힣]+/g) || [];
+  const last = koreanChunks.at(-1) || "";
+  if (/(?:적으로|하게|히|도록|씩|마다|에서|으로|로서|로써)$/.test(last) || ["따로", "그대로"].includes(last)) {
+    return "부사";
+  }
+  if (
+    /(?:한|하는|적인|있는|없는|가능한|좋은|나쁜|큰|작은|높은|낮은|빠른|느린|가벼운|무거운|밝은|어두운|새로운|오래된|로운|스러운|받은|같은|끼치는|따르는|붉은|검은|흰|파란|빨간|노란|하얀|푸른|멋진|어린|추운|더운|차가운|기쁜|슬픈|의)$/.test(last)
+  ) {
+    return "형용사";
+  }
+  if (/다$/.test(last)) {
+    return "동사";
+  }
+  return "명사";
+}
+
+function splitKoreanMeaningSummary(value) {
+  const text = String(value || "").trim();
+  const results = [];
+  let buffer = "";
+  let roundDepth = 0;
+  let squareDepth = 0;
+
+  for (const char of text) {
+    if (char === "(") roundDepth += 1;
+    else if (char === ")") roundDepth = Math.max(0, roundDepth - 1);
+    else if (char === "[") squareDepth += 1;
+    else if (char === "]") squareDepth = Math.max(0, squareDepth - 1);
+
+    if ((char === "," || char === ";" || char === "/") && roundDepth === 0 && squareDepth === 0) {
+      if (buffer.trim()) results.push(buffer.trim());
+      buffer = "";
+    } else {
+      buffer += char;
+    }
+  }
+  if (buffer.trim()) results.push(buffer.trim());
+  return [...new Set(results)].slice(0, 5);
+}
+
+function buildFallbackSenses(entry) {
+  const meanings = splitKoreanMeaningSummary(entry.korean);
+  const safeMeanings = meanings.length ? meanings : [String(entry.korean || "뜻 정보 확인 중").trim()];
+  return safeMeanings.map((meaning) => ({
+    part: inferSensePart(meaning, entry.part, entry.word),
+    meaning,
+  }));
+}
+
+dictionary.forEach((entry) => {
+  if (Array.isArray(entry.senses) && entry.senses.length) {
+    entry.senseSource = entry.senseSource ?? "manual-curated";
+    return;
+  }
+
+  const override = detailedSenseOverrides[entry.word.toLowerCase()];
+  if (Array.isArray(override) && override.length) {
+    entry.senses = override
+      .map(([part, meaning, reference = ""]) => ({
+        part: normalizeSensePart(part),
+        meaning: String(meaning || "").trim(),
+        ...(reference ? { reference: String(reference).trim() } : {}),
+      }))
+      .filter((sense) => sense.meaning);
+    entry.senseSource = "naver-verified";
+
+    const representedParts = new Set(entry.senses.map((sense) => sense.part));
+    const representedMeanings = new Set(
+      entry.senses.map((sense) => sense.meaning.replace(/\s+/g, "").toLowerCase())
+    );
+    for (const fallbackSense of buildFallbackSenses(entry)) {
+      if (entry.senses.length >= 5) break;
+      const normalizedMeaning = fallbackSense.meaning.replace(/\s+/g, "").toLowerCase();
+      if (representedMeanings.has(normalizedMeaning)) continue;
+      if (representedParts.has(fallbackSense.part)) continue;
+      entry.senses.push(fallbackSense);
+      representedMeanings.add(normalizedMeaning);
+    }
+  }
+
+  if (!entry.senses?.length) {
+    entry.senses = buildFallbackSenses(entry);
+    entry.senseSource = "verified-summary";
+  }
+});
+
 dictionary.forEach((entry) => {
   if (!entry.structure) {
     entry.structure = buildNegativePrefixStructure(entry.word);
@@ -2445,7 +2564,7 @@ const quizFeedback = document.querySelector("#quizFeedback");
 const propertiesModal = document.querySelector("#propertiesModal");
 const propertiesCloseButton = document.querySelector("#propertiesCloseButton");
 const propertiesBody = document.querySelector("#propertiesBody");
-const APP_RELEASE_VERSION = "v88";
+const APP_RELEASE_VERSION = "v89";
 
 let activeTab = "recent";
 let selectedWord = getTodayWord();
@@ -3455,6 +3574,8 @@ function buildAppStats() {
   let pronunciationGuideCount = 0;
   let structureCount = 0;
   let properNounCount = 0;
+  let detailedSenseCount = 0;
+  let naverDetailedSenseCount = 0;
 
   dictionary.forEach((entry) => {
     if (entry.separateGroup === "proper-noun") {
@@ -3473,6 +3594,12 @@ function buildAppStats() {
     }
     if (entry.structure) {
       structureCount += 1;
+    }
+    if (Array.isArray(entry.senses) && entry.senses.length) {
+      detailedSenseCount += 1;
+    }
+    if (entry.senseSource === "naver-verified") {
+      naverDetailedSenseCount += 1;
     }
   });
 
@@ -3511,6 +3638,8 @@ function buildAppStats() {
     recentCount: recentWords.length,
     favoriteCount: favoriteWords.length,
     properNounCount,
+    detailedSenseCount,
+    naverDetailedSenseCount,
     selectedWord: selectedWord?.word ?? "-",
     levelRows: [
       ["\uCD08\uB4F1 \uAD8C\uC7A5", elementaryCount, "Level 1-2"],
@@ -3639,6 +3768,8 @@ function renderPropertiesModal() {
       <div class="summary-list">
         ${renderSummaryRows([
           ["예문 제공 단어", stats.exampleCount],
+          ["번호 뜻 제공 단어", stats.detailedSenseCount],
+          ["네이버 검수 세부 뜻", stats.naverDetailedSenseCount],
           ["발음 안내 단어", stats.pronunciationGuideCount],
           ["어근 설명 단어", stats.structureCount],
         ])}

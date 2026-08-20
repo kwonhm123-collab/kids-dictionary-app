@@ -1,11 +1,13 @@
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const ROOT = process.cwd();
 const SOURCE_DIR = path.join(ROOT, "outputs", "kids-dictionary");
 const RELEASE_DIR = path.join(ROOT, "outputs", "kids-dictionary-release");
 const RELEASE_INFO = path.join(RELEASE_DIR, "release-info.json");
 const RELEASE_GUIDE = path.join(RELEASE_DIR, "android-install-update-guide.txt");
+const SENSE_BUILD_SCRIPT = path.join(ROOT, "work", "build-detailed-sense-overrides.cjs");
 
 const FILES = [
   "index.html",
@@ -18,6 +20,7 @@ const FILES = [
   "ministry3000-supplement.js",
   "verified-bank-supplement.js",
   "verified-meaning-overrides.js",
+  "detailed-sense-overrides.js",
   "manual-meaning-overrides.js",
   "manual-extra-overrides.js",
   "manual-middle-school-additions.js",
@@ -60,6 +63,11 @@ function clearDir(dir) {
 }
 
 function main() {
+  execFileSync(process.execPath, [SENSE_BUILD_SCRIPT], {
+    cwd: ROOT,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "pipe"],
+  });
   ensureDir(RELEASE_DIR);
   clearDir(RELEASE_DIR);
 

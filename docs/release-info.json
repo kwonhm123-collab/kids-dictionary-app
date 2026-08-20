@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T15:10:26.867Z",
+  "generatedAt": "2026-08-20T08:28:55.534Z",
   "sourceDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary",
   "releaseDir": "C:\\Users\\kwonh\\Documents\\Codex\\2026-07-12\\ch\\outputs\\kids-dictionary-release",
   "files": [
@@ -13,6 +13,7 @@
     "ministry3000-supplement.js",
     "verified-bank-supplement.js",
     "verified-meaning-overrides.js",
+    "detailed-sense-overrides.js",
     "manual-meaning-overrides.js",
     "manual-extra-overrides.js",
     "manual-middle-school-additions.js",

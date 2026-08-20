@@ -43,6 +43,9 @@ const verifiedBankSupplementCode = fs.existsSync("./outputs/kids-dictionary/veri
 const verifiedMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/verified-meaning-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/verified-meaning-overrides.js", "utf8")
   : "window.verifiedMeaningOverrides = {};";
+const detailedSenseOverridesCode = fs.existsSync("./outputs/kids-dictionary/detailed-sense-overrides.js")
+  ? fs.readFileSync("./outputs/kids-dictionary/detailed-sense-overrides.js", "utf8")
+  : "window.detailedSenseOverrides = {};";
 const manualMeaningOverridesCode = fs.existsSync("./outputs/kids-dictionary/manual-meaning-overrides.js")
   ? fs.readFileSync("./outputs/kids-dictionary/manual-meaning-overrides.js", "utf8")
   : "";
@@ -134,6 +137,7 @@ vm.runInContext(supplement2200Code, context);
 vm.runInContext(ministry3000SupplementCode, context);
 vm.runInContext(verifiedBankSupplementCode, context);
 vm.runInContext(verifiedMeaningOverridesCode, context);
+vm.runInContext(detailedSenseOverridesCode, context);
 vm.runInContext(manualMeaningOverridesCode, context);
 vm.runInContext(manualExtraOverridesCode, context);
 vm.runInContext(manualMiddleSchoolAdditionsCode, context);
@@ -425,6 +429,10 @@ const falsePositiveResults = falsePositiveWords.map((word) => {
 const falsePositiveFailed = falsePositiveResults.filter((result) => !result.pass);
 const runEntry = context.findWord("run");
 const appearEntry = context.findWord("appear");
+const sequenceEntry = context.findWord("sequence");
+const becauseEntry = context.findWord("because");
+const goEntry = context.findWord("go");
+const lionsEntry = context.findWord("lions");
 function findExactDictionaryEntry(word) {
   return vm.runInContext(`dictionary.find((entry) => entry.word === ${JSON.stringify(word)})`, context);
 }
@@ -465,8 +473,34 @@ const verbInflectionCoverageResults = vm.runInContext(
 const verbInflectionCoverageFailed = verbInflectionCoverageResults.filter((result) => !result.pass);
 const senseChecks = [
   {
+    name: "sequence 품사별 뜻 목록 3개",
+    pass:
+      JSON.stringify(sequenceEntry?.senses) ===
+      JSON.stringify([
+        { part: "명사", meaning: "(일련의) 연속적인 사건들[행동들/숫자들 등]" },
+        { part: "명사", meaning: "(사건·행동 등의) 순서[차례]" },
+        { part: "동사", meaning: "차례로 배열하다" },
+      ]),
+  },
+  {
     name: "run 뜻 목록 5개",
     pass: Array.isArray(runEntry?.senses) && runEntry.senses.length === 5,
+  },
+  {
+    name: "because 접속사 품사",
+    pass: becauseEntry?.senses?.every((sense) => sense.part === "접속사"),
+  },
+  {
+    name: "go 오연결 제거 및 세부 뜻",
+    pass:
+      goEntry?.senses?.some((sense) => sense.meaning.includes("가다")) &&
+      !goEntry?.senses?.some((sense) => /harm|damage|injury|손해/i.test(sense.meaning)),
+  },
+  {
+    name: "lions 원형 의미 연결",
+    pass:
+      lionsEntry?.senses?.some((sense) => sense.meaning.includes("사자")) &&
+      !lionsEntry?.senses?.some((sense) => /리옹만|Golfe du Lion/i.test(sense.meaning)),
   },
   {
     name: "run 품사별 뜻 포함",
@@ -497,8 +531,26 @@ const senseChecks = [
       ]),
   },
 ];
+const detailedSenseCoverageResults = vm.runInContext(
+  `dictionary.map((entry) => ({
+    word: entry.word,
+    count: Array.isArray(entry.senses) ? entry.senses.length : 0,
+    source: entry.senseSource || "",
+    pass:
+      Array.isArray(entry.senses) &&
+      entry.senses.length > 0 &&
+      entry.senses.every((sense) =>
+        typeof sense.part === "string" && sense.part.trim() &&
+        typeof sense.meaning === "string" && sense.meaning.trim() &&
+        !/관련 추가 영어 어휘|어휘 뱅크 단어|온라인 사전 확장 데이터/.test(sense.meaning)
+      )
+  }))`,
+  context
+);
+const detailedSenseCoverageFailed = detailedSenseCoverageResults.filter((result) => !result.pass);
 const senseFailed = [
   ...senseChecks.filter((result) => !result.pass),
+  ...detailedSenseCoverageFailed.slice(0, 50).map((result) => ({ name: `${result.word} 번호 뜻`, pass: false })),
   ...verbInflectionSampleResults.filter((result) => !result.pass).map((result) => ({ name: `${result.word} 동사 변화형`, pass: false })),
 ];
 const qualityWords = ["world", "time", "year", "day", "work", "company", "business", "life", "place", "case", "government", "computer", "gold", "golden"];
@@ -638,6 +690,8 @@ context.renderResult(context.findWord("uncertain"));
 const uncertainHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("candidate"));
 const candidateHtml = elements.get("#resultPanel")?.innerHTML ?? "";
+context.renderResult(context.findWord("sequence"));
+const sequenceHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 context.renderResult(context.findWord("onboarding"));
 const onboardingHtml = elements.get("#resultPanel")?.innerHTML ?? "";
 const repeatedExamplePattern = /searched for|looked up|studied the word|in the dictionary/i;
@@ -684,6 +738,14 @@ const advancedDepthChecks = advancedDepthWords.map((word) => {
 const advancedDepthFailed = advancedDepthChecks.filter((result) => !result.pass);
 const awkwardPrimaryPattern = /I saw a primary|The primary was important|주요한을 봤어요|주요한은 중요했어요/i;
 const renderChecks = [
+  {
+    name: "sequence 번호 뜻 화면 표시",
+    pass:
+      sequenceHtml.includes("(일련의) 연속적인 사건들[행동들/숫자들 등]") &&
+      sequenceHtml.includes("(사건·행동 등의) 순서[차례]") &&
+      sequenceHtml.includes("차례로 배열하다") &&
+      !sequenceHtml.includes("고등학생까지 사용할 3000개 우선 보강 단어예요"),
+  },
   {
     name: "world 화면 뜻 표시",
     pass: worldHtml.includes("세계, 세상, 지구") && worldHtml.includes("뜻") && worldHtml.includes("지구"),
@@ -867,6 +929,15 @@ console.log(
       excluded: { total: excludedResults.length + 1, failed: excludedFailed.length, results: [...excludedResults, excludedAutocompleteResult] },
       falsePositives: { total: falsePositiveResults.length, failed: falsePositiveFailed.length, results: falsePositiveResults },
       senses: { total: senseChecks.length, failed: senseFailed.length, results: senseChecks },
+      detailedSenseCoverage: {
+        total: detailedSenseCoverageResults.length,
+        failed: detailedSenseCoverageFailed.length,
+        bySource: detailedSenseCoverageResults.reduce((counts, result) => {
+          counts[result.source] = (counts[result.source] || 0) + 1;
+          return counts;
+        }, {}),
+        failures: detailedSenseCoverageFailed.slice(0, 50),
+      },
       verbInflections: {
         total: verbInflectionCoverageResults.length,
         failed: verbInflectionCoverageFailed.length + verbInflectionSampleResults.filter((result) => !result.pass).length,
@@ -892,6 +963,7 @@ if (
   autocompleteFailed.length > 0 ||
   excludedFailed.length > 0 ||
   senseFailed.length > 0 ||
+  detailedSenseCoverageFailed.length > 0 ||
   verbInflectionCoverageFailed.length > 0 ||
   pronunciationFailed.length > 0 ||
   negativePrefixFailed.length > 0 ||
